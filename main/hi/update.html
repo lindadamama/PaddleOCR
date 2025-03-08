@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../static/images/logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
@@ -779,6 +779,15 @@ You're not viewing the latest version.
   
     <nav class="md-nav" aria-label="更新">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#202537-paddleocr-210" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥🔥2025.3.7 PaddleOCR 2.10 版本，主要包含如下内容：
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#2024101-ocr" class="md-nav__link">
@@ -5605,6 +5614,15 @@ You're not viewing the latest version.
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#202537-paddleocr-210" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔥🔥2025.3.7 PaddleOCR 2.10 版本，主要包含如下内容：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2024101-ocr" class="md-nav__link">
     <span class="md-ellipsis">
       🔥2024.10.1 添加OCR领域低代码全流程开发能力
@@ -6024,6 +6042,30 @@ You're not viewing the latest version.
   <h1>近期更新</h1>
 
 <h3 id="_1">更新<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="202537-paddleocr-210"><strong>🔥🔥2025.3.7 PaddleOCR 2.10 版本，主要包含如下内容</strong>：<a class="headerlink" href="#202537-paddleocr-210" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>重磅新增 OCR 领域 12 个自研单模型：</strong></p>
+<ul>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/module_usage/tutorials/ocr_modules/layout_detection.html">版面区域检测</a></strong> 系列 3 个模型：PP-DocLayout-L、PP-DocLayout-M、PP-DocLayout-S，支持预测 23 个常见版面类别，中英论文、研报、试卷、书籍、杂志、合同、报纸等丰富类型的文档实现高质量版面检测，<strong>mAP@0.5 最高达 90.4%，轻量模型端到端每秒处理超百页文档图像。</strong></li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/module_usage/tutorials/ocr_modules/formula_recognition.html">公式识别</a></strong> 系列 2 个模型：PP-FormulaNet-L、PP-FormulaNet-S，支持 5 万种 LaTeX 常见词汇，支持识别高难度印刷公式和手写公式，其中 <strong>PP-FormulaNet-L 较开源同等量级模型精度高 6 个百分点，PP-FormulaNet-S 较同等精度模型速度快 16 倍。</strong></li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/module_usage/tutorials/ocr_modules/table_structure_recognition.html">表格结构识别</a></strong> 系列 2 个模型：SLANeXt_wired、SLANeXt_wireless。飞桨自研新一代表格结构识别模型，分别支持有线表格和无线表格的结构预测。相比于SLANet_plus，SLANeXt在表格结构方面有较大提升，<strong>在内部高难度表格识别评测集上精度高 6 个百分点。</strong></li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/module_usage/tutorials/ocr_modules/table_classification.html">表格分类</a></strong> 系列 1 个模型：PP-LCNet_x1_0_table_cls，超轻量级有线表格和无线表格的分类模型。</li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/module_usage/tutorials/ocr_modules/table_cells_detection.html">表格单元格检测</a></strong> 系列 2 个模型：RT-DETR-L_wired_table_cell_det、RT-DETR-L_wireless_table_cell_det，分别支持有线表格和无线表格的单元格检测，可配合SLANeXt_wired、SLANeXt_wireless、文本检测、文本识别模块完成对表格的端到端预测。（参见本次新增的表格识别v2产线）</li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/module_usage/tutorials/ocr_modules/text_recognition.html">文本识别</a></strong> 系列 1 个模型： PP-OCRv4_server_rec_doc，<strong>支持1.5万+字典，文字识别范围更广，与此同时提升了部分文字的识别精准度，在内部数据集上，精度较 PP-OCRv4_server_rec 高 3 个百分点以上。</strong></li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/module_usage/tutorials/ocr_modules/text_recognition.html">文本行方向分类</a></strong> 系列 1 个模型：PP-LCNet_x0_25_textline_ori，<strong>存储只有 0.3M</strong> 的超轻量级文本行方向分类模型。</li>
+</ul>
+</li>
+<li>
+<p><strong>重磅推出 4 条高价值多模型组合方案：</strong> </p>
+<ul>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/pipeline_usage/tutorials/ocr_pipelines/doc_preprocessor.html">文档图像预处理产线</a></strong>：通过超轻量级模型组合使用，实现对文档图像的扭曲和方向的矫正。</li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/pipeline_usage/tutorials/ocr_pipelines/layout_parsing_v2.html">版面解析v2产线</a></strong>：组合多个自研的不同类型的 OCR 类模型，优化复杂版面阅读顺序，实现多种复杂 PDF 文件端到端转换 Markdown 文件和 JSON 文件。在多个文档场景下，转换效果较其他开源方案更好。可以为大模型训练和应用提供高质量的数据生产能力。</li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/pipeline_usage/tutorials/ocr_pipelines/table_recognition_v2.html">表格识别v2产线</a></strong>：<strong>提供更好的表格端到端识别能力。</strong> 通过将表格分类模块、表格单元格检测模块、表格结构识别模块、文本检测模块、文本识别模块等组合使用，实现对多种样式的表格预测，用户可自定义微调其中任意模块以提升垂类表格的效果。</li>
+<li><strong><a href="https://paddlepaddle.github.io/PaddleX/latest/pipeline_usage/tutorials/information_extraction_pipelines/document_scene_information_extraction_v4.html">PP-ChatOCRv4-doc产线</a></strong>：在 PP-ChatOCRv3-doc 的基础上，<strong>融合了多模态大模型，优化了 Prompt 和多模型组合后处理逻辑，更好地解决了版面分析、生僻字、多页 pdf、表格、印章识别等常见的复杂文档信息抽取难点问题，准确率较 PP-ChatOCRv3-doc 高 15 个百分点。其中，大模型升级了本地部署的能力，提供了标准的 OpenAI 调用接口，支持对本地大模型如 DeepSeek-R1 部署的调用。</strong></li>
+</ul>
+</li>
+</ul>
 <h4 id="2024101-ocr"><strong>🔥2024.10.1 添加OCR领域低代码全流程开发能力</strong><a class="headerlink" href="#2024101-ocr" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
@@ -6134,7 +6176,7 @@ You're not viewing the latest version.
     <span class="md-icon" title="आखिरी अपडेट">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月26日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年3月7日 16:24:37">2025年3月7日</span>
   </span>
 
     
@@ -6144,7 +6186,7 @@ You're not viewing the latest version.
     <span class="md-icon" title="बनाया था">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2025年2月26日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年3月7日 16:24:37">2025年3月7日</span>
   </span>
 
     
@@ -6162,9 +6204,9 @@ You're not viewing the latest version.
     
     <nav>
       
-        <a href="https://github.com/AmberC0209" class="md-author" title="@AmberC0209">
+        <a href="https://github.com/cuicheng01" class="md-author" title="@cuicheng01">
           
-          <img src="https://avatars.githubusercontent.com/u/55582609?v=4&size=72" alt="AmberC0209">
+          <img src="https://avatars.githubusercontent.com/u/45199522?v=4&size=72" alt="cuicheng01">
         </a>
       
         <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
@@ -6172,21 +6214,21 @@ You're not viewing the latest version.
           <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
         </a>
       
-        <a href="https://github.com/cuicheng01" class="md-author" title="@cuicheng01">
+        <a href="https://github.com/timminator" class="md-author" title="@timminator">
           
-          <img src="https://avatars.githubusercontent.com/u/45199522?v=4&size=72" alt="cuicheng01">
+          <img src="https://avatars.githubusercontent.com/u/150205162?v=4&size=72" alt="timminator">
         </a>
       
-        <a href="https://github.com/dyning" class="md-author" title="@dyning">
+        <a href="https://github.com/AmberC0209" class="md-author" title="@AmberC0209">
           
-          <img src="https://avatars.githubusercontent.com/u/10047064?v=4&size=72" alt="dyning">
+          <img src="https://avatars.githubusercontent.com/u/55582609?v=4&size=72" alt="AmberC0209">
         </a>
       
       
       
         
           <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/update.md" class="md-author md-author--more">
-            +2
+            +3
           </a>
         
       
@@ -6364,7 +6406,7 @@ You're not viewing the latest version.
     <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u0915\u094d\u0932\u093f\u092a\u092c\u094b\u0930\u094d\u0921 \u092a\u0930 \u0915\u0949\u092a\u0940 \u0915\u0930 \u0926\u093f\u092f\u093e \u0917\u092f\u093e", "clipboard.copy": "\u0915\u094d\u0932\u093f\u092a\u092c\u094b\u0930\u094d\u0921 \u092a\u0930 \u0915\u0949\u092a\u0940 \u0915\u0930\u0947\u0902", "search.result.more.one": "1 \u0914\u0930 \u0907\u0938 \u092a\u0943\u0937\u094d\u0920 \u092a\u0930", "search.result.more.other": "# \u0914\u0930 \u0907\u0938 \u092a\u0943\u0937\u094d\u0920 \u092a\u0930", "search.result.none": "\u0915\u094b\u0908 \u092e\u093f\u0932\u093e\u0928 \u0921\u0949\u0915\u094d\u092f\u0942\u092e\u0947\u0902\u091f \u0928\u0939\u0940\u0902", "search.result.one": "1 \u092e\u093f\u0932\u093e\u0928 \u0921\u0949\u0915\u094d\u092f\u0942\u092e\u0947\u0902\u091f", "search.result.other": "# \u092e\u093f\u0932\u093e\u0928 \u0921\u093e\u0915\u094d\u092f\u0942\u092e\u0947\u0902\u091f\u094d\u0938", "search.result.placeholder": "\u0916\u094b\u091c \u0936\u0941\u0930\u0942 \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u091f\u093e\u0907\u092a \u0915\u0930\u0947\u0902", "search.result.term.missing": "\u095a\u093e\u092f\u092c", "select.version": "\u0935\u0930\u094d\u0936\u0928 \u091a\u0941\u0928\u0947\u0902"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="../javascripts/katex.min.js"></script>
       
