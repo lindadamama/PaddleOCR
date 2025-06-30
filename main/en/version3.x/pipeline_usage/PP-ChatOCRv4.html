@@ -778,6 +778,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -850,6 +852,29 @@ You're not viewing the latest version.
   
   <span class="md-ellipsis">
     PP-OCRv5 Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PP-OCRv5 Multilingual Text Recognition Introduction
     
   </span>
   
@@ -1800,6 +1825,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1964,6 +1991,29 @@ You're not viewing the latest version.
   
   <span class="md-ellipsis">
     General Table Recognition v2 Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PP-DocTranslation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PP-DocTranslation产线
     
   </span>
   
@@ -3245,11 +3295,25 @@ You're not viewing the latest version.
 <h1 id="pp-chatocrv4-doc-pipeline-usage-tutorial">PP-ChatOCRv4-doc Pipeline Usage Tutorial<a class="headerlink" href="#pp-chatocrv4-doc-pipeline-usage-tutorial" title="Permanent link">&para;</a></h1>
 <h2 id="1-introduction-to-pp-chatocrv4-doc-pipeline">1. Introduction to PP-ChatOCRv4-doc Pipeline<a class="headerlink" href="#1-introduction-to-pp-chatocrv4-doc-pipeline" title="Permanent link">&para;</a></h2>
 <p>PP-ChatOCRv4-doc is a unique document and image intelligent analysis solution from PaddlePaddle, combining LLM, MLLM, and OCR technologies to address complex document information extraction challenges such as layout analysis, rare characters, multi-page PDFs, tables, and seal text recognition. Integrated with ERNIE Bot, it fuses massive data and knowledge, achieving high accuracy and wide applicability. This pipeline also provides flexible service deployment options, supporting deployment on various hardware. Furthermore, it offers custom development capabilities, allowing you to train and fine-tune models on your own datasets, with seamless integration of trained models.</p>
-<p><img src="https://github.com/user-attachments/assets/0870cdec-1909-4247-9004-d9efb4ab9635"></p>
-<p>The Document Scene Information Extraction v4 pipeline includes modules for <strong>Layout Region Detection</strong>, <strong>Table Structure Recognition</strong>, <strong>Table Classification</strong>, <strong>Table Cell Localization</strong>, <strong>Text Detection</strong>, <strong>Text Recognition</strong>, <strong>Seal Text Detection</strong>, <strong>Text Image Rectification</strong>, and <strong>Document Image Orientation Classification</strong>. </p>
-<p><b>If you prioritize model accuracy, choose a model with higher accuracy. If you prioritize inference speed, select a model with faster inference. If you prioritize model storage size, choose a model with a smaller storage size.</b> Benchmarks for some models are as follows:</p>
-<details><summary> 👉Model List Details</summary>
-<p><b>Document Image Orientation Classification Module (Optional):</b></p>
+<div align="center">
+<img src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/paddleocr/PP-ChatOCRv4/algorithm_ppchatocrv4.png" width="80%"/>
+</div>
+
+<p>The PP-ChatOCRv4 pipeline includes the following 9 modules. Each module can be trained and inferred independently and includes multiple models. For more details, please click on the respective module to view the documentation.</p>
+<ul>
+<li><a href="../module_usage/doc_img_orientation_classification.html">Document Image Orientation Classification Module</a> (Optional)</li>
+<li><a href="../module_usage/text_image_unwarping.html">Text Image Unwarping Module</a> (Optional)</li>
+<li><a href="../module_usage/layout_detection.html">Layout Detection Module</a></li>
+<li><a href="../module_usage/table_structure_recognition.html">Table Structure Recognition Module</a> (Optional)</li>
+<li><a href="../module_usage/text_detection.html">Text Detection Module</a></li>
+<li><a href="../module_usage/text_recognition.html">Text Recognition Module</a></li>
+<li><a href="../module_usage/textline_orientation_classification.html">Text Line Orientation Classification Module</a>(Optional)</li>
+<li><a href="../module_usage/formula_recognition.html">Formula Recognition Module</a> (Optional)</li>
+<li><a href="../module_usage/seal_text_detection.html">Seal Text Detection Module</a> (Optional)</li>
+</ul>
+<p>In this pipeline, you can choose the model to use based on the benchmark data below.</p>
+<details>
+<summary><b>Document Image Orientation Classification Module (Optional):</b></summary>
 <table>
 <thead>
 <tr>
@@ -3273,7 +3337,10 @@ You're not viewing the latest version.
 </tr>
 </tbody>
 </table>
-<p><b>Text Image Unwarp Module (Optional):</b></p>
+</details>
+
+<details>
+<summary><b>Text Image Unwarp Module (Optional):</b></summary>
 <table>
 <thead>
 <tr>
@@ -3297,37 +3364,11 @@ You're not viewing the latest version.
 </tr>
 </tbody>
 </table>
-<p><b>Table Structure Recognition Module Models</b>:</p>
-<table>
-<tr>
-<th>Model</th><th>Model Download Link</th>
-<th>Accuracy (%)</th>
-<th>GPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
-<th>CPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
-<th>Model Storage Size (MB)</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>SLANet</td>
-<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/SLANet_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/SLANet_pretrained.pdparams">Training Model</a></td>
-<td>59.52</td>
-<td>23.96 / 21.75</td>
-<td>- / 43.12</td>
-<td>6.9</td>
-<td>SLANet is a table structure recognition model developed by Baidu PaddleX Team. The model significantly improves the accuracy and inference speed of table structure recognition by adopting a CPU-friendly lightweight backbone network PP-LCNet, a high-low-level feature fusion module CSP-PAN, and a feature decoding module SLA Head that aligns structural and positional information.</td>
-</tr>
-<tr>
-<td>SLANet_plus</td>
-<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/SLANet_plus_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/SLANet_plus_pretrained.pdparams">Training Model</a></td>
-<td>63.69</td>
-<td>23.43 / 22.16</td>
-<td>- / 41.80</td>
-<td>6.9</td>
-<td>SLANet_plus is an enhanced version of SLANet, the table structure recognition model developed by Baidu PaddleX Team. Compared to SLANet, SLANet_plus significantly improves the recognition ability for wireless and complex tables and reduces the model's sensitivity to the accuracy of table positioning, enabling more accurate recognition even with offset table positioning.</td>
-</tr>
-</table>
+</details>
 
-<p><b>Layout Detection Module Models</b>:</p>
+<details>
+<summary><b>Layout Detection Module Model:</b></summary>
+* <b>The layout detection model includes 20 common categories: document title, paragraph title, text, page number, abstract, table, references, footnotes, header, footer, algorithm, formula, formula number, image, table, seal, figure_table title, chart, and sidebar text and lists of references</b>
 <table>
 <thead>
 <tr>
@@ -3341,8 +3382,62 @@ You're not viewing the latest version.
 </thead>
 <tbody>
 <tr>
+<td>PP-DocLayout_plus-L</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-DocLayout_plus-L_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-DocLayout_plus-L_pretrained.pdparams">Training Model</a></td>
+<td>83.2</td>
+<td>53.03 / 17.23</td>
+<td>634.62 / 378.32</td>
+<td>126.01</td>
+<td>A higher-precision layout area localization model trained on a self-built dataset containing Chinese and English papers, PPT, multi-layout magazines, contracts, books, exams, ancient books and research reports using RT-DETR-L</td>
+</tr>
+<tr>
+</tbody>
+</table>
+
+
+* <b>The layout detection model includes 1 category: Block:</b>
+<table>
+<thead>
+<tr>
+<th>Model</th><th>Model Download Link</th>
+<th>mAP(0.5) (%)</th>
+<th>GPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
+<th>CPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
+<th>Model Storage Size (MB)</th>
+<th>Introduction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PP-DocBlockLayout</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-DocBlockLayout_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-DocBlockLayout_pretrained.pdparams">Training Model</a></td>
+<td>95.9</td>
+<td>34.60 / 28.54</td>
+<td>506.43 / 256.83</td>
+<td>123.92</td>
+<td>A layout block localization model trained on a self-built dataset containing Chinese and English papers, PPT, multi-layout magazines, contracts, books, exams, ancient books and research reports using RT-DETR-L</td>
+</tr>
+<tr>
+</tbody>
+</table>
+
+
+* <b>The layout detection model includes 23 common categories: document title, paragraph title, text, page number, abstract, table of contents, references, footnotes, header, footer, algorithm, formula, formula number, image, figure caption, table, table caption, seal, figure title, figure, header image, footer image, and sidebar text</b>
+<table>
+<thead>
+<tr>
+<th>Model</th><th>Download Link</th>
+<th>mAP(0.5) (%)</th>
+<th>GPU Inference Time (ms)<br/>[Standard Mode / High Performance Mode]</th>
+<th>CPU Inference Time (ms)<br/>[Standard Mode / High Performance Mode]</th>
+<th>Model Storage Size (MB)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td>PP-DocLayout-L</td>
-<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-DocLayout-L_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-DocLayout-L_pretrained.pdparams">Training Model</a></td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-DocLayout-L_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-DocLayout-L_pretrained.pdparams">Pretrained Model</a></td>
 <td>90.4</td>
 <td>33.59 / 33.59</td>
 <td>503.01 / 251.08</td>
@@ -3351,7 +3446,7 @@ You're not viewing the latest version.
 </tr>
 <tr>
 <td>PP-DocLayout-M</td>
-<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-DocLayout-M_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-DocLayout-M_pretrained.pdparams">Training Model</a></td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-DocLayout-M_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-DocLayout-M_pretrained.pdparams">Pretrained Model</a></td>
 <td>75.2</td>
 <td>13.03 / 4.72</td>
 <td>43.39 / 24.44</td>
@@ -3360,7 +3455,7 @@ You're not viewing the latest version.
 </tr>
 <tr>
 <td>PP-DocLayout-S</td>
-<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-DocLayout-S_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-DocLayout-S_pretrained.pdparams">Training Model</a></td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-DocLayout-S_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-DocLayout-S_pretrained.pdparams">Pretrained Model</a></td>
 <td>70.9</td>
 <td>11.54 / 3.86</td>
 <td>18.53 / 6.29</td>
@@ -3369,9 +3464,10 @@ You're not viewing the latest version.
 </tr>
 </tbody>
 </table>
-<b>Note: The evaluation dataset for the above precision metrics is a self-built layout area detection dataset by PaddleOCR, containing 500 common document-type images of Chinese and English papers, magazines, contracts, books, exams, and research reports. GPU inference time is based on an NVIDIA Tesla T4 machine with FP32 precision. CPU inference speed is based on an Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz with 8 threads and FP32 precision.</b>
 
-> ❗ The above list includes the <b>3 core models</b> that are key supported by the text recognition module. The module actually supports a total of <b>11 full models</b>, including several predefined models with different categories. The complete model list is as follows:
+> ❗ The above list includes the <b>4 core models</b> that are key supported by the text recognition module. The module actually supports a total of <b>12 full models</b>, including several predefined models with different categories. The complete model list is as follows:
+
+<details><summary> 👉 Details of Model List</summary>
 
 * <b>Table Layout Detection Model</b>
 <table>
@@ -3396,7 +3492,6 @@ You're not viewing the latest version.
 <td>A high-efficiency layout area localization model trained on a self-built dataset using PicoDet-1x, capable of detecting table regions.</td>
 </tr>
 </tbody></table>
-<b>Note: The evaluation dataset for the above precision metrics is a self-built layout table area detection dataset by PaddleOCR, containing 7835 Chinese and English document images with tables. GPU inference time is based on an NVIDIA Tesla T4 machine with FP32 precision. CPU inference speed is based on an Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz with 8 threads and FP32 precision.</b>
 
 * <b>3-Class Layout Detection Model, including Table, Image, and Stamp</b>
 <table>
@@ -3429,6 +3524,10 @@ You're not viewing the latest version.
 <td>22.6</td>
 <td>A balanced efficiency and precision layout area localization model trained on a self-built dataset of Chinese and English papers, magazines, and research reports using PicoDet-L.</td>
 </tr>
+</table>
+
+<p><b>Table Classification Module Models:</b></p>
+<table>
 <tr>
 <td>RT-DETR-H_layout_3cls</td>
 <td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/RT-DETR-H_layout_3cls_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/RT-DETR-H_layout_3cls_pretrained.pdparams">Training Model</a></td>
@@ -3439,7 +3538,6 @@ You're not viewing the latest version.
 <td>A high-precision layout area localization model trained on a self-built dataset of Chinese and English papers, magazines, and research reports using RT-DETR-H.</td>
 </tr>
 </tbody></table>
-<b>Note: The evaluation dataset for the above precision metrics is a self-built layout area detection dataset by PaddleOCR, containing 1154 common document images of Chinese and English papers, magazines, and research reports. GPU inference time is based on an NVIDIA Tesla T4 machine with FP32 precision. CPU inference speed is based on an Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz with 8 threads and FP32 precision.</b>
 
 * <b>5-Class English Document Area Detection Model, including Text, Title, Table, Image, and List</b>
 <table>
@@ -3464,7 +3562,6 @@ You're not viewing the latest version.
 <td>A high-efficiency English document layout area localization model trained on the PubLayNet dataset using PicoDet-1x.</td>
 </tr>
 </tbody></table>
-<b>Note: The evaluation dataset for the above precision metrics is the [PubLayNet](https://developer.ibm.com/exchanges/data/all/publaynet/) dataset, containing 11245 English document images. GPU inference time is based on an NVIDIA Tesla T4 machine with FP32 precision. CPU inference speed is based on an Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz with 8 threads and FP32 precision.</b>
 
 * <b>17-Class Area Detection Model, including 17 common layout categories: Paragraph Title, Image, Text, Number, Abstract, Content, Figure Caption, Formula, Table, Table Caption, References, Document Title, Footnote, Header, Algorithm, Footer, and Stamp</b>
 <table>
@@ -3506,10 +3603,44 @@ You're not viewing the latest version.
 <td>470.2</td>
 <td>A high-precision layout area localization model trained on a self-built dataset of Chinese and English papers, magazines, and research reports using RT-DETR-H.</td>
 </tr>
-</tbody>
 </table>
+</details>
+</details>
 
-<p><b>Text Detection Module Models</b>:</p>
+<details>
+<summary><b>Table Structure Recognition Module Models (Optional):</b></summary>
+<table>
+<tr>
+<th>Model</th><th>Model Download Link</th>
+<th>Accuracy (%)</th>
+<th>GPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
+<th>CPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
+<th>Model Storage Size (MB)</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>SLANet</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/SLANet_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/SLANet_pretrained.pdparams">Training Model</a></td>
+<td>59.52</td>
+<td>23.96 / 21.75</td>
+<td>- / 43.12</td>
+<td>6.9</td>
+<td>SLANet is a table structure recognition model developed by Baidu PaddleX Team. The model significantly improves the accuracy and inference speed of table structure recognition by adopting a CPU-friendly lightweight backbone network PP-LCNet, a high-low-level feature fusion module CSP-PAN, and a feature decoding module SLA Head that aligns structural and positional information.</td>
+</tr>
+<tr>
+<td>SLANet_plus</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/SLANet_plus_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/SLANet_plus_pretrained.pdparams">Training Model</a></td>
+<td>63.69</td>
+<td>23.43 / 22.16</td>
+<td>- / 41.80</td>
+<td>6.9</td>
+<td>SLANet_plus is an enhanced version of SLANet, the table structure recognition model developed by Baidu PaddleX Team. Compared to SLANet, SLANet_plus significantly improves the recognition ability for wireless and complex tables and reduces the model's sensitivity to the accuracy of table positioning, enabling more accurate recognition even with offset table positioning.</td>
+</tr>
+</table>
+</details>
+
+<details>
+<summary><b>Text Detection Module Models</b></summary>
 <table>
 <thead>
 <tr>
@@ -3560,8 +3691,10 @@ You're not viewing the latest version.
 </tr>
 </tbody>
 </table>
+</details>
 
-<p><b>Text Recognition Module Models</b>:</p>
+<details>
+<summary><b>Text Recognition Module Models</b></summary>
 <table>
 <tr>
 <th>Model</th><th>Model Download Links</th>
@@ -3792,13 +3925,6 @@ The RepSVTR text recognition model is a mobile-oriented text recognition model b
 </tr>
 </table>
 
-
-
-
-
-
-
-
 * <b>Multilingual Recognition Models</b>
 <table>
 <tr>
@@ -3910,7 +4036,10 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 <td>An ultra-lightweight Devanagari script recognition model trained based on PP-OCRv3, supporting Devanagari script and digits recognition</td>
 </tr>
 </table>
-<p><b>Text Line Orientation Classification Module (Optional):</b></p>
+</details>
+
+<details>
+<summary><b>Text Line Orientation Classification Module (Optional):</b></summary>
 <table>
 <thead>
 <tr>
@@ -3934,35 +4063,90 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 </tr>
 </tbody>
 </table>
+</details>
 
-<p><b>Formula Recognition Module Models</b>:</p>
+<details>
+<summary><b>Formula Recognition Module Models  (Optional):</b></summary>
+
 <table>
-<thead>
 <tr>
-<th>Model Name</th><th>Model Download Link</th>
-<th>BLEU Score</th>
-<th>Normed Edit Distance</th>
-<th>ExpRate (%)</th>
+<th>Model</th><th>Model Download Link</th>
+<th>En-BLEU(%)</th>
+<th>Zh-BLEU(%)</th>
 <th>GPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
 <th>CPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
 <th>Model Storage Size (MB)</th>
+<th>Introduction</th>
 </tr>
-</thead>
-<tbody>
+<tr>
+<td>UniMERNet</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/UniMERNet_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/UniMERNet_pretrained.pdparams">Training Model</a></td>
+<td>85.91</td>
+<td>43.50</td>
+<td>1311.84 / 1311.84</td>
+<td>- / 8288.07</td>
+<td>1530</td>
+<td>UniMERNet is a formula recognition model developed by Shanghai AI Lab. It uses Donut Swin as the encoder and MBartDecoder as the decoder. The model is trained on a dataset of one million samples, including simple formulas, complex formulas, scanned formulas, and handwritten formulas, significantly improving the recognition accuracy of real-world formulas.</td>
+</tr>
+<td>PP-FormulaNet-S</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-FormulaNet-S_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-FormulaNet-S_pretrained.pdparams">Training Model</a></td>
+<td>87.00</td>
+<td>45.71</td>
+<td>182.25 / 182.25</td>
+<td>- / 254.39</td>
+<td>224</td>
+<td rowspan="2">PP-FormulaNet is an advanced formula recognition model developed by the Baidu PaddlePaddle Vision Team. The PP-FormulaNet-S version uses PP-HGNetV2-B4 as its backbone network. Through parallel masking and model distillation techniques, it significantly improves inference speed while maintaining high recognition accuracy, making it suitable for applications requiring fast inference. The PP-FormulaNet-L version, on the other hand, uses Vary_VIT_B as its backbone network and is trained on a large-scale formula dataset, showing significant improvements in recognizing complex formulas compared to PP-FormulaNet-S.</td>
+</tr>
+<td>PP-FormulaNet-L</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-FormulaNet-L_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-FormulaNet-L_pretrained.pdparams">Training Model</a></td>
+<td>90.36</td>
+<td>45.78</td>
+<td>1482.03 / 1482.03</td>
+<td>- / 3131.54</td>
+<td>695</td>
+</tr>
+<td>PP-FormulaNet_plus-S</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-FormulaNet_plus-S_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-FormulaNet_plus-S_pretrained.pdparams">Training Model</a></td>
+<td>88.71</td>
+<td>53.32</td>
+<td>179.20 / 179.20</td>
+<td>- / 260.99</td>
+<td>248</td>
+<td rowspan="3">PP-FormulaNet_plus is an enhanced version of the formula recognition model developed by the Baidu PaddlePaddle Vision Team, building upon the original PP-FormulaNet. Compared to the original version, PP-FormulaNet_plus utilizes a more diverse formula dataset during training, including sources such as Chinese dissertations, professional books, textbooks, exam papers, and mathematics journals. This expansion significantly improves the model’s recognition capabilities. Among the models, PP-FormulaNet_plus-M and PP-FormulaNet_plus-L have added support for Chinese formulas and increased the maximum number of predicted tokens for formulas from 1,024 to 2,560, greatly enhancing the recognition performance for complex formulas. Meanwhile, the PP-FormulaNet_plus-S model focuses on improving the recognition of English formulas. With these improvements, the PP-FormulaNet_plus series models perform exceptionally well in handling complex and diverse formula recognition tasks. </td>
+</tr>
+<tr>
+<td>PP-FormulaNet_plus-M</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-FormulaNet_plus-M_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-FormulaNet_plus-M_pretrained.pdparams">Training Model</a></td>
+<td>91.45</td>
+<td>89.76</td>
+<td>1040.27 / 1040.27</td>
+<td>- / 1615.80</td>
+<td>592</td>
+</tr>
+<tr>
+<td>PP-FormulaNet_plus-L</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-FormulaNet_plus-L_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-FormulaNet_plus-L_pretrained.pdparams">Training Model</a></td>
+<td>92.22</td>
+<td>90.64</td>
+<td>1476.07 / 1476.07</td>
+<td>- / 3125.58</td>
+<td>698</td>
+</tr>
 <tr>
 <td>LaTeX_OCR_rec</td>
 <td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/LaTeX_OCR_rec_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/LaTeX_OCR_rec_pretrained.pdparams">Training Model</a></td>
-<td>0.8821</td>
-<td>0.0823</td>
-<td>40.01</td>
+<td>74.55</td>
+<td>39.96</td>
 <td>1088.89 / 1088.89</td>
 <td>- / -</td>
 <td>99</td>
+<td>LaTeX-OCR is a formula recognition algorithm based on an autoregressive large model. It uses Hybrid ViT as the backbone network and a transformer as the decoder, significantly improving the accuracy of formula recognition.</td>
 </tr>
-</tbody>
 </table>
+</details>
 
-<p><b>Seal Text Detection Module Models</b>:</p>
+<details>
+<summary><b>Seal Text Detection Module Models (Optional):</b></summary>
 <table>
 <thead>
 <tr>
@@ -3995,8 +4179,10 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 </tr>
 </tbody>
 </table>
+</details>
 
-<strong>Test Environment Description:</strong>
+<details>
+<summary> <b>Test Environment Description:</b></summary>
 
   <ul>
       <li><b>Performance Test Environment</b>
@@ -4055,6 +4241,8 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 
 </details>
 
+<p><br />
+<b>If you prioritize model accuracy, choose a model with higher accuracy. If you prioritize inference speed, select a model with faster inference. If you prioritize model storage size, choose a model with a smaller storage size.</b></p>
 <h2 id="2-quick-start">2. Quick Start<a class="headerlink" href="#2-quick-start" title="Permanent link">&para;</a></h2>
 <p>The pre-trained pipelines provided by PaddleOCR allow for quick experience of their effects. You can locally use Python to experience the effects of the PP-ChatOCRv4-doc pipeline.</p>
 <p>Please note: If you encounter issues such as the program becoming unresponsive, unexpected program termination, running out of memory resources, or extremely slow inference during execution, please try adjusting the configuration according to the documentation, such as disabling unnecessary features or using lighter-weight models.</p>
@@ -4219,19 +4407,19 @@ The name of the document orientation classification model. If not set, the defau
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to load and use the document orientation classification module. If not set, the parameter value initialized by the pipeline will be used by default, initialized as <code>True</code>.</td>
+<td>Whether to load and use the document orientation classification module. If not set, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to load and use the text image unwarping module. If not set, the parameter value initialized by the pipeline will be used by default, initialized as <code>True</code>.</td>
+<td>Whether to load and use the text image unwarping module. If not set, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>use_textline_orientation</code></td>
-<td>Whether to load and use the text line orientation classification module. If not set, the parameter value initialized by the pipeline will be used by default, initialized as <code>True</code>.</td>
+<td>Whether to load and use the text line orientation classification module. If not set, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
@@ -4257,7 +4445,7 @@ The name of the document orientation classification model. If not set, the defau
 <tr>
 <td><code>layout_nms</code></td>
 <td>
-Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. If not set, the parameter will default to the value initialized in the pipeline, which is set to <code>True</code> by default.
+Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. If not set, the parameter will be set to the value initialized in the pipeline, which defaults to <code>True</code> by default.
 </td>
 <td><code>bool</code></td>
 <td></td>
@@ -4530,7 +4718,7 @@ The number of threads to use when performing inference on the CPU.</td>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{&#39;chat_res&#39;: {&#39;驾驶室准乘人数&#39;: &#39;2&#39;}}
 </span></code></pre></div>
 <p>The prediction process, API description, and output description for PP-ChatOCRv4 are as follows:</p>
-<details><summary>(1) Call the <code>PPChatOCRv4Doc</code> method to instantiate the PP-ChatOCRv4 pipeline object.</summary>
+<details><summary>(1) Call <code>PPChatOCRv4Doc</code> to instantiate the PP-ChatOCRv4 pipeline object.</summary>
 
 The relevant parameter descriptions are as follows:
 
@@ -4654,31 +4842,31 @@ The relevant parameter descriptions are as follows:
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to load and use the document orientation classification module. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>True</code>).</td>
+<td>Whether to load and use the document orientation classification module. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>True</code>).</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to load and use the document unwarping module. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>True</code>).</td>
+<td>Whether to load and use the document unwarping module. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>True</code>).</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_textline_orientation</code></td>
-<td>Whether to load and use the text line orientation classification function. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>True</code>).</td>
+<td>Whether to load and use the text line orientation classification function. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>True</code>).</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_seal_recognition</code></td>
-<td>Whether to load and use the seal text recognition sub-pipeline. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>True</code>).</td>
+<td>Whether to load and use the seal text recognition sub-pipeline. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>True</code>).</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_table_recognition</code></td>
-<td>Whether to load and use the table recognition sub-pipeline. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>True</code>).</td>
+<td>Whether to load and use the table recognition sub-pipeline. If set to<code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>True</code>).</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -4696,7 +4884,7 @@ The relevant parameter descriptions are as follows:
 </tr>
 <tr>
 <td><code>layout_nms</code></td>
-<td>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. If set to <code>None</code>, the parameter will default to the value initialized in the pipeline, which is set to <code>True</code> by default.</td>
+<td>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is set to <code>True</code> by default.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -4719,7 +4907,7 @@ The relevant parameter descriptions are as follows:
 <ul>
 <li><b>str</b>: <code>large</code>,<code>small</code>, <code>union</code>, representing whether to keep the large box, small box, or both when filtering overlapping boxes;</li>
 <li><b>dict</b>, where the key is of <b>int</b> type, representing <code>cls_id</code>, and the value is of <b>str</b> type, e.g.,<code>{0: "large", 2: "small"}</code>, meaning use "large" mode for class 0 detection boxes and "small" mode for class 2 detection boxes;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>large</code>).</li>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>large</code>).</li>
 </ul>
 </td>
 <td><code>str|dict|None</code></td>
@@ -4730,7 +4918,7 @@ The relevant parameter descriptions are as follows:
 <td>Image side length limitation for text detection.
 <ul>
 <li><b>int</b>: Any integer greater than <code>0</code>;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>960</code>).</li>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>960</code>).</li>
 </ul>
 </td>
 <td><code>int|None</code></td>
@@ -4741,7 +4929,7 @@ The relevant parameter descriptions are as follows:
 <td>Type of side length limit for text detection.
 <ul>
 <li><b>str</b>: Supports <code>min</code> and <code>max</code>. <code>min</code> ensures the shortest side of the image is not less than <code>det_limit_side_len</code>. <code>max</code> ensures the longest side of the image is not greater than <code>limit_side_len</code>;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>max</code>).</li>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>max</code>).</li>
 </ul>
 </td>
 <td><code>str|None</code></td>
@@ -4752,7 +4940,7 @@ The relevant parameter descriptions are as follows:
 <td>Detection pixel threshold. In the output probability map, pixels with scores greater than this threshold are considered text pixels.
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (<code>0.3</code>) will be used by default.</li></ul>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (defaults to <code>0.3</code>) will be used.</li></ul>
 </td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
@@ -4762,7 +4950,7 @@ The relevant parameter descriptions are as follows:
 <td>Detection box threshold. If the average score of all pixels within a detection result's bounding box is greater than this threshold, the result is considered a text region.
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (<code>0.6</code>) will be used by default.</li></ul>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (defaults to <code>0.6</code>) will be used.</li></ul>
 </td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
@@ -4772,7 +4960,7 @@ The relevant parameter descriptions are as follows:
 <td>Text detection expansion factor. This method is used to expand text regions; the larger the value, the larger the expanded area.
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (<code>2.0</code>) will be used by default.</li></ul>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (defaults to <code>2.0</code>) will be used.</li></ul>
 </td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
@@ -4782,7 +4970,7 @@ The relevant parameter descriptions are as follows:
 <td>Text recognition threshold. Text results with scores greater than this threshold will be kept.
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (<code>0.0</code>, i.e., no threshold) will be used by default.</li></ul>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (defaults to <code>0.0</code>, i.e., no threshold) will be used.</li></ul>
 </td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
@@ -4792,7 +4980,7 @@ The relevant parameter descriptions are as follows:
 <td>Image side length limit for seal text detection.
 <ul>
 <li><b>int</b>: Any integer greater than <code>0</code>;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>736</code>).</li>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>736</code>).</li>
 </ul>
 </td>
 <td><code>int|None</code></td>
@@ -4803,7 +4991,7 @@ The relevant parameter descriptions are as follows:
 <td>Type of image side length limit for seal text detection.
 <ul>
 <li><b>str</b>: Supports <code>min</code> and <code>max</code>. <code>min</code> ensures the shortest side of the image is not less than <code>det_limit_side_len</code>. <code>max</code> ensures the longest side of the image is not greater than <code>limit_side_len</code>;</li>
-<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used by default (initialized to <code>min</code>).</li>
+<li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter will be used (defaults to <code>min</code>).</li>
 </ul>
 </td>
 <td><code>str|None</code></td>
@@ -4814,7 +5002,7 @@ The relevant parameter descriptions are as follows:
 <td>Detection pixel threshold. In the output probability map, pixels with scores greater than this threshold are considered text pixels.
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;
-    <li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (<code>0.2</code>) will be used by default.</li></li></ul>
+    <li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (defaults to <code>0.2</code>) will be used.</li></li></ul>
 </td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
@@ -4824,7 +5012,7 @@ The relevant parameter descriptions are as follows:
 <td>Detection box threshold. If the average score of all pixels within a detection result's bounding box is greater than this threshold, the result is considered a text region.
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;
-    <li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (<code>0.6</code>) will be used by default.</li></li></ul>
+    <li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (defaults to <code>0.6</code>) will be used.</li></li></ul>
 </td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
@@ -4834,7 +5022,7 @@ The relevant parameter descriptions are as follows:
 <td>Seal text detection expansion factor. This method is used to expand text regions; the larger the value, the larger the expanded area.
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;
-    <li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (<code>0.5</code>) will be used by default.</li></li></ul>
+    <li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (defaults to <code>0.5</code>) will be used.</li></li></ul>
 </td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
@@ -4844,7 +5032,7 @@ The relevant parameter descriptions are as follows:
 <td>Seal text recognition threshold. Text results with scores greater than this threshold will be kept.
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;
-    <li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (<code>0.0</code>, i.e., no threshold) will be used by default.</li></li></ul>
+    <li><b>None</b>: If set to <code>None</code>, the value initialized by the pipeline for this parameter (defaults to <code>0.0</code>, i.e., no threshold) will be used.</li></li></ul>
 </td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
@@ -5627,26 +5815,6 @@ To remove the page limit, please add the following configuration to the pipeline
 <td>No</td>
 </tr>
 <tr>
-<td><code>visualize</code></td>
-<td><code>boolean</code> | <code>null</code></td>
-<td>
-Whether to return the final visualization image and intermediate images during the processing.<br/>
-<ul style="margin: 0 0 0 1em; padding-left: 0em;">
-<li>If <code>true</code> is provided: return images.</li>
-<li>If <code>false</code> is provided: do not return any images.</li>
-<li>If this parameter is omitted from the request body, or if <code>null</code> is explicitly passed, the behavior will follow the value of <code>Serving.visualize</code> in the pipeline configuration.</li>
-</ul>
-<br/>
-For example, adding the following setting to the pipeline config file:<br/>
-<pre><code>Serving:
-  visualize: False
-</code></pre>
-will disable image return by default. This behavior can be overridden by explicitly setting the <code>visualize</code> parameter in the request.<br/>
-If neither the request body nor the configuration file is set (If <code>visualize</code> is set to <code>null</code> in the request and  not defined in the configuration file), the image is returned by default.
-</td>
-<td>No</td>
-</tr>
-<tr>
 <td><code>useDocOrientationClassify</code></td>
 <td><code>boolean</code> | <code>null</code></td>
 <td>Please refer to the description of the <code>use_doc_orientation_classify</code> parameter of the pipeline object's <code>visual_predict</code> method.</td>
@@ -5766,6 +5934,26 @@ If neither the request body nor the configuration file is set (If <code>visualiz
 <td>Please refer to the description of the <code>seal_rec_score_thresh</code> parameter of the pipeline object's <code>visual_predict</code> method.</td>
 <td>No</td>
 </tr>
+<tr>
+<td><code>visualize</code></td>
+<td><code>boolean</code> | <code>null</code></td>
+<td>
+Whether to return the final visualization image and intermediate images during the processing.<br/>
+<ul style="margin: 0 0 0 1em; padding-left: 0em;">
+<li>If <code>true</code> is provided: return images.</li>
+<li>If <code>false</code> is provided: do not return any images.</li>
+<li>If this parameter is omitted from the request body, or if <code>null</code> is explicitly passed, the behavior will follow the value of <code>Serving.visualize</code> in the pipeline configuration.</li>
+</ul>
+<br/>
+For example, adding the following setting to the pipeline config file:<br/>
+<pre><code>Serving:
+  visualize: False
+</code></pre>
+will disable image return by default. This behavior can be overridden by explicitly setting the <code>visualize</code> parameter in the request.<br/>
+If neither the request body nor the configuration file is set (If <code>visualize</code> is set to <code>null</code> in the request and  not defined in the configuration file), the image is returned by default.
+</td>
+<td>No</td>
+</tr>
 </tbody>
 </table>
 <ul>
@@ -5810,7 +5998,7 @@ If neither the request body nor the configuration file is set (If <code>visualiz
 <tr>
 <td><code>prunedResult</code></td>
 <td><code>object</code></td>
-<td>A simplified version of the <code>res</code> field in the JSON representation of the results generated by the pipeline's <code>visual_predict</code> method, with the <code>input_path</code> and the <code>page_index</code> fields removed.</td>
+<td>A simplified version of the <code>res</code> field in the JSON representation of the <code>layout_parsing_result</code> generated by the pipeline object's <code>visual_predict</code> method, with the <code>input_path</code> and <code>page_index</code> fields removed.</td>
 </tr>
 <tr>
 <td><code>outputImages</code></td>
@@ -5850,13 +6038,13 @@ If neither the request body nor the configuration file is set (If <code>visualiz
 </tr>
 <tr>
 <td><code>minCharacters</code></td>
-<td><code>integer</code> | <code>null</code></td>
-<td>Minimum data length to enable the vector database.</td>
+<td><code>integer</code></td>
+<td>Please refer to the description of the <code>min_characters</code> parameter of the pipeline object's <code>build_vector</code> method.</td>
 <td>No</td>
 </tr>
 <tr>
 <td><code>blockSize</code></td>
-<td><code>int</code> | <code>null</code></td>
+<td><code>integer</code></td>
 <td>Please refer to the description of the <code>block_size</code> parameter of the pipeline object's <code>build_vector</code> method.</td>
 <td>No</td>
 </tr>
@@ -5975,7 +6163,7 @@ If neither the request body nor the configuration file is set (If <code>visualiz
 </tr>
 <tr>
 <td><code>useVectorRetrieval</code></td>
-<td><code>boolean</code> | <code>null</code></td>
+<td><code>boolean</code></td>
 <td>Please refer to the description of the <code>use_vector_retrieval</code> parameter of the pipeline object's <code>chat</code> method.</td>
 <td>No</td>
 </tr>
@@ -5988,12 +6176,12 @@ If neither the request body nor the configuration file is set (If <code>visualiz
 <tr>
 <td><code>minCharacters</code></td>
 <td><code>integer</code></td>
-<td>Minimum data length to enable the vector database.</td>
+<td>Please refer to the description of the <code>min_characters</code> parameter of the pipeline object's <code>chat</code> method.</td>
 <td>No</td>
 </tr>
 <tr>
 <td><code>textTaskDescription</code></td>
-<td><code>string</code> | <code>null</code></td>
+<td><code>string</code></td>
 <td>Please refer to the description of the <code>text_task_description</code> parameter of the pipeline object's <code>chat</code> method.</td>
 <td>No</td>
 </tr>
@@ -6059,7 +6247,7 @@ If neither the request body nor the configuration file is set (If <code>visualiz
 </tr>
 <tr>
 <td><code>mllmIntegrationStrategy</code></td>
-<td><code>string</code> | <code>null</code></td>
+<td><code>string</code></td>
 <td>Please refer to the description of the <code>mllm_integration_strategy</code> parameter of the pipeline object's <code>chat</code> method.</td>
 <td>No</td>
 </tr>
@@ -6115,7 +6303,7 @@ import sys
 import requests
 
 
-API_BASE_URL = "http://0.0.0.0:8080"
+API_BASE_URL = "http://127.0.0.1:8080"
 
 image_path = "./demo.jpg"
 keys = ["name"]
@@ -6870,10 +7058,10 @@ function send_post_raw($url, $data) {
 <li>Exporting Pipeline Configuration Files</li>
 </ol>
 <p>You can call the <code>export_paddlex_config_to_yaml</code> method of the pipeline object to export the current pipeline configuration to a YAML file. Here is an example:</p>
-<div class="language-Python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">PPChatOCRv4</span>
+<div class="language-Python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">PPChatOCRv4Doc</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PPChatOCRv4</span><span class="p">()</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">pipeline</span><span class="o">.</span><span class="n">export_paddlex_config_to_yaml</span><span class="p">(</span><span class="s2">&quot;PP-ChatOCRv4.yaml&quot;</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PPChatOCRv4Doc</span><span class="p">()</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">pipeline</span><span class="o">.</span><span class="n">export_paddlex_config_to_yaml</span><span class="p">(</span><span class="s2">&quot;PP-ChatOCRv4-doc.yaml&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <ol>
 <li>Editing Pipeline Configuration Files</li>
@@ -6905,15 +7093,15 @@ function send_post_raw($url, $data) {
 <li>Loading Pipeline Configuration Files in CLI</li>
 </ol>
 <p>By specifying the path to the PaddleX pipeline configuration file using the <code>--paddlex_config</code> parameter, PaddleOCR will read its contents as the configuration for inference. Here is an example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>paddleocr<span class="w"> </span>pp_chatocrv4_doc<span class="w"> </span>--paddlex_config<span class="w"> </span>PP-ChatOCRv4.yaml<span class="w"> </span>...
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>paddleocr<span class="w"> </span>pp_chatocrv4_doc<span class="w"> </span>--paddlex_config<span class="w"> </span>PP-ChatOCRv4-doc.yaml<span class="w"> </span>...
 </span></code></pre></div>
 <ol>
 <li>Loading Pipeline Configuration Files in Python API</li>
 </ol>
 <p>When initializing the pipeline object, you can pass the path to the PaddleX pipeline configuration file or a configuration dictionary through the <code>paddlex_config</code> parameter, and PaddleOCR will use it as the configuration for inference. Here is an example:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">PPChatOCRv4</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">PPChatOCRv4Doc</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PPChatOCRv4</span><span class="p">(</span><span class="n">paddlex_config</span><span class="o">=</span><span class="s2">&quot;PP-ChatOCRv4.yaml&quot;</span><span class="p">)</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PPChatOCRv4Doc</span><span class="p">(</span><span class="n">paddlex_config</span><span class="o">=</span><span class="s2">&quot;PP-ChatOCRv4-doc.yaml&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 
 
@@ -6937,7 +7125,7 @@ function send_post_raw($url, $data) {
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 03:37:36 UTC">June 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 29, 2025 06:51:28 UTC">June 29, 2025</span>
   </span>
 
     
@@ -6947,7 +7135,7 @@ function send_post_raw($url, $data) {
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 03:37:36 UTC">June 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 29, 2025 06:51:28 UTC">June 29, 2025</span>
   </span>
 
     
