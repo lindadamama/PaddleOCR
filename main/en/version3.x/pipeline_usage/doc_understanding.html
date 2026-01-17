@@ -4376,7 +4376,8 @@ You're not viewing the latest version.
 <tbody>
 <tr>
 <td><code>input</code></td>
-<td>Data to be predicted,  required.
+<td><b>Meaning:</b>Data to be predicted,  required.<br/>
+<b>Description:</b>
 "{'image': 'https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/medal_table.png', 'query': 'Recognize the content of this table and output it in markdown format'}".
 </td>
 <td><code>str</code></td>
@@ -4384,31 +4385,41 @@ You're not viewing the latest version.
 </tr>
 <tr>
 <td><code>save_path</code></td>
-<td>Specify the path for saving the inference result file. If not set, the inference result will not be saved locally.</td>
+<td><b>Meaning:</b>Specify the path for saving the inference result file.<br/>
+<b>Description:</b> 
+If not set, the inference result will not be saved locally.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_understanding_model_name</code></td>
-<td>The name of the document understanding model. If not set, the default model of the pipeline will be used.</td>
+<td><b>Meaning:</b>The name of the document understanding model.<br/>
+<b>Description:</b> 
+If not set, the default model of the pipeline will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_understanding_model_dir</code></td>
-<td>The directory path of the document understanding model. If not set, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the document understanding model.<br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_understanding_batch_size</code></td>
-<td>The batch size of the document understanding model. If not set, the default batch size will be set to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size of the document understanding model.<br/>
+<b>Description:</b> 
+If not set, the default batch size will be set to <code>1</code>.</td>
 <td><code>int</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>The device used for inference. Supports specifying a specific card number:
+<td><b>Meaning:</b>The device used for inference.<br/> 
+<b>Description:</b> 
+Supports specifying a specific card number:
 <ul>
 <li><b>CPU</b>: For example, <code>cpu</code> indicates using the CPU for inference;</li>
 <li><b>GPU</b>: For example, <code>gpu:0</code> indicates using the first GPU for inference;</li>
@@ -4425,7 +4436,7 @@ You're not viewing the latest version.
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
@@ -4465,25 +4476,33 @@ You're not viewing the latest version.
 <tbody>
 <tr>
 <td><code>doc_understanding_model_name</code></td>
-<td>The name of the document understanding model. If set to <code>None</code>, the default model of the pipeline will be used.</td>
+<td><b>Meaning:</b>The name of the document understanding model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default model of the pipeline will be used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_understanding_model_dir</code></td>
-<td>The directory path of the document understanding model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the document understanding model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_understanding_batch_size</code></td>
-<td>The batch size of the document understanding model. If set to <code>None</code>, the default batch size will be set to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size of the document understanding model.<br/> 
+<b>Description:</b> 
+If set to <code>None</code>, the default batch size will be set to <code>1</code>.</td>
 <td><code>int|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>The device used for inference. Supports specifying a specific card number:
+<td><b>Meaning:</b>The device used for inference. <br/>
+<b>Description:</b> 
+Supports specifying a specific card number:
 <ul>
 <li><b>CPU</b>: For example, <code>cpu</code> indicates using the CPU for inference;</li>
 <li><b>GPU</b>: For example, <code>gpu:0</code> indicates using the first GPU for inference;</li>
@@ -4501,7 +4520,7 @@ You're not viewing the latest version.
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -4522,7 +4541,8 @@ You're not viewing the latest version.
 </thead>
 <tr>
 <td><code>input</code></td>
-<td>Data to be predicted, currently only supports dictionary type input
+<td><b>Meaning:</b>Data to be predicted, currently only supports dictionary type input<br/>
+<b>Description:</b>
 <ul>
   <li><b>Python Dict</b>: The input format for PP-DocBee is: <code>{"image":/path/to/image, "query": user question}</code>, representing the input image and corresponding user question.</li>
 </ul>

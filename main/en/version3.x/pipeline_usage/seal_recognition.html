@@ -2748,84 +2748,6 @@ You're not viewing the latest version.
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-development-integrationdeployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Development Integration/Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-custom-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Custom Development
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Custom Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-model-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Model Fine-Tuning
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-model-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Model Application
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.2 Model Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#421-specify-local-model-path-via-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.1 Specify Local Model Path via Parameters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#422-specify-local-model-path-via-configuration-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.2 Specify Local Model Path via Configuration File
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4277,84 +4199,6 @@ You're not viewing the latest version.
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-development-integrationdeployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Development Integration/Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-custom-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Custom Development
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Custom Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-model-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Model Fine-Tuning
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-model-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Model Application
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.2 Model Application">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#421-specify-local-model-path-via-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.1 Specify Local Model Path via Parameters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#422-specify-local-model-path-via-configuration-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.2 Specify Local Model Path via Configuration File
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5139,7 +4983,8 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 <tbody>
 <tr>
 <td><code>input</code></td>
-<td>Data to be predicted, required.
+<td><b>Meaning:</b>Data to be predicted, required.<br/>
+<b>Description:</b>
 Local path of image or PDF file, e.g., <code>/root/data/img.jpg</code>; <b>URL link</b>, e.g., network URL of image or PDF file: <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/seal_text_det.png">Example</a>; <b>Local directory</b>, the directory should contain images to be predicted, e.g., local path: <code>/root/data/</code> (currently does not support prediction of PDF files in directories; PDF files must be specified with a specific file path).
 </td>
 <td><code>str</code></td>
@@ -5148,122 +4993,157 @@ Local path of image or PDF file, e.g., <code>/root/data/img.jpg</code>; <b>URL l
 <tr>
 <td><code>save_path</code></td>
 <td>
-Specify the path to save the inference results file. If not set, the inference results will not be saved locally.</td>
+<b>Meaning:</b>Specify the path to save the inference results file.<br/>
+<b>Description:</b> 
+If not set, the inference results will not be saved locally.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_name</code></td>
 <td> 
-The name of the document orientation classification model. If not set, the default model in pipeline will be used.</td>
+<b>Meaning:</b>The name of the document orientation classification model.<br/>
+<b>Description:</b> 
+If not set, the default model in pipeline will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_dir</code></td>
-<td>The directory path of the document orientation classification model. If not set, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the document orientation classification model.<br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_name</code></td>
-<td> The name of the text image unwarping model. If not set, the default model in pipeline will be used.</td>
+<td> <b>Meaning:</b>The name of the text image unwarping model. <br/>
+<b>Description:</b> 
+If not set, the default model in pipeline will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_dir</code></td>
-<td> The directory path of the  text image unwarping model. If not set, the official model will be downloaded.
-</td>
+<td> <b>Meaning:</b>The directory path of the  text image unwarping model. <br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_name</code></td>
 <td>
-The name of the layout detection model. If not set, the default model in pipeline will be used. </td>
+<b>Meaning:</b>The name of the layout detection model. <br/>
+<b>Description:</b> 
+If not set, the default model in pipeline will be used. </td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_dir</code></td>
-<td> The directory path of the  layout detection model. If not set, the official model will be downloaded.
-</td>
+<td> <b>Meaning:</b>The directory path of the  layout detection model. <br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>seal_text_detection_model_name</code></td>
-<td>The name of the seal text detection model. If not set, the pipeline's default model will be used.</td>
+<td><b>Meaning:</b>The name of the seal text detection model.<br/>
+<b>Description:</b> 
+If not set, the pipeline's default model will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>seal_text_detection_model_dir</code></td>
-<td>The directory path of the seal text detection model. If not set, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the seal text detection model. <br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>  
 <td><code>text_recognition_model_name</code></td>  
-<td>Name of the text recognition model. If not set, the default pipeline model is used.</td>  
+<td><b>Meaning:</b>Name of the text recognition model. <br/>
+<b>Description:</b> 
+If not set, the default pipeline model is used.</td>  
 <td><code>str</code></td>  
 <td></td>  
 </tr>  
 <tr>  
 <td><code>text_recognition_model_dir</code></td>  
-<td>Directory path of the text recognition model. If not set, the official model is downloaded.</td>  
+<td><b>Meaning:</b>Directory path of the text recognition model. <br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.</td>  
 <td><code>str</code></td>  
 <td></td>  
 </tr>
 <tr>  
 <td><code>text_recognition_batch_size</code></td>  
-<td>Batch size for the text recognition model. If not set, defaults to <code>1</code>.</td>  
+<td><b>Meaning:</b>Batch size for the text recognition model. <br/>
+<b>Description:</b> 
+If not set, defaults to <code>1</code>.</td>  
 <td><code>int</code></td>  
 <td></td>  
 </tr>
 <tr>  
 <td><code>use_doc_orientation_classify</code></td>  
-<td>Whether to load and use document orientation classification module. If not set, defaults to pipeline initialization value (<code>True</code>).</td>  
+<td><b>Meaning:</b>Whether to load and use document orientation classification module. <br/>
+<b>Description:</b> 
+If not set, defaults to pipeline initialization value (<code>True</code>).</td>  
 <td><code>bool</code></td>  
 <td></td>  
 </tr>  
 <tr>  
 <td><code>use_doc_unwarping</code></td>  
-<td>Whether to load and use text image correction module. If not set, defaults to pipeline initialization value (<code>True</code>).</td>  
+<td><b>Meaning:</b>Whether to load and use text image correction module. <br/>
+<b>Description:</b> 
+If not set, defaults to pipeline initialization value (<code>True</code>).</td>  
 <td><code>bool</code></td>  
 <td></td>  
 </tr>   
 <tr>
 <td><code>use_layout_detection</code></td>
 <td>
-Whether to load and use the layout detection module. If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
+<b>Meaning:</b>Whether to load and use the layout detection module. <br/>
+<b>Description:</b> 
+If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_threshold</code></td>
-<td>Score threshold for the layout model. Any value between <code>0-1</code>. If not set, the default value is used, which is <code>0.5</code>.
+<td><b>Meaning:</b>Score threshold for the layout model. <br/>
+<b>Description:</b>
+Any value between <code>0-1</code>. If not set, the default value is used, which is <code>0.5</code>.
 </td>
 <td><code>float</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_nms</code></td>
-<td>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. If not set, the parameter will be set to the value initialized in the pipeline, which is set to <code>True</code> by default.</td>
+<td><b>Meaning:</b>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. <br/>
+<b>Description:</b> 
+If not set, the parameter will be set to the value initialized in the pipeline, which is set to <code>True</code> by default.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_unclip_ratio</code></td>
-<td>Unclip ratio for detected boxes in layout detection model. Any float > <code>0</code>. If not set, the default is <code>1.0</code>.
+<td><b>Meaning:</b>Unclip ratio for detected boxes in layout detection model. <br/>
+<b>Description:</b>
+Any float > <code>0</code>. If not set, the default is <code>1.0</code>.
 </td>
 <td><code>float</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_merge_bboxes_mode</code></td>
-<td>The merging mode for the detection boxes output by the model in layout region detection.
+<td><b>Meaning:</b>The merging mode for the detection boxes output by the model in layout region detection. <br/>
+<b>Description:</b>
 <ul>
 <li><b>large</b>: When set to "large", only the largest outer bounding box will be retained for overlapping bounding boxes, and the inner overlapping boxes will be removed;</li>
 <li><b>small</b>: When set to "small", only the smallest inner bounding boxes will be retained for overlapping bounding boxes, and the outer overlapping boxes will be removed;</li>
@@ -5275,7 +5155,8 @@ Whether to load and use the layout detection module. If not set, the parameter w
 </tr>
 <tr>
 <td><code>seal_det_limit_side_len</code></td>
-<td>Image side length limit for seal text detection.
+<td><b>Meaning:</b>Image side length limit for seal text detection. <br/>
+<b>Description:</b>
 Any integer > <code>0</code>. If not set, the default is <code>736</code>.
 </td>
 <td><code>int</code></td>
@@ -5283,7 +5164,8 @@ Any integer > <code>0</code>. If not set, the default is <code>736</code>.
 </tr>
 <tr>
 <td><code>seal_det_limit_type</code></td>
-<td>Limit type for image side in seal text detection.
+<td><b>Meaning:</b>Limit type for image side in seal text detection. <br/>
+<b>Description:</b>
 Supports <code>min</code> and <code>max</code>; <code>min</code> ensures shortest side ≥ <code>det_limit_side_len</code>, <code>max</code> ensures longest side ≤ <code>limit_side_len</code>. If not set, the default is <code>min</code>.
 </td>
 <td><code>str</code></td>
@@ -5291,23 +5173,26 @@ Supports <code>min</code> and <code>max</code>; <code>min</code> ensures shortes
 </tr>
 <tr>
 <td><code>seal_det_thresh</code></td>
-<td>Pixel threshold. Pixels with scores above this value in the probability map are considered text.
-any float > <code>0</code>. If not set, the default is <code>0.2</code>.
+<td><b>Meaning:</b>Pixel threshold. Pixels with scores above this value in the probability map are considered text. <br/>
+<b>Description:</b>
+Any float > <code>0</code>. If not set, the default is <code>0.2</code>.
 </td>
 <td><code>float</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>seal_det_box_thresh</code></td>
-<td>Box threshold. Boxes with average pixel scores above this value are considered text regions.
-any float > <code>0</code>. If not set, the default is <code>0.6</code>.
+<td><b>Meaning:</b>Box threshold. Boxes with average pixel scores above this value are considered text regions. <br/>
+<b>Description:</b>
+Any float > <code>0</code>. If not set, the default is <code>0.6</code>.
 </td>
 <td><code>float</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>seal_det_unclip_ratio</code></td>
-<td>Expansion ratio for seal text detection. Higher value means larger expansion area.
+<td><b>Meaning:</b>Expansion ratio for seal text detection. Higher value means larger expansion area. <br/>
+<b>Description:</b>
 Any float > <code>0</code>. If not set, the default is <code>0.5</code>.
 </td>
 <td><code>float</code></td>
@@ -5315,7 +5200,8 @@ Any float > <code>0</code>. If not set, the default is <code>0.5</code>.
 </tr>
 <tr>
 <td><code>seal_rec_score_thresh</code></td>
-<td>Recognition score threshold. Text results above this value will be kept.
+<td><b>Meaning:</b>Recognition score threshold. Text results above this value will be kept. <br/>
+<b>Description:</b>
 Any float > <code>0</code>. If not set, the default is <code>0.0</code> (no threshold).
 </td>
 <td><code>float</code></td>
@@ -5323,7 +5209,9 @@ Any float > <code>0</code>. If not set, the default is <code>0.0</code> (no thre
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>The device used for inference. Support for specifying specific card numbers:
+<td><b>Meaning:</b>The device used for inference.<br/>
+<b>Description:</b>
+Support for specifying specific card numbers:
 <ul>
 <li><b>CPU</b>: For example, <code>cpu</code> indicates using the CPU for inference.</li>
 <li><b>GPU</b>: For example, <code>gpu:0</code> indicates using the first GPU for inference.</li>
@@ -5346,7 +5234,9 @@ Any float > <code>0</code>. If not set, the default is <code>0.0</code> (no thre
 </tr>
 <tr>
 <td><code>use_tensorrt</code></td>
-<td>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<td><b>Meaning:</b>Whether to use the Paddle Inference TensorRT subgraph engine.<br/>
+<b>Description:</b> 
+If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
 For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6), and it is recommended to install TensorRT 8.6.1.6.<br/>
 
 </td>
@@ -5355,40 +5245,42 @@ For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6)
 </tr>
 <tr>
 <td><code>precision</code></td>
-<td>The computational precision, such as fp32, fp16.</td>
+<td><b>Meaning:</b>The computational precision, such as fp32, fp16.</td>
 <td><code>str</code></td>
 <td><code>fp32</code></td>
 </tr>
 <tr>
 <td><code>enable_mkldnn</code></td>
-<td>Whether to enable MKL-DNN acceleration for inference. If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
+<td><b>Meaning:</b>Whether to enable MKL-DNN acceleration for inference.<br/>
+<b>Description:</b> 
+If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
 <td><code>bool</code></td>
 <td><code>True</code></td>
 </tr>
 <tr>
 <td><code>mkldnn_cache_capacity</code></td>
 <td>
-MKL-DNN cache capacity.
+<b>Meaning:</b>MKL-DNN cache capacity.
 </td>
 <td><code>int</code></td>
 <td><code>10</code></td>
 </tr>
 <tr>
 <td><code>cpu_threads</code></td>
-<td>The number of threads used for inference on the CPU.</td>
+<td><b>Meaning:</b>The number of threads used for inference on the CPU.</td>
 <td><code>int</code></td>
 <td><code>8</code></td>
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 </details>
-<p><br /></p>
+<p><br/></p>
 <p>After running, the results will be printed to the terminal, as follows:</p>
 <p><div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">{</span><span class="s1">&#39;res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span><span class="s1">&#39;./seal_text_det.png&#39;</span>,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_preprocessor&#39;</span>:<span class="w"> </span>True,<span class="w"> </span><span class="s1">&#39;use_layout_detection&#39;</span>:<span class="w"> </span>True<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;doc_preprocessor_res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_orientation_classify&#39;</span>:<span class="w"> </span>False,<span class="w"> </span><span class="s1">&#39;use_doc_unwarping&#39;</span>:<span class="w"> </span>False<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;angle&#39;</span>:<span class="w"> </span>-1<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;layout_det_res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;boxes&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;cls_id&#39;</span>:<span class="w"> </span><span class="m">16</span>,<span class="w"> </span><span class="s1">&#39;label&#39;</span>:<span class="w"> </span><span class="s1">&#39;seal&#39;</span>,<span class="w"> </span><span class="s1">&#39;score&#39;</span>:<span class="w"> </span><span class="m">0</span>.975529670715332,<span class="w"> </span><span class="s1">&#39;coordinate&#39;</span>:<span class="w"> </span><span class="o">[</span><span class="m">6</span>.191284,<span class="w"> </span><span class="m">0</span>.16680908,<span class="w"> </span><span class="m">634</span>.39325,<span class="w"> </span><span class="m">628</span>.85345<span class="o">]}]}</span>,<span class="w"> </span><span class="s1">&#39;seal_res_list&#39;</span>:<span class="w"> </span><span class="o">[{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_preprocessor&#39;</span>:<span class="w"> </span>False,<span class="w"> </span><span class="s1">&#39;use_textline_orientation&#39;</span>:<span class="w"> </span>False<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;dt_polys&#39;</span>:<span class="w"> </span><span class="o">[</span>array<span class="o">([[</span><span class="m">320</span>,<span class="w">  </span><span class="m">38</span><span class="o">]</span>,
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">       </span>...,
@@ -5441,91 +5333,120 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 <tbody>
 <tr>
 <td><code>doc_orientation_classify_model_name</code></td>
-<td>Name of the document orientation classification model. If set to <code>None</code>, the pipeline default model is used.</td>
+<td><b>Meaning:</b>Name of the document orientation classification model.<br/>
+<b>Description:</b> 
+If set to <code>None</code>, the pipeline default model is used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_dir</code></td>
-<td>Directory path of the document orientation classification model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>Directory path of the document orientation classification model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_name</code></td>
-<td>Name of the document unwarping model. If set to <code>None</code>, the pipeline default model is used.</td>
+<td><b>Meaning:</b>Name of the document unwarping model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the pipeline default model is used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_dir</code></td>
-<td>Directory path of the document unwarping model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>Directory path of the document unwarping model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_name</code></td>
-<td>Name of the layout detection model. If set to <code>None</code>, the pipeline default model is used.</td>
+<td><b>Meaning:</b>Name of the layout detection model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the pipeline default model is used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_dir</code></td>
-<td>Directory path of the layout detection model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>Directory path of the layout detection model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>seal_text_detection_model_name</code></td>
-<td>Name of the seal text detection model. If set to <code>None</code>, the default model will be used.</td>
+<td><b>Meaning:</b>Name of the seal text detection model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default model will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>seal_text_detection_model_dir</code></td>
-<td>Directory of the seal text detection model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>Directory of the seal text detection model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>text_recognition_model_name</code></td>
-<td>Name of the text recognition model. If set to <code>None</code>, the pipeline default model is used.</td>
+<td><b>Meaning:</b>Name of the text recognition model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the pipeline default model is used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>text_recognition_model_dir</code></td>
-<td>Directory path of the text recognition model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>Directory path of the text recognition model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>text_recognition_batch_size</code></td>
-<td>Batch size for the text recognition model. If set to <code>None</code>, the default batch size is <code>1</code>.</td>
+<td><b>Meaning:</b>Batch size for the text recognition model.<br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default batch size is <code>1</code>.</td>
 <td><code>int|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to enable the document orientation classification module. If set to <code>None</code>, the default value is <code>True</code>.</td>
+<td><b>Meaning:</b>Whether to enable the document orientation classification module. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default value is <code>True</code>.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to enable the document image unwarping module. If set to <code>None</code>, the default value is <code>True</code>.</td>
+<td><b>Meaning:</b>Whether to enable the document image unwarping module. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default value is <code>True</code>.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_layout_detection</code></td>
-<td>Whether to load and use the layout detection module. If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
+<td><b>Meaning:</b>Whether to load and use the layout detection module. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_threshold</code></td>
-<td>Score threshold for the layout model.
+<td><b>Meaning:</b>Score threshold for the layout model. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>float</b>: Any float between <code>0-1</code>;</li>
 <li><b>dict</b>: <code>{0:0.1}</code> where the key is the class ID and the value is the threshold for that class;</li>
@@ -5537,13 +5458,16 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>layout_nms</code></td>
-<td>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is set to <code>True</code> by default.</td>
+<td><b>Meaning:</b>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is set to <code>True</code> by default.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_unclip_ratio</code></td>
-<td>Expansion ratio for the bounding boxes from the layout detection model.
+<td><b>Meaning:</b>Expansion ratio for the bounding boxes from the layout detection model. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
 <li><b>Tuple[float,float]</b>: Expansion ratios in horizontal and vertical directions;</li>
@@ -5556,7 +5480,8 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>layout_merge_bboxes_mode</code></td>
-<td>Filtering method for overlapping boxes in layout detection.
+<td><b>Meaning:</b>Filtering method for overlapping boxes in layout detection.<br/>
+<b>Description:</b> 
 <ul>
 <li><b>str</b>: Options include <code>large</code>, <code>small</code>, and <code>union</code> to retain the larger box, smaller box, or both;</li>
 <li><b>dict</b>: A dictionary with <b>int</b> keys representing <code>cls_id</code>, and <b>str</b> values, e.g., <code>{0: "large", 2: "small"}</code> means using different modes for different classes;</li>
@@ -5568,7 +5493,8 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>seal_det_limit_side_len</code></td>
-<td>Image side length limit for seal text detection.
+<td><b>Meaning:</b>Image side length limit for seal text detection. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>int</b>: Any integer greater than <code>0</code>;</li>
 <li><b>None</b>: If set to <code>None</code>, the default value is <code>736</code>.</li>
@@ -5579,7 +5505,8 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>seal_det_limit_type</code></td>
-<td>Limit type for seal text detection image side length.
+<td><b>Meaning:</b>Limit type for seal text detection image side length. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>str</b>: Supports <code>min</code> and <code>max</code>. <code>min</code> ensures the shortest side is no less than <code>det_limit_side_len</code>, while <code>max</code> ensures the longest side is no greater than <code>limit_side_len</code>;</li>
 <li><b>None</b>: If set to <code>None</code>, the default value is <code>min</code>.</li>
@@ -5590,7 +5517,8 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>seal_det_thresh</code></td>
-<td>Pixel threshold for detection. Pixels with scores greater than this value in the probability map are considered text pixels.
+<td><b>Meaning:</b>Pixel threshold for detection. Pixels with scores greater than this value in the probability map are considered text pixels. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
 <li><b>None</b>: If set to <code>None</code>, the default value is <code>0.2</code>.</li>
@@ -5601,7 +5529,8 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>seal_det_box_thresh</code></td>
-<td>Bounding box threshold. If the average score of all pixels inside a detection box exceeds this threshold, it is considered a text region.
+<td><b>Meaning:</b>Bounding box threshold. If the average score of all pixels inside a detection box exceeds this threshold, it is considered a text region. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
 <li><b>None</b>: If set to <code>None</code>, the default value is <code>0.6</code>.</li>
@@ -5612,7 +5541,8 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>seal_det_unclip_ratio</code></td>
-<td>Expansion ratio for seal text detection. The larger the value, the larger the expanded area.
+<td><b>Meaning:</b>Expansion ratio for seal text detection. The larger the value, the larger the expanded area. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
 <li><b>None</b>: If set to <code>None</code>, the default value is <code>0.5</code>.</li>
@@ -5623,7 +5553,8 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>seal_rec_score_thresh</code></td>
-<td>Score threshold for seal text recognition. Text results with scores above this threshold will be retained.
+<td><b>Meaning:</b>Score threshold for seal text recognition. Text results with scores above this threshold will be retained. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
 <li><b>None</b>: If set to <code>None</code>, the default value is <code>0.0</code> (no threshold).</li>
@@ -5634,7 +5565,9 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>Device used for inference. Supports specifying device ID:
+<td><b>Meaning:</b>Device used for inference. <br/>
+<b>Description:</b> 
+Supports specifying device ID:
 <ul>
 <li><b>CPU</b>: e.g., <code>cpu</code> means using CPU for inference;</li>
 <li><b>GPU</b>: e.g., <code>gpu:0</code> means using GPU 0;</li>
@@ -5652,13 +5585,14 @@ The visualized results are saved under <code>save_path</code>, and the visualize
 </tr>
 <tr>
 <td><code>enable_hpi</code></td>
-<td>Whether to enable high-performance inference.</td>
+<td><b>Meaning:</b>Whether to enable high-performance inference.</td>
 <td><code>bool</code></td>
 <td><code>False</code></td>
 </tr>
 <tr>
 <td><code>use_tensorrt</code></td>
-<td>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<td><b>Meaning:</b>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<b>Description:</b> 
 For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6), and it is recommended to install TensorRT 8.6.1.6.<br/>
 
 </td>
@@ -5667,33 +5601,35 @@ For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6)
 </tr>
 <tr>
 <td><code>precision</code></td>
-<td>Computation precision, e.g., fp32, fp16.</td>
+<td><b>Meaning:</b>Computation precision, e.g., fp32, fp16.</td>
 <td><code>str</code></td>
 <td><code>"fp32"</code></td>
 </tr>
 <tr>
 <td><code>enable_mkldnn</code></td>
-<td>Whether to enable MKL-DNN acceleration for inference. If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
+<td><b>Meaning:</b>Whether to enable MKL-DNN acceleration for inference. <br/>
+<b>Description:</b> 
+If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
 <td><code>bool</code></td>
 <td><code>True</code></td>
 </tr>
 <tr>
 <td><code>mkldnn_cache_capacity</code></td>
 <td>
-MKL-DNN cache capacity.
+<b>Meaning:</b>MKL-DNN cache capacity.
 </td>
 <td><code>int</code></td>
 <td><code>10</code></td>
 </tr>
 <tr>
 <td><code>cpu_threads</code></td>
-<td>Number of threads used for inference on CPU.</td>
+<td><b>Meaning:</b>Number of threads used for inference on CPU.</td>
 <td><code>int</code></td>
 <td><code>8</code></td>
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td>Path to the PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b>Path to the PaddleX pipeline configuration file.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -5712,7 +5648,9 @@ MKL-DNN cache capacity.
 </thead>
 <tr>
 <td><code>input</code></td>
-<td>Input data to be predicted. Required. Supports multiple types:
+<td><b>Meaning:</b>Input data to be predicted. Required. <br/>
+<b>Description:</b> 
+Supports multiple types:
 <ul>
 <li><b>Python Var</b>: Image data represented by <code>numpy.ndarray</code>;</li>
 <li><b>str</b>: Local path of an image or PDF file, e.g., <code>/root/data/img.jpg</code>; <b>URL link</b>, e.g., the network URL of an image or PDF file: <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/seal_text_det.png">Example</a>; <b>Local directory</b>, containing images to be predicted, e.g., <code>/root/data/</code> (currently does not support prediction of PDF files in directories; PDF files must be specified with an exact file path);</li>
@@ -5724,80 +5662,99 @@ MKL-DNN cache capacity.
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to use the document orientation classification module during inference.</td>
+<td><b>Meaning:</b>Whether to use the document orientation classification module during inference.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to use the text image correction module during inference.</td>
+<td><b>Meaning:</b>Whether to use the text image correction module during inference.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_layout_detection</code></td>
 <td>
-Whether to use the layout detection module during inference. </td>
+<b>Meaning:</b>Whether to use the layout detection module during inference. </td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_threshold</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters.<br/>
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>float|dict|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_nms</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters.<br/>
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_unclip_ratio</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters.<br/> 
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>float|Tuple[float,float]|dict|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_merge_bboxes_mode</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>str|dict|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>seal_det_limit_side_len</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td>Same meaning as the instantiation parameters. 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>int|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>seal_det_limit_type</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters.<br/>
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>seal_det_thresh</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>seal_det_box_thresh</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>seal_det_unclip_ratio</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>seal_rec_score_thresh</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>float|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -5864,100 +5821,75 @@ Whether to use the layout detection module during inference. </td>
 <td>None</td>
 </tr>
 </table>
+<ul>
+<li>Calling the<code>print()</code> method will print the results to the terminal, and the explanations of the printed content are as follows:
+    <ol start="1" type="1">
+    <li><code>input_path</code>: <code>(str)</code> The input path of the image to be predicted.</li>
+    <li><code>model_settings</code>: <code>(Dict[str, bool])</code> The model parameters required for pipeline configuration.
+        <ol>
+        <li><code>use_doc_preprocessor</code>: <code>(bool)</code> Controls whether to enable the document preprocessing sub-pipeline.</li>
+        <li><code>use_layout_detection</code>: <code>(bool)</code> Controls whether to enable the layout detection sub-module.</li>
+        </ol>
+    </li>
+    <li><code>layout_det_res</code>: <code>(Dict[str, Union[List[numpy.ndarray], List[float]]])</code> The output result of the layout detection sub-module. Only exists when <code>use_layout_detection=True</code>
+        <ol>
+        <li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the layout detection module. Saved as <code>None</code> when the input is a <code>numpy.ndarray</code>.</li>
+        <li><code>page_index</code>: <code>(Union[int, None])</code> Indicates the current page number of the PDF if the input is a PDF file; otherwise, it is<code>None</code>.</li>
+        <li><code>boxes</code>: <code>(List[Dict])</code> A list of detected layout seal regions, with each element containing the following fields:</li>
+            <ul>
+            <li><code>cls_id</code>: <code>(int)</code> The class ID of the detected seal region.</li>
+            <li><code>score</code>: <code>(float)</code> The confidence score of the detected region.</li>
+            <li><code>coordinate</code>: <code>(List[float])</code> The coordinates of the four corners of the detection box, in the order of x1, y1, x2, y2, representing the x-coordinate of the top-left corner, the y-coordinate of the top-left corner, the x-coordinate of the bottom-right corner, and the y-coordinate of the bottom-right corner.</li>
+            </ul>
+        </ol>
+    </li>
+    <li><code>seal_res_list</code>: <code>List[Dict]</code> A list of seal text recognition results, with each element containing the following fields:
+        <ol>
+        <li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the seal text recognition pipeline. Saved as <code>None</code> when the input is a <code>numpy.ndarray</code>.</li>
+        <li><code>page_index</code>: <code>(Union[int, None])</code> Indicates the current page number of the PDF if the input is a PDF file; otherwise, it is <code>None</code>.</li>
+        <li><code>model_settings</code>: <code>(Dict[str, bool])</code> The model configuration parameters for the seal text recognition pipeline.</li>
+            <ul>
+            <li><code>use_doc_preprocessor</code>: <code>(bool)</code> Controls whether to enable the document preprocessing sub-pipeline.</li>
+            <li><code>use_textline_orientation</code>: <code>(bool)</code> Controls whether to enable the text line orientation classification sub-module.</li>
+            </ul>
+        </ol>
+    </li>
+    <li><code>doc_preprocessor_res</code>: <code>(Dict[str, Union[str, Dict[str, bool], int]])</code> The output result of the document preprocessing sub-pipeline. Only exists when <code>use_doc_preprocessor=True</code>.
+        <ol>
+        <li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the document preprocessing sub-pipeline. Saved as <code>None</code> when the input is a <code>numpy.ndarray</code>.</li>
+        <li><code>model_settings</code>: <code>(Dict[str, bool])</code> The model configuration parameters for the preprocessing sub-pipeline.</li>
+            <ul>
+            <li><code>use_doc_orientation_classify</code>: <code>(bool)</code> Controls whether to enable the document orientation classification sub-module.</li>
+            <li><code>use_doc_unwarping</code>: <code>(bool)</code> Controls whether to enable the document unwarping sub-module.</li>
+            </ul>
+        <li><code>angle</code>: <code>(int)</code> The predicted result of document orientation classification. When enabled, it takes values [0, 1, 2, 3], corresponding to [0°, 90°, 180°, 270°]; when disabled, it is -1.</li>
+        </ol>
+    </li>
+    <li><code>dt_polys</code>: <code>(List[numpy.ndarray])</code> A list of polygon boxes for text detection. Each box is represented by a numpy array of shape (n, 2), where n is the number of vertices.</li>
+    <li><code>dt_scores</code>: <code>(List[float])</code> A list of confidence scores for text detection boxes.</li>
+    <li><code>dt_scores</code>: <code>(List[float])</code> A list of confidence scores for text detection boxes.</li>
+    <li><code>text_det_params</code>: <code>(Dict[str, Dict[str, int, float]])</code> Configuration parameters for the text detection module.
+        <ol>
+        <li><code>limit_side_len</code>: <code>(int)</code> The side length limit value during image preprocessing.</li>
+        <li><code>limit_type</code>: <code>(str)</code> The type of side length limit, which can be "min" or "max".</li>
+        <li><code>thresh</code>: <code>(float)</code> The confidence threshold for text pixel classification.</li>
+        <li><code>box_thresh</code>: <code>(float)</code> The confidence threshold for text detection boxes.</li>
+        <li><code>unclip_ratio</code>: <code>(float)</code> The expansion ratio for text detection boxes.</li>
+        <li><code>text_type</code>: <code>(str)</code> The type of text to be detected, which is fixed as "seal" for seal text detection.</li>
+        </ol>
+    </li>
+    <li><code>text_rec_score_thresh</code>: <code>(float)</code> The filtering threshold for text recognition results.</li>
+    <li><code>rec_texts</code>: <code>(List[str])</code> A list of text recognition results, containing only texts with confidence scores above <code>text_rec_score_thresh</code>.</li>
+     <li><code>rec_scores</code>: <code>(List[float])</code> A list of confidence scores for text recognition, filtered by <code>text_rec_score_thresh</code>.</li>
+     <li><code>rec_polys</code>: <code>(List[numpy.ndarray])</code> A list of text detection boxes filtered by confidence score, in the same format as <code>dt_polys</code>.</li>
+     <li><code>rec_boxes</code>: <code>(numpy.ndarray)</code> 检An array of rectangular bounding boxes for detection boxes; the seal recognition pipeline returns an empty array.</li>
+    </ol>
+</li>
+<li>Calling the <code>save_to_json()</code> method will save the above content to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_res.json</code>. If a file is specified, it will be saved directly to that file. Since JSON files do not support saving numpy arrays, <code>numpy.array</code> types will be converted to list format.</li>
+<li>Calling the <code>save_to_img()</code> method will save the visualization results to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_seal_res_region1.{your_img_extension}</code>. If a file is specified, it will be saved directly to that file. (The pipeline usually contains multiple result images, so it is not recommended to specify a specific file path directly, as multiple images will be overwritten, and only the last image will be retained.)</li>
 
-<ul>
-<li>
-<p>Calling the <code>print()</code> method will print the results to the terminal, and the explanations of the printed content are as follows:</p>
-<ul>
-<li>
-<p><code>input_path</code>: <code>(str)</code> The input path of the image to be predicted.</p>
-</li>
-<li>
-<p><code>model_settings</code>: <code>(Dict[str, bool])</code> The model parameters required for pipeline configuration.</p>
-<ul>
-<li><code>use_doc_preprocessor</code>: <code>(bool)</code> Controls whether to enable the document preprocessing sub-pipeline.</li>
-<li><code>use_layout_detection</code>: <code>(bool)</code> Controls whether to enable the layout detection sub-module.</li>
-</ul>
-</li>
-<li>
-<p><code>layout_det_res</code>: <code>(Dict[str, Union[List[numpy.ndarray], List[float]]])</code> The output result of the layout detection sub-module. Only exists when <code>use_layout_detection=True</code>.</p>
-<ul>
-<li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the layout detection module. Saved as <code>None</code> when the input is a <code>numpy.ndarray</code>.</li>
-<li><code>page_index</code>: <code>(Union[int, None])</code> Indicates the current page number of the PDF if the input is a PDF file; otherwise, it is <code>None</code>.</li>
-<li><code>boxes</code>: <code>(List[Dict])</code> A list of detected layout seal regions, with each element containing the following fields:<ul>
-<li><code>cls_id</code>: <code>(int)</code> The class ID of the detected seal region.</li>
-<li><code>score</code>: <code>(float)</code> The confidence score of the detected region.</li>
-<li><code>coordinate</code>: <code>(List[float])</code> The coordinates of the four corners of the detection box, in the order of x1, y1, x2, y2, representing the x-coordinate of the top-left corner, the y-coordinate of the top-left corner, the x-coordinate of the bottom-right corner, and the y-coordinate of the bottom-right corner.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><code>seal_res_list</code>: <code>List[Dict]</code> A list of seal text recognition results, with each element containing the following fields:</p>
-<ul>
-<li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the seal text recognition pipeline. Saved as <code>None</code> when the input is a <code>numpy.ndarray</code>.</li>
-<li><code>page_index</code>: <code>(Union[int, None])</code> Indicates the current page number of the PDF if the input is a PDF file; otherwise, it is <code>None</code>.</li>
-<li><code>model_settings</code>: <code>(Dict[str, bool])</code> The model configuration parameters for the seal text recognition pipeline.</li>
-<li><code>use_doc_preprocessor</code>: <code>(bool)</code> Controls whether to enable the document preprocessing sub-pipeline.</li>
-<li><code>use_textline_orientation</code>: <code>(bool)</code> Controls whether to enable the text line orientation classification sub-module.</li>
-</ul>
-</li>
-<li>
-<p><code>doc_preprocessor_res</code>: <code>(Dict[str, Union[str, Dict[str, bool], int]])</code> The output result of the document preprocessing sub-pipeline. Only exists when <code>use_doc_preprocessor=True</code>.</p>
-<ul>
-<li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the document preprocessing sub-pipeline. Saved as <code>None</code> when the input is a <code>numpy.ndarray</code>.</li>
-<li><code>model_settings</code>: <code>(Dict)</code> The model configuration parameters for the preprocessing sub-pipeline.<ul>
-<li><code>use_doc_orientation_classify</code>: <code>(bool)</code> Controls whether to enable document orientation classification.</li>
-<li><code>use_doc_unwarping</code>: <code>(bool)</code> Controls whether to enable document unwarping.</li>
-</ul>
-</li>
-<li><code>angle</code>: <code>(int)</code> The predicted result of document orientation classification. When enabled, it takes values [0, 1, 2, 3], corresponding to [0°, 90°, 180°, 270°]; when disabled, it is -1.</li>
-</ul>
-</li>
-<li>
-<p><code>dt_polys</code>: <code>(List[numpy.ndarray])</code> A list of polygon boxes for seal text detection. Each detection box is represented by a numpy array of multiple vertex coordinates, with the array shape being (n, 2).</p>
-</li>
-<li>
-<p><code>dt_scores</code>: <code>(List[float])</code> A list of confidence scores for text detection boxes.</p>
-</li>
-<li>
-<p><code>text_det_params</code>: <code>(Dict[str, Dict[str, int, float]])</code> Configuration parameters for the text detection module.</p>
-<ul>
-<li><code>limit_side_len</code>: <code>(int)</code> The side length limit value during image preprocessing.</li>
-<li><code>limit_type</code>: <code>(str)</code> The handling method for side length limits.</li>
-<li><code>thresh</code>: <code>(float)</code> The confidence threshold for text pixel classification.</li>
-<li><code>box_thresh</code>: <code>(float)</code> The confidence threshold for text detection boxes.</li>
-<li><code>unclip_ratio</code>: <code>(float)</code> The expansion ratio for text detection boxes.</li>
-<li><code>text_type</code>: <code>(str)</code> The type of seal text detection, currently fixed as "seal".</li>
-</ul>
-</li>
-<li>
-<p><code>text_rec_score_thresh</code>: <code>(float)</code> The filtering threshold for text recognition results.</p>
-</li>
-<li>
-<p><code>rec_texts</code>: <code>(List[str])</code> A list of text recognition results, containing only texts with confidence scores above <code>text_rec_score_thresh</code>.</p>
-</li>
-<li>
-<p><code>rec_scores</code>: <code>(List[float])</code> A list of confidence scores for text recognition, filtered by <code>text_rec_score_thresh</code>.</p>
-</li>
-<li>
-<p><code>rec_polys</code>: <code>(List[numpy.ndarray])</code> A list of text detection boxes filtered by confidence score, in the same format as <code>dt_polys</code>.</p>
-</li>
-<li>
-<p><code>rec_boxes</code>: <code>(numpy.ndarray)</code> An array of rectangular bounding boxes for detection boxes; the seal recognition pipeline returns an empty array.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Calling the <code>save_to_json()</code> method will save the above content to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_res.json</code>. If a file is specified, it will be saved directly to that file. Since JSON files do not support saving numpy arrays, <code>numpy.array</code> types will be converted to list format.</p>
-</li>
-<li>
-<p>Calling the <code>save_to_img()</code> method will save the visualization results to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_seal_res_region1.{your_img_extension}</code>. If a file is specified, it will be saved directly to that file. (The pipeline usually contains multiple result images, so it is not recommended to specify a specific file path directly, as multiple images will be overwritten, and only the last image will be retained.)</p>
-</li>
-<li>
-<p>Additionally, you can obtain visualized images with results and prediction results through attributes, as follows:</p>
-</li>
-</ul>
+* Additionally, you can obtain visualized images with results and prediction results through attributes, as follows:
+
 <table>
 <thead>
 <tr>
@@ -5975,17 +5907,22 @@ Whether to use the layout detection module during inference. </td>
 </tr>
 </table>
 
-<ul>
 <li>The prediction results obtained through the <code>json</code> attribute are of dict type, with content consistent with what is saved by calling the <code>save_to_json()</code> method.</li>
 <li>The prediction results returned by the <code>img</code> attribute are of dict type. The keys are <code>layout_det_res</code>, <code>seal_res_region1</code>, and <code>preprocessed_img</code>, corresponding to three <code>Image.Image</code> objects: one for visualizing layout detection, one for visualizing seal text recognition results, and one for visualizing image preprocessing. If the image preprocessing sub-module is not used, <code>preprocessed_img</code> will not be included in the dictionary. If the layout region detection module is not used, <code>layout_det_res</code> will not be included.</li>
-</ul>
-<h2 id="3-development-integrationdeployment">3. Development Integration/Deployment<a class="headerlink" href="#3-development-integrationdeployment" title="Permanent link">&para;</a></h2>
-<p>If the pipeline meets your requirements for inference speed and accuracy, you can proceed directly with development integration/deployment.</p>
-<p>If you need to integrate the pipeline into your Python project, you can refer to the example code in <a href="#22-python脚本方式集成">2.2 Python Script Method</a>.</p>
-<p>In addition, PaddleOCR also provides three other deployment methods, which are detailed as follows:</p>
-<p>🚀 High-Performance Inference: In real-world production environments, many applications have stringent performance requirements for deployment strategies, especially in terms of response speed, to ensure efficient system operation and a smooth user experience. To address this, PaddleOCR offers high-performance inference capabilities aimed at deeply optimizing the performance of model inference and pre/post-processing, thereby significantly accelerating the end-to-end process. For detailed high-performance inference procedures, please refer to <a href="../deployment/high_performance_inference.html">High-Performance Inference</a>.</p>
-<p>☁️ Service Deployment: Service deployment is a common form of deployment in real-world production environments. By encapsulating inference functionality into a service, clients can access these services via network requests to obtain inference results. For detailed production service deployment procedures, please refer to <a href="../deployment/serving.html">Serving</a>.</p>
-<p>Below are the API references for basic serving deployment and multi-language service invocation examples:</p>
+
+## 3. Development Integration/Deployment
+If the pipeline meets your requirements for inference speed and accuracy, you can proceed directly with development integration/deployment.
+
+If you need to integrate the pipeline into your Python project, you can refer to the example code in [2.2 Python Script Method](#22-python脚本方式集成).
+
+In addition, PaddleOCR also provides three other deployment methods, which are detailed as follows:
+
+🚀 High-Performance Inference: In real-world production environments, many applications have stringent performance requirements for deployment strategies, especially in terms of response speed, to ensure efficient system operation and a smooth user experience. To address this, PaddleOCR offers high-performance inference capabilities aimed at deeply optimizing the performance of model inference and pre/post-processing, thereby significantly accelerating the end-to-end process. For detailed high-performance inference procedures, please refer to [High-Performance Inference](../deployment/high_performance_inference.md).
+
+☁️ Service Deployment: Service deployment is a common form of deployment in real-world production environments. By encapsulating inference functionality into a service, clients can access these services via network requests to obtain inference results. For detailed production service deployment procedures, please refer to [Serving](../deployment/serving.md).
+
+Below are the API references for basic serving deployment and multi-language service invocation examples:
+
 <details><summary>API Reference</summary>
 <p>For the main operations provided by the service:</p>
 <ul>
@@ -6671,11 +6608,15 @@ foreach ($result as $i => $item) {
 ?&gt;
 </code></pre></details>
 </details>
-<p><br/></p>
-<h2 id="4-custom-development">4. Custom Development<a class="headerlink" href="#4-custom-development" title="Permanent link">&para;</a></h2>
-<p>If the default model weights provided by the seal text recognition pipeline do not meet your requirements in terms of accuracy or speed, you can try to <b>fine-tune</b> the existing models using <b>your own domain-specific or application data</b> to improve the recognition performance of the seal text recognition pipeline in your scenario.</p>
-<h3 id="41-model-fine-tuning">4.1 Model Fine-Tuning<a class="headerlink" href="#41-model-fine-tuning" title="Permanent link">&para;</a></h3>
-<p>Since the seal text recognition pipeline consists of several modules, if the pipeline's performance does not meet expectations, the issue may arise from any one of these modules. You can analyze images with poor recognition results to identify which module is problematic and refer to the corresponding fine-tuning tutorial links in the table below for model fine-tuning.</p>
+<br/>
+
+
+## 4. Custom Development
+If the default model weights provided by the seal text recognition pipeline do not meet your requirements in terms of accuracy or speed, you can try to <b>fine-tune</b> the existing models using <b>your own domain-specific or application data</b> to improve the recognition performance of the seal text recognition pipeline in your scenario.
+
+### 4.1 Model Fine-Tuning
+Since the seal text recognition pipeline consists of several modules, if the pipeline's performance does not meet expectations, the issue may arise from any one of these modules. You can analyze images with poor recognition results to identify which module is problematic and refer to the corresponding fine-tuning tutorial links in the table below for model fine-tuning.
+
 <table>
 <thead>
 <tr>
@@ -6713,18 +6654,26 @@ foreach ($result as $i => $item) {
 </tbody>
 </table>
 
-<h3 id="42-model-application">4.2 Model Application<a class="headerlink" href="#42-model-application" title="Permanent link">&para;</a></h3>
-<p>After you complete the fine-tuning training with a private dataset, you can obtain the local model weight files. You can then use the fine-tuned model weights by specifying the local model save path through parameters or by using a custom pipeline configuration file.</p>
-<h4 id="421-specify-local-model-path-via-parameters">4.2.1 Specify Local Model Path via Parameters<a class="headerlink" href="#421-specify-local-model-path-via-parameters" title="Permanent link">&para;</a></h4>
-<p>When initializing the pipeline object, specify the local model path through parameters. Taking the usage of fine-tuned weights for a text detection model as an example, the demonstration is as follows:</p>
-<p>Command line method:</p>
+
+### 4.2 Model Application
+
+After you complete the fine-tuning training with a private dataset, you can obtain the local model weight files. You can then use the fine-tuned model weights by specifying the local model save path through parameters or by using a custom pipeline configuration file.
+
+#### 4.2.1 Specify Local Model Path via Parameters
+
+When initializing the pipeline object, specify the local model path through parameters. Taking the usage of fine-tuned weights for a text detection model as an example, the demonstration is as follows:
+
+Command line method:
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Specify the local model path through --doc_orientation_classify_model_dir</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>paddleocr<span class="w"> </span>seal_recognition<span class="w"> </span>-i<span class="w"> </span>./seal_text_det.png<span class="w"> </span>--doc_orientation_classify_model_dir<span class="w"> </span>your_orientation_classify_model_path
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># By default, the PP-LCNet_x1_0_doc_ori model is used as the default text detection model. If the fine-tuned model is not this one, modify the model name with --text_detection_model_name</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>paddleocr<span class="w"> </span>seal_recognition<span class="w"> </span>-i<span class="w"> </span>./seal_text_det.png<span class="w"> </span>--doc_orientation_classify_model_name<span class="w"> </span>PP-LCNet_x1_0_doc_ori<span class="w"> </span>--doc_orientation_classify_model_dir<span class="w"> </span>your_orientation_classify_model_path
 </span></code></pre></div>
-<p>Script method:</p>
+
+Script method:
+
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">SealRecognition</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Specify the local model path through doc_orientation_classify_model_dir</span>
@@ -6733,20 +6682,23 @@ foreach ($result as $i => $item) {
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># By default, the PP-LCNet_x1_0_doc_ori model is used as the default text detection model. If the fine-tuned model is not this one, modify the model name with doc_orientation_classify_model_name</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># pipeline = SealRecognition(doc_orientation_classify_model_name=&quot;PP-LCNet_x1_0_doc_ori&quot;, doc_orientation_classify_model_dir=&quot;./your_orientation_classify_model_path&quot;)</span>
 </span></code></pre></div>
-<h4 id="422-specify-local-model-path-via-configuration-file">4.2.2 Specify Local Model Path via Configuration File<a class="headerlink" href="#422-specify-local-model-path-via-configuration-file" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Obtain pipeline Configuration File</li>
-</ol>
-<p>You can call the <code>export_paddlex_config_to_yaml</code> method of the general OCR pipeline object in PaddleOCR to export the current pipeline configuration to a YAML file:</p>
+
+#### 4.2.2 Specify Local Model Path via Configuration File
+
+1. Obtain pipeline Configuration File
+
+You can call the `export_paddlex_config_to_yaml` method of the general OCR pipeline object in PaddleOCR to export the current pipeline configuration to a YAML file:
+
 <div class="language-Python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">SealRecognition</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">SealRecognition</span><span class="p">()</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">pipeline</span><span class="o">.</span><span class="n">export_paddlex_config_to_yaml</span><span class="p">(</span><span class="s2">&quot;SealRecognition.yaml&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<ol>
-<li>Modify Configuration File</li>
-</ol>
-<p>After obtaining the default pipeline configuration file, replace the local path of the fine-tuned model weights in the corresponding position of the pipeline configuration file. For example:</p>
+
+2. Modify Configuration File
+
+After obtaining the default pipeline configuration file, replace the local path of the fine-tuned model weights in the corresponding position of the pipeline configuration file. For example:
+
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="l l-Scalar l-Scalar-Plain">......</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="l l-Scalar l-Scalar-Plain">SubPipelines</span><span class="p p-Indicator">:</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">DocPreprocessor</span><span class="p">:</span>
@@ -6764,17 +6716,20 @@ foreach ($result as $i => $item) {
 </span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="nt">use_doc_unwarping</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="l l-Scalar l-Scalar-Plain">......</span>
 </span></code></pre></div>
-<p>The pipeline configuration file not only contains the parameters supported by the SealRecognition CLI and Python API but also allows for more advanced configurations. Detailed information can be found in the <a href="https://paddlepaddle.github.io/PaddleX/latest/en/pipeline_usage/pipeline_develop_guide.html">PaddleX Model pipeline Usage Overview</a>, where you can find the corresponding pipeline usage tutorial and adjust various configurations as needed.</p>
-<ol>
-<li>Load pipeline Configuration File in CLI</li>
-</ol>
-<p>After modifying the configuration file, specify the path of the modified pipeline configuration file using the <code>--paddlex_config</code> parameter in the command line. PaddleOCR will read its contents as the pipeline configuration. Example:</p>
+
+The pipeline configuration file not only contains the parameters supported by the SealRecognition CLI and Python API but also allows for more advanced configurations. Detailed information can be found in the [PaddleX Model pipeline Usage Overview](https://paddlepaddle.github.io/PaddleX/latest/en/pipeline_usage/pipeline_develop_guide.html), where you can find the corresponding pipeline usage tutorial and adjust various configurations as needed.
+
+3. Load pipeline Configuration File in CLI
+
+After modifying the configuration file, specify the path of the modified pipeline configuration file using the `--paddlex_config` parameter in the command line. PaddleOCR will read its contents as the pipeline configuration. Example:
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>paddleocr<span class="w"> </span>seal_recognition<span class="w"> </span>--paddlex_config<span class="w"> </span>SealRecognition.yaml<span class="w"> </span>...
 </span></code></pre></div>
-<ol>
-<li>Load pipeline Configuration File in Python API</li>
-</ol>
-<p>When initializing the pipeline object, you can pass the PaddleX pipeline configuration file path or configuration dictionary through the <code>paddlex_config</code> parameter. PaddleOCR will read its contents as the pipeline configuration. Example:</p>
+
+4. Load pipeline Configuration File in Python API
+
+When initializing the pipeline object, you can pass the PaddleX pipeline configuration file path or configuration dictionary through the `paddlex_config` parameter. PaddleOCR will read its contents as the pipeline configuration. Example:
+
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">SealRecognition</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">SealRecognition</span><span class="p">(</span><span class="n">paddlex_config</span><span class="o">=</span><span class="s2">&quot;SealRecognition.yaml&quot;</span><span class="p">)</span>

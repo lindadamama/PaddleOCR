@@ -2664,84 +2664,6 @@ You're not viewing the latest version.
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-development-integrationdeployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Development Integration/Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-custom-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Custom Development
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Custom Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-model-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Model Fine-Tuning
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-model-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Model Deployment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.2 Model Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#421-specify-the-local-model-path-through-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.1 Specify the local model path through parameters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#422-specify-the-local-model-path-through-the-configuration-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.2 Specify the local model path through the configuration file
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4277,84 +4199,6 @@ You're not viewing the latest version.
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-development-integrationdeployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Development Integration/Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-custom-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Custom Development
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Custom Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-model-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Model Fine-Tuning
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-model-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Model Deployment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.2 Model Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#421-specify-the-local-model-path-through-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.1 Specify the local model path through parameters
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#422-specify-the-local-model-path-through-the-configuration-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2.2 Specify the local model path through the configuration file
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4854,7 +4698,8 @@ The formula recognition pipeline includes the following four modules. Each modul
 <tbody>
 <tr>
 <td><code>input</code></td>
-<td>Data to be predicted, required.
+<td><b>Meaning:</b>Data to be predicted, required.<br/>
+<b>Description:</b>
 Local path of image or PDF file, e.g., <code>/root/data/img.jpg</code>; <b>URL link</b>, e.g., network URL of image or PDF file: <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/demo_image/pipelines/general_formula_recognition_001.png">Example</a>; <b>Local directory</b>, the directory should contain images to be predicted, e.g., local path: <code>/root/data/</code> (currently does not support prediction of PDF files in directories; PDF files must be specified with a specific file path).
 </td>
 <td><code>str</code></td>
@@ -4863,79 +4708,103 @@ Local path of image or PDF file, e.g., <code>/root/data/img.jpg</code>; <b>URL l
 <tr>
 <td><code>save_path</code></td>
 <td>
-Specify the path to save the inference results file. If not set, the inference results will not be saved locally.</td>
+<b>Meaning:</b>Specify the path to save the inference results file. <br/>
+<b>Description:</b>
+If not set, the inference results will not be saved locally.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_name</code></td>
 <td> 
-The name of the document orientation classification model. If not set, the default model in pipeline will be used.</td>
+<b>Meaning:</b>The name of the document orientation classification model.<br/>
+<b>Description:</b> 
+If not set, the default model in pipeline will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_dir</code></td>
-<td>The directory path of the document orientation classification model. If not set, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the document orientation classification model. <br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_batch_size</code></td>
-<td>The batch size of the document orientation classification model. If not set, the default batch size will be set to <code>1</code>.
+<td><b>Meaning:</b>The batch size of the document orientation classification model. <br/>
+<b>Description:</b> 
+If not set, the default batch size will be set to <code>1</code>.
 </td>
 <td><code>int</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_name</code></td>
-<td> The name of the text image unwarping model. If not set, the default model in pipeline will be used.</td>
+<td><b>Meaning:</b> The name of the text image unwarping model. <br/>
+<b>Description:</b> 
+If not set, the default model in pipeline will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_dir</code></td>
-<td> The directory path of the  text image unwarping model. If not set, the official model will be downloaded.
+<td> <b>Meaning:</b>The directory path of the  text image unwarping model. <br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.
 </td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_batch_size</code></td>
-<td>The batch size of the text image unwarping model. If not set, the default batch size will be set to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size of the text image unwarping model. <br/>
+<b>Description:</b> 
+If not set, the default batch size will be set to <code>1</code>.</td>
 <td><code>int</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to load and use the document orientation classification module. If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
+<td><b>Meaning:</b>Whether to load and use the document orientation classification module. <br/>
+<b>Description:</b> 
+If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
 <td>
-Whether to load and use the text image unwarping module. If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
+<b>Meaning:</b>Whether to load and use the text image unwarping module. <br/>
+<b>Description:</b> 
+If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_name</code></td>
 <td>
-The name of the layout detection model. If not set, the default model in pipeline will be used. </td>
+<b>Meaning:</b>The name of the layout detection model. <br/>
+<b>Description:</b> 
+If not set, the default model in pipeline will be used. </td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_dir</code></td>
-<td> The directory path of the  layout detection model. If not set, the official model will be downloaded.
+<td> <b>Meaning:</b>The directory path of the  layout detection model. <br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.
 </td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_threshold</code></td>
-<td>Score threshold for the layout model. Any value between <code>0-1</code>. If not set, the default value is used, which is <code>0.5</code>.
+<td><b>Meaning:</b>Score threshold for the layout model. <br/>
+<b>Description:</b> 
+Any value between <code>0-1</code>. If not set, the default value is used, which is <code>0.5</code>.
 </td>
 <td><code>float</code></td>
 <td></td>
@@ -4943,21 +4812,26 @@ The name of the layout detection model. If not set, the default model in pipelin
 <tr>
 <td><code>layout_nms</code></td>
 <td>
-Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.
+<b>Meaning:</b>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. <br/>
+<b>Description:</b> 
+If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.
 </td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_unclip_ratio</code></td>
-<td>Unclip ratio for detected boxes in layout detection model. Any float > <code>0</code>. If not set, the default is <code>1.0</code>.
+<td><b>Meaning:</b>Unclip ratio for detected boxes in layout detection model. <br/>
+<b>Description:</b> 
+Any float > <code>0</code>. If not set, the default is <code>1.0</code>.
 </td>
 <td><code>float</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>layout_merge_bboxes_mode</code></td>
-<td>The merging mode for the detection boxes output by the model in layout region detection.
+<td><b>Meaning:</b>The merging mode for the detection boxes output by the model in layout region detection. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>large</b>: When set to "large", only the largest outer bounding box will be retained for overlapping bounding boxes, and the inner overlapping boxes will be removed;</li>
 <li><b>small</b>: When set to "small", only the smallest inner bounding boxes will be retained for overlapping bounding boxes, and the outer overlapping boxes will be removed;</li>
@@ -4969,41 +4843,53 @@ Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detec
 </tr>
 <tr>
 <td><code>layout_detection_batch_size</code></td>
-<td>The batch size for the layout region detection model. If not set, the default batch size will be set to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size for the layout region detection model. <br/>
+<b>Description:</b> 
+If not set, the default batch size will be set to <code>1</code>.</td>
 <td><code>int</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>use_layout_detection</code></td>
 <td>
-Whether to load and use the layout detection module. If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
+<b>Meaning:</b>Whether to load and use the layout detection module. <br/>
+<b>Description:</b> 
+If not set, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>formula_recognition_model_name</code></td>
 <td>
-The name of the formula recognition model. If not set, the default model from the pipeline will be used.
+<b>Meaning:</b>The name of the formula recognition model. <br/>
+<b>Description:</b> 
+If not set, the default model from the pipeline will be used.
 </td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>formula_recognition_model_dir</code></td>
-<td>The directory path of the formula recognition model. If not set, the official model will be downloaded.
+<td><b>Meaning:</b>The directory path of the formula recognition model. <br/>
+<b>Description:</b> 
+If not set, the official model will be downloaded.
 </td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>formula_recognition_batch_size</code></td>
-<td>The batch size for the formula recognition model. If not set, the batch size will default to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size for the formula recognition model. <br/>
+<b>Description:</b> 
+If not set, the batch size will default to <code>1</code>.</td>
 <td><code>int</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>The device used for inference. You can specify a particular card number:
+<td><b>Meaning:</b>The device used for inference. <br/>
+<b>Description:</b> 
+You can specify a particular card number:
 <ul>
 <li><b>CPU</b>: e.g., <code>cpu</code> indicates using CPU for inference;</li>
 <li><b>GPU</b>: e.g., <code>gpu:0</code> indicates using the 1st GPU for inference;</li>
@@ -5020,13 +4906,14 @@ The name of the formula recognition model. If not set, the default model from th
 </tr>
 <tr>
 <td><code>enable_hpi</code></td>
-<td>Whether to enable the high-performance inference plugin.</td>
+<td><b>Meaning:</b>Whether to enable the high-performance inference plugin.</td>
 <td><code>bool</code></td>
 <td><code>False</code></td>
 </tr>
 <tr>
 <td><code>use_tensorrt</code></td>
-<td>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<b>Meaning:</b>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<b>Description:</b> 
 For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6), and it is recommended to install TensorRT 8.6.1.6.<br/>
 
 </td>
@@ -5035,13 +4922,15 @@ For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6)
 </tr>
 <tr>
 <td><code>precision</code></td>
-<td>Compute precision, such as FP32 or FP16.</td>
+<td><b>Meaning:</b>Compute precision, such as FP32 or FP16.</td>
 <td><code>str</code></td>
 <td><code>fp32</code></td>
 </tr>
 <tr>
 <td><code>enable_mkldnn</code></td>
-<td>Whether to enable MKL-DNN acceleration for inference. If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.
+<td><b>Meaning:</b>Whether to enable MKL-DNN acceleration for inference. <br/>
+<b>Description:</b> 
+If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.
 </td>
 <td><code>bool</code></td>
 <td><code>True</code></td>
@@ -5049,7 +4938,7 @@ For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6)
 <tr>
 <td><code>mkldnn_cache_capacity</code></td>
 <td>
-MKL-DNN cache capacity.
+<b>Meaning:</b>MKL-DNN cache capacity.
 </td>
 <td><code>int</code></td>
 <td><code>10</code></td>
@@ -5057,13 +4946,13 @@ MKL-DNN cache capacity.
 <tr>
 <td><code>cpu_threads</code></td>
 <td>
-The number of threads to use when performing inference on the CPU.</td>
+<b>Meaning:</b>The number of threads to use when performing inference on the CPU.</td>
 <td><code>int</code></td>
 <td><code>8</code></td>
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
@@ -5110,67 +4999,88 @@ The number of threads to use when performing inference on the CPU.</td>
 <tbody>
 <tr>
 <td><code>doc_orientation_classify_model_name</code></td>
-<td>The name of the document orientation classification model. If set to <code>None</code>, the default model in pipeline will be used.</td>
+<td><b>Meaning:</b>The name of the document orientation classification model.<br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default model in pipeline will be used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_dir</code></td>
-<td>The directory path of the document orientation classification model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the document orientation classification model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_batch_size</code></td>
-<td>The batch size of the document orientation classification model. If set to <code>None</code>, the default batch size will be set to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size of the document orientation classification model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default batch size will be set to <code>1</code>.</td>
 <td><code>int|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_name</code></td>
-<td>The name of the text image unwarping model. If set to <code>None</code>, the default model in pipeline will be used.</td>
+<td><b>Meaning:</b>The name of the text image unwarping model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default model in pipeline will be used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_dir</code></td>
-<td>The directory path of the  text image unwarping model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the  text image unwarping model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_batch_size</code></td>
-<td>The batch size of the text image unwarping model. If set to <code>None</code>, the default batch size will be set to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size of the text image unwarping model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default batch size will be set to <code>1</code>.</td>
 <td><code>int|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to load and use the document orientation classification module. If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
+<td><b>Meaning:</b>Whether to load and use the document orientation classification module. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to load and use the text image unwarping module. If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
+<td><b>Meaning:</b>Whether to load and use the text image unwarping module.<br/> 
+<b>Description:</b> 
+If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_name</code></td>
-<td>The name of the layout detection model. If set to <code>None</code>, the default model in pipeline will be used. </td>
+<td><b>Meaning:</b>The name of the layout detection model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default model in pipeline will be used. </td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_detection_model_dir</code></td>
-<td>The directory path of the  layout detection model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the  layout detection model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_threshold</code></td>
-<td>Threshold for layout detection, used to filter out predictions with low confidence.
+<td><b>Meaning:</b>Threshold for layout detection, used to filter out predictions with low confidence. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>float</b>: Such as 0.2, indicates filtering out all bounding boxes with a confidence score less than 0.2;</li>
 <li><b>Dictionary</b>: With <b>int</b> keys representing <code>cls_id</code> and <b>float</b> values as thresholds. For example, <code>{0: 0.45, 2: 0.48, 7: 0.4}</code> indicates applying a threshold of 0.45 for class ID 0, 0.48 for class ID 2, and 0.4 for class ID 7;</li>
@@ -5182,13 +5092,16 @@ The number of threads to use when performing inference on the CPU.</td>
 </tr>
 <tr>
 <td><code>layout_nms</code></td>
-<td>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is set to <code>True</code> by default.</td>
+<td><b>Meaning:</b>Whether to use Non-Maximum Suppression (NMS) as post-processing for layout detection. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is set to <code>True</code> by default.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_unclip_ratio</code></td>
-<td>Expansion factor for the detection boxes of the layout region detection model.
+<td><b>Meaning:</b>Expansion factor for the detection boxes of the layout region detection model. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>float</b>: Any float greater than <code>0</code>;</li>
 <li><b>Tuple[float,float]</b>: Expansion ratios in horizontal and vertical directions;</li>
@@ -5201,7 +5114,8 @@ The number of threads to use when performing inference on the CPU.</td>
 </tr>
 <tr>
 <td><code>layout_merge_bboxes_mode</code></td>
-<td>Filtering method for overlapping boxes in layout detection.
+<td><b>Meaning:</b>Filtering method for overlapping boxes in layout detection. <br/>
+<b>Description:</b> 
 <ul>
 <li><b>str</b>: Options include <code>large</code>, <code>small</code>, and <code>union</code> to retain the larger box, smaller box, or both;</li>
 <li><b>dict</b>: A dictionary with <b>int</b> keys representing <code>cls_id</code>, and <b>str</b> values, e.g., <code>{0: "large", 2: "small"}</code> means using different modes for different classes;</li>
@@ -5213,37 +5127,49 @@ The number of threads to use when performing inference on the CPU.</td>
 </tr>
 <tr>
 <td><code>layout_detection_batch_size</code></td>
-<td>The batch size for the layout region detection model. If set to <code>None</code>, the default batch size will be set to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size for the layout region detection model.<br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default batch size will be set to <code>1</code>.</td>
 <td><code>int|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_layout_detection</code></td>
-<td>Whether to load and use the layout detection module. If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
+<td><b>Meaning:</b>Whether to load and use the layout detection module. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the parameter will be set to the value initialized in the pipeline, which is <code>True</code> by default.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>formula_recognition_model_name</code></td>
-<td>The name of the formula recognition model. If set to <code>None</code>, the default model from the pipeline will be used.</td>
+<td><b>Meaning:</b>The name of the formula recognition model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the default model from the pipeline will be used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>formula_recognition_model_dir</code></td>
-<td>The directory path of the formula recognition model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the formula recognition model. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>formula_recognition_batch_size</code></td>
-<td>The batch size for the formula recognition model. If set to  <code>None</code>, the batch size will default to <code>1</code>.</td>
+<td><b>Meaning:</b>The batch size for the formula recognition model. <br/>
+<b>Description:</b> 
+If set to  <code>None</code>, the batch size will default to <code>1</code>.</td>
 <td><code>int|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>The device used for inference. You can specify a particular card number:
+<td><b>Meaning:</b>The device used for inference. <br/>
+<b>Description:</b> 
+You can specify a particular card number:
 <ul>
 <li><b>CPU</b>: e.g., <code>cpu</code> indicates using CPU for inference;</li>
 <li><b>GPU</b>: e.g., <code>gpu:0</code> indicates using the 1st GPU for inference;</li>
@@ -5261,13 +5187,14 @@ The number of threads to use when performing inference on the CPU.</td>
 </tr>
 <tr>
 <td><code>enable_hpi</code></td>
-<td>Whether to enable the high-performance inference plugin.</td>
+<td><b>Meaning:</b>Whether to enable the high-performance inference plugin.</td>
 <td><code>bool</code></td>
 <td><code>False</code></td>
 </tr>
 <tr>
 <td><code>use_tensorrt</code></td>
-<td>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<td><b>Meaning:</b>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<b>Description:</b> 
 For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6), and it is recommended to install TensorRT 8.6.1.6.<br/>
 
 </td>
@@ -5276,13 +5203,15 @@ For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6)
 </tr>
 <tr>
 <td><code>precision</code></td>
-<td>Compute precision, such as FP32 or FP16.</td>
+<td><b>Meaning:</b>Compute precision, such as FP32 or FP16.</td>
 <td><code>str</code></td>
 <td><code>"fp32"</code></td>
 </tr>
 <tr>
 <td><code>enable_mkldnn</code></td>
-<td>Whether to enable MKL-DNN acceleration for inference. If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.
+<td><b>Meaning:</b>Whether to enable MKL-DNN acceleration for inference. <br/>
+<b>Description:</b> 
+If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.
 </td>
 <td><code>bool</code></td>
 <td><code>True</code></td>
@@ -5290,20 +5219,20 @@ For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6)
 <tr>
 <td><code>mkldnn_cache_capacity</code></td>
 <td>
-MKL-DNN cache capacity.
+<b>Meaning:</b>MKL-DNN cache capacity.
 </td>
 <td><code>int</code></td>
 <td><code>10</code></td>
 </tr>
 <tr>
 <td><code>cpu_threads</code></td>
-<td>The number of threads to use when performing inference on the CPU.</td>
+<td><b>Meaning:</b>The number of threads to use when performing inference on the CPU.</td>
 <td><code>int</code></td>
 <td><code>8</code></td>
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -5325,7 +5254,8 @@ MKL-DNN cache capacity.
 <tbody>
 <tr>
 <td><code>input</code></td>
-<td>Data to be predicted, supporting multiple input types, required.
+<td><b>Meaning:</b>Data to be predicted, supporting multiple input types, required.<br/>
+<b>Description:</b> 
 <ul>
 <li><b>Python Var</b>: Image data represented by <code>numpy.ndarray;</code></li>
 <li><b>str</b>: Local path of image or PDF file, e.g., <code>/root/data/img.jpg</code>; <b>URL link</b>, e.g., network URL of image or PDF file: <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/demo_image/pipelines/general_formula_recognition_001.png">Example</a>; <b>Local directory</b>, the directory should contain images to be predicted, e.g., local path: <code>/root/data/</code> (currently does not support prediction of PDF files in directories; PDF files must be specified with a specific file path);</li>
@@ -5338,43 +5268,51 @@ MKL-DNN cache capacity.
 <tr>
 <td><code>use_layout_detection</code></td>
 <td>
-Whether to use the layout detection module during inference. </td>
+<b>Meaning:</b>Whether to use the layout detection module during inference. </td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
 <td>
-Whether to use the document orientation classification module during inference.</td>
+<b>Meaning:</b>Whether to use the document orientation classification module during inference.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to use the text image unwarping module during inference.</td>
+<td><b>Meaning:</b>Whether to use the text image unwarping module during inference.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_threshold</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>float|dict|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_nms</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>layout_unclip_ratio</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>float|Tuple[float,float]|dict|None</code></td>
 <td><code>None</code></td>
 <tr>
 <td><code>layout_merge_bboxes_mode</code></td>
-<td>Same meaning as the instantiation parameters. If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
+<td><b>Meaning:</b>Same meaning as the instantiation parameters. <br/>
+<b>Description:</b> 
+If set to <code>None</code>, the instantiation value is used; otherwise, this parameter takes precedence.</td>
 <td><code>string</code></td>
 <td><code>None</code></td>
 </tr>
@@ -5442,65 +5380,55 @@ Whether to use the document orientation classification module during inference.<
 <td>无</td>
 </tr>
 </table>
+<ul>
+  <li>Calling the <code>print()</code> method will print the results to the terminal. The content printed to the terminal is explained as follows:
+    <ol start="1" type="1">
+      <li><code>input_path</code>: <code>(str)</code> The input path of the image to be predicted.</li>
+      <li><code>page_index</code>: <code>(Union[int, None])</code> If the input is a PDF file, this indicates the current page number of the PDF. Otherwise, it is <code>None</code></li>
+      <li><code>model_settings</code>: <code>(Dict[str, bool])</code> The model parameters required for the pipeline configuration.
+        <ol >
+          <li><code>use_doc_preprocessor</code>: <code>(bool)</code> Controls whether to enable the document preprocessing sub-pipeline.</li>
+          <li><code>use_layout_detection</code>: <code>(bool)</code> Controls whether to enable the layout detection module.</li>
+        </ol>
+      </li>
+      <li><code>doc_preprocessor_res</code>: <code>(Dict[str, Union[str, Dict[str, bool], int]])</code> The output result of the document preprocessing sub-pipeline. It exists only when <code>use_doc_preprocessor=True</code>
+        <ol>
+          <li><code>input_path</code>: <code>(Union[str, None])</code> T <code>numpy.ndarray</code>, it is saved as <code>None</code>.</li>
+          <li><code>model_settings</code>: <code>(Dict)</code> he model configuration parameters of the preprocessing sub-pipeline.
+            <ul>
+              <li><code>use_doc_orientation_classify</code>: <code>(bool)</code> Controls whether to enable document orientation classification.</li>
+              <li><code>use_doc_unwarping</code>: <code>(bool)</code> Controls whether to enable document distortion correction.</li>
+            </ul>
+          </li>
+          <li><code>angle</code>: <code>(int)</code> The prediction result of document orientation classification. When enabled, it takes values from [0,1,2,3], corresponding to [0°,90°,180°,270°]; when disabled, it is -1.</li>
+        </ol>
+      </li>
+      <li><code>layout_det_res</code>: <code>(Dict[str, List[Dict]])</code> The output result of the layout area detection module. It exists only when <code>use_layout_detection=True</code></li>
+        <ol>
+          <li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the layout area detection module. When the input is a <code>numpy.ndarray</code>, it is saved as <code>None</code>.</li>
+            <ol>
+                <li><code>boxes</code>: <code>(List[Dict[int, str, float, List[float]]])</code> A list of layout area detection prediction results.</li>
+                <li><code>cls_id</code>: <code>(int)</code> The class ID predicted by layout area detection.</li>
+                <li><code>label</code>: <code>(str)</code> The class label predicted by layout area detection.</li>
+                <li><code>score</code>: <code>(float)</code> The confidence score of the predicted class.</li>
+                <li><code>coordinate</code>: <code>(List[float])</code> The bounding box coordinates predicted by layout area detection, in the format [x_min, y_min, x_max, y_max], where (x_min, y_min) is the top-left corner and (x_max, y_max) is the bottom-right corner.</li>
+            </ol>
+          <li><code>formula_res_list</code>: <code>(List[Dict[str, int, List[float]]])</code>  A list of formula recognition prediction results.</li>
+            <ol>
+                <li><code>rec_formula</code>: <code>(str)</code> The LaTeX source code predicted by formula recognition.</li>
+                <li><code>formula_region_id</code>: <code>(int)</code>  The ID number predicted by formula recognition.</li>
+                <li><code>dt_polys</code>:  <code>(List[float])</code> The bounding box coordinates predicted by formula recognition, in the format [x_min, y_min, x_max, y_max], where (x_min, y_min) is the top-left corner and (x_max, y_max) is the bottom-right corner.</li>
+            </ol>
+        </li>
+      </li>
+    </ol>
+  </li>
+  <li>Calling the <code>save_to_json()</code> method will save the above content to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_res.json</code>. If a file is specified, it will be saved directly to that file. Since JSON files do not support saving numpy arrays, <code>numpy.array</code> types will be converted to list format.</li>
+<li>Calling the <code>save_to_img()</code> method will save the visualization results to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_formula_res_img.{your_img_extension}</code>. If a file is specified, it will be saved directly to that file. (The pipeline usually contains many result images, so it is not recommended to specify a specific file path directly, otherwise multiple images will be overwritten and only the last one will be retained.)</li>
 
-<ul>
-<li>
-<p>Calling the <code>print()</code> method will print the results to the terminal. The content printed to the terminal is explained as follows:</p>
-<ul>
-<li>
-<p><code>input_path</code>: <code>(str)</code> The input path of the image to be predicted.</p>
-</li>
-<li>
-<p><code>page_index</code>: <code>(Union[int, None])</code> If the input is a PDF file, this indicates the current page number of the PDF. Otherwise, it is <code>None</code></p>
-</li>
-<li>
-<p><code>model_settings</code>: <code>(Dict[str, bool])</code> The model parameters required for the pipeline configuration.</p>
-<ul>
-<li><code>use_doc_preprocessor</code>: <code>(bool)</code> Controls whether to enable the document preprocessing sub-pipeline.</li>
-<li><code>use_layout_detection</code>: <code>(bool)</code> Controls whether to enable the layout area detection module.</li>
-</ul>
-</li>
-<li>
-<p><code>doc_preprocessor_res</code>: <code>(Dict[str, Union[str, Dict[str, bool], int]])</code> The output result of the document preprocessing sub-pipeline. It exists only when <code>use_doc_preprocessor=True</code>.</p>
-<ul>
-<li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the image preprocessing sub-pipeline. When the input is a <code>numpy.ndarray</code>, it is saved as <code>None</code>.</li>
-<li><code>model_settings</code>: <code>(Dict)</code> The model configuration parameters of the preprocessing sub-pipeline.<ul>
-<li><code>use_doc_orientation_classify</code>: <code>(bool)</code> Controls whether to enable document orientation classification.</li>
-<li><code>use_doc_unwarping</code>: <code>(bool)</code> Controls whether to enable document distortion correction.</li>
-</ul>
-</li>
-<li><code>angle</code>: <code>(int)</code> The prediction result of document orientation classification. When enabled, it takes values from [0,1,2,3], corresponding to [0°,90°,180°,270°]; when disabled, it is -1.</li>
-</ul>
-</li>
-<li><code>layout_det_res</code>: <code>(Dict[str, List[Dict]])</code> The output result of the layout area detection module. It exists only when <code>use_layout_detection=True</code>.<ul>
-<li><code>input_path</code>: <code>(Union[str, None])</code> The image path accepted by the layout area detection module. When the input is a <code>numpy.ndarray</code>, it is saved as <code>None</code>.</li>
-<li><code>boxes</code>: <code>(List[Dict[int, str, float, List[float]]])</code> A list of layout area detection prediction results.<ul>
-<li><code>cls_id</code>: <code>(int)</code> The class ID predicted by layout area detection.</li>
-<li><code>label</code>: <code>(str)</code> The class label predicted by layout area detection.</li>
-<li><code>score</code>: <code>(float)</code> The confidence score of the predicted class.</li>
-<li><code>coordinate</code>: <code>(List[float])</code> The bounding box coordinates predicted by layout area detection, in the format [x_min, y_min, x_max, y_max], where (x_min, y_min) is the top-left corner and (x_max, y_max) is the bottom-right corner.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>formula_res_list</code>: <code>(List[Dict[str, int, List[float]]])</code> A list of formula recognition prediction results.<ul>
-<li><code>rec_formula</code>: <code>(str)</code> The LaTeX source code predicted by formula recognition.</li>
-<li><code>formula_region_id</code>: <code>(int)</code> The ID number predicted by formula recognition.</li>
-<li><code>dt_polys</code>: <code>(List[float])</code> The bounding box coordinates predicted by formula recognition, in the format [x_min, y_min, x_max, y_max], where (x_min, y_min) is the top-left corner and (x_max, y_max) is the bottom-right corner.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Calling the <code>save_to_json()</code> method will save the above content to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_res.json</code>. If a file is specified, it will be saved directly to that file. Since JSON files do not support saving numpy arrays, <code>numpy.array</code> types will be converted to list format.</p>
-</li>
-<li>
-<p>Calling the <code>save_to_img()</code> method will save the visualization results to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_formula_res_img.{your_img_extension}</code>. If a file is specified, it will be saved directly to that file. (The pipeline usually contains many result images, so it is not recommended to specify a specific file path directly, otherwise multiple images will be overwritten and only the last one will be retained.)</p>
-</li>
-<li>
-<p>In addition, you can also obtain the visualization image with results and the prediction results through attributes, as follows:</p>
-</li>
-</ul>
+
+* In addition, you can also obtain the visualization image with results and the prediction results through attributes, as follows:
+
 <table>
 <thead>
 <tr>
@@ -5518,18 +5446,29 @@ Whether to use the document orientation classification module during inference.<
 </tr>
 </table>
 
+
 <ul>
 <li>The prediction result obtained from the <code>json</code> attribute is of the dict type, and its content is consistent with what is saved by calling the <code>save_to_json()</code> method.</li>
 <li>The prediction result returned by the  <code>img</code> attribute is a dictionary-type data. The keys are  <code>preprocessed_img</code>、 <code>layout_det_res</code> and <code>formula_res_img</code>, and the corresponding values are three <code>Image.Image</code> objects: the first one is used to display the visualization of image preprocessing, the second one is for displaying the visualization of layout region detection, and the third one is for displaying the visualization of formula recognition. If the image preprocessing submodule is not used, the dictionary will not contain the <code>preprocessed_img</code> key. Similarly, if the layout region detection submodule is not used, the dictionary will not contain the <code>layout_det_res</code> key.</li>
 </ul>
-<h2 id="3-development-integrationdeployment">3. Development Integration/Deployment<a class="headerlink" href="#3-development-integrationdeployment" title="Permanent link">&para;</a></h2>
-<p>If the formula recognition pipeline meets your requirements for inference speed and accuracy, you can proceed directly with development integration/deployment.</p>
-<p>If you need to integrate the formula recognition pipeline into your Python project, you can refer to the example code in <a href="#22-python-script-integration"> 2.2 Python Script Integration</a>.</p>
-<p>In addition, PaddleOCR also provides two other deployment methods, which are detailed as follows:</p>
-<p>🚀 High-Performance Inference: In real-world production environments, many applications have stringent standards for performance metrics of deployment strategies, particularly regarding response speed, to ensure efficient system operation and a smooth user experience. To address this, PaddleOCR offers high-performance inference capabilities designed to deeply optimize the performance of model inference and pre/post-processing, significantly accelerating the end-to-end process. For detailed information on the high-performance inference process, please refer to the <a href="../deployment/high_performance_inference.html">High-Performance Inference Guide</a>.</p>
-<p>☁️ Service-Based Deployment: 
-Service-Based Deployment is a common deployment form in real-world production environments. By encapsulating inference capabilities as a service, clients can access these services via network requests to obtain inference results. For detailed instructions on Service-Based Deployment in pipelines, please refer to the <a href="../deployment/serving.html">Service-Based Deployment Guide</a>.</p>
-<p>Below are the API references for basic service-based deployment and multi-language service invocation examples:</p>
+
+## 3. Development Integration/Deployment
+
+If the formula recognition pipeline meets your requirements for inference speed and accuracy, you can proceed directly with development integration/deployment.
+
+If you need to integrate the formula recognition pipeline into your Python project, you can refer to the example code in [ 2.2 Python Script Integration](#22-python-script-integration).
+
+In addition, PaddleOCR also provides two other deployment methods, which are detailed as follows:
+
+🚀 High-Performance Inference: In real-world production environments, many applications have stringent standards for performance metrics of deployment strategies, particularly regarding response speed, to ensure efficient system operation and a smooth user experience. To address this, PaddleOCR offers high-performance inference capabilities designed to deeply optimize the performance of model inference and pre/post-processing, significantly accelerating the end-to-end process. For detailed information on the high-performance inference process, please refer to the [High-Performance Inference Guide](../deployment/high_performance_inference.en.md).
+
+
+☁️ Service-Based Deployment: 
+Service-Based Deployment is a common deployment form in real-world production environments. By encapsulating inference capabilities as a service, clients can access these services via network requests to obtain inference results. For detailed instructions on Service-Based Deployment in pipelines, please refer to the [Service-Based Deployment Guide](../deployment/serving.en.md).
+
+Below are the API references for basic service-based deployment and multi-language service invocation examples:
+
+
 <details><summary>API Reference</summary>
 <p>For the main operations provided by the service:</p>
 <ul>
@@ -6181,11 +6120,17 @@ foreach ($result as $i => $item) {
 ?&gt;
 </code></pre></details>
 </details>
-<p><br/></p>
-<h2 id="4-custom-development">4. Custom Development<a class="headerlink" href="#4-custom-development" title="Permanent link">&para;</a></h2>
-<p>If the default model weights provided by the formula recognition pipeline do not meet your requirements in terms of accuracy or speed, you can try to <b>fine-tune</b> the existing models using <b>your own domain-specific or application-specific data</b> to improve the recognition performance of the formula recognition pipeline in your scenario.</p>
-<h3 id="41-model-fine-tuning">4.1 Model Fine-Tuning<a class="headerlink" href="#41-model-fine-tuning" title="Permanent link">&para;</a></h3>
-<p>Since the formula recognition pipeline consists of several modules, if the pipeline's performance is not satisfactory, the issue may arise from any one of these modules. You can analyze the poorly recognized images to determine which module is problematic and refer to the corresponding fine-tuning tutorial links in the table below for model fine-tuning.</p>
+<br/>
+
+
+## 4. Custom Development
+
+If the default model weights provided by the formula recognition pipeline do not meet your requirements in terms of accuracy or speed, you can try to <b>fine-tune</b> the existing models using <b>your own domain-specific or application-specific data</b> to improve the recognition performance of the formula recognition pipeline in your scenario.
+
+### 4.1 Model Fine-Tuning
+
+Since the formula recognition pipeline consists of several modules, if the pipeline's performance is not satisfactory, the issue may arise from any one of these modules. You can analyze the poorly recognized images to determine which module is problematic and refer to the corresponding fine-tuning tutorial links in the table below for model fine-tuning.
+
 <table>
 <thead>
 <tr>
@@ -6218,18 +6163,25 @@ foreach ($result as $i => $item) {
 </tbody>
 </table>
 
-<h3 id="42-model-deployment">4.2  Model Deployment<a class="headerlink" href="#42-model-deployment" title="Permanent link">&para;</a></h3>
-<p>After you complete fine-tuning training using a private dataset, you can obtain a local model weight file. You can then use the fine-tuned model weights by specifying the local model save path through parameters or by customizing the pipeline configuration file.</p>
-<h4 id="421-specify-the-local-model-path-through-parameters">4.2.1 Specify the local model path through parameters<a class="headerlink" href="#421-specify-the-local-model-path-through-parameters" title="Permanent link">&para;</a></h4>
-<p>When initializing the pipeline object, specify the local model path through parameters. Take the usage of the weights after fine-tuning the text detection model as an example, as follows:</p>
-<p>Command line mode:</p>
+### 4.2  Model Deployment
+
+After you complete fine-tuning training using a private dataset, you can obtain a local model weight file. You can then use the fine-tuned model weights by specifying the local model save path through parameters or by customizing the pipeline configuration file.
+
+#### 4.2.1 Specify the local model path through parameters
+
+When initializing the pipeline object, specify the local model path through parameters. Take the usage of the weights after fine-tuning the text detection model as an example, as follows:
+
+Command line mode:
+
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Specify the local model path via --formula_recognition_model_dir</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>paddleocr<span class="w"> </span>formula_recognition_pipeline<span class="w"> </span>-i<span class="w"> </span>./general_formula_recognition_001.png<span class="w"> </span>--formula_recognition_model_dir<span class="w"> </span>your_formula_recognition_model_path
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># PP-FormulaNet_plus-M model is used as the default formula recognition model. If you do not fine-tune this model, modify the model name by using --formula_recognition_model_name</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>paddleocr<span class="w"> </span>formula_recognition_pipeline<span class="w"> </span>-i<span class="w"> </span>./general_formula_recognition_001.png<span class="w"> </span>--formula_recognition_model_name<span class="w"> </span>PP-FormulaNet_plus-M<span class="w"> </span>--formula_recognition_model_dir<span class="w"> </span>your_ppformulanet_plus-m_formula_recognition_model_path
 </span></code></pre></div>
-<p>Script mode：</p>
+
+Script mode：
+
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">FormulaRecognitionPipeline</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">#  Specify the local model path via formula_recognition_model_dir</span>
@@ -6243,16 +6195,25 @@ foreach ($result as $i => $item) {
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># PP-FormulaNet_plus-M model is used as the default formula recognition model. If you do not fine-tune this model, modify the model name by using  formula_recognition_model_name</span>
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="c1"># pipeline = FormulaRecognitionPipeline(formula_recognition_model_name=&quot;PP-FormulaNet_plus-M&quot;, formula_recognition_model_dir=&quot;./your_ppformulanet_plus-m_formula_recognition_model_path&quot;)</span>
 </span></code></pre></div>
-<h4 id="422-specify-the-local-model-path-through-the-configuration-file">4.2.2 Specify the local model path through the configuration file<a class="headerlink" href="#422-specify-the-local-model-path-through-the-configuration-file" title="Permanent link">&para;</a></h4>
-<p>1.Obtain the pipeline configuration file</p>
-<p>Call the <code>export_paddlex_config_to_yaml</code> method of the <strong>Formula Recognition Pipeline</strong> object in PaddleOCR to export the current pipeline configuration as a YAML file:  </p>
+
+
+#### 4.2.2 Specify the local model path through the configuration file
+
+
+1.Obtain the pipeline configuration file
+
+Call the `export_paddlex_config_to_yaml` method of the **Formula Recognition Pipeline** object in PaddleOCR to export the current pipeline configuration as a YAML file:  
+
 <div class="language-Python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">FormulaRecognitionPipeline</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">FormulaRecognitionPipeline</span><span class="p">()</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">pipeline</span><span class="o">.</span><span class="n">export_paddlex_config_to_yaml</span><span class="p">(</span><span class="s2">&quot;FormulaRecognitionPipeline.yaml&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p>2.Modify the Configuration File </p>
-<p>After obtaining the default pipeline configuration file, replace the paths of the default model weights with the local paths of your fine-tuned model weights. For example:  </p>
+
+2.Modify the Configuration File 
+
+After obtaining the default pipeline configuration file, replace the paths of the default model weights with the local paths of your fine-tuned model weights. For example:  
+
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="l l-Scalar l-Scalar-Plain">......</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="l l-Scalar l-Scalar-Plain">SubModules</span><span class="p p-Indicator">:</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">FormulaRecognition</span><span class="p">:</span>
@@ -6290,13 +6251,19 @@ foreach ($result as $i => $item) {
 </span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="nt">use_layout_detection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="l l-Scalar l-Scalar-Plain">......</span>
 </span></code></pre></div>
-<p>The pipeline configuration file includes not only the parameters supported by the PaddleOCR CLI and Python API but also advanced configurations. For detailed instructions, refer to the <a href="https://paddlepaddle.github.io/PaddleX/latest/en/pipeline_usage/pipeline_develop_guide.html">PaddleX Pipeline Usage Overview</a> and adjust the configurations as needed.  </p>
-<p>3.Load the Configuration File in CLI  </p>
-<p>After modifying the configuration file, specify its path using the <code>--paddlex_config</code> parameter in the command line. PaddleOCR will read the file and apply the configurations. Example:  </p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>paddleocr<span class="w"> </span>formula_recognition_pipeline<span class="w"> </span>-i<span class="w"> </span>./general_formula_recognition_001.png<span class="w"> </span>--paddlex_config<span class="w"> </span>FormulaRecognitionPipeline.yaml<span class="w"> </span>
+
+The pipeline configuration file includes not only the parameters supported by the PaddleOCR CLI and Python API but also advanced configurations. For detailed instructions, refer to the [PaddleX Pipeline Usage Overview](https://paddlepaddle.github.io/PaddleX/latest/en/pipeline_usage/pipeline_develop_guide.html) and adjust the configurations as needed.  
+
+3.Load the Configuration File in CLI  
+
+After modifying the configuration file, specify its path using the `--paddlex_config` parameter in the command line. PaddleOCR will read the file and apply the configurations. Example:  
+
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>paddleocr<span class="w"> </span>formula_recognition_pipeline<span class="w"> </span>-i<span class="w"> </span>./general_formula_recognition_001.png<span class="w"> </span>--paddlex_config<span class="w"> </span>FormulaRecognitionPipeline.yaml<span class="w"> </span>
 </span></code></pre></div>
-4.Load the Configuration File in Python API  </p>
-<p>When initializing the pipeline object, pass the path of the PaddleX pipeline configuration file or a configuration dictionary via the <code>paddlex_config</code> parameter. PaddleOCR will read and apply the configurations. Example: </p>
+4.Load the Configuration File in Python API  
+
+When initializing the pipeline object, pass the path of the PaddleX pipeline configuration file or a configuration dictionary via the `paddlex_config` parameter. PaddleOCR will read and apply the configurations. Example: 
+
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span>  <span class="n">FormulaRecognitionPipeline</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">pipeline</span> <span class="o">=</span>  <span class="n">FormulaRecognitionPipeline</span><span class="p">(</span><span class="n">paddlex_config</span><span class="o">=</span><span class="s2">&quot;FormulaRecognitionPipeline.yaml&quot;</span><span class="p">)</span>

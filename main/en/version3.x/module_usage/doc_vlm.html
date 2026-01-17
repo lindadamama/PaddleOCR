@@ -4332,10 +4332,13 @@ You're not viewing the latest version.
 <p>After running, the result is:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">{</span><span class="s1">&#39;res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;image&#39;</span>:<span class="w"> </span><span class="s1">&#39;medal_table.png&#39;</span>,<span class="w"> </span><span class="s1">&#39;query&#39;</span>:<span class="w"> </span><span class="s1">&#39;识别这份表格的内容, 以markdown格式输出&#39;</span>,<span class="w"> </span><span class="s1">&#39;result&#39;</span>:<span class="w"> </span><span class="s1">&#39;| 名次 | 国家/地区 | 金牌 | 银牌 | 铜牌 | 奖牌总数 |\n| --- | --- | --- | --- | --- | --- |\n| 1 | 中国（CHN） | 48 | 22 | 30 | 100 |\n| 2 | 美国（USA） | 36 | 39 | 37 | 112 |\n| 3 | 俄罗斯（RUS） | 24 | 13 | 23 | 60 |\n| 4 | 英国（GBR） | 19 | 13 | 19 | 51 |\n| 5 | 德国（GER） | 16 | 11 | 14 | 41 |\n| 6 | 澳大利亚（AUS） | 14 | 15 | 17 | 46 |\n| 7 | 韩国（KOR） | 13 | 11 | 8 | 32 |\n| 8 | 日本（JPN） | 9 | 8 | 8 | 25 |\n| 9 | 意大利（ITA） | 8 | 9 | 10 | 27 |\n| 10 | 法国（FRA） | 7 | 16 | 20 | 43 |\n| 11 | 荷兰（NED） | 7 | 5 | 4 | 16 |\n| 12 | 乌克兰（UKR） | 7 | 4 | 11 | 22 |\n| 13 | 肯尼亚（KEN） | 6 | 4 | 6 | 16 |\n| 14 | 西班牙（ESP） | 5 | 11 | 3 | 19 |\n| 15 | 牙买加（JAM） | 5 | 4 | 2 | 11 |\n&#39;</span><span class="o">}}</span>
 </span></code></pre></div>
-<p>The meaning of the result parameters is as follows:
-- <code>image</code>: Indicates the path of the input image to be predicted
-- <code>query</code>: Represents the input text information to be predicted
-- <code>result</code>: Information of the model's prediction result</p>
+<p>The meaning of the result parameters is as follows:</p>
+<ul>
+<li><b>image</b>: Indicates the path of the input image to be predicted</li>
+<li><b>query</b>: Represents the input text information to be predicted</li>
+<li><b>result</b>: Information of the model's prediction result</li>
+</ul>
+
 <p>The visualization of the prediction result is as follows:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">|</span><span class="w"> </span>名次<span class="w"> </span><span class="p">|</span><span class="w"> </span>国家/地区<span class="w"> </span><span class="p">|</span><span class="w"> </span>金牌<span class="w"> </span><span class="p">|</span><span class="w"> </span>银牌<span class="w"> </span><span class="p">|</span><span class="w"> </span>铜牌<span class="w"> </span><span class="p">|</span><span class="w"> </span>奖牌总数<span class="w"> </span><span class="p">|</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">|</span><span class="w"> </span>---<span class="w"> </span><span class="p">|</span><span class="w"> </span>---<span class="w"> </span><span class="p">|</span><span class="w"> </span>---<span class="w"> </span><span class="p">|</span><span class="w"> </span>---<span class="w"> </span><span class="p">|</span><span class="w"> </span>---<span class="w"> </span><span class="p">|</span><span class="w"> </span>---<span class="w"> </span><span class="p">|</span>
@@ -4371,19 +4374,22 @@ You're not viewing the latest version.
 <tbody>
 <tr>
 <td><code>model_name</code></td>
-<td>Model name. If set to <code>None</code>, <code>PP-DocBee-2B</code> will be used.</td>
+<td><b>Meaning:</b> Model name.<br/>
+<b>Description:</b>
+ If set to <code>None</code>, <code>PP-DocBee-2B</code> will be used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>model_dir</code></td>
-<td>Model storage path.</td>
+<td><b>Meaning:</b>Model storage path.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>Device for inference.<br/>
+<td><b>Meaning:</b> Device for inference.<br/>
+<b>Description:</b>
 <b>For example:</b><code>"cpu"</code>, <code>"gpu"</code>, <code>"npu"</code>, <code>"gpu:0"</code>, <code>"gpu:0,1"</code>.<br/>
 By default, GPU 0 is used if available; otherwise, CPU is used.
 </td>
@@ -4394,7 +4400,7 @@ By default, GPU 0 is used if available; otherwise, CPU is used.
 </table>
 
 <ul>
-<li>Call the <code>predict()</code> method of the document visual language model for inference prediction. This method will return a result list. Additionally, this module also provides the <code>predict_iter()</code> method. Both are completely consistent in terms of parameter acceptance and result return, the difference being that <code>predict_iter()</code> returns a <code>generator</code>, capable of gradually processing and obtaining prediction results, suitable for handling large datasets or scenarios where memory saving is desired. You can choose to use either of these methods based on actual needs. The <code>predict()</code> method parameters include <code>input</code>, <code>batch_size</code>, with specific explanations as follows:</li>
+<li>Call the  <code>predict()</code> method of the document visual language model for inference prediction. This method will return a result list. Additionally, this module also provides the <code>predict_iter()</code> method. Both are completely consistent in terms of parameter acceptance and result return, the difference being that <code>predict_iter()</code> returns a <code>generator</code>, capable of gradually processing and obtaining prediction results, suitable for handling large datasets or scenarios where memory saving is desired. You can choose to use either of these methods based on actual needs. The <code>predict()</code> method parameters include  <code>input</code> , <code>batch_size</code>, with specific explanations as follows:</li>
 </ul>
 <table>
 <thead>
@@ -4407,7 +4413,9 @@ By default, GPU 0 is used if available; otherwise, CPU is used.
 </thead>
 <tr>
 <td><code>input</code></td>
-<td>Input data. Required. Since multimodal models have different input requirements, please refer to the specific model for the correct format.<br/>
+<td><b>Meaning:</b> Input data. Required. <br/>
+<b>Description:</b>
+Since multimodal models have different input requirements, please refer to the specific model for the correct format.<br/>
 For example, for the PP-DocBee series models, the input format should be: <code>{'image': image_path, 'query': query_text}</code>
 </td>
 <td><code>dict</code></td>
@@ -4415,7 +4423,9 @@ For example, for the PP-DocBee series models, the input format should be: <code>
 </tr>
 <tr>
 <td><code>batch_size</code></td>
-<td>Batch size, positive integer.</td>
+<td><b>Meaning:</b>Batch size.<br/>
+<b>Description:</b>
+Positive integer.</td>
 <td><code>int</code></td>
 <td>1</td>
 </tr>

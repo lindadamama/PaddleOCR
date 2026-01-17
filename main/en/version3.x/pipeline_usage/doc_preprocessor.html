@@ -2692,45 +2692,6 @@ You're not viewing the latest version.
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-development-integrationdeployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Development Integration/Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-secondary-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Secondary Development
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Secondary Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-model-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Model Fine-Tuning
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4238,45 +4199,6 @@ You're not viewing the latest version.
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-development-integrationdeployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Development Integration/Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-secondary-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Secondary Development
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Secondary Development">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-model-fine-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Model Fine-Tuning
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4496,7 +4418,8 @@ You're not viewing the latest version.
 <tbody>
 <tr>
 <td><code>input</code></td>
-<td>The data to be predicted. This parameter is required.
+<td><b>Meaning:</b>The data to be predicted. This parameter is required.<br/>
+<b>Description:</b>
 For example, the local path of an image file or PDF file: <code>/root/data/img.jpg</code>; <b>or a URL link</b>, such as the network URL of an image file or PDF file: <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/demo_image/doc_test_rotated.jpg">example</a>; <b>or a local directory</b>, which should contain the images to be predicted, such as the local path: <code>/root/data/</code> (currently does not support prediction of PDF files in directories; PDF files need to be specified to a specific file path).
 </td>
 <td><code>str</code></td>
@@ -4504,49 +4427,65 @@ For example, the local path of an image file or PDF file: <code>/root/data/img.j
 </tr>
 <tr>
 <td><code>save_path</code></td>
-<td>Specify the path to save the inference result file. If not set, the inference result will not be saved locally.</td>
+<td><b>Meaning:</b>Specify the path to save the inference result file. <br/>
+<b>Description:</b>
+If not set, the inference result will not be saved locally.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_name</code></td>
-<td>The name of the document orientation classification model. If not set, the pipeline's default model will be used.</td>
+<td><b>Meaning:</b>The name of the document orientation classification model.<br/>
+<b>Description:</b>
+If not set, the pipeline's default model will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_dir</code></td>
-<td>The directory path of the document orientation classification model. If not set, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the document orientation classification model. <br/>
+<b>Description:</b>
+If not set, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_name</code></td>
-<td>The name of the text image unwarping model. If not set, the pipeline's default model will be used.</td>
+<td><b>Meaning:</b>The name of the text image unwarping model. <br/>
+<b>Description:</b>
+If not set, the pipeline's default model will be used.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_dir</code></td>
-<td>The directory path of the text image unwarping model. If not set, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the text image unwarping model. <br/>
+<b>Description:</b>
+If not set, the official model will be downloaded.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to load and use  the document orientation classification module. If not set, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
+<td><b>Meaning:</b>Whether to load and use  the document orientation classification module. <br/>
+<b>Description:</b>
+If not set, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to load and use  the text image unwarping module. If not set, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
+<td><b>Meaning:</b>Whether to load and use  the text image unwarping module. <br/>
+<b>Description:</b>
+If not set, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
 <td><code>bool</code></td>
 <td></td>
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>The device used for inference. Support for specifying specific card numbers:
+<td><b>Meaning:</b>The device used for inference. <br/>
+<b>Description:</b>
+Support for specifying specific card numbers:
 <ul>
 <li><b>CPU</b>: For example, <code>cpu</code> indicates using the CPU for inference;</li>
 <li><b>GPU</b>: For example, <code>gpu:0</code> indicates using the first GPU for inference;</li>
@@ -4564,13 +4503,15 @@ If not set, the pipeline initialized value for this parameter will be used. Duri
 </tr>
 <tr>
 <td><code>enable_hpi</code></td>
-<td>Whether to enable high-performance inference.</td>
+<td><b>Meaning:</b>Whether to enable high-performance inference.</td>
 <td><code>bool</code></td>
 <td><code>False</code></td>
 </tr>
 <tr>
 <td><code>use_tensorrt</code></td>
-<td>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<td><b>Meaning:</b>Whether to use the Paddle Inference TensorRT subgraph engine.<br/> 
+<b>Description:</b>
+If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
 For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6), and it is recommended to install TensorRT 8.6.1.6.<br/>
 
 </td>
@@ -4579,33 +4520,35 @@ For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6)
 </tr>
 <tr>
 <td><code>precision</code></td>
-<td>The computational precision, such as fp32, fp16.</td>
+<td><b>Meaning:</b>The computational precision, such as fp32, fp16.</td>
 <td><code>str</code></td>
 <td><code>fp32</code></td>
 </tr>
 <tr>
 <td><code>enable_mkldnn</code></td>
-<td>Whether to enable MKL-DNN acceleration for inference. If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
+<td><b>Meaning:</b>Whether to enable MKL-DNN acceleration for inference. <br/>
+<b>Description:</b>
+If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
 <td><code>bool</code></td>
 <td><code>True</code></td>
 </tr>
 <tr>
 <td><code>mkldnn_cache_capacity</code></td>
 <td>
-MKL-DNN cache capacity.
+<b>Meaning:</b>MKL-DNN cache capacity.
 </td>
 <td><code>int</code></td>
 <td><code>10</code></td>
 </tr>
 <tr>
 <td><code>cpu_threads</code></td>
-<td>The number of threads used for inference on the CPU.</td>
+<td><b>Meaning:</b>The number of threads used for inference on the CPU.</td>
 <td><code>int</code></td>
 <td><code>8</code></td>
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
@@ -4646,43 +4589,57 @@ MKL-DNN cache capacity.
 <tbody>
 <tr>
 <td><code>doc_orientation_classify_model_name</code></td>
-<td>The name of the document orientation classification model. If set to <code>None</code>, the pipeline's default model will be used.</td>
+<td><b>Meaning:</b>The name of the document orientation classification model. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the pipeline's default model will be used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_orientation_classify_model_dir</code></td>
-<td>The directory path of the document orientation classification model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the document orientation classification model. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_name</code></td>
-<td>The name of the text image unwarping model. If set to <code>None</code>, the pipeline's default model will be used.</td>
+<td><b>Meaning:</b>The name of the text image unwarping model. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the pipeline's default model will be used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>doc_unwarping_model_dir</code></td>
-<td>The directory path of the text image unwarping model. If set to <code>None</code>, the official model will be downloaded.</td>
+<td><b>Meaning:</b>The directory path of the text image unwarping model. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the official model will be downloaded.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to load and use the document orientation classification module. If set to <code>None</code>, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
+<td><b>Meaning:</b>Whether to load and use the document orientation classification module. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to load and use the text image unwarping module. If set to <code>None</code>, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
+<td><b>Meaning:</b>Whether to load and use the text image unwarping module. <br/>
+<b>Description:</b>
+If set to <code>None</code>, the parameter value initialized by the pipeline will be used, which defaults to <code>True</code>.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>device</code></td>
-<td>The device used for inference. Support for specifying specific card numbers:
+<td><b>Meaning:</b>The device used for inference. <br/>
+<b>Description:</b>
+Support for specifying specific card numbers:
 <ul>
 <li><b>CPU</b>: For example, <code>cpu</code> indicates using the CPU for inference;</li>
 <li><b>GPU</b>: For example, <code>gpu:0</code> indicates using the first GPU for inference;</li>
@@ -4700,13 +4657,15 @@ MKL-DNN cache capacity.
 </tr>
 <tr>
 <td><code>enable_hpi</code></td>
-<td>Whether to enable high-performance inference.</td>
+<td><b>Meaning:</b>Whether to enable high-performance inference.</td>
 <td><code>bool</code></td>
 <td><code>False</code></td>
 </tr>
 <tr>
 <td><code>use_tensorrt</code></td>
-<td>Whether to use the Paddle Inference TensorRT subgraph engine. If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
+<td><b>Meaning:</b>Whether to use the Paddle Inference TensorRT subgraph engine.<br/> 
+<b>Description:</b>
+If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
 For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6), and it is recommended to install TensorRT 8.6.1.6.<br/>
 
 </td>
@@ -4715,33 +4674,35 @@ For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6)
 </tr>
 <tr>
 <td><code>precision</code></td>
-<td>The computational precision, such as fp32, fp16.</td>
+<td><b>Meaning:</b>The computational precision, such as fp32, fp16.</td>
 <td><code>str</code></td>
 <td><code>"fp32"</code></td>
 </tr>
 <tr>
 <td><code>enable_mkldnn</code></td>
-<td>Whether to enable MKL-DNN acceleration for inference. If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
+<td><b>Meaning:</b>Whether to enable MKL-DNN acceleration for inference. <br/>
+<b>Description:</b>
+If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
 <td><code>bool</code></td>
 <td><code>True</code></td>
 </tr>
 <tr>
 <td><code>mkldnn_cache_capacity</code></td>
 <td>
-MKL-DNN cache capacity.
+<b>Meaning:</b>MKL-DNN cache capacity.<br/>
 </td>
 <td><code>int</code></td>
 <td><code>10</code></td>
 </tr>
 <tr>
 <td><code>cpu_threads</code></td>
-<td>The number of threads used for inference on the CPU.</td>
+<td><b>Meaning:</b>The number of threads used for inference on the CPU.</td>
 <td><code>int</code></td>
 <td><code>8</code></td>
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -4762,7 +4723,8 @@ MKL-DNN cache capacity.
 </thead>
 <tr>
 <td><code>input</code></td>
-<td>The data to be predicted, supporting multiple input types. This parameter is required.
+<td><b>Meaning:</b>The data to be predicted, supporting multiple input types. This parameter is required.<br/>
+<b>Description:</b>
 <ul>
 <li><b>Python Var</b>: For example, image data represented as <code>numpy.ndarray</code>;</li>
 <li><b>str</b>: For example, the local path of an image file or PDF file: <code>/root/data/img.jpg</code>; <b>or a URL link</b>, such as the network URL of an image file or PDF file: <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/demo_image/doc_test_rotated.jpg">example</a>; <b>or a local directory</b>, which should contain the images to be predicted, such as the local path: <code>/root/data/</code> (currently does not support prediction of PDF files in directories; PDF files need to be specified to a specific file path);</li>
@@ -4774,13 +4736,13 @@ MKL-DNN cache capacity.
 </tr>
 <tr>
 <td><code>use_doc_orientation_classify</code></td>
-<td>Whether to use the document orientation classification module during inference.</td>
+<td><b>Meaning:</b>Whether to use the document orientation classification module during inference.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_doc_unwarping</code></td>
-<td>Whether to use the text image unwarping module during inference.</td>
+<td><b>Meaning:</b>Whether to use the text image unwarping module during inference.</td>
 <td><code>bool|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -4850,37 +4812,26 @@ MKL-DNN cache capacity.
 </table>
 <p>Here's the continuation of the translation:</p>
 <ul>
-<li>
-<p>Calling the <code>print()</code> method will output the results to the terminal. The content printed to the terminal is explained as follows:</p>
-<ul>
-<li>
-<p><code>input_path</code>: <code>(str)</code> The input path of the image to be predicted</p>
+<li>Calling the<code>print()</code> method will output the results to the terminal. The content printed to the terminal is explained as follows:</li>
+    <ol start="1" type="1">
+     <li><code>input_path</code>: <code>(str)</code> The input path of the image to be predicted
 </li>
-<li>
-<p><code>page_index</code>: <code>(Union[int, None])</code> If the input is a PDF file, it indicates the current page number of the PDF; otherwise, it is <code>None</code></p>
+     <li><code>page_index</code>: <code>(Union[int, None])</code> If the input is a PDF file, it indicates the current page number of the PDF; otherwise, it is  <code>None</code></li>  
+     <li><code>model_settings</code>: <code>(Dict[str, bool])</code> Model parameters configured for the pipeline
 </li>
-<li>
-<p><code>model_settings</code>: <code>(Dict[str, bool])</code> Model parameters configured for the pipeline</p>
-<ul>
-<li><code>use_doc_orientation_classify</code>: <code>(bool)</code> Controls whether to enable the document orientation classification module</li>
-<li><code>use_doc_unwarping</code>: <code>(bool)</code> Controls whether to enable the text image rectification module</li>
-</ul>
+        <ol>
+        <li><code>use_doc_orientation_classify</code>: <code>(bool)</code> Controls whether to enable the document orientation classification module</li>
+        <li><code>use_doc_unwarping</code>: <code>(bool)</code> Controls whether to enable the text image rectification module</li>
+        </ol>
+    <li><code>angle</code>: <code>(int)</code> The prediction result of the document orientation classification. When enabled, the value is one of [0,90,180,270]; when disabled, it is -1</li>
+    </ol>
+<li> Calling the<code>save_to_json()</code> method will save the above content to the specified<code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}.json</code>，If a file is specified, it will be saved directly to that file. Since JSON files do not support saving numpy arrays,<code>numpy.array</code>types will be converted to list form.
 </li>
-<li>
-<p><code>angle</code>: <code>(int)</code> The prediction result of the document orientation classification. When enabled, the value is one of [0,90,180,270]; when disabled, it is -1</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Calling the <code>save_to_json()</code> method will save the above content to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}.json</code>. If a file is specified, it will be saved directly to that file. Since JSON files do not support saving numpy arrays, <code>numpy.array</code> types will be converted to list form.</p>
-</li>
-<li>
-<p>Calling the <code>save_to_img()</code> method will save the visualization results to the specified <code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_doc_preprocessor_res_img.{your_img_extension}</code>. If a file is specified, it will be saved directly to that file. (Production lines usually contain many result images, so it is not recommended to specify a specific file path directly, as multiple images will be overwritten, and only the last image will be retained)</p>
-</li>
-<li>
-<p>In addition, it also supports obtaining visualization images and prediction results with results through attributes, as follows:</p>
-</li>
-</ul>
+<li>Calling the<code>save_to_img()</code> method will save the visualization results to the specified<code>save_path</code>. If a directory is specified, the saved path will be <code>save_path/{your_img_basename}_doc_preprocessor_res_img.{your_img_extension}</code>. If a file is specified, it will be saved directly to that file. (Production lines usually contain many result images, so it is not recommended to specify a specific file path directly, as multiple images will be overwritten, and only the last image will be retained)</li>
+
+
+* In addition, it also supports obtaining visualization images and prediction results with results through attributes, as follows:
+
 <table>
 <thead>
 <tr>
@@ -4897,18 +4848,25 @@ MKL-DNN cache capacity.
 <td rowspan="2">Obtain visualization images in dictionary format</td>
 </tr>
 </table>
-
 <ul>
 <li>The prediction result obtained by the <code>json</code> attribute is data of type dict, and the content is consistent with that saved by calling the <code>save_to_json()</code> method.</li>
 <li>The prediction result returned by the <code>img</code> attribute is a dictionary-type data. The key is <code>preprocessed_img</code>, and the corresponding value is an <code>Image.Image</code> object: a visualization image for displaying the doc_preprocessor result.</li>
 </ul>
-<h2 id="3-development-integrationdeployment">3. Development Integration/Deployment<a class="headerlink" href="#3-development-integrationdeployment" title="Permanent link">&para;</a></h2>
-<p>If the pipeline meets your requirements for inference speed and accuracy, you can proceed directly to development integration/deployment.</p>
-<p>If you need to apply the pipeline directly to your Python project, you can refer to the example code in <a href="#22-python脚本方式集成">2.2 Python Script Integration</a>.</p>
-<p>In addition, PaddleOCR also provides two other deployment methods, which are detailed as follows:</p>
-<p>🚀 High-performance inference: In actual production environments, many applications have strict performance requirements (especially response speed) to ensure efficient system operation and smooth user experience. To this end, PaddleOCR provides high-performance inference functionality, aiming to deeply optimize model inference and pre/post-processing to achieve significant end-to-end process acceleration. For detailed high-performance inference procedures, please refer to the <a href="../deployment/high_performance_inference.html">High-Performance Inference Guide</a>.</p>
-<p>☁️ Service-oriented deployment: Service-oriented deployment is a common form of deployment in actual production environments. By encapsulating inference functions as services, clients can access these services through network requests to obtain inference results. For detailed pipeline service-oriented deployment procedures, please refer to the <a href="../deployment/serving.html">Service-Oriented Deployment Guide</a>.</p>
-<p>Below are the API references for basic service-oriented deployment and examples of multi-language service calls:</p>
+
+## 3. Development Integration/Deployment
+
+If the pipeline meets your requirements for inference speed and accuracy, you can proceed directly to development integration/deployment.
+
+If you need to apply the pipeline directly to your Python project, you can refer to the example code in [2.2 Python Script Integration](#22-python脚本方式集成).
+
+In addition, PaddleOCR also provides two other deployment methods, which are detailed as follows:
+
+🚀 High-performance inference: In actual production environments, many applications have strict performance requirements (especially response speed) to ensure efficient system operation and smooth user experience. To this end, PaddleOCR provides high-performance inference functionality, aiming to deeply optimize model inference and pre/post-processing to achieve significant end-to-end process acceleration. For detailed high-performance inference procedures, please refer to the [High-Performance Inference Guide](../deployment/high_performance_inference.md).
+
+☁️ Service-oriented deployment: Service-oriented deployment is a common form of deployment in actual production environments. By encapsulating inference functions as services, clients can access these services through network requests to obtain inference results. For detailed pipeline service-oriented deployment procedures, please refer to the [Service-Oriented Deployment Guide](../deployment/serving.md).
+
+Below are the API references for basic service-oriented deployment and examples of multi-language service calls:
+
 <details><summary>API Reference</summary>
 <p>Main operations provided by the service:</p>
 <ul>
@@ -5529,11 +5487,16 @@ foreach ($result as $i => $item) {
 ?&gt;
 </code></pre></details>
 </details>
-<p><br/></p>
-<h2 id="4-secondary-development">4. Secondary Development<a class="headerlink" href="#4-secondary-development" title="Permanent link">&para;</a></h2>
-<p>If the default model weights provided by the document image preprocessing pipeline do not meet your accuracy or speed requirements in your specific scenario, you can attempt to further <strong>fine-tune</strong> the existing model using <strong>your own domain-specific or application-specific data</strong> to enhance the recognition performance of the document image preprocessing pipeline in your context.</p>
-<h3 id="41-model-fine-tuning">4.1 Model Fine-Tuning<a class="headerlink" href="#41-model-fine-tuning" title="Permanent link">&para;</a></h3>
-<p>Since the document image preprocessing pipeline comprises multiple modules, any module could potentially contribute to suboptimal performance if the overall pipeline does not meet expectations. You can analyze images with poor recognition results to identify which module is causing the issue and then refer to the corresponding fine-tuning tutorial links in the table below to perform model fine-tuning.</p>
+<br/>
+
+## 4. Secondary Development
+
+If the default model weights provided by the document image preprocessing pipeline do not meet your accuracy or speed requirements in your specific scenario, you can attempt to further **fine-tune** the existing model using **your own domain-specific or application-specific data** to enhance the recognition performance of the document image preprocessing pipeline in your context.
+
+### 4.1 Model Fine-Tuning
+
+Since the document image preprocessing pipeline comprises multiple modules, any module could potentially contribute to suboptimal performance if the overall pipeline does not meet expectations. You can analyze images with poor recognition results to identify which module is causing the issue and then refer to the corresponding fine-tuning tutorial links in the table below to perform model fine-tuning.
+
 <table>
 <thead>
 <tr>
