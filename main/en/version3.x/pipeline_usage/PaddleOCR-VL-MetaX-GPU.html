@@ -1299,6 +1299,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1360,6 +1362,34 @@ You're not viewing the latest version.
     
   
     Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.5 Introduction
   
 
     
@@ -4555,6 +4585,13 @@ You're not viewing the latest version.
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Call PaddleOCR CLI or Python API in the container</span>
 </span></code></pre></div>
 <p>If you wish to start the service in an environment without internet access, replace <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-metax-gpu</code> in the above command with the offline version image <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-metax-gpu-offline</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>
+Images with the <code>latest-xxx</code> tag correspond to the latest version of PaddleOCR. If you want to use a specific version of the PaddleOCR image, you can replace <code>latest</code> in the tag with the desired version number: <code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>.
+For example:
+<code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:paddleocr3.3-metax-gpu-offline</code></p>
+</div>
 <h3 id="12-method-2-manually-install-paddlepaddle-and-paddleocr">1.2 Method 2: Manually Install PaddlePaddle and PaddleOCR<a class="headerlink" href="#12-method-2-manually-install-paddlepaddle-and-paddleocr" title="Permanent link">&para;</a></h3>
 <p>If you cannot use Docker, you can also manually install PaddlePaddle and PaddleOCR. Python version 3.8–3.12 is required.</p>
 <p><strong>We strongly recommend installing PaddleOCR-VL in a virtual environment to avoid dependency conflicts.</strong> For example, use the Python venv standard library to create a virtual environment:</p>
@@ -4588,7 +4625,7 @@ You're not viewing the latest version.
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span>--shm-size<span class="w"> </span>64g<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span>--network<span class="w"> </span>host<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-metax-gpu<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>fastdeploy
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.5-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>fastdeploy
 </span></code></pre></div>
 <p>If you wish to start the service in an environment without internet access, replace <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-metax-gpu</code> in the above command with the offline version image <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-metax-gpu-offline</code>.</p>
 <p>When launching the FastDeploy inference service, we provide a set of default parameter settings. If you need to adjust parameters such as GPU memory usage, you can configure additional parameters yourself. Please refer to <a href="PaddleOCR-VL.html#331-server-side-parameter-adjustment">3.3.1 Server-side Parameter Adjustment</a> to create a configuration file, then mount the file into the container and specify the configuration file using <code>backend_config</code> in the command to start the service, for example:</p>
@@ -4604,8 +4641,15 @@ You're not viewing the latest version.
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span>--network<span class="w"> </span>host<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span>-v<span class="w"> </span>fastdeploy_config.yml:/tmp/fastdeploy_config.yml<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-metax-gpu<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>fastdeploy<span class="w"> </span>--backend_config<span class="w"> </span>/tmp/fastdeploy_config.yml
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.5-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>fastdeploy<span class="w"> </span>--backend_config<span class="w"> </span>/tmp/fastdeploy_config.yml
 </span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>
+Images with the <code>latest-xxx</code> tag correspond to the latest version of PaddleOCR. If you want to use a specific version of the PaddleOCR image, you can replace <code>latest</code> in the tag with the desired version number: <code>paddleocr&lt;major&gt;.&lt;minor&gt;</code>.
+For example:
+<code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:paddleocr3.3-metax-gpu-offline</code></p>
+</div>
 <h3 id="32-client-usage-method">3.2 Client Usage Method<a class="headerlink" href="#32-client-usage-method" title="Permanent link">&para;</a></h3>
 <p>Please refer to the corresponding section in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
 <h3 id="33-performance-tuning">3.3 Performance Tuning<a class="headerlink" href="#33-performance-tuning" title="Permanent link">&para;</a></h3>
@@ -4686,7 +4730,7 @@ After generating the configuration file, add the following <code>paddleocr-vlm-s
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">  </span><span class="nt">paddleocr-vlm-server</span><span class="p">:</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/your_config.yaml:/home/paddleocr/vlm_server_config.yaml</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">paddleocr genai_server --model_name PaddleOCR-VL-0.9B --host 0.0.0.0 --port 8118 --backend fastdeploy --backend_config /home/paddleocr/vlm_server_config.yaml</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">paddleocr genai_server --model_name PaddleOCR-VL-1.5-0.9B --host 0.0.0.0 --port 8118 --backend fastdeploy --backend_config /home/paddleocr/vlm_server_config.yaml</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </span></code></pre></div>
 
