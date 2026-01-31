@@ -18,7 +18,7 @@
         <link rel="prev" href="../algorithm/PaddleOCR-VL/PaddleOCR-VL.html">
       
       
-        <link rel="next" href="PaddleOCR-VL-XPU.html">
+        <link rel="next" href="PaddleOCR-VL-MetaX-GPU.html">
       
       
         
@@ -1301,6 +1301,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1713,14 +1715,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-XPU.html" class="md-nav__link">
+      <a href="../../../version3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL XPU Environment Configuration Tutorial
+    PaddleOCR-VL KUNLUNXIN XPU Environment Configuration Tutorial
   
 
     
@@ -1741,14 +1743,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-DCU.html" class="md-nav__link">
+      <a href="../../../version3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL DCU Environment Configuration Tutorial
+    PaddleOCR-VL HYGON DCU Environment Configuration Tutorial
   
 
     
@@ -1825,14 +1827,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-NPU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Ascend GPU Environment Configuration Tutorial
+    PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PaddleOCR-VL-Apple-Silicon.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Apple Silicon Environment Configuration Tutorial
   
 
     
@@ -4666,6 +4696,7 @@ You're not viewing the latest version.
 <li>RTX 5060、RTX 5060 Ti</li>
 <li>RTX 5050</li>
 </ul>
+<p>PaddleOCR-VL has been verified for accuracy and speed on the RTX 5070. However, due to hardware diversity, compatibility with other NVIDIA Blackwell-architecture GPUs has not yet been confirmed. We welcome the community to test on different hardware setups and share your results.</p>
 <p>Before starting the tutorial, <strong>please ensure that your NVIDIA driver supports CUDA 12.9 or higher</strong>.</p>
 <h2 id="1-environment-preparation">1. Environment Preparation<a class="headerlink" href="#1-environment-preparation" title="Permanent link">&para;</a></h2>
 <p>This section introduces how to set up the PaddleOCR-VL runtime environment using one of the following two methods:</p>
@@ -4689,7 +4720,7 @@ You're not viewing the latest version.
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span>/bin/bash
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Call PaddleOCR CLI or Python API in the container</span>
 </span></code></pre></div>
-<p>If you wish to use PaddleOCR-VL in an offline environment, replace <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-nvidia-gpu-sm120</code> in the above command with the offline version image <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-nvidia-gpu-sm120-offline</code>.</p>
+<p>If you wish to use PaddleOCR-VL in an offline environment, replace <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-nvidia-gpu-sm120</code> (image size approximately 10 GB) in the above command with the offline version image <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-nvidia-gpu-sm120-offline</code> (image size approximately 12 GB).</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>
@@ -4737,7 +4768,7 @@ For example:
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.5-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>vllm
 </span></code></pre></div>
-<p>If you wish to start the service in an offline environment, replace <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120</code> in the above command with the offline version image <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120-offline</code>.</p>
+<p>If you wish to start the service in an offline environment, replace <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120</code> (image size approximately 13 GB) in the above command with the offline version image <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-nvidia-gpu-sm120-offline</code> (image size approximately 15 GB).</p>
 <p>When launching the vLLM inference service, we provide a set of default parameter settings. If you need to adjust parameters such as GPU memory usage, you can configure additional parameters yourself. Please refer to <a href="PaddleOCR-VL.html#331-server-side-parameter-adjustment">3.3.1 Server-side Parameter Adjustment</a> to create a configuration file, then mount the file into the container and specify the configuration file using <code>backend_config</code> in the command to start the service, for example:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>-it<span class="w"> </span><span class="se">\</span>
@@ -5041,13 +5072,13 @@ Refer to the <a href="./PaddleOCR-VL.en.md#44-pipeline-configuration-adjustment-
         
         
           
-          <a href="PaddleOCR-VL-XPU.html" class="md-footer__link md-footer__link--next" aria-label="Next: PaddleOCR-VL XPU Environment Configuration Tutorial">
+          <a href="PaddleOCR-VL-MetaX-GPU.html" class="md-footer__link md-footer__link--next" aria-label="Next: PaddleOCR-VL MetaX GPU Environment Configuration Tutorial">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                PaddleOCR-VL XPU Environment Configuration Tutorial
+                PaddleOCR-VL MetaX GPU Environment Configuration Tutorial
               </div>
             </div>
             <div class="md-footer__button md-icon">

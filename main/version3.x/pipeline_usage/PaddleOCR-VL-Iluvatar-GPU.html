@@ -18,7 +18,7 @@
         <link rel="prev" href="PaddleOCR-VL-MetaX-GPU.html">
       
       
-        <link rel="next" href="PaddleOCR-VL-NPU.html">
+        <link rel="next" href="PaddleOCR-VL-Huawei-Ascend-NPU.html">
       
       
         
@@ -1301,6 +1301,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1466,14 +1468,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-XPU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Kunlunxin-XPU.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL XPU 环境配置教程
+    PaddleOCR-VL 昆仑芯 XPU 环境配置教程
   
 
     
@@ -1494,14 +1496,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-DCU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Hygon-DCU.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL DCU 环境配置教程
+    PaddleOCR-VL 海光 DCU 环境配置教程
   
 
     
@@ -1775,14 +1777,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-NPU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL 昇腾 NPU 环境配置教程
+    PaddleOCR-VL 华为昇腾 NPU 环境配置教程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PaddleOCR-VL-Apple-Silicon.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Apple Silicon 环境配置教程
   
 
     
@@ -4558,6 +4588,7 @@ You're not viewing the latest version.
 <!-- Page content -->
 <h1 id="paddleocr-vl-gpu">PaddleOCR-VL 天数 GPU 环境配置教程<a class="headerlink" href="#paddleocr-vl-gpu" title="Permanent link">&para;</a></h1>
 <p>本教程是 PaddleOCR-VL 天数 GPU 的环境配置教程，目的是完成相关的环境配置，环境配置完毕后请参考 <a href="PaddleOCR-VL.html">PaddleOCR-VL 使用教程</a> 使用 PaddleOCR-VL。</p>
+<p>目前 PaddleOCR-VL 已在天数天垓 150 上完成精度、速度验证；鉴于硬件环境的多样性，其他天数 GPU 的兼容性尚未验证。我们诚挚欢迎社区用户在不同硬件上进行测试并反馈您的运行结果。</p>
 <h2 id="1">1. 环境准备<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>此步骤主要介绍如何搭建 PaddleOCR-VL 的运行环境，有以下两种方式，任选一种即可：</p>
 <ul>
@@ -4585,7 +4616,7 @@ You're not viewing the latest version.
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span>/bin/bash
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># 在容器中调用 PaddleOCR CLI 或 Python API</span>
 </span></code></pre></div>
-<p>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-iluvatar-gpu</code> 更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-iluvatar-gpu-offline</code>。</p>
+<p>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-iluvatar-gpu</code>（镜像的大小约为 37 GB）更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-vl:latest-iluvatar-gpu-offline</code>（镜像的大小约为 39 GB）。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>
@@ -4628,7 +4659,7 @@ You're not viewing the latest version.
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-iluvatar-gpu<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>fastdeploy
 </span></code></pre></div>
-<p>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-iluvatar-gpu</code> 更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-iluvatar-gpu-offline</code>。</p>
+<p>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-iluvatar-gpu</code>（镜像的大小约为 38 GB）更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-iluvatar-gpu-offline</code>（镜像的大小约为 40 GB）。</p>
 <p>启动 FastDeploy 推理服务时，我们提供了一套默认参数设置。如果您有调整显存占用等更多参数的需求，可以自行配置更多参数。请参考 <a href="PaddleOCR-VL.html#331-服务端参数调整">3.3.1 服务端参数调整</a> 创建配置文件，然后将该文件挂载到容器中，并在启动服务的命令中使用 <code>backend_config</code> 指定配置文件，例如：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>--user<span class="w"> </span>root<span class="w"> </span><span class="se">\</span>
@@ -4859,13 +4890,13 @@ You're not viewing the latest version.
         
         
           
-          <a href="PaddleOCR-VL-NPU.html" class="md-footer__link md-footer__link--next" aria-label="下一页: PaddleOCR-VL 昇腾 NPU 环境配置教程">
+          <a href="PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-footer__link md-footer__link--next" aria-label="下一页: PaddleOCR-VL 华为昇腾 NPU 环境配置教程">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                PaddleOCR-VL 昇腾 NPU 环境配置教程
+                PaddleOCR-VL 华为昇腾 NPU 环境配置教程
               </div>
             </div>
             <div class="md-footer__button md-icon">

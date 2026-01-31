@@ -1301,6 +1301,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1869,14 +1871,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-XPU.html" class="md-nav__link">
+      <a href="../../../version3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL XPU Environment Configuration Tutorial
+    PaddleOCR-VL KUNLUNXIN XPU Environment Configuration Tutorial
   
 
     
@@ -1897,14 +1899,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-DCU.html" class="md-nav__link">
+      <a href="../../../version3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL DCU Environment Configuration Tutorial
+    PaddleOCR-VL HYGON DCU Environment Configuration Tutorial
   
 
     
@@ -1981,14 +1983,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-NPU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Ascend GPU Environment Configuration Tutorial
+    PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PaddleOCR-VL-Apple-Silicon.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Apple Silicon Environment Configuration Tutorial
   
 
     
@@ -4972,6 +5002,11 @@ You're not viewing the latest version.
 <p>PaddleOCR-VL is an advanced and efficient document parsing model designed specifically for element recognition in documents. Its core component is PaddleOCR-VL-0.9B, a compact yet powerful Vision-Language Model (VLM) composed of a NaViT-style dynamic resolution visual encoder and the ERNIE-4.5-0.3B language model, enabling precise element recognition. The model supports 109 languages and excels in recognizing complex elements (such as text, tables, formulas, and charts) while maintaining extremely low resource consumption. Comprehensive evaluations on widely used public benchmarks and internal benchmarks demonstrate that PaddleOCR-VL achieves SOTA performance in both page-level document parsing and element-level recognition. It significantly outperforms existing Pipeline-based solutions, document parsing multimodal schemes, and advanced general-purpose multimodal large models, while offering faster inference speeds. These advantages make it highly suitable for deployment in real-world scenarios.</p>
 <p><strong>On January 29, 2026, we released PaddleOCR-VL-1.5. PaddleOCR-VL-1.5 not only significantly improved the accuracy on the OmniDocBench v1.5 evaluation set to 94.5%, but also innovatively supports irregular-shaped bounding box localization. As a result, PaddleOCR-VL-1.5 demonstrates outstanding performance in real-world scenarios such as Skew, Warping, Screen Photography, Illumination, and Scanning. In addition, the model has added new capabilities for seal (stamp) recognition and text detection and recognition, with key metrics continuing to lead the industry.</strong></p>
 <p><img src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/refs/heads/main/images/paddleocr_vl_1_5/paddleocr-vl-1.5_metrics.png"/></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>
+PaddleOCR provides a unified interface for the PaddleOCR-VL model series to facilitate quick setup and usage. Unless otherwise specified, the term "PaddleOCR-VL" in subsequent sections and related environment configuration documentation refers to the PaddleOCR-VL model series (e.g., PaddleOCR-VL-1.5). References specific to the PaddleOCR-VL v1 version will be explicitly noted.</p>
+</div>
 <h2 id="process-guide">Process Guide<a class="headerlink" href="#process-guide" title="Permanent link">&para;</a></h2>
 <p>Before starting, please refer to the next section for information on the inference device support provided by PaddleOCR-VL to <strong>determine if your device meets the operational requirements.</strong> If your device meets the requirements, please select the relevant section to read based on your needs.</p>
 <p>For some inference hardware, you may need to refer to other environment configuration documents we provide, but the process remains the same and does not affect your reading of the following process guide:</p>
@@ -5112,11 +5147,11 @@ You're not viewing the latest version.
 </tr>
 <tr>
 <td>KUNLUNXIN XPU</td>
-<td><a href="PaddleOCR-VL-XPU.html">PaddleOCR-VL XPU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-KUNLUNXIN-XPU.html">PaddleOCR-VL KUNLUNXIN XPU Environment Configuration Tutorial</a></td>
 </tr>
 <tr>
 <td>HYGON DCU</td>
-<td><a href="PaddleOCR-VL-DCU.html">PaddleOCR-VL DCU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-HYGON-DCU.html">PaddleOCR-VL HYGON DCU Environment Configuration Tutorial</a></td>
 </tr>
 <tr>
 <td>MetaX GPU</td>
@@ -5128,7 +5163,7 @@ You're not viewing the latest version.
 </tr>
 <tr>
 <td>Huawei Ascend NPU</td>
-<td><a href="PaddleOCR-VL-NPU.html">PaddleOCR-VL NPU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-Huawei-Ascend-NPU.html">PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial</a></td>
 </tr>
 <tr>
 <td>Apple Silicon</td>
