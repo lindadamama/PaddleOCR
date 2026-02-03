@@ -4988,26 +4988,21 @@ You're not viewing the latest version.
 </div>
 
 <h2 id="6-faq">6. FAQ<a class="headerlink" href="#6-faq" title="Permanent link">&para;</a></h2>
-<ol>
-<li>How to use PaddleOCR-VL for document parsing?</li>
-</ol>
+<p><strong>1.How to use PaddleOCR-VL for document parsing?</strong></p>
 <p>Please refer to our usage documentation <a href="../../pipeline_usage/PaddleOCR-VL.html">PaddleOCR-VL Usage</a>.</p>
-<ol>
-<li>How to fine-tune the PaddleOCR-VL model?</li>
-</ol>
-<p>We recommend using the <a href="https://github.com/PaddlePaddle/ERNIE/tree/release/v1.4">ERNIEKit toolkit</a> to perform Supervised Fine-Tuning (SFT) on the PaddleOCR-VL-0.9B model. For detailed steps, please refer to the <a href="https://github.com/PaddlePaddle/ERNIE/blob/release/v1.4/docs/paddleocr_vl_sft.md">ERNIEKit documentation</a>.</p>
-<ol>
-<li>Why was my chart not recognized and how can I use chart recognition?</li>
-</ol>
+<p><strong>2. How to fine-tune the PaddleOCR-VL model?</strong></p>
+<p>Currently, we do not support fine-tuning of the model, but it is a high-priority feature and will be released soon. Please stay tuned.</p>
+<p><strong>3. Why was my chart not recognized and how can I use chart recognition?</strong></p>
 <p>Because our default chart recognition function is turned off, it needs to be manually turned on. Please refer to <a href="../../pipeline_usage/PaddleOCR-VL.html">PaddleOCR-VL Usage</a> and set the use_chart_recognition为True parameters to True turn it on.</p>
-<ol>
-<li>What are the 109 supported languages?</li>
-</ol>
+<p><strong>4. What are the 109 supported languages?</strong></p>
 <p>Chinese, English, Korea, Japanese, Thai, Greek, Tamil, Telugu</p>
 <p>Arabic: Arabic, Persian, Uyghur, Urdu, Pashto, Kurdish, Sindhi, Balochi </p>
 <p>Latin: French, German, Afrikaans, Italian, Spanish, Bosnian, Portuguese, Czech, Welsh, Danish, Estonian, Irish, Croatian, Uzbek, Hungarian, Serbian (Latin), Indonesian, Occitan, Icelandic, Lithuanian, Maori, Malay, Dutch, Norwegian, Polish, Slovak, Slovenian, Albanian, Swedish, Swahili, Tagalog, Turkish, Latin, Azerbaijani, Kurdish, Latvian, Maltese, Pali, Romanian, Vietnamese, Finnish, Basque, Galician, Luxembourgish, Romansh, Catalan, Quechua </p>
 <p>Cyrillic: Russian, Belarusian, Ukrainian, Serbian (Cyrillic), Bulgarian, Mongolian, Abkhazian, Adyghe, Kabardian, Avar, Dargin, Ingush, Chechen, Lak, Lezgin, Tabasaran, Kazakh, Kyrgyz, Tajik, Macedonian, Tatar, Chuvash, Bashkir, Malian, Moldovan, Udmurt, Komi, Ossetian, Buryat, Kalmyk, Tuvan, Sakha, Karakalpak </p>
 <p>Devanagari: Hindi, Marathi, Nepali, Bihari, Maithili, Angika, Bhojpuri, Magahi, Santali, Newari, Konkani, Sanskrit, Haryanvi </p>
+<p><strong>5. If the results of the layout check are not satisfactory, what solutions can be optimized?</strong></p>
+<p>Since layout detection is mainly trained for various document scenarios, if your test data is non-standard documents such as license plates, tickets images or ID Cards and you want to do OCR recognition, you can directly use the PaddleOCR-VL-0.9B model and turn off the layout detection model by setting use_layout_detection to False. If you find any layout detection errors, you can directly try the effect of using PaddleOCR-VL-0.9B alone. 
+We recommend using the <a href="https://github.com/PaddlePaddle/ERNIE/tree/release/v1.4">ERNIEKit toolkit</a> to perform Supervised Fine-Tuning (SFT) on the PaddleOCR-VL-0.9B model. For detailed steps, please refer to the <a href="https://github.com/PaddlePaddle/ERNIE/blob/release/v1.4/docs/paddleocr_vl_sft.md">ERNIEKit documentation</a>.</p>
 
 <!-- Source file information -->
 
