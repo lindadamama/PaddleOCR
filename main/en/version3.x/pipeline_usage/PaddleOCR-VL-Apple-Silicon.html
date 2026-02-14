@@ -33,7 +33,7 @@
     
     
       
-        <title>PaddleOCR-VL Apple Silicon Environment Configuration Tutorial - PaddleOCR Documentation</title>
+        <title>PaddleOCR-VL Apple Silicon Usage Tutorial - PaddleOCR Documentation</title>
       
     
     
@@ -182,7 +182,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#paddleocr-vl-apple-silicon-environment-configuration-tutorial" class="md-skip">
+        <a href="#paddleocr-vl-apple-silicon-usage-tutorial" class="md-skip">
           Skip to content
         </a>
       
@@ -233,7 +233,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PaddleOCR-VL Apple Silicon Environment Configuration Tutorial
+              PaddleOCR-VL Apple Silicon Usage Tutorial
             
           </span>
         </div>
@@ -1447,7 +1447,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL NVIDIA Blackwell-Architecture GPUs Environment Configuration Tutorial
+    PaddleOCR-VL NVIDIA Blackwell-Architecture GPUs Usage Tutorial
   
 
     
@@ -1468,14 +1468,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-KUNLUNXIN-XPU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Kunlunxin-XPU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL KUNLUNXIN XPU Environment Configuration Tutorial
+    PaddleOCR-VL Kunlunxin XPU Usage Tutorial
   
 
     
@@ -1496,14 +1496,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-HYGON-DCU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Hygon-DCU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL HYGON DCU Environment Configuration Tutorial
+    PaddleOCR-VL Hygon DCU Usage Tutorial
   
 
     
@@ -1531,7 +1531,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL MetaX GPU Environment Configuration Tutorial
+    PaddleOCR-VL MetaX GPU Usage Tutorial
   
 
     
@@ -1559,7 +1559,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Iluvatar GPU Environment Configuration Tutorial
+    PaddleOCR-VL Iluvatar GPU Usage Tutorial
   
 
     
@@ -1587,7 +1587,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial
+    PaddleOCR-VL Huawei Ascend NPU Usage Tutorial
   
 
     
@@ -1624,7 +1624,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Apple Silicon Environment Configuration Tutorial
+    PaddleOCR-VL Apple Silicon Usage Tutorial
   
 
     
@@ -1642,7 +1642,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Apple Silicon Environment Configuration Tutorial
+    PaddleOCR-VL Apple Silicon Usage Tutorial
   
 
     
@@ -4586,8 +4586,8 @@ You're not viewing the latest version.
 
 
 <!-- Page content -->
-<h1 id="paddleocr-vl-apple-silicon-environment-configuration-tutorial">PaddleOCR-VL Apple Silicon Environment Configuration Tutorial<a class="headerlink" href="#paddleocr-vl-apple-silicon-environment-configuration-tutorial" title="Permanent link">&para;</a></h1>
-<p>This tutorial is a guide for configuring the PaddleOCR-VL Apple Silicon environment. The purpose is to complete the relevant environment setup. After the environment configuration is complete, please refer to the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a> to use PaddleOCR-VL.</p>
+<h1 id="paddleocr-vl-apple-silicon-usage-tutorial">PaddleOCR-VL Apple Silicon Usage Tutorial<a class="headerlink" href="#paddleocr-vl-apple-silicon-usage-tutorial" title="Permanent link">&para;</a></h1>
+<p>This tutorial is a guide for using PaddleOCR-VL on Apple Silicon, covering the complete workflow from environment preparation to service deployment.</p>
 <p>Apple Silicon include, but are not limited to:</p>
 <ul>
 <li>Apple M1</li>
@@ -4611,7 +4611,7 @@ You're not viewing the latest version.
 <p><strong>Please install PaddlePaddle framework version 3.2.1 or above.</strong></p>
 </blockquote>
 <h2 id="2-quick-start">2. Quick Start<a class="headerlink" href="#2-quick-start" title="Permanent link">&para;</a></h2>
-<p>Please refer to the corresponding section in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
+<p>Please refer to <a href="PaddleOCR-VL.html#2-quick-start">PaddleOCR-VL Usage Tutorial - 2. Quick Start</a>.</p>
 <h2 id="3-improving-vlm-inference-performance-using-inference-acceleration-frameworks">3. Improving VLM Inference Performance Using Inference Acceleration Frameworks<a class="headerlink" href="#3-improving-vlm-inference-performance-using-inference-acceleration-frameworks" title="Permanent link">&para;</a></h2>
 <p>The inference performance under default configurations is not fully optimized and may not meet actual production requirements. This step mainly introduces how to use the MLX-VLM inference acceleration framework to improve the inference performance of PaddleOCR-VL.</p>
 <h3 id="31-starting-the-vlm-inference-service">3.1 Starting the VLM Inference Service<a class="headerlink" href="#31-starting-the-vlm-inference-service" title="Permanent link">&para;</a></h3>
@@ -4639,15 +4639,15 @@ You're not viewing the latest version.
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="33-performance-tuning">3.3 Performance Tuning<a class="headerlink" href="#33-performance-tuning" title="Permanent link">&para;</a></h3>
-<p>Please refer to the corresponding section in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
+<p>Please refer to <a href="PaddleOCR-VL.html#33-performance-tuning">PaddleOCR-VL Usage Tutorial - 3.3 Performance Tuning</a>.</p>
 <h2 id="4-service-deployment">4. Service Deployment<a class="headerlink" href="#4-service-deployment" title="Permanent link">&para;</a></h2>
 <p>Currently, only <strong>manual deployment</strong> is supported. Please refer to <strong>Section 4.2 Method 2: Manual Deployment</strong> in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
 <h3 id="43-client-invocation-methods">4.3 Client Invocation Methods<a class="headerlink" href="#43-client-invocation-methods" title="Permanent link">&para;</a></h3>
-<p>Please refer to the corresponding section in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
+<p>Please refer to <a href="PaddleOCR-VL.html#43-client-invocation-methods">PaddleOCR-VL Usage Tutorial - 4.3 Client Invocation Methods</a>.</p>
 <h3 id="44-pipeline-configuration-adjustment-instructions">4.4 Pipeline Configuration Adjustment Instructions<a class="headerlink" href="#44-pipeline-configuration-adjustment-instructions" title="Permanent link">&para;</a></h3>
-<p>Please refer to the corresponding section in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
+<p>Please refer to <a href="PaddleOCR-VL.html#44-pipeline-configuration-adjustment-instructions">PaddleOCR-VL Usage Tutorial - 4.4 Pipeline Configuration Adjustment Instructions</a>.</p>
 <h2 id="5-model-fine-tuning">5. Model Fine-Tuning<a class="headerlink" href="#5-model-fine-tuning" title="Permanent link">&para;</a></h2>
-<p>Please refer to the corresponding section in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
+<p>Please refer to <a href="PaddleOCR-VL.html#5-model-fine-tuning">PaddleOCR-VL Usage Tutorial - 5. Model Fine-Tuning</a>.</p>
 
 <!-- Source file information -->
 
@@ -4739,7 +4739,7 @@ You're not viewing the latest version.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial">
+          <a href="PaddleOCR-VL-Huawei-Ascend-NPU.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: PaddleOCR-VL Huawei Ascend NPU Usage Tutorial">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -4749,7 +4749,7 @@ You're not viewing the latest version.
                 Previous
               </span>
               <div class="md-ellipsis">
-                PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial
+                PaddleOCR-VL Huawei Ascend NPU Usage Tutorial
               </div>
             </div>
           </a>

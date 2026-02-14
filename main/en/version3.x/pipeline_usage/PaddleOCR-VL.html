@@ -1861,7 +1861,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL NVIDIA Blackwell-Architecture GPUs Environment Configuration Tutorial
+    PaddleOCR-VL NVIDIA Blackwell-Architecture GPUs Usage Tutorial
   
 
     
@@ -1882,14 +1882,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-KUNLUNXIN-XPU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Kunlunxin-XPU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL KUNLUNXIN XPU Environment Configuration Tutorial
+    PaddleOCR-VL Kunlunxin XPU Usage Tutorial
   
 
     
@@ -1910,14 +1910,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-HYGON-DCU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Hygon-DCU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL HYGON DCU Environment Configuration Tutorial
+    PaddleOCR-VL Hygon DCU Usage Tutorial
   
 
     
@@ -1945,7 +1945,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL MetaX GPU Environment Configuration Tutorial
+    PaddleOCR-VL MetaX GPU Usage Tutorial
   
 
     
@@ -1973,7 +1973,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Iluvatar GPU Environment Configuration Tutorial
+    PaddleOCR-VL Iluvatar GPU Usage Tutorial
   
 
     
@@ -2001,7 +2001,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial
+    PaddleOCR-VL Huawei Ascend NPU Usage Tutorial
   
 
     
@@ -2029,7 +2029,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Apple Silicon Environment Configuration Tutorial
+    PaddleOCR-VL Apple Silicon Usage Tutorial
   
 
     
@@ -5027,11 +5027,11 @@ You're not viewing the latest version.
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>
-PaddleOCR provides a unified interface for the PaddleOCR-VL model series to facilitate quick setup and usage. Unless otherwise specified, the term "PaddleOCR-VL" in subsequent sections and related environment configuration documentation refers to the PaddleOCR-VL model series (e.g., PaddleOCR-VL-1.5). References specific to the PaddleOCR-VL v1 version will be explicitly noted.</p>
+PaddleOCR provides a unified interface for the PaddleOCR-VL model series to facilitate quick setup and usage. Unless otherwise specified, the term "PaddleOCR-VL" in subsequent sections and related usage tutorials refers to the PaddleOCR-VL model series (e.g., PaddleOCR-VL-1.5). References specific to the PaddleOCR-VL v1 version will be explicitly noted.</p>
 </div>
 <h2 id="process-guide">Process Guide<a class="headerlink" href="#process-guide" title="Permanent link">&para;</a></h2>
 <p>Before starting, please refer to the next section for information on the inference device support provided by PaddleOCR-VL to <strong>determine if your device meets the operational requirements.</strong> If your device meets the requirements, please select the relevant section to read based on your needs.</p>
-<p>For some inference hardware, you may need to refer to other environment configuration documents we provide, but the process remains the same and does not affect your reading of the following process guide:</p>
+<p>For some inference hardware, you may need to refer to other usage tutorials we provide, but the process remains the same and does not affect your reading of the following process guide:</p>
 <ol>
 <li>
 <p><strong>Want to quickly experience PaddleOCR-VL</strong>:</p>
@@ -5061,8 +5061,8 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
   <tr>
     <th>Inference Method</th>
     <th>NVIDIA GPU</th>
-    <th>KUNLUNXIN XPU</th>
-    <th>HYGON DCU</th>
+    <th>Kunlunxin XPU</th>
+    <th>Hygon DCU</th>
     <th>MetaX GPU</th>
     <th>Iluvatar GPU</th>
     <th>Huawei Ascend NPU</th>
@@ -5090,8 +5090,8 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
     <td>🚧</td>
     <td>🚧</td>
     <td>✅</td>
-    <td>❌</td>
-    <td>❌</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr style="text-align: center;">
     <td>PaddlePaddle + SGLang</td>
@@ -5101,8 +5101,8 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
     <td>🚧</td>
     <td>🚧</td>
     <td>🚧</td>
-    <td>❌</td>
-    <td>❌</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr style="text-align: center;">
     <td>PaddlePaddle + FastDeploy</td>
@@ -5112,18 +5112,18 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
     <td>✅</td>
     <td>✅</td>
     <td>🚧</td>
-    <td>❌</td>
-    <td>❌</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
   <tr style="text-align: center;">
     <td>PaddlePaddle + MLX-VLM</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
-    <td>❌</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
     <td>✅</td>
   </tr>
   <tr style="text-align: center;">
@@ -5161,12 +5161,12 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
 <li>vLLM, SGLang, and FastDeploy cannot run natively on Windows. Please use the Docker images we provide.</li>
 </ul>
 </div>
-<p>Since different hardware requires different dependencies, if your hardware meets the requirements in the table above, please refer to the following table for the corresponding tutorial to configure your environment:</p>
+<p>Since different hardware requires different dependencies, if your hardware meets the requirements in the table above, please refer to the following table for the corresponding usage tutorial:</p>
 <table>
 <thead>
 <tr>
 <th>Hardware Type</th>
-<th>Environment Configuration Tutorial</th>
+<th>Usage Tutorial</th>
 </tr>
 </thead>
 <tbody>
@@ -5176,38 +5176,38 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
 </tr>
 <tr>
 <td>NVIDIA GPU</td>
-<td>- NVIDIA Blackwell architecture GPU (e.g., RTX 50 series) refer to <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Environment Configuration Tutorial</a> <br/> - Other NVIDIA GPUs refer to this tutorial</td>
+<td>- NVIDIA Blackwell architecture GPU (e.g., RTX 50 series) refer to <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Usage Tutorial</a> <br/> - Other NVIDIA GPUs refer to this tutorial</td>
 </tr>
 <tr>
-<td>KUNLUNXIN XPU</td>
-<td><a href="PaddleOCR-VL-KUNLUNXIN-XPU.html">PaddleOCR-VL KUNLUNXIN XPU Environment Configuration Tutorial</a></td>
+<td>Kunlunxin XPU</td>
+<td><a href="PaddleOCR-VL-Kunlunxin-XPU.html">PaddleOCR-VL Kunlunxin XPU Usage Tutorial</a></td>
 </tr>
 <tr>
-<td>HYGON DCU</td>
-<td><a href="PaddleOCR-VL-HYGON-DCU.html">PaddleOCR-VL HYGON DCU Environment Configuration Tutorial</a></td>
+<td>Hygon DCU</td>
+<td><a href="PaddleOCR-VL-Hygon-DCU.html">PaddleOCR-VL Hygon DCU Usage Tutorial</a></td>
 </tr>
 <tr>
 <td>MetaX GPU</td>
-<td><a href="PaddleOCR-VL-MetaX-GPU.html">PaddleOCR-VL MetaX GPU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-MetaX-GPU.html">PaddleOCR-VL MetaX GPU Usage Tutorial</a></td>
 </tr>
 <tr>
 <td>Iluvatar GPU</td>
-<td><a href="PaddleOCR-VL-Iluvatar-GPU.html">PaddleOCR-VL Iluvatar GPU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-Iluvatar-GPU.html">PaddleOCR-VL Iluvatar GPU Usage Tutorial</a></td>
 </tr>
 <tr>
 <td>Huawei Ascend NPU</td>
-<td><a href="PaddleOCR-VL-Huawei-Ascend-NPU.html">PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-Huawei-Ascend-NPU.html">PaddleOCR-VL Huawei Ascend NPU Usage Tutorial</a></td>
 </tr>
 <tr>
 <td>Apple Silicon</td>
-<td><a href="PaddleOCR-VL-Apple-Silicon.html">PaddleOCR-VL Apple Silicon Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-Apple-Silicon.html">PaddleOCR-VL Apple Silicon Usage Tutorial</a></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>
-For example, if you are using an RTX 50 series GPU that meets the device requirements for both PaddlePaddle and vLLM inference methods, please refer to the <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Environment Configuration Tutorial</a> to complete the environment configuration before using PaddleOCR-VL.</p>
+For example, if you are using an RTX 50 series GPU that meets the device requirements for both PaddlePaddle and vLLM inference methods, please refer to the <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Usage Tutorial</a> to learn about relevant configurations and usage.</p>
 </div>
 <h2 id="1-environment-preparation">1. Environment Preparation<a class="headerlink" href="#1-environment-preparation" title="Permanent link">&para;</a></h2>
 <p>This section explains how to set up the runtime environment for PaddleOCR-VL. Choose one of the following two methods:</p>
@@ -5270,8 +5270,8 @@ For example:
 </div>
 <h2 id="2-quick-start">2. Quick Start<a class="headerlink" href="#2-quick-start" title="Permanent link">&para;</a></h2>
 <p>PaddleOCR-VL supports two usage methods: CLI command line and Python API. The CLI command line method is simpler and suitable for quickly verifying functionality, while the Python API method is more flexible and suitable for integration into existing projects.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>
 The methods introduced in this section are primarily for rapid validation. Their inference speed, memory usage, and stability may not meet the requirements of a production environment. <strong>If deployment to a production environment is needed, we strongly recommend using a dedicated inference acceleration framework</strong>. For specific methods, please refer to the next section.</p>
 </div>
@@ -5280,10 +5280,10 @@ The methods introduced in this section are primarily for rapid validation. Their
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># NVIDIA GPU</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/paddleocr_vl_demo.png
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># KUNLUNXIN XPU</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Kunlunxin XPU</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>./paddleocr_vl_demo.png<span class="w"> </span>--device<span class="w"> </span>xpu
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># HYGON DCU</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Hygon DCU</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>./paddleocr_vl_demo.png<span class="w"> </span>--device<span class="w"> </span>dcu
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># MetaX GPU</span>
@@ -5697,9 +5697,9 @@ If MKL-DNN is not available or the model does not support acceleration via MKL-D
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># NVIDIA GPU</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PaddleOCRVL</span><span class="p">()</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># KUNLUNXIN XPU</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Kunlunxin XPU</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># pipeline = PaddleOCRVL(device=&quot;xpu&quot;)</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># HYGON DCU</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Hygon DCU</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># pipeline = PaddleOCRVL(device=&quot;dcu&quot;)</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># MetaX GPU</span>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># pipeline = PaddleOCRVL(device=&quot;metax_gpu&quot;)</span>
@@ -6683,14 +6683,13 @@ For example:
 </span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span>--vl_rec_server_url<span class="w"> </span>http://localhost:8000/v1<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span>--vl_rec_api_model_name<span class="w"> </span><span class="s1">&#39;PaddlePaddle/PaddleOCR-VL-1.5&#39;</span>
 </span></code></pre></div>
-<p>SiliconFlow platform (currently only PaddleOCR-VL-0.9B is supported, i.e., the v1 model):</p>
+<p>SiliconFlow platform:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span>--input<span class="w"> </span>paddleocr_vl_demo.png<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span>--pipeline_version<span class="w"> </span>v1<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span>--vl_rec_backend<span class="w"> </span>vllm-server<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span>--vl_rec_server_url<span class="w"> </span>https://api.siliconflow.cn/v1<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span>--vl_rec_api_model_name<span class="w"> </span><span class="s1">&#39;PaddlePaddle/PaddleOCR-VL&#39;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span>--vl_rec_api_key<span class="w"> </span>xxxxxx
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span>--vl_rec_backend<span class="w"> </span>vllm-server<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span>--vl_rec_server_url<span class="w"> </span>https://api.siliconflow.cn/v1<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span>--vl_rec_api_model_name<span class="w"> </span><span class="s1">&#39;PaddlePaddle/PaddleOCR-VL-1.5&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span>--vl_rec_api_key<span class="w"> </span>xxxxxx
 </span></code></pre></div>
 <p>Novita AI platform (currently only PaddleOCR-VL-0.9B is supported, i.e., the v1 model):</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span><span class="se">\</span>
@@ -6715,12 +6714,11 @@ For example:
 </span></code></pre></div>
 <p>SiliconFlow platform (currently only PaddleOCR-VL-0.9B is supported, i.e., the v1 model):</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PaddleOCRVL</span><span class="p">(</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="n">pipeline_version</span><span class="o">=</span><span class="s2">&quot;v1&quot;</span><span class="p">,</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    <span class="n">vl_rec_backend</span><span class="o">=</span><span class="s2">&quot;vllm-server&quot;</span><span class="p">,</span> 
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    <span class="n">vl_rec_server_url</span><span class="o">=</span><span class="s2">&quot;https://api.siliconflow.cn/v1&quot;</span><span class="p">,</span>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    <span class="n">vl_rec_api_model_name</span><span class="o">=</span><span class="s2">&quot;PaddlePaddle/PaddleOCR-VL&quot;</span><span class="p">,</span>
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    <span class="n">vl_rec_api_key</span><span class="o">=</span><span class="s2">&quot;xxxxxx&quot;</span><span class="p">,</span>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">)</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="n">vl_rec_backend</span><span class="o">=</span><span class="s2">&quot;vllm-server&quot;</span><span class="p">,</span> 
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    <span class="n">vl_rec_server_url</span><span class="o">=</span><span class="s2">&quot;https://api.siliconflow.cn/v1&quot;</span><span class="p">,</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    <span class="n">vl_rec_api_model_name</span><span class="o">=</span><span class="s2">&quot;PaddlePaddle/PaddleOCR-VL-1.5&quot;</span><span class="p">,</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    <span class="n">vl_rec_api_key</span><span class="o">=</span><span class="s2">&quot;xxxxxx&quot;</span><span class="p">,</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="p">)</span>
 </span></code></pre></div>
 <p>Novita AI platform (currently only PaddleOCR-VL-0.9B is supported, i.e., the v1 model):</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PaddleOCRVL</span><span class="p">(</span>
@@ -7033,9 +7031,7 @@ Refer to section <a href="#44-pipeline-configuration-adjustment-instructions">4.
 <tr>
 <td><code>file</code></td>
 <td><code>string</code></td>
-<td>The URL of an image file or PDF file accessible to the server, or the Base64-encoded result of the content of the aforementioned file types. By default, for PDF files with more than 10 pages, only the first 10 pages will be processed.<br/>To remove the page limit, add the following configuration to the pipeline configuration file:<pre> <code>Serving:
-  extra:
-    max_num_input_imgs: null</code></pre>
+<td>The URL of an image file or PDF file accessible to the server, or the Base64-encoded result of the content of the aforementioned file types.
 </td>
 <td>Yes</td>
 </tr>
@@ -7992,6 +7988,7 @@ If you do not need to adjust pipeline configurations, you can ignore this sectio
 </span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a><span class="w">      </span><span class="nt">sk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxx</span>
 </span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a><span class="w">      </span><span class="nt">key_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
 </span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a><span class="w">    </span><span class="nt">return_img_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</span><span id="__span-38-11"><a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a><span class="w">    </span><span class="nt">url_expires_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3600</span>
 </span></code></pre></div>
 <p>Currently, storing generated images in Baidu Intelligent Cloud Object Storage (BOS) and returning URLs is supported. The parameters are described as follows:</p>
 <ul>
@@ -8001,15 +7998,16 @@ If you do not need to adjust pipeline configurations, you can ignore this sectio
 <li><code>bucket_name</code>: Storage bucket name (required).</li>
 <li><code>key_prefix</code>: Unified prefix for object keys.</li>
 <li><code>connection_timeout_in_mills</code>: Request timeout in milliseconds.</li>
+<li><code>url_expires_in</code>: URL validity period (in seconds). <code>-1</code> indicates it never expires.</li>
 </ul>
 <p>For more information on obtaining AK/SK and other details, refer to the <a href="https://cloud.baidu.com/doc/BOS/index.html">Baidu Intelligent Cloud Official Documentation</a>.</p>
-<p><strong>Modify PDF Parsing Page Limit</strong></p>
-<p>For performance considerations, the service processes only the first 10 pages of received PDF files by default. To adjust the page limit, add the following configuration to the pipeline configuration file (<code>Serving</code> is a top-level field):</p>
+<p><strong>Limit the Number of PDF Pages Parsed</strong></p>
+<p>By default, the service processes the entire PDF file. In production environments, if a PDF contains too many pages, it may affect system stability, leading to processing timeouts or excessive resource usage. To ensure stable service operation, it is recommended to set a reasonable page limit based on actual needs. You can add the following configuration to the production configuration file (<code>Serving</code> is the top-level field):</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nt">Serving</span><span class="p">:</span>
 </span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">  </span><span class="nt">extra</span><span class="p">:</span>
-</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="nt">max_num_input_imgs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;new page limit, e.g., 100&gt;</span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="nt">max_num_input_imgs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;page limit, e.g., 100&gt;</span>
 </span></code></pre></div>
-<p>Set <code>max_num_input_imgs</code> to <code>null</code> to remove the page limit.</p>
+<p>When <code>max_num_input_imgs</code> is set to <code>null</code>, there will be no limit on the number of PDF pages.</p>
 <h4 id="443-apply-the-configuration-file">4.4.3 Apply the Configuration File<a class="headerlink" href="#443-apply-the-configuration-file" title="Permanent link">&para;</a></h4>
 <p><strong>If you deployed using Docker Compose</strong>:</p>
 <p><strong>If you are deploying using Docker Compose:</strong></p>
