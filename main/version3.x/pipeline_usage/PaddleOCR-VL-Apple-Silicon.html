@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -4633,12 +4633,12 @@ You're not viewing the latest version.
 <p><strong>请注意安装 3.2.1 及以上版本的飞桨框架。</strong></p>
 </blockquote>
 <h2 id="2">2. 快速开始<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>请参考<a href="PaddleOCR-VL.html#2-快速开始">PaddleOCR-VL 使用教程 - 2. 快速开始</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#2">PaddleOCR-VL 使用教程 - 2. 快速开始</a>。</p>
 <h2 id="3-vlm">3. 使用推理加速框架提升 VLM 推理性能<a class="headerlink" href="#3-vlm" title="Permanent link">&para;</a></h2>
 <p>默认配置下的推理性能未经过充分优化，可能无法满足实际生产需求。此步骤主要介绍如何使用 MLX-VLM 推理加速框架来提升 PaddleOCR-VL 的推理性能。</p>
 <h3 id="31-vlm">3.1 启动 VLM 推理服务<a class="headerlink" href="#31-vlm" title="Permanent link">&para;</a></h3>
-<p>安装 MLX-VLM 推理框架：</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>mlx-vlm
+<p>安装 MLX-VLM 推理框架（v0.3.11以上版本）：</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;mlx-vlm&gt;=0.3.11&quot;</span>
 </span></code></pre></div>
 <p>启动 MLX-VLM 推理服务：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mlx_vlm.server<span class="w"> </span>--port<span class="w"> </span><span class="m">8111</span>
@@ -4661,17 +4661,17 @@ You're not viewing the latest version.
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="33">3.3 性能调优<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#33-性能调优">PaddleOCR-VL 使用教程 - 3.3 性能调优</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#33">PaddleOCR-VL 使用教程 - 3.3 性能调优</a>。</p>
 <h2 id="4">4. 服务化部署<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p>目前仅支持<strong>手动部署</strong>方式。</p>
 <h3 id="41">4.1 手动部署<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
 <p>请参考<a href="PaddleOCR-VL.html">PaddleOCR-VL 使用教程</a> 4.2 方法二：手动部署。</p>
 <h3 id="42">4.2 客户端调用方式<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#43-客户端调用方式">PaddleOCR-VL 使用教程 - 4.3 客户端调用方式</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#43">PaddleOCR-VL 使用教程 - 4.3 客户端调用方式</a>。</p>
 <h3 id="43">4.3 产线配置调整说明<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#44-产线配置调整说明">PaddleOCR-VL 使用教程 - 4.4 产线配置调整说明</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#44">PaddleOCR-VL 使用教程 - 4.4 产线配置调整说明</a>。</p>
 <h2 id="5">5. 模型微调<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<p>请参考<a href="PaddleOCR-VL.html#5-模型微调">PaddleOCR-VL 使用教程 - 5. 模型微调</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#5">PaddleOCR-VL 使用教程 - 5. 模型微调</a>。</p>
 
 <!-- Source file information -->
 

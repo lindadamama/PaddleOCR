@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../../version3.x/logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -6141,7 +6141,7 @@ If MKL-DNN is unavailable or the model does not support it, acceleration will no
        [ 13, ..., 777]], dtype=int16)}}}
 </code></pre></details>
 
-<p>For explanation of the result parameters, refer to <a href="#222-python-script-integration">2.2 Python Script Integration</a>.</p>
+<p>For explanation of the result parameters, refer to <a href="#22-python-script-integration">2.2 Python Script Integration</a>.</p>
 <p><b>Note:</b> Due to the large size of the default model in the pipeline, the inference speed may be slow. You can refer to the model list in Section 1 to replace it with a faster model.</p>
 <h3 id="22-python-script-integration">2.2 Python Script Integration<a class="headerlink" href="#22-python-script-integration" title="Permanent link">&para;</a></h3>
 <p>The command line method is for quick testing and visualization. In actual projects, you usually need to integrate the model via code. You can perform pipeline inference with just a few lines of code as shown below:</p>
@@ -7387,7 +7387,7 @@ Additionally, you can access the prediction results and visual images through th
 
 <h2 id="3-development-integration-deployment">3. Development Integration / Deployment<a class="headerlink" href="#3-development-integration-deployment" title="Permanent link">&para;</a></h2>
 <p>If the pipeline meets your requirements for inference speed and accuracy, you can proceed with development integration or deployment.</p>
-<p>If you want to directly use the pipeline in your Python project, refer to the example code in <a href="#22-python脚本方式集成">2.2 Python script mode</a>.</p>
+<p>If you want to directly use the pipeline in your Python project, refer to the example code in <a href="#22-python-script-integration">2.2 Python script mode</a>.</p>
 <p>In addition, PaddleOCR provides two other deployment options described in detail below:</p>
 <p>🚀 High-Performance Inference: In production environments, many applications have strict performance requirements (especially response speed) to ensure system efficiency and smooth user experience. PaddleOCR offers a high-performance inference option that deeply optimizes model inference and pre/post-processing for significant end-to-end acceleration. For detailed high-performance inference workflow, refer to <a href="../deployment/high_performance_inference.html">High Performance Inference</a>.</p>
 <p>☁️ Service Deployment: Service-based deployment is common in production. It encapsulates the inference logic as a service, allowing clients to access it via network requests to obtain results. For detailed instructions on service deployment, refer to <a href="../deployment/serving.html">Service Deployment</a>.</p>

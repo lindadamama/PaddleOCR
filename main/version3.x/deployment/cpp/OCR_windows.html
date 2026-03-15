@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -4678,21 +4678,21 @@ You're not viewing the latest version.
 <!-- Page content -->
 <h1 id="ocr-c-windows">通用 OCR 产线 C++ 部署 - Windows<a class="headerlink" href="#ocr-c-windows" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="#1-环境准备">1. 环境准备</a><ul>
-<li><a href="#11-编译-opencv-库">1.1 编译 OpenCV 库</a></li>
-<li><a href="#12-编译-paddle-inference">1.2 编译 Paddle Inference</a></li>
+<li><a href="#1">1. 环境准备</a><ul>
+<li><a href="#11-opencv">1.1 编译 OpenCV 库</a></li>
+<li><a href="#12-paddle-inference">1.2 编译 Paddle Inference</a></li>
 </ul>
 </li>
-<li><a href="#2-开始运行">2. 开始运行</a><ul>
-<li><a href="#21-编译预测-demo">2.1 编译预测 demo</a></li>
-<li><a href="#22-准备模型">2.2 准备模型</a></li>
-<li><a href="#23-运行预测-demo">2.3 运行预测 demo</a></li>
-<li><a href="#24-c-api-集成">2.4 C++ API 集成</a></li>
+<li><a href="#2">2. 开始运行</a><ul>
+<li><a href="#21-demo">2.1 编译预测 demo</a></li>
+<li><a href="#22">2.2 准备模型</a></li>
+<li><a href="#23-demo">2.3 运行预测 demo</a></li>
+<li><a href="#24-c-api">2.4 C++ API 集成</a></li>
 </ul>
 </li>
-<li><a href="#3-拓展功能">3. 拓展功能</a><ul>
-<li><a href="#31-多语种文字识别">3.1 多语种文字识别</a>  </li>
-<li><a href="#32-可视化文本识别结果">3.2 可视化文本识别结果</a>  </li>
+<li><a href="#3">3. 拓展功能</a><ul>
+<li><a href="#31">3.1 多语种文字识别</a>  </li>
+<li><a href="#32">3.2 可视化文本识别结果</a>  </li>
 </ul>
 </li>
 </ul>
@@ -4802,14 +4802,14 @@ You're not viewing the latest version.
 <li><code>opencv-4.7.0\build\install\x64\vc16\bin\opencv_world470.dll</code></li>
 </ol>
 <h3 id="22">2.2 准备模型<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
-<p>该步骤参考 <a href="OCR.html#22-准备模型">通用 OCR 产线 C++ 部署 - Linux —— 2.2 准备模型</a> 小节。</p>
+<p>该步骤参考 <a href="OCR.html#22">通用 OCR 产线 C++ 部署 - Linux —— 2.2 准备模型</a> 小节。</p>
 <h3 id="23-demo">2.3 运行预测 demo<a class="headerlink" href="#23-demo" title="Permanent link">&para;</a></h3>
-<p>参考 <a href="OCR.html#23-运行预测-demo">通用 OCR 产线 C++ 部署 - Linux —— 2.3 运行预测 demo</a> 小节。</p>
+<p>参考 <a href="OCR.html#23-demo">通用 OCR 产线 C++ 部署 - Linux —— 2.3 运行预测 demo</a> 小节。</p>
 <h3 id="24-c-api">2.4 C++ API 集成<a class="headerlink" href="#24-c-api" title="Permanent link">&para;</a></h3>
-<p>参考 <a href="OCR.html#24-c-api-集成">通用 OCR 产线 C++ 部署 - Linux —— 2.4 C++ API 集成</a> 小节。</p>
+<p>参考 <a href="OCR.html#24-c-api">通用 OCR 产线 C++ 部署 - Linux —— 2.4 C++ API 集成</a> 小节。</p>
 <h2 id="3">3. 拓展功能<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <h3 id="31">3.1 多语种文字识别<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
-<p>参考 <a href="OCR.html#31-多语种文字识别">通用 OCR 产线 C++ 部署 - Linux —— 3.1 多语种文字识别</a> 小节。</p>
+<p>参考 <a href="OCR.html#31">通用 OCR 产线 C++ 部署 - Linux —— 3.1 多语种文字识别</a> 小节。</p>
 <h3 id="32">3.2 可视化文本识别结果<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
 <p>我们使用 4.x 版本的 opencv_contrib 模块中的 FreeType 进行字体渲染，如果想要可视化文本识别结果，需要下载 OpenCV 和 opencv_contrib 的源码并编译包含 FreeType 模块的 OpenCV。下载源码时需确保两者的版本一致。以下以 opencv-4.7.0 和 opencv_contrib-4.7.0 为例进行说明：</p>
 <p><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/cpp/libs/opencv-4.7.0.tgz">下载 opencv-4.7.0</a>

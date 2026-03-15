@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -4665,7 +4665,7 @@ You're not viewing the latest version.
 <p><strong>请注意安装 3.2.1 及以上版本的飞桨框架。</strong></p>
 </blockquote>
 <h2 id="2">2. 快速开始<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>请参考<a href="PaddleOCR-VL.html#2-快速开始">PaddleOCR-VL 使用教程 - 2. 快速开始</a>，注意需要指定 <code>device="dcu"</code>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#2">PaddleOCR-VL 使用教程 - 2. 快速开始</a>，注意需要指定 <code>device="dcu"</code>。</p>
 <h2 id="3-vlm">3. 使用推理加速框架提升 VLM 推理性能<a class="headerlink" href="#3-vlm" title="Permanent link">&para;</a></h2>
 <p>默认配置下的推理性能未经过充分优化，可能无法满足实际生产需求。此步骤主要介绍如何使用 vLLM 推理加速框架来提升 PaddleOCR-VL 的推理性能。</p>
 <h3 id="31-vlm">3.1 启动 VLM 推理服务<a class="headerlink" href="#31-vlm" title="Permanent link">&para;</a></h3>
@@ -4686,7 +4686,7 @@ You're not viewing the latest version.
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.5-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>vllm
 </span></code></pre></div>
 <p>如果您希望在无法连接互联网的环境中启动服务，请将上述命令中的 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-hygon-dcu</code>（镜像的大小约为 25 GB）更换为离线版本镜像 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest-hygon-dcu-offline</code>（镜像的大小约为 27 GB）。</p>
-<p>启动 vLLM 推理服务时，我们提供了一套默认参数设置。如果您有调整显存占用等更多参数的需求，可以自行配置更多参数。请参考 <a href="PaddleOCR-VL.html#331-服务端参数调整">3.3.1 服务端参数调整</a> 创建配置文件，然后将该文件挂载到容器中，并在启动服务的命令中使用 <code>backend_config</code> 指定配置文件，例如：</p>
+<p>启动 vLLM 推理服务时，我们提供了一套默认参数设置。如果您有调整显存占用等更多参数的需求，可以自行配置更多参数。请参考 <a href="PaddleOCR-VL.html#331">3.3.1 服务端参数调整</a> 创建配置文件，然后将该文件挂载到容器中，并在启动服务的命令中使用 <code>backend_config</code> 指定配置文件，例如：</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>--user<span class="w"> </span>root<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>--privileged<span class="w"> </span><span class="se">\</span>
@@ -4711,9 +4711,9 @@ You're not viewing the latest version.
 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:paddleocr3.3-hygon-dcu-offline</code></p>
 </div>
 <h3 id="32">3.2 客户端使用方法<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
-<p>请参考 <a href="PaddleOCR-VL.html#32-客户端使用方法">PaddleOCR-VL 使用教程 - 3.2 客户端使用方法</a>。</p>
+<p>请参考 <a href="PaddleOCR-VL.html#32">PaddleOCR-VL 使用教程 - 3.2 客户端使用方法</a>。</p>
 <h3 id="33">3.3 性能调优<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#33-性能调优">PaddleOCR-VL 使用教程 - 3.3 性能调优</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#33">PaddleOCR-VL 使用教程 - 3.3 性能调优</a>。</p>
 <h2 id="4">4. 服务化部署<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>请注意，本节所介绍 PaddleOCR-VL 服务与上一节中的 VLM 推理服务有所区别：后者仅负责完整流程中的一个环节（即 VLM 推理），并作为前者的底层服务被调用。</p>
@@ -4784,7 +4784,7 @@ You're not viewing the latest version.
 <details>
 <summary>3. 调整 VLM 服务端配置</summary>
 
-若您想调整 VLM 服务端的配置，可以参考 <a href="./PaddleOCR-VL.md#331-服务端参数调整">3.3.1 服务端参数调整</a> 生成配置文件。
+若您想调整 VLM 服务端的配置，可以参考 <a href="./PaddleOCR-VL.md#331">3.3.1 服务端参数调整</a> 生成配置文件。
 
 生成配置文件后，将以下的 <code>paddleocr-vlm-server.volumes</code> 和 <code>paddleocr-vlm-server.command</code> 字段增加到您的 <code>compose.yaml</code> 中。请将 <code>/path/to/your_config.yaml</code> 替换为您的实际配置文件路径。
 
@@ -4800,16 +4800,16 @@ You're not viewing the latest version.
 <details>
 <summary>4. 调整产线相关配置（如模型路径、批处理大小、部署设备等）</summary>
 
-参考 <a href="./PaddleOCR-VL.md#44-产线配置调整说明">4.4 产线配置调整说明</a> 小节。
+参考 <a href="./PaddleOCR-VL.md#44">4.4 产线配置调整说明</a> 小节。
 
 </details>
 
 <h3 id="42">4.2 客户端调用方式<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#43-客户端调用方式">PaddleOCR-VL 使用教程 - 4.3 客户端调用方式</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#43">PaddleOCR-VL 使用教程 - 4.3 客户端调用方式</a>。</p>
 <h3 id="43">4.3 产线配置调整说明<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
-<p>请参考<a href="PaddleOCR-VL.html#44-产线配置调整说明">PaddleOCR-VL 使用教程 - 4.4 产线配置调整说明</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#44">PaddleOCR-VL 使用教程 - 4.4 产线配置调整说明</a>。</p>
 <h2 id="5">5. 模型微调<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<p>请参考<a href="PaddleOCR-VL.html#5-模型微调">PaddleOCR-VL 使用教程 - 5. 模型微调</a>。</p>
+<p>请参考<a href="PaddleOCR-VL.html#5">PaddleOCR-VL 使用教程 - 5. 模型微调</a>。</p>
 
 <!-- Source file information -->
 

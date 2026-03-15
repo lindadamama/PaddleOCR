@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -4700,21 +4700,21 @@ You're not viewing the latest version.
 <!-- Page content -->
 <h1 id="ocr-c-linux">通用 OCR 产线 C++ 部署 - Linux<a class="headerlink" href="#ocr-c-linux" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="#1-环境准备">1. 环境准备</a><ul>
-<li><a href="#11-编译-opencv-库">1.1 编译 OpenCV 库</a></li>
-<li><a href="#12-编译-paddle-inference">1.2 编译 Paddle Inference</a></li>
+<li><a href="#1">1. 环境准备</a><ul>
+<li><a href="#11-opencv">1.1 编译 OpenCV 库</a></li>
+<li><a href="#12-paddle-inference">1.2 编译 Paddle Inference</a></li>
 </ul>
 </li>
-<li><a href="#2-开始运行">2. 开始运行</a><ul>
-<li><a href="#21-编译预测-demo">2.1 编译预测 demo</a></li>
-<li><a href="#22-准备模型">2.2 准备模型</a></li>
-<li><a href="#23-运行预测-demo">2.3 运行预测 demo</a></li>
-<li><a href="#24-c-api-集成">2.4 C++ API 集成</a></li>
+<li><a href="#2">2. 开始运行</a><ul>
+<li><a href="#21-demo">2.1 编译预测 demo</a></li>
+<li><a href="#22">2.2 准备模型</a></li>
+<li><a href="#23-demo">2.3 运行预测 demo</a></li>
+<li><a href="#24-c-api">2.4 C++ API 集成</a></li>
 </ul>
 </li>
-<li><a href="#3-拓展功能">3. 拓展功能</a><ul>
-<li><a href="#31-多语种文字识别">3.1 多语种文字识别</a></li>
-<li><a href="#32-可视化文本识别结果">3.2 可视化文本识别结果</a></li>
+<li><a href="#3">3. 拓展功能</a><ul>
+<li><a href="#31">3.1 多语种文字识别</a></li>
+<li><a href="#32">3.2 可视化文本识别结果</a></li>
 </ul>
 </li>
 <li><a href="#4-faq">4. FAQ</a></li>
@@ -4990,7 +4990,7 @@ You're not viewing the latest version.
 </table>
 </details>
 
-<p>也可以参考各模块的模型导出章节，如<a href="../../module_usage/text_detection.html#44-模型导出">文本检测模块-模型导出</a>，将训练好的模型导出为推理模型。</p>
+<p>也可以参考各模块的模型导出章节，如<a href="../../module_usage/text_detection.html#44">文本检测模块-模型导出</a>，将训练好的模型导出为推理模型。</p>
 <p>模型的目录结构一般如下所示：</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>PP-OCRv5_mobile_det
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>|--inference.pdiparams

@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -4375,7 +4375,7 @@ You're not viewing the latest version.
 
 <!-- Page content -->
 <h1 id="pp-ocrv5">一、PP-OCRv5多语种文字识别介绍<a class="headerlink" href="#pp-ocrv5" title="Permanent link">&para;</a></h1>
-<p><a href="PP-OCRv5.html">PP-OCRv5</a> 是 PP-OCR 系列的最新一代文字识别解决方案，专注于多场景、多语种的文字识别任务。在文字类型支持方面，默认配置的识别模型可准确识别简体中文、中文拼音、繁体中文、英文和日文这五大主流文字类型。同时，PP-OCRv5还提供了覆盖106种语言的多语种文字识别能力，包括韩文、西班牙文、法文、葡萄牙文、德文、意大利文、俄罗斯文、泰文、希腊文等（具体支持语种及缩写详见<a href="#四-支持语种及缩写">第四节</a>）。相较于前代 PP-OCRv3 版本，PP-OCRv5 在多语言文字识别准确率上实现了超过30%的提升。</p>
+<p><a href="PP-OCRv5.html">PP-OCRv5</a> 是 PP-OCR 系列的最新一代文字识别解决方案，专注于多场景、多语种的文字识别任务。在文字类型支持方面，默认配置的识别模型可准确识别简体中文、中文拼音、繁体中文、英文和日文这五大主流文字类型。同时，PP-OCRv5还提供了覆盖106种语言的多语种文字识别能力，包括韩文、西班牙文、法文、葡萄牙文、德文、意大利文、俄罗斯文、泰文、希腊文等（具体支持语种及缩写详见<a href="#_3">第四节</a>）。相较于前代 PP-OCRv3 版本，PP-OCRv5 在多语言文字识别准确率上实现了超过30%的提升。</p>
 <div align="center">
   <img src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/refs/heads/main/images/pipelines/ocr/french_0_res.jpg" alt="法文识别结" width="500"/>
   <br>
@@ -4450,7 +4450,7 @@ You're not viewing the latest version.
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span>--save_path<span class="w"> </span>./output<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span>--device<span class="w"> </span>gpu:0<span class="w"> </span>
 </span></code></pre></div>
-上述命令行的其他参数说明请参考通用 OCR 产线的<a href="../../pipeline_usage/OCR.html#21-命令行方式">命令行使用方式</a>, 运行后结果会被打印到终端上：</p>
+上述命令行的其他参数说明请参考通用 OCR 产线的<a href="../../pipeline_usage/OCR.html#21">命令行使用方式</a>, 运行后结果会被打印到终端上：</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">{</span><span class="s1">&#39;res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span><span class="s1">&#39;/root/.paddlex/predict_input/general_ocr_french01.png&#39;</span>,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_preprocessor&#39;</span>:<span class="w"> </span>True,<span class="w"> </span><span class="s1">&#39;use_textline_orientation&#39;</span>:<span class="w"> </span>False<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;doc_preprocessor_res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_orientation_classify&#39;</span>:<span class="w"> </span>False,<span class="w"> </span><span class="s1">&#39;use_doc_unwarping&#39;</span>:<span class="w"> </span>False<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;angle&#39;</span>:<span class="w"> </span>-1<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;dt_polys&#39;</span>:<span class="w"> </span>array<span class="o">([[[</span><span class="m">119</span>,<span class="w">  </span><span class="m">23</span><span class="o">]</span>,
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span>...,
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="o">[</span><span class="m">118</span>,<span class="w">  </span><span class="m">75</span><span class="o">]]</span>,
@@ -4488,7 +4488,7 @@ You're not viewing the latest version.
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-更过关于 <code>PaddleOCR</code> 类参数的说明参考通用 OCR 产线的<a href="../../pipeline_usage/OCR.html#22-python脚本方式集成">脚本方式集成</a>。</p>
+更过关于 <code>PaddleOCR</code> 类参数的说明参考通用 OCR 产线的<a href="../../pipeline_usage/OCR.html#22-python">脚本方式集成</a>。</p>
 <h2 id="_2">三、指标对比<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../../../version3.x/logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -4456,7 +4456,7 @@ You're not viewing the latest version.
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span>--save_path<span class="w"> </span>./output<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span>--device<span class="w"> </span>gpu:0<span class="w"> </span>
 </span></code></pre></div>
-For explanations of the other command-line parameters, please refer to the <a href="../../pipeline_usage/OCR.html#21-command-line-usage">Command Line Usage</a> section of the general OCR pipeline documentation. After running, the results will be displayed in the terminal:</p>
+For explanations of the other command-line parameters, please refer to the <a href="../../pipeline_usage/OCR.html#21-command-line">Command Line Usage</a> section of the general OCR pipeline documentation. After running, the results will be displayed in the terminal:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">{</span><span class="s1">&#39;res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span><span class="s1">&#39;/root/.paddlex/predict_input/general_ocr_french01.png&#39;</span>,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_preprocessor&#39;</span>:<span class="w"> </span>True,<span class="w"> </span><span class="s1">&#39;use_textline_orientation&#39;</span>:<span class="w"> </span>False<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;doc_preprocessor_res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_orientation_classify&#39;</span>:<span class="w"> </span>False,<span class="w"> </span><span class="s1">&#39;use_doc_unwarping&#39;</span>:<span class="w"> </span>False<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;angle&#39;</span>:<span class="w"> </span>-1<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;dt_polys&#39;</span>:<span class="w"> </span>array<span class="o">([[[</span><span class="m">119</span>,<span class="w">  </span><span class="m">23</span><span class="o">]</span>,
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span>...,
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="o">[</span><span class="m">118</span>,<span class="w">  </span><span class="m">75</span><span class="o">]]</span>,
@@ -4494,7 +4494,7 @@ For explanations of the other command-line parameters, please refer to the <a hr
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-For more details on the <code>PaddleOCR</code> class parameters, please refer to the <a href="../../pipeline_usage/OCR.html#22-python-scripting-integration">Python Scripting Integration</a> section of the general OCR pipeline documentation.</p>
+For more details on the <code>PaddleOCR</code> class parameters, please refer to the <a href="../../pipeline_usage/OCR.html#22-python-script-integration">Python Scripting Integration</a> section of the general OCR pipeline documentation.</p>
 <h2 id="3-performance-comparison">3. Performance Comparison<a class="headerlink" href="#3-performance-comparison" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

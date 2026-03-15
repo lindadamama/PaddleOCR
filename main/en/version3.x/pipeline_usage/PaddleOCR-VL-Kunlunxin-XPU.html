@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../../version3.x/logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -4673,7 +4673,7 @@ For example:
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span>paddleocr<span class="w"> </span>genai_server<span class="w"> </span>--model_name<span class="w"> </span>PaddleOCR-VL-1.5-0.9B<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8118</span><span class="w"> </span>--backend<span class="w"> </span>fastdeploy
 </span></code></pre></div>
 <p>If you wish to start the service in an environment without internet access, replace <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-kunlunxin-xpu</code> (image size approximately 53 GB) in the above command with the offline version image <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-fastdeploy-server:latest-kunlunxin-xpu-offline</code> (image size approximately 55 GB).</p>
-<p>When launching the FastDeploy inference service, we provide a set of default parameter settings. If you need to adjust parameters such as GPU memory usage, you can configure additional parameters yourself. Please refer to <a href="PaddleOCR-VL.html#331-server-parameter-adjustment">3.3.1 Server Parameter Adjustment</a> to create a configuration file, then mount this file into the container and specify the configuration file using <code>backend_config</code> in the command to start the service, for example:</p>
+<p>When launching the FastDeploy inference service, we provide a set of default parameter settings. If you need to adjust parameters such as GPU memory usage, you can configure additional parameters yourself. Please refer to <a href="PaddleOCR-VL.html#331-server-side-parameter-adjustment">3.3.1 Server Parameter Adjustment</a> to create a configuration file, then mount this file into the container and specify the configuration file using <code>backend_config</code> in the command to start the service, for example:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>-it<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>--rm<span class="w"> </span><span class="se">\</span>
@@ -4693,7 +4693,7 @@ For example:
 <code>ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:paddleocr3.3-kunlunxin-xpu-offline</code></p>
 </div>
 <h3 id="32-client-usage-method">3.2 Client Usage Method<a class="headerlink" href="#32-client-usage-method" title="Permanent link">&para;</a></h3>
-<p>Please refer to <a href="PaddleOCR-VL.html#32-client-usage-method">PaddleOCR-VL Usage Tutorial - 3.2 Client Usage Method</a>.</p>
+<p>Please refer to <a href="PaddleOCR-VL.html#32-client-usage-methods">PaddleOCR-VL Usage Tutorial - 3.2 Client Usage Method</a>.</p>
 <h3 id="33-performance-tuning">3.3 Performance Tuning<a class="headerlink" href="#33-performance-tuning" title="Permanent link">&para;</a></h3>
 <p>Please refer to <a href="PaddleOCR-VL.html#33-performance-tuning">PaddleOCR-VL Usage Tutorial - 3.3 Performance Tuning</a>.</p>
 <h2 id="4-service-deployment">4. Service Deployment<a class="headerlink" href="#4-service-deployment" title="Permanent link">&para;</a></h2>
@@ -4765,7 +4765,7 @@ Edit <code>environment</code> in the <code>compose.yaml</code> file to change th
 <details>
 <summary>3. Adjust VLM server configuration</summary>
 
-If you want to adjust the VLM server configuration, refer to <a href="./PaddleOCR-VL.en.md#331-server-parameter-adjustment">3.3.1 Server Parameter Adjustment</a> to generate a configuration file.
+If you want to adjust the VLM server configuration, refer to <a href="./PaddleOCR-VL.en.md#331-server-side-parameter-adjustment">3.3.1 Server Parameter Adjustment</a> to generate a configuration file.
 
 After generating the configuration file, add the following <code>paddleocr-vlm-server.volumes</code> and <code>paddleocr-vlm-server.command</code> fields to your <code>compose.yaml</code>. Replace <code>/path/to/your_config.yaml</code> with your actual configuration file path.
 
@@ -4786,7 +4786,7 @@ Refer to the <a href="./PaddleOCR-VL.en.md#44-pipeline-configuration-adjustment-
 </details>
 
 <h3 id="42-client-invocation-methods">4.2 Client Invocation Methods<a class="headerlink" href="#42-client-invocation-methods" title="Permanent link">&para;</a></h3>
-<p>Please refer to <a href="PaddleOCR-VL.html#43-client-invocation-methods">PaddleOCR-VL Usage Tutorial - 4.3 Client Invocation Methods</a>.</p>
+<p>Please refer to <a href="PaddleOCR-VL.html#43-client-side-invocation">PaddleOCR-VL Usage Tutorial - 4.3 Client Invocation Methods</a>.</p>
 <h3 id="43-pipeline-configuration-adjustment-instructions">4.3 Pipeline Configuration Adjustment Instructions<a class="headerlink" href="#43-pipeline-configuration-adjustment-instructions" title="Permanent link">&para;</a></h3>
 <p>Please refer to <a href="PaddleOCR-VL.html#44-pipeline-configuration-adjustment-instructions">PaddleOCR-VL Usage Tutorial - 4.4 Pipeline Configuration Adjustment Instructions</a>.</p>
 <h2 id="5-model-fine-tuning">5. Model Fine-Tuning<a class="headerlink" href="#5-model-fine-tuning" title="Permanent link">&para;</a></h2>

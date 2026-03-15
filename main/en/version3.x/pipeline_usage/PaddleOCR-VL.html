@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../../version3.x/logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -5043,11 +5043,12 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
 </li>
 <li>
 <p><strong>Want to deploy PaddleOCR-VL as an API service</strong>:</p>
-<p>If you want to deploy PaddleOCR-VL as a web service (API) so that other devices or applications can access and call it through a specific URL without configuring the environment, we offer two methods:</p>
+<p>You can deploy PaddleOCR-VL as a web service (API), allowing client applications to invoke PaddleOCR-VL's capabilities through a specific URL without configuring the environment. If concurrent request processing is not required, choose either of the following two methods:</p>
 <ul>
 <li>Deployment using Docker Compose (one-click start, recommended): Please read <a href="#41-method-1-deploy-using-docker-compose-recommended">4.1 Method 1: Deploy Using Docker Compose</a> and <a href="#43-client-side-invocation">4.3 Client-Side Invocation</a>, or the corresponding chapters in documentation for other hardware.</li>
 <li>Manual deployment: Please read <a href="#1-environment-preparation">1. Environment Preparation</a>, <a href="#42-method-2-manual-deployment">4.2 Method 2: Manual Deployment</a>, and <a href="#43-client-side-invocation">4.3 Client-Side Invocation</a>, or the corresponding chapters in documentation for other hardware.</li>
 </ul>
+<p>For concurrent request processing, please refer to the <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/hps/README_en.md">High-Performance Service Deployment solution</a>.</p>
 </li>
 <li>
 <p><strong>Want to fine-tune PaddleOCR-VL to adapt to specific business needs</strong>:</p>
@@ -5689,8 +5690,8 @@ If MKL-DNN is not available or the model does not support acceleration via MKL-D
 {'res': {'input_path': 'paddleocr_vl_demo.png', 'page_index': None, 'model_settings': {'use_doc_preprocessor': False, 'use_layout_detection': True, 'use_chart_recognition': False, 'format_block_content': False}, 'layout_det_res': {'input_path': None, 'page_index': None, 'boxes': [{'cls_id': 6, 'label': 'doc_title', 'score': 0.9636914134025574, 'coordinate': [np.float32(131.31366), np.float32(36.450516), np.float32(1384.522), np.float32(127.984665)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9281806349754333, 'coordinate': [np.float32(585.39465), np.float32(158.438), np.float32(930.2184), np.float32(182.57469)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9840355515480042, 'coordinate': [np.float32(9.023666), np.float32(200.86115), np.float32(361.41583), np.float32(343.8828)]}, {'cls_id': 14, 'label': 'image', 'score': 0.9871416091918945, 'coordinate': [np.float32(775.50574), np.float32(200.66502), np.float32(1503.3807), np.float32(684.9304)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9801855087280273, 'coordinate': [np.float32(9.532196), np.float32(344.90594), np.float32(361.4413), np.float32(440.8244)]}, {'cls_id': 17, 'label': 'paragraph_title', 'score': 0.9708921313285828, 'coordinate': [np.float32(28.040405), np.float32(455.87976), np.float32(341.7215), np.float32(520.7117)]}, {'cls_id': 24, 'label': 'vision_footnote', 'score': 0.9002962708473206, 'coordinate': [np.float32(809.0692), np.float32(703.70044), np.float32(1488.3016), np.float32(750.5238)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9825374484062195, 'coordinate': [np.float32(8.896561), np.float32(536.54895), np.float32(361.05237), np.float32(655.8058)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9822263717651367, 'coordinate': [np.float32(8.971573), np.float32(657.4949), np.float32(362.01715), np.float32(774.625)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9767460823059082, 'coordinate': [np.float32(9.407074), np.float32(776.5216), np.float32(361.31067), np.float32(846.82874)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9868153929710388, 'coordinate': [np.float32(8.669495), np.float32(848.2543), np.float32(361.64703), np.float32(1062.8568)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9826608300209045, 'coordinate': [np.float32(8.8025055), np.float32(1063.8615), np.float32(361.46588), np.float32(1182.8524)]}, {'cls_id': 22, 'label': 'text', 'score': 0.982555627822876, 'coordinate': [np.float32(8.820602), np.float32(1184.4663), np.float32(361.66394), np.float32(1302.4507)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9584776759147644, 'coordinate': [np.float32(9.170288), np.float32(1304.2161), np.float32(361.48898), np.float32(1351.7483)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9782056212425232, 'coordinate': [np.float32(389.1618), np.float32(200.38202), np.float32(742.7591), np.float32(295.65146)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9844875931739807, 'coordinate': [np.float32(388.73303), np.float32(297.18463), np.float32(744.00024), np.float32(441.3034)]}, {'cls_id': 17, 'label': 'paragraph_title', 'score': 0.9680547714233398, 'coordinate': [np.float32(409.39468), np.float32(455.89386), np.float32(721.7174), np.float32(520.9387)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9741666913032532, 'coordinate': [np.float32(389.71606), np.float32(536.8138), np.float32(742.7112), np.float32(608.00165)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9840384721755981, 'coordinate': [np.float32(389.30988), np.float32(609.39636), np.float32(743.09247), np.float32(750.3231)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9845995306968689, 'coordinate': [np.float32(389.13272), np.float32(751.7772), np.float32(743.058), np.float32(894.8815)]}, {'cls_id': 22, 'label': 'text', 'score': 0.984852135181427, 'coordinate': [np.float32(388.83267), np.float32(896.0371), np.float32(743.58215), np.float32(1038.7345)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9804865717887878, 'coordinate': [np.float32(389.08478), np.float32(1039.9119), np.float32(742.7585), np.float32(1134.4897)]}, {'cls_id': 22, 'label': 'text', 'score': 0.986461341381073, 'coordinate': [np.float32(388.52643), np.float32(1135.8137), np.float32(743.451), np.float32(1352.0085)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9869391918182373, 'coordinate': [np.float32(769.8341), np.float32(775.66235), np.float32(1124.9813), np.float32(1063.207)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9822869896888733, 'coordinate': [np.float32(770.30383), np.float32(1063.938), np.float32(1124.8295), np.float32(1184.2192)]}, {'cls_id': 17, 'label': 'paragraph_title', 'score': 0.9689218997955322, 'coordinate': [np.float32(791.3042), np.float32(1199.3169), np.float32(1104.4521), np.float32(1264.6985)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9713128209114075, 'coordinate': [np.float32(770.4253), np.float32(1279.6072), np.float32(1124.6917), np.float32(1351.8672)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9236552119255066, 'coordinate': [np.float32(1153.9058), np.float32(775.5814), np.float32(1334.0654), np.float32(798.1581)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9857938885688782, 'coordinate': [np.float32(1151.5197), np.float32(799.28015), np.float32(1506.3619), np.float32(991.1156)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9820687174797058, 'coordinate': [np.float32(1151.5686), np.float32(991.91095), np.float32(1506.6023), np.float32(1110.8875)]}, {'cls_id': 22, 'label': 'text', 'score': 0.9866049885749817, 'coordinate': [np.float32(1151.6919), np.float32(1112.1301), np.float32(1507.1611), np.float32(1351.9504)]}]}}}
 </code></pre></details>
 
-<p>For explanation of the result parameters, refer to <a href="#222-python-script-integration">2.2 Python Script Integration</a>.</p>
-<p><b>Note: </b> The default model for the pipeline is relatively large, which may result in slower inference speed. It is recommended to use <a href="#31-starting-the-vlm-inference-service">inference acceleration frameworks to enhance VLM inference performance</a> for faster inference.</p>
+<p>For explanation of the result parameters, refer to <a href="#22-python-script-integration">2.2 Python Script Integration</a>.</p>
+<p><b>Note: </b> The default model for the pipeline is relatively large, which may result in slower inference speed. It is recommended to use <a href="#31-launching-the-vlm-inference-service">inference acceleration frameworks to enhance VLM inference performance</a> for faster inference.</p>
 <h3 id="22-python-script-integration">2.2 Python Script Integration<a class="headerlink" href="#22-python-script-integration" title="Permanent link">&para;</a></h3>
 <p>The command line method is for quick testing and visualization. In actual projects, you usually need to integrate the model via code. You can perform pipeline inference with just a few lines of code as shown below:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">PaddleOCRVL</span>
@@ -6519,7 +6520,7 @@ Setting it to <code>None</code> means using the instantiation parameter; otherwi
 <h2 id="3-enhancing-vlm-inference-performance-using-inference-acceleration-frameworks">3. Enhancing VLM Inference Performance Using Inference Acceleration Frameworks<a class="headerlink" href="#3-enhancing-vlm-inference-performance-using-inference-acceleration-frameworks" title="Permanent link">&para;</a></h2>
 <p>The inference performance under default configurations is not fully optimized and may not meet actual production requirements. This step primarily introduces how to use the vLLM, SGLang and FastDeploy inference acceleration frameworks to enhance the inference performance of PaddleOCR-VL.</p>
 <h3 id="31-launching-the-vlm-inference-service">3.1 Launching the VLM Inference Service<a class="headerlink" href="#31-launching-the-vlm-inference-service" title="Permanent link">&para;</a></h3>
-<p>There are two methods to launch the VLM inference service; choose either one:</p>
+<p>There are three methods to launch the VLM inference service; choose either one:</p>
 <ul>
 <li>
 <p>Method 1: Launch the service using the official Docker image. Currently supported:</p>
@@ -6537,7 +6538,7 @@ Setting it to <code>None</code> means using the instantiation parameter; otherwi
 </ul>
 </li>
 <li>
-<p>Method 3: Launch service directly using inference acceleration frameworks. Currently supported:</p>
+<p>Method 3: Launch service directly using inference acceleration frameworks (the pre-configured performance tuning parameters provided by PaddleOCR will not be applied). Currently supported:</p>
 <ul>
 <li>FastDeploy</li>
 <li>vLLM</li>
@@ -6655,7 +6656,7 @@ For example:
 <li>MLX-VLM: <a href="PaddleOCR-VL-Apple-Silicon.html">Refer to this document</a></li>
 <li>llama.cpp:<ol>
 <li>Install llama.cpp by referring to the <code>Quick start</code> section in the <a href="https://github.com/ggml-org/llama.cpp">llama.cpp github</a>.</li>
-<li>Download the model files in gguf format: <a href="https://modelscope.cn/models/megemini/PaddleOCR-VL-1.5-GGUF/files">megemini/PaddleOCR-VL-1.5-GGUF</a> or <a href="https://modelscope.cn/models/megemini/PaddleOCR-VL-GGUF/files">megemini/PaddleOCR-VL-GGUF</a>.</li>
+<li>Download the model files in gguf format: <a href="https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.5-GGUF">PaddlePaddle/PaddleOCR-VL-1.5-GGUF</a>.</li>
 <li>
 <p>Execute the following command to start the inference service. For an introduction to the parameters, please refer to <a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md">LLaMA.cpp HTTP Server</a>:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./build/bin/llama-server<span class="w"> </span><span class="se">\</span>
@@ -6775,7 +6776,7 @@ For example:
 </li>
 </ul>
 <h2 id="4-service-deployment">4. Service Deployment<a class="headerlink" href="#4-service-deployment" title="Permanent link">&para;</a></h2>
-<p>This step mainly introduces how to deploy PaddleOCR-VL as a service and invoke it. There are two methods; choose either one:</p>
+<p>This step mainly introduces how to deploy PaddleOCR-VL as a service and invoke it. If concurrent request processing is not required, choose either of the following two methods:</p>
 <ul>
 <li>
 <p>Method 1: Deploy using Docker Compose (recommended).</p>
@@ -6784,8 +6785,9 @@ For example:
 <p>Method 2: Manual Deployment.</p>
 </li>
 </ul>
+<p>Both methods can handle only one request at a time. If you need concurrent request processing, please refer to the <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/hps/README_en.md">High-Performance Service Deployment solution</a>.</p>
 <blockquote>
-<p>Note that the PaddleOCR-VL service described in this section differs from the VLM inference service in the previous section: the latter is responsible for only one part of the complete process (i.e., VLM inference) and is called as an underlying service by the former. In addition, the PaddleOCR-VL service started according to the instructions in this section can handle only one request at a time. We will later provide instructions on how to start the service with support for concurrent requests.</p>
+<p>Note that the PaddleOCR-VL service described in this section differs from the VLM inference service in the previous section: the latter is responsible for only one part of the complete process (i.e., VLM inference) and is called as an underlying service by the former.</p>
 </blockquote>
 <h3 id="41-method-1-deploy-using-docker-compose-recommended">4.1 Method 1: Deploy Using Docker Compose (Recommended)<a class="headerlink" href="#41-method-1-deploy-using-docker-compose-recommended" title="Permanent link">&para;</a></h3>
 <p>You can obtain the Compose file and the environment variables configuration file from <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/accelerators/gpu/compose.yaml">here</a> and <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/deploy/paddleocr_vl_docker/accelerators/gpu/.env">here</a>, respectively, and download them to your local machine. Then, in the directory where the files were just downloaded, execute the following command to start the server, which will listen on port <strong>8080</strong> by default:</p>

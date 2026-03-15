@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../../version3.x/logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -4615,8 +4615,8 @@ You're not viewing the latest version.
 <h2 id="3-improving-vlm-inference-performance-using-inference-acceleration-frameworks">3. Improving VLM Inference Performance Using Inference Acceleration Frameworks<a class="headerlink" href="#3-improving-vlm-inference-performance-using-inference-acceleration-frameworks" title="Permanent link">&para;</a></h2>
 <p>The inference performance under default configurations is not fully optimized and may not meet actual production requirements. This step mainly introduces how to use the MLX-VLM inference acceleration framework to improve the inference performance of PaddleOCR-VL.</p>
 <h3 id="31-starting-the-vlm-inference-service">3.1 Starting the VLM Inference Service<a class="headerlink" href="#31-starting-the-vlm-inference-service" title="Permanent link">&para;</a></h3>
-<p>Install the MLX-VLM inference framework:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>mlx-vlm
+<p>Install the MLX-VLM inference framework (v0.3.11 or later):</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;mlx-vlm&gt;=0.3.11&quot;</span>
 </span></code></pre></div>
 <p>Start the MLX-VLM inference service:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mlx_vlm.server<span class="w"> </span>--port<span class="w"> </span><span class="m">8111</span>
@@ -4643,7 +4643,7 @@ You're not viewing the latest version.
 <h2 id="4-service-deployment">4. Service Deployment<a class="headerlink" href="#4-service-deployment" title="Permanent link">&para;</a></h2>
 <p>Currently, only <strong>manual deployment</strong> is supported. Please refer to <strong>Section 4.2 Method 2: Manual Deployment</strong> in the <a href="PaddleOCR-VL.html">PaddleOCR-VL Usage Tutorial</a>.</p>
 <h3 id="43-client-invocation-methods">4.3 Client Invocation Methods<a class="headerlink" href="#43-client-invocation-methods" title="Permanent link">&para;</a></h3>
-<p>Please refer to <a href="PaddleOCR-VL.html#43-client-invocation-methods">PaddleOCR-VL Usage Tutorial - 4.3 Client Invocation Methods</a>.</p>
+<p>Please refer to <a href="PaddleOCR-VL.html#43-client-side-invocation">PaddleOCR-VL Usage Tutorial - 4.3 Client Invocation Methods</a>.</p>
 <h3 id="44-pipeline-configuration-adjustment-instructions">4.4 Pipeline Configuration Adjustment Instructions<a class="headerlink" href="#44-pipeline-configuration-adjustment-instructions" title="Permanent link">&para;</a></h3>
 <p>Please refer to <a href="PaddleOCR-VL.html#44-pipeline-configuration-adjustment-instructions">PaddleOCR-VL Usage Tutorial - 4.4 Pipeline Configuration Adjustment Instructions</a>.</p>
 <h2 id="5-model-fine-tuning">5. Model Fine-Tuning<a class="headerlink" href="#5-model-fine-tuning" title="Permanent link">&para;</a></h2>
