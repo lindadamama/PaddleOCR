@@ -524,7 +524,7 @@ You're not viewing the latest version.
   
     
   
-  Model Deploy
+  Inference and Deployment
 
         </a>
       </li>
@@ -1301,6 +1301,10 @@ You're not viewing the latest version.
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1626,6 +1630,62 @@ You're not viewing the latest version.
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PaddleOCR-VL-AMD-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL AMD GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PaddleOCR-VL-Intel-Arc-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Intel Arc GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1641,6 +1701,12 @@ You're not viewing the latest version.
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -1683,7 +1749,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    Model Deploy
+    Inference and Deployment
   
 
     
@@ -1699,7 +1765,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    Model Deploy
+    Inference and Deployment
   
 
           </label>
@@ -1824,6 +1890,34 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
+      <a href="../deployment/browser.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browser Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../deployment/mcp_server.html" class="md-nav__link">
         
   
@@ -1832,6 +1926,34 @@ You're not viewing the latest version.
     
   
     MCP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/skills.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Skills
   
 
     
@@ -1927,10 +2049,10 @@ You're not viewing the latest version.
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_10" >
         
           
-          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
             
   
   
@@ -1948,8 +2070,8 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2038,6 +2160,34 @@ You're not viewing the latest version.
     
   
     Benchmark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inference_engine.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference Engine and Configuration
   
 
     
@@ -2941,7 +3091,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PP-DocTranslation产线
+    PP-DocTranslation Pipeline
   
 
     
@@ -3243,7 +3393,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    Configure the logging system for the PaddleOCR inference package
+    Configure logging for the paddleocr Python package
   
 
     
@@ -4555,8 +4705,59 @@ Supports specifying a specific card number:
 <td></td>
 </tr>
 <tr>
+<td><code>engine</code></td>
+<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, and <code>paddle_dynamic</code>. When left as <code>None</code>, PaddleOCR preserves the behavior of earlier versions, which in most configurations is equivalent to <code>paddle</code>. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><code>str</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>enable_hpi</code></td>
+<td><b>Meaning:</b> Whether to enable high-performance inference.</td>
+<td><code>bool</code></td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>use_tensorrt</code></td>
+<td><b>Meaning:</b> Whether to enable the TensorRT subgraph engine of Paddle Inference.<br/>
+<b>Description:</b>
+If the model does not support TensorRT acceleration, acceleration will not be used even if this flag is set.<br/>
+For CUDA 11.8 versions of PaddlePaddle, the compatible TensorRT version is 8.x (x>=6). TensorRT 8.6.1.6 is recommended.<br/>
+</td>
+<td><code>bool</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precision</code></td>
+<td><b>Meaning:</b> Computation precision, such as <code>"fp32"</code> or <code>"fp16"</code>.</td>
+<td><code>str</code></td>
+<td><code>"fp32"</code></td>
+</tr>
+<tr>
+<td><code>enable_mkldnn</code></td>
+<td><b>Meaning:</b> Whether to enable MKL-DNN accelerated inference.<br/>
+<b>Description:</b>
+If MKL-DNN is unavailable or the model does not support MKL-DNN acceleration, acceleration will not be used even if this flag is set.
+</td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>mkldnn_cache_capacity</code></td>
+<td>
+<b>Meaning:</b> MKL-DNN cache capacity.
+</td>
+<td><code>int</code></td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>cpu_threads</code></td>
+<td><b>Meaning:</b> Number of threads used for inference on CPU.</td>
+<td><code>int</code></td>
+<td><code>10</code></td>
+</tr>
+<tr>
 <td><code>paddlex_config</code></td>
-<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b> Path to the PaddleX pipeline configuration file.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
@@ -4636,6 +4837,18 @@ Supports specifying a specific card number:
 </ul>
 </td>
 <td><code>str|None</code></td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>engine</code></td>
+<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, and <code>paddle_dynamic</code>. When left as <code>None</code>, PaddleOCR preserves the behavior of earlier versions, which in most configurations is equivalent to <code>paddle</code>. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><code>str|None</code></td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>engine_config</code></td>
+<td><b>Meaning:</b> Inference-engine configuration.<br/><b>Description:</b> Recommended together with <code>engine</code>. For supported fields, compatibility rules, and examples, see <a href="../inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><code>dict|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>

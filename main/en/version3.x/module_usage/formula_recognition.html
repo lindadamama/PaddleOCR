@@ -524,7 +524,7 @@ You're not viewing the latest version.
   
     
   
-  Model Deploy
+  Inference and Deployment
 
         </a>
       </li>
@@ -1301,6 +1301,10 @@ You're not viewing the latest version.
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1626,6 +1630,62 @@ You're not viewing the latest version.
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline_usage/PaddleOCR-VL-AMD-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL AMD GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline_usage/PaddleOCR-VL-Intel-Arc-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Intel Arc GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1641,6 +1701,12 @@ You're not viewing the latest version.
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -1683,7 +1749,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    Model Deploy
+    Inference and Deployment
   
 
     
@@ -1699,7 +1765,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    Model Deploy
+    Inference and Deployment
   
 
           </label>
@@ -1824,6 +1890,34 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
+      <a href="../deployment/browser.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browser Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../deployment/mcp_server.html" class="md-nav__link">
         
   
@@ -1832,6 +1926,34 @@ You're not viewing the latest version.
     
   
     MCP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/skills.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Skills
   
 
     
@@ -1927,10 +2049,10 @@ You're not viewing the latest version.
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_10" >
         
           
-          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
             
   
   
@@ -1948,8 +2070,8 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2038,6 +2160,34 @@ You're not viewing the latest version.
     
   
     Benchmark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inference_engine.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference Engine and Configuration
   
 
     
@@ -3013,7 +3163,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PP-DocTranslation产线
+    PP-DocTranslation Pipeline
   
 
     
@@ -3315,7 +3465,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    Configure the logging system for the PaddleOCR inference package
+    Configure logging for the paddleocr Python package
   
 
     
@@ -4579,7 +4729,7 @@ You're not viewing the latest version.
 <p>The formula recognition module is a key component of an OCR (Optical Character Recognition) system, responsible for converting mathematical formulas in images into editable text or computer-readable formats. The performance of this module directly affects the accuracy and efficiency of the entire OCR system. The formula recognition module typically outputs LaTeX or MathML code of the mathematical formulas, which will be passed as input to the text understanding module for further processing.</p>
 <h2 id="ii-supported-model-list">II. Supported Model List<a class="headerlink" href="#ii-supported-model-list" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>The inference time only includes the model inference time and does not include the time for pre- or post-processing.</p>
+<p>The inference time only includes the model inference time and does not include the time for pre- or post-processing. The "Normal Mode" values correspond to the local <code>paddle_static</code> inference engine.</p>
 </blockquote>
 <table>
 <tr>
@@ -4670,7 +4820,7 @@ You're not viewing the latest version.
               <li><strong>Software Environment:</strong>
                   <ul>
                       <li>Ubuntu 20.04 / CUDA 11.8 / cuDNN 8.9 / TensorRT 8.6.1.6</li>
-                      <li>paddlepaddle 3.0.0 / paddleocr 3.0.3</li>
+                      <li>paddlepaddle-gpu 3.0.0 / paddleocr 3.0.3</li>
                   </ul>
               </li>
         </li>
@@ -4708,9 +4858,10 @@ You're not viewing the latest version.
 <p>You can quickly try it out with a single command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>paddleocr<span class="w"> </span>formula_recognition<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_formula_rec_001.png
 </span></code></pre></div>
+<p>The example above uses the <code>paddle_static</code> inference engine by default. To run it, first install PaddlePaddle by following <a href="../paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>.</p>
 <p><b>Note: </b>The official models would be download from HuggingFace by default. If can't access to HuggingFace, please set the environment variable <code>PADDLE_PDX_MODEL_SOURCE="BOS"</code> to change the model source to BOS. In the future, more model sources will be supported.</p>
 <p>You can also integrate the model inference from the formula recognition module into your own project.Before running the code below, please download the <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_formula_rec_001.png">example image</a> locally.</p>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">FormulaRecognition</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">FormulaRecognition</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">FormulaRecognition</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;PP-FormulaNet_plus-M&quot;</span><span class="p">)</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;general_formula_rec_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
@@ -4718,7 +4869,8 @@ You're not viewing the latest version.
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-After running, the output is:
+<p>The example above uses the <code>paddle_static</code> inference engine by default. To run it, first install PaddlePaddle by following <a href="../paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>.</p>
+<p>After running, the output is:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">{</span><span class="s1">&#39;res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span><span class="s1">&#39;/root/.paddlex/predict_input/general_formula_rec_001.png&#39;</span>,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;rec_formula&#39;</span>:<span class="w"> </span><span class="s1">&#39;\\zeta_{0}(\\nu)=-\\frac{\\nu\\varrho^{-2\\nu}}{\\pi}\\int_{\\mu}^{\\infty}d\\omega\\int_{C_{+}}d z\\frac{2z^{2}}{(z^{2}+\\omega^{2})^{\\nu+1}}\\breve{\\Psi}(\\omega;z)e^{i\\epsilon z}\\quad,&#39;</span><span class="o">}}</span>
 </span></code></pre></div>
 Explanation of the result parameters:</p>
@@ -4767,6 +4919,18 @@ If multiple devices are specified, parallel inference will be performed.<br/>
 By default, GPU 0 is used if available; otherwise, CPU is used.
 </td>
 <td><code>str|None</code></td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>engine</code></td>
+<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, <code>paddle_static</code>, <code>paddle_dynamic</code>, and <code>transformers</code>. When left as <code>None</code>, local inference uses the <code>paddle_static</code> engine by default. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><code>str|None</code></td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>engine_config</code></td>
+<td><b>Meaning:</b> Inference-engine configuration.<br/><b>Description:</b> Recommended together with <code>engine</code>. For supported fields, compatibility rules, and examples, see <a href="../inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><code>dict|None</code></td>
 <td><code>None</code></td>
 </tr>
 <tr>

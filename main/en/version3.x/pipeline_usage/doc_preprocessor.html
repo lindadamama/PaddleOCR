@@ -524,7 +524,7 @@ You're not viewing the latest version.
   
     
   
-  Model Deploy
+  Inference and Deployment
 
         </a>
       </li>
@@ -1301,6 +1301,10 @@ You're not viewing the latest version.
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1626,6 +1630,62 @@ You're not viewing the latest version.
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PaddleOCR-VL-AMD-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL AMD GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PaddleOCR-VL-Intel-Arc-GPU.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL Intel Arc GPU Usage Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1641,6 +1701,12 @@ You're not viewing the latest version.
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -1683,7 +1749,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    Model Deploy
+    Inference and Deployment
   
 
     
@@ -1699,7 +1765,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    Model Deploy
+    Inference and Deployment
   
 
           </label>
@@ -1824,6 +1890,34 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
+      <a href="../deployment/browser.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browser Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../deployment/mcp_server.html" class="md-nav__link">
         
   
@@ -1832,6 +1926,34 @@ You're not viewing the latest version.
     
   
     MCP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/skills.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Skills
   
 
     
@@ -1927,10 +2049,10 @@ You're not viewing the latest version.
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_10" >
         
           
-          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_10" id="__nav_8_10_label" tabindex="0">
             
   
   
@@ -1948,8 +2070,8 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_10">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2038,6 +2160,34 @@ You're not viewing the latest version.
     
   
     Benchmark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inference_engine.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference Engine and Configuration
   
 
     
@@ -2919,7 +3069,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PP-DocTranslation产线
+    PP-DocTranslation Pipeline
   
 
     
@@ -3221,7 +3371,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    Configure the logging system for the PaddleOCR inference package
+    Configure logging for the paddleocr Python package
   
 
     
@@ -4397,7 +4547,8 @@ You're not viewing the latest version.
 </ul>
 <p>In this pipeline, you can select the models to use based on the benchmark data provided below.</p>
 <blockquote>
-<p>The inference time only includes the model inference time and does not include the time for pre- or post-processing.</p>
+<p>The inference time only includes the model inference time and does not include the time for pre- or post-processing.
+In the inference time columns labeled [Normal Mode / High-Performance Mode], the Normal Mode values correspond to the local <code>paddle_static</code> inference engine.</p>
 </blockquote>
 <details>
 <summary> <b>Document Image Orientation Classification Module (Optional):</b></summary>
@@ -4475,7 +4626,7 @@ You're not viewing the latest version.
               <li><strong>Software Environment:</strong>
                   <ul>
                       <li>Ubuntu 20.04 / CUDA 11.8 / cuDNN 8.9 / TensorRT 8.6.1.6</li>
-                      <li>paddlepaddle 3.0.0 / paddleocr 3.0.3</li>
+                      <li>paddlepaddle-gpu 3.0.0 / paddleocr 3.0.3</li>
                   </ul>
               </li>
           </ul>
@@ -4497,7 +4648,7 @@ You're not viewing the latest version.
             <td>Normal Mode</td>
             <td>FP32 Precision / No TRT Acceleration</td>
             <td>FP32 Precision / 8 Threads</td>
-            <td>PaddleInference</td>
+            <td><code>paddle_static</code></td>
         </tr>
         <tr>
             <td>High-Performance Mode</td>
@@ -4525,6 +4676,13 @@ You're not viewing the latest version.
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Specify the use of GPU for model inference via --device</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>paddleocr<span class="w"> </span>doc_preprocessor<span class="w"> </span>-i<span class="w"> </span>./doc_test_rotated.jpg<span class="w"> </span>--device<span class="w"> </span>gpu
 </span></code></pre></div>
+<p>The examples above use the local <code>paddle_static</code> inference engine by default. To run them, first install PaddlePaddle by following <a href="../paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>.</p>
+<p>If you choose <code>transformers</code> as the inference engine, make sure the Transformers environment is configured by following <a href="../inference_engine.html">Inference Engine and Configuration</a>, and then run the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Use the transformers engine for inference</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>paddleocr<span class="w"> </span>doc_preprocessor<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/demo_image/doc_test_rotated.jpg<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>--engine<span class="w"> </span>transformers
+</span></code></pre></div>
+<p>In most scenarios, the default <code>paddle_static</code> inference engine delivers better inference performance and is the recommended first choice.</p>
 <details><summary><b>The command line supports more parameter settings. Click to expand for detailed explanations of command line parameters.</b></summary>
 <table>
 <thead>
@@ -4622,79 +4780,103 @@ If not set, the pipeline initialized value for this parameter will be used. Duri
 <td></td>
 </tr>
 <tr>
+<td><code>engine</code></td>
+<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, <code>paddle_static</code>, <code>paddle_dynamic</code>, and <code>transformers</code>. When left as <code>None</code>, PaddleOCR preserves the behavior of earlier versions, which in most configurations is equivalent to <code>paddle</code>. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><code>str|None</code></td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>enable_hpi</code></td>
-<td><b>Meaning:</b>Whether to enable high-performance inference.</td>
+<td><b>Meaning:</b> Whether to enable high-performance inference.</td>
 <td><code>bool</code></td>
-<td><code>False</code></td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_tensorrt</code></td>
-<td><b>Meaning:</b>Whether to use the Paddle Inference TensorRT subgraph engine.<br/> 
+<td><b>Meaning:</b> Whether to enable the TensorRT subgraph engine of Paddle Inference.<br/>
 <b>Description:</b>
-If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
-For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6), and it is recommended to install TensorRT 8.6.1.6.<br/>
-
+If the model does not support TensorRT acceleration, acceleration will not be used even if this flag is set.<br/>
+For CUDA 11.8 versions of PaddlePaddle, the compatible TensorRT version is 8.x (x>=6). TensorRT 8.6.1.6 is recommended.<br/>
 </td>
 <td><code>bool</code></td>
 <td><code>False</code></td>
 </tr>
 <tr>
 <td><code>precision</code></td>
-<td><b>Meaning:</b>The computational precision, such as fp32, fp16.</td>
+<td><b>Meaning:</b> Computation precision, such as <code>fp32</code> or <code>fp16</code>.</td>
 <td><code>str</code></td>
 <td><code>fp32</code></td>
 </tr>
 <tr>
 <td><code>enable_mkldnn</code></td>
-<td><b>Meaning:</b>Whether to enable MKL-DNN acceleration for inference. <br/>
+<td><b>Meaning:</b> Whether to enable MKL-DNN accelerated inference.<br/>
 <b>Description:</b>
-If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
+If MKL-DNN is unavailable or the model does not support MKL-DNN acceleration, acceleration will not be used even if this flag is set.
+</td>
 <td><code>bool</code></td>
 <td><code>True</code></td>
 </tr>
 <tr>
 <td><code>mkldnn_cache_capacity</code></td>
 <td>
-<b>Meaning:</b>MKL-DNN cache capacity.
+<b>Meaning:</b> MKL-DNN cache capacity.
 </td>
 <td><code>int</code></td>
 <td><code>10</code></td>
 </tr>
 <tr>
 <td><code>cpu_threads</code></td>
-<td><b>Meaning:</b>The number of threads used for inference on the CPU.</td>
+<td><b>Meaning:</b> Number of threads used for inference on CPU.</td>
 <td><code>int</code></td>
-<td><code>8</code></td>
+<td><code>10</code></td>
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b> Path to the PaddleX pipeline configuration file.</td>
 <td><code>str</code></td>
 <td></td>
 </tr>
+
 </tbody>
 </table>
 </details>
 <p><br /></p>
 <p>The running results will be printed to the terminal. The running results of the <code>doc_preprocessor</code> pipeline with default configuration are as follows:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">{</span><span class="s1">&#39;res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span><span class="s1">&#39;/root/.paddlex/predict_input/doc_test_rotated.jpg&#39;</span>,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_orientation_classify&#39;</span>:<span class="w"> </span>True,<span class="w"> </span><span class="s1">&#39;use_doc_unwarping&#39;</span>:<span class="w"> </span>True<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;angle&#39;</span>:<span class="w"> </span><span class="m">180</span><span class="o">}}</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">{</span><span class="s1">&#39;res&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;input_path&#39;</span>:<span class="w"> </span><span class="s1">&#39;/root/.paddlex/predict_input/doc_test_rotated.jpg&#39;</span>,<span class="w"> </span><span class="s1">&#39;page_index&#39;</span>:<span class="w"> </span>None,<span class="w"> </span><span class="s1">&#39;model_settings&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;use_doc_orientation_classify&#39;</span>:<span class="w"> </span>True,<span class="w"> </span><span class="s1">&#39;use_doc_unwarping&#39;</span>:<span class="w"> </span>True<span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;angle&#39;</span>:<span class="w"> </span><span class="m">180</span><span class="o">}}</span>
 </span></code></pre></div></p>
 <p>The visualization results are saved under the <code>save_path</code>. The visualization results are as follows:</p>
 <p><img src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/pipelines/doc_preprocessor/02.jpg"/></p>
 <h3 id="22-integration-via-python-script">2.2 Integration via Python Script<a class="headerlink" href="#22-integration-via-python-script" title="Permanent link">&para;</a></h3>
 <p>The command-line approach is for quick experience and viewing results. Generally, in projects, integration through code is often required. You can achieve rapid inference in pipelines with just a few lines of code. The inference code is as follows:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">DocPreprocessor</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">DocPreprocessor</span><span class="p">()</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># docpp = DocPreprocessor(use_doc_orientation_classify=True) # Specify whether to use the document orientation classification model via use_doc_orientation_classify</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># docpp = DocPreprocessor(use_doc_unwarping=True) # Specify whether to use the text image unwarping module via use_doc_unwarping</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># docpp = DocPreprocessor(device=&quot;gpu&quot;) # Specify whether to use GPU for model inference via device</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">output</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;./doc_test_rotated.jpg&quot;</span><span class="p">)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>  <span class="c1">## Print the structured output of the prediction</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">DocPreprocessor</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">DocPreprocessor</span><span class="p">()</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># docpp = DocPreprocessor(use_doc_orientation_classify=True) # Specify whether to use the document orientation classification model via use_doc_orientation_classify</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># docpp = DocPreprocessor(use_doc_unwarping=True) # Specify whether to use the text image unwarping module via use_doc_unwarping</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># docpp = DocPreprocessor(device=&quot;gpu&quot;) # Specify whether to use GPU for model inference via device</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">output</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;./doc_test_rotated.jpg&quot;</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>  <span class="c1">## Print the structured output of the prediction</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
 </span></code></pre></div>
+<p>The example above uses the local <code>paddle_static</code> inference engine by default. To run it, first install PaddlePaddle by following <a href="../paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>.</p>
+<p>If you choose <code>transformers</code> as the inference engine, make sure the Transformers environment is configured by following <a href="../inference_engine.html">Inference Engine and Configuration</a>, and then run the following code:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">DocPreprocessor</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">DocPreprocessor</span><span class="p">(</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># docpp = DocPreprocessor(use_doc_orientation_classify=True) # Specify whether to use the document orientation classification model via use_doc_orientation_classify</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># docpp = DocPreprocessor(use_doc_unwarping=True) # Specify whether to use the text image unwarping module via use_doc_unwarping</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># docpp = DocPreprocessor(device=&quot;gpu&quot;) # Specify whether to use GPU for model inference via device</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">output</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;./doc_test_rotated.jpg&quot;</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>  <span class="c1">## Print the structured output of the prediction</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In most scenarios, the default <code>paddle_static</code> inference engine delivers better inference performance and is the recommended first choice.</p>
 <p>In the above Python script, the following steps are executed:</p>
 <p>(1) Instantiate the <code>doc_preprocessor</code> pipeline object via <code>DocPreprocessor()</code>. The specific parameter descriptions are as follows:</p>
 <table>
@@ -4776,56 +4958,70 @@ Support for specifying specific card numbers:
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>engine</code></td>
+<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, <code>paddle_static</code>, <code>paddle_dynamic</code>, and <code>transformers</code>. When left as <code>None</code>, PaddleOCR preserves the behavior of earlier versions, which in most configurations is equivalent to <code>paddle</code>. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><code>str|None</code></td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>engine_config</code></td>
+<td><b>Meaning:</b> Inference-engine configuration.<br/><b>Description:</b> Recommended together with <code>engine</code>. For supported fields, compatibility rules, and examples, see <a href="../inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><code>dict|None</code></td>
+<td><code>None</code></td>
+</tr>
+
+<tr>
 <td><code>enable_hpi</code></td>
-<td><b>Meaning:</b>Whether to enable high-performance inference.</td>
+<td><b>Meaning:</b> Whether to enable high-performance inference.</td>
 <td><code>bool</code></td>
-<td><code>False</code></td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_tensorrt</code></td>
-<td><b>Meaning:</b>Whether to use the Paddle Inference TensorRT subgraph engine.<br/> 
+<td><b>Meaning:</b> Whether to enable the TensorRT subgraph engine of Paddle Inference.<br/>
 <b>Description:</b>
-If the model does not support acceleration through TensorRT, setting this flag will not enable acceleration.<br/>
-For Paddle with CUDA version 11.8, the compatible TensorRT version is 8.x (x>=6), and it is recommended to install TensorRT 8.6.1.6.<br/>
-
+If the model does not support TensorRT acceleration, acceleration will not be used even if this flag is set.<br/>
+For CUDA 11.8 versions of PaddlePaddle, the compatible TensorRT version is 8.x (x>=6). TensorRT 8.6.1.6 is recommended.<br/>
 </td>
 <td><code>bool</code></td>
 <td><code>False</code></td>
 </tr>
 <tr>
 <td><code>precision</code></td>
-<td><b>Meaning:</b>The computational precision, such as fp32, fp16.</td>
+<td><b>Meaning:</b> Computation precision, such as <code>"fp32"</code> or <code>"fp16"</code>.</td>
 <td><code>str</code></td>
 <td><code>"fp32"</code></td>
 </tr>
 <tr>
 <td><code>enable_mkldnn</code></td>
-<td><b>Meaning:</b>Whether to enable MKL-DNN acceleration for inference. <br/>
+<td><b>Meaning:</b> Whether to enable MKL-DNN accelerated inference.<br/>
 <b>Description:</b>
-If MKL-DNN is unavailable or the model does not support it, acceleration will not be used even if this flag is set.</td>
+If MKL-DNN is unavailable or the model does not support MKL-DNN acceleration, acceleration will not be used even if this flag is set.
+</td>
 <td><code>bool</code></td>
 <td><code>True</code></td>
 </tr>
 <tr>
 <td><code>mkldnn_cache_capacity</code></td>
 <td>
-<b>Meaning:</b>MKL-DNN cache capacity.<br/>
+<b>Meaning:</b> MKL-DNN cache capacity.
 </td>
 <td><code>int</code></td>
 <td><code>10</code></td>
 </tr>
 <tr>
 <td><code>cpu_threads</code></td>
-<td><b>Meaning:</b>The number of threads used for inference on the CPU.</td>
+<td><b>Meaning:</b> Number of threads used for inference on CPU.</td>
 <td><code>int</code></td>
-<td><code>8</code></td>
+<td><code>10</code></td>
 </tr>
 <tr>
 <td><code>paddlex_config</code></td>
-<td><b>Meaning:</b>Path to PaddleX pipeline configuration file.</td>
+<td><b>Meaning:</b> Path to the PaddleX pipeline configuration file.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
+
 </tbody>
 </table>
 
