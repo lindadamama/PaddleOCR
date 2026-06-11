@@ -436,7 +436,7 @@ You're not viewing the latest version.
   
     
   
-  PP-OCRv5
+  PP-OCRv6
 
         </a>
       </li>
@@ -934,8 +934,6 @@ You're not viewing the latest version.
       
         
       
-        
-      
     
     
     
@@ -961,7 +959,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PP-OCRv5
+    PP-OCRv6
   
 
     
@@ -977,7 +975,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    PP-OCRv5
+    PP-OCRv6
   
 
           </label>
@@ -1018,42 +1016,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5.html" class="md-nav__link">
+      <a href="../algorithm/PP-OCRv6/PP-OCRv6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-OCRv5简介
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PP-OCRv5多语种文字识别
+    PP-OCRv6简介
   
 
     
@@ -5854,18 +5824,18 @@ You're not viewing the latest version.
 <h3 id="_1">主要功能如下：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><strong>当前支持的产线</strong></p>
+<p><strong>当前支持的模型</strong></p>
 <table>
 <thead>
 <tr>
-<th>产线</th>
+<th>模型</th>
 <th>MCP 工具名称</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>OCR</code></td>
+<td><code>PP-OCRv5</code>、<code>PP-OCRv5-latin</code>、<code>PP-OCRv6</code></td>
 <td><code>ocr</code></td>
 <td>对图像和 PDF 文件进行文本检测与识别。</td>
 </tr>
@@ -5875,9 +5845,9 @@ You're not viewing the latest version.
 <td>从图像或 PDF 文件中识别和提取文本块、标题、段落、图片、表格以及其他版面元素，将输入转换为 Markdown 文档。</td>
 </tr>
 <tr>
-<td><code>PaddleOCR-VL 系列</code></td>
+<td><code>PaddleOCR-VL</code>、<code>PaddleOCR-VL-1.5</code>、<code>PaddleOCR-VL-1.6</code></td>
 <td><code>paddleocr_vl</code></td>
-<td>使用基于多模态大模型的方案进行版面解析，将输入转换为 Markdown 文档。包含版本：PaddleOCR-VL、PaddleOCR-VL-1.5、PaddleOCR-VL-1.6。</td>
+<td>使用基于多模态大模型的方案进行版面解析，将输入转换为 Markdown 文档。</td>
 </tr>
 </tbody>
 </table>
@@ -5953,7 +5923,7 @@ You're not viewing the latest version.
 <h2 id="1">1. 安装<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>本节将介绍如何通过 pip 安装 <code>paddleocr-mcp</code> 库。</p>
 <p><code>paddleocr-mcp</code> 要求 Python 版本不低于 3.10。
-<code>paddleocr-mcp</code> 默认依赖 <code>paddleocr&gt;=3.6.0</code>，因此官方 API、千帆 API 和自建 API 推理方式无需额外安装 PaddleOCR。如需使用本地推理，还需要安装本地运行产线所需的文档解析依赖和推理引擎，详情请参考 <a href="#方式一本地推理">方式一：本地推理</a>。</p>
+<code>paddleocr-mcp</code> 默认依赖 <code>paddleocr&gt;=3.7.0</code>，因此官方 API、千帆 API 和自建 API 推理方式无需额外安装 PaddleOCR。如需使用本地推理，还需要安装本地运行产线所需的文档解析依赖和推理引擎，详情请参考 <a href="#方式一本地推理">方式一：本地推理</a>。</p>
 <p>从 PyPI 安装：</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>paddleocr-mcp
 </span></code></pre></div>
@@ -5995,7 +5965,7 @@ You're not viewing the latest version.
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;paddleocr_mcp&quot;</span><span class="p">,</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_PIPELINE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OCR&quot;</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_MODEL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PP-OCRv5&quot;</span><span class="p">,</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_PPOCR_SOURCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;aistudio&quot;</span><span class="p">,</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_AISTUDIO_ACCESS_TOKEN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;your-access-token&gt;&quot;</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="p">}</span>
@@ -6033,7 +6003,7 @@ You're not viewing the latest version.
 <li>
 <p>安装 <code>paddleocr-mcp</code> 及本地推理依赖。<code>paddleocr-mcp</code> 已默认依赖 PaddleOCR；本地推理还需要文档解析依赖和推理引擎。可以参考 <a href="../installation.html">PaddleOCR 安装文档</a> 手动安装，也可以使用相应的可选依赖：</p>
 <ul>
-<li><code>paddleocr-mcp[local]</code>：包含 <code>paddleocr[doc-parser]&gt;=3.6.0</code>（不包含推理引擎）。</li>
+<li><code>paddleocr-mcp[local]</code>：包含 <code>paddleocr[doc-parser]&gt;=3.7.0</code>（不包含推理引擎）。</li>
 <li><code>paddleocr-mcp[local-cpu]</code>：在 <code>local</code> 基础上额外包含 CPU 版本的 PaddlePaddle 推理引擎（<code>paddlepaddle&gt;=3.2.1</code>）。</li>
 </ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 安装本地推理所需的文档解析依赖（不包含推理引擎）</span>
@@ -6053,7 +6023,7 @@ You're not viewing the latest version.
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;paddleocr_mcp&quot;</span><span class="p">,</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_PIPELINE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OCR&quot;</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_MODEL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PP-OCRv5&quot;</span><span class="p">,</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_PPOCR_SOURCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="p">}</span>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="p">}</span>
@@ -6062,13 +6032,12 @@ You're not viewing the latest version.
 </span></code></pre></div>
 <p><strong>说明</strong>：</p>
 <ul>
-<li><code>PADDLEOCR_MCP_PIPELINE</code> 需要被设置为产线名称。详见第 4 节。</li>
+<li><code>PADDLEOCR_MCP_MODEL</code> 需要被设置为模型名称。详见第 4 节。</li>
 <li><code>PADDLEOCR_MCP_PIPELINE_CONFIG</code> 为可选项，不设置时使用产线默认配置。如需调整配置，例如更换模型，请参考 <a href="../paddleocr_and_paddlex.html">PaddleOCR 文档</a> 导出产线配置文件，并将 <code>PADDLEOCR_MCP_PIPELINE_CONFIG</code> 设置为配置文件的绝对路径。</li>
 <li>
 <p><strong>推理性能提示</strong>：</p>
 <p>如果使用过程中出现推理耗时过长、内存不足等问题，可考虑参考如下建议调整产线配置：</p>
 <ul>
-<li><strong>OCR 产线</strong>：建议更换 <code>mobile</code> 系列模型。例如，您可以在产线配置文件中将检测和识别模型分别修改为 <code>PP-OCRv5_mobile_det</code> 和 <code>PP-OCRv5_mobile_rec</code>。</li>
 <li>
 <p><strong>PP-StructureV3 产线</strong>：</p>
 <ul>
@@ -6102,7 +6071,7 @@ You're not viewing the latest version.
 </ul>
 <h4 id="api">方式二：官方 API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h4>
 <p>请参考 <a href="#21">2.1 快速开始</a>。</p>
-<p>对于文字识别以外的任务，请正确设置 <code>PADDLEOCR_MCP_PIPELINE</code>（参数说明详见第 4 节）。</p>
+<p>对于文字识别以外的任务，请正确设置 <code>PADDLEOCR_MCP_MODEL</code>（参数说明详见第 4 节）。</p>
 <h4 id="api_1">方式三：千帆 API<a class="headerlink" href="#api_1" title="Permanent link">&para;</a></h4>
 <ol>
 <li>安装 <code>paddleocr-mcp</code>。</li>
@@ -6117,7 +6086,7 @@ You're not viewing the latest version.
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;paddleocr_mcp&quot;</span><span class="p">,</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_PIPELINE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PaddleOCR-VL&quot;</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_MODEL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PaddleOCR-VL&quot;</span><span class="p">,</span>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_PPOCR_SOURCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;qianfan&quot;</span><span class="p">,</span>
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_QIANFAN_API_KEY&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;your-api-key&gt;&quot;</span>
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">      </span><span class="p">}</span>
@@ -6127,7 +6096,7 @@ You're not viewing the latest version.
 </span></code></pre></div>
 <p><strong>说明</strong>：</p>
 <ul>
-<li><code>PADDLEOCR_MCP_PIPELINE</code> 需设置为产线名称；千帆仅支持 <code>PP-StructureV3</code> 与 <code>PaddleOCR-VL</code>。</li>
+<li><code>PADDLEOCR_MCP_MODEL</code> 需设置为模型名称；千帆仅支持 <code>PP-StructureV3</code> 与 <code>PaddleOCR-VL</code>。</li>
 <li><code>PADDLEOCR_MCP_QIANFAN_BASE_URL</code> 为千帆 API 基础 URL（可选）。</li>
 <li><code>PADDLEOCR_MCP_QIANFAN_API_KEY</code> 是您的千帆 API key，用于认证。</li>
 </ul>
@@ -6145,7 +6114,7 @@ You're not viewing the latest version.
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;paddleocr_mcp&quot;</span><span class="p">,</span>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_PIPELINE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OCR&quot;</span><span class="p">,</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_MODEL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PP-OCRv5&quot;</span><span class="p">,</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_PPOCR_SOURCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;self_hosted&quot;</span><span class="p">,</span>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">        </span><span class="nt">&quot;PADDLEOCR_MCP_SELF_HOSTED_BASE_URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;your-server-url&gt;&quot;</span>
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">      </span><span class="p">}</span>
@@ -6155,7 +6124,7 @@ You're not viewing the latest version.
 </span></code></pre></div>
 <p><strong>说明</strong>：</p>
 <ul>
-<li><code>PADDLEOCR_MCP_PIPELINE</code> 需要被设置为产线名称。详见第 4 节。</li>
+<li><code>PADDLEOCR_MCP_MODEL</code> 需要被设置为模型名称。详见第 4 节。</li>
 <li>将 <code>&lt;your-server-url&gt;</code> 替换为底层服务的基础 URL（如：<code>http://127.0.0.1:8080</code>，<strong>不要</strong>包含 <code>/ocr</code>、<code>/layout-parsing</code> 等路径；MCP 会按产线自动拼接）。</li>
 </ul>
 <h3 id="24-uvx">2.4 使用 <code>uvx</code><a class="headerlink" href="#24-uvx" title="Permanent link">&para;</a></h3>
@@ -6175,7 +6144,7 @@ You're not viewing the latest version.
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">      </span><span class="s2">&quot;paddleocr_mcp&quot;</span>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">],</span>
 </span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">      </span><span class="nt">&quot;PADDLEOCR_MCP_PIPELINE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OCR&quot;</span><span class="p">,</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">      </span><span class="nt">&quot;PADDLEOCR_MCP_MODEL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PP-OCRv5&quot;</span><span class="p">,</span>
 </span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">      </span><span class="nt">&quot;PADDLEOCR_MCP_PPOCR_SOURCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;self_hosted&quot;</span><span class="p">,</span>
 </span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">      </span><span class="nt">&quot;PADDLEOCR_MCP_SELF_HOSTED_BASE_URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;your-server-url&gt;&quot;</span>
 </span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="p">}</span>
@@ -6194,7 +6163,7 @@ You're not viewing the latest version.
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">      </span><span class="s2">&quot;paddleocr_mcp&quot;</span>
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="p">],</span>
 </span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">      </span><span class="nt">&quot;PADDLEOCR_MCP_PIPELINE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OCR&quot;</span><span class="p">,</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">      </span><span class="nt">&quot;PADDLEOCR_MCP_MODEL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PP-OCRv5&quot;</span><span class="p">,</span>
 </span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">      </span><span class="nt">&quot;PADDLEOCR_MCP_PPOCR_SOURCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span>
 </span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">   </span><span class="p">}</span>
@@ -6209,14 +6178,17 @@ You're not viewing the latest version.
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>paddleocr_mcp<span class="w"> </span>--help
 </span></code></pre></div>
 <p>示例命令如下：</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># OCR + 官方 API + stdio</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nv">PADDLEOCR_MCP_AISTUDIO_ACCESS_TOKEN</span><span class="o">=</span>xxxxxx<span class="w"> </span>paddleocr_mcp<span class="w"> </span>--pipeline<span class="w"> </span>OCR<span class="w"> </span>--ppocr_source<span class="w"> </span>aistudio
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># PP-OCRv5 + 官方 API + stdio</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nv">PADDLEOCR_MCP_AISTUDIO_ACCESS_TOKEN</span><span class="o">=</span>xxxxxx<span class="w"> </span>paddleocr_mcp<span class="w"> </span>--model<span class="w"> </span>PP-OCRv5<span class="w"> </span>--ppocr_source<span class="w"> </span>aistudio
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># PP-StructureV3 + 本地推理 + stdio</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>paddleocr_mcp<span class="w"> </span>--pipeline<span class="w"> </span>PP-StructureV3<span class="w"> </span>--ppocr_source<span class="w"> </span><span class="nb">local</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># PP-OCRv6 + 官方 API + stdio</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>paddleocr_mcp<span class="w"> </span>--model<span class="w"> </span>PP-OCRv6<span class="w"> </span>--ppocr_source<span class="w"> </span>aistudio
 </span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># OCR + 自建 API + Streamable HTTP</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>paddleocr_mcp<span class="w"> </span>--pipeline<span class="w"> </span>OCR<span class="w"> </span>--ppocr_source<span class="w"> </span>self_hosted<span class="w"> </span>--self-hosted-base-url<span class="w"> </span>http://127.0.0.1:8080<span class="w"> </span>--http
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># PP-StructureV3 + 本地推理 + stdio</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>paddleocr_mcp<span class="w"> </span>--model<span class="w"> </span>PP-StructureV3<span class="w"> </span>--ppocr_source<span class="w"> </span><span class="nb">local</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># OCR + 自建 API + Streamable HTTP</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>paddleocr_mcp<span class="w"> </span>--model<span class="w"> </span>PP-OCRv5<span class="w"> </span>--ppocr_source<span class="w"> </span>self_hosted<span class="w"> </span>--self-hosted-base-url<span class="w"> </span>http://127.0.0.1:8080<span class="w"> </span>--http
 </span></code></pre></div>
 <p>在 <a href="#4">4. 参数说明</a> 中可以了解 PaddleOCR MCP 服务器支持的全部参数。</p>
 <h2 id="4">4. 参数说明<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
@@ -6234,12 +6206,12 @@ You're not viewing the latest version.
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>PADDLEOCR_MCP_PIPELINE</code></td>
-<td style="text-align: left;"><code>--pipeline</code></td>
+<td style="text-align: left;"><code>PADDLEOCR_MCP_MODEL</code></td>
+<td style="text-align: left;"><code>--model</code></td>
 <td style="text-align: left;"><code>str</code></td>
-<td style="text-align: left;">要运行的产线。</td>
-<td style="text-align: left;"><code>"OCR"</code>，<code>"PP-StructureV3"</code>，<code>"PaddleOCR-VL"</code>，<code>"PaddleOCR-VL-1.5"</code>，<code>"PaddleOCR-VL-1.6"</code></td>
-<td style="text-align: left;"><code>"OCR"</code></td>
+<td style="text-align: left;">要运行的模型。MCP 会根据模型自动选择对应的工具。</td>
+<td style="text-align: left;"><code>"PP-OCRv5"</code>，<code>"PP-OCRv5-latin"</code>，<code>"PP-OCRv6"</code>，<code>"PP-StructureV3"</code>，<code>"PaddleOCR-VL"</code>，<code>"PaddleOCR-VL-1.5"</code>，<code>"PaddleOCR-VL-1.6"</code></td>
+<td style="text-align: left;"><code>"PP-OCRv6"</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>PADDLEOCR_MCP_PPOCR_SOURCE</code></td>
@@ -6290,12 +6262,28 @@ You're not viewing the latest version.
 <td style="text-align: left;"><code>None</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>PADDLEOCR_MCP_TIMEOUT</code></td>
-<td style="text-align: left;"><code>--timeout</code></td>
+<td style="text-align: left;"><code>PADDLEOCR_MCP_HTTP_TIMEOUT</code></td>
+<td style="text-align: left;"><code>--http-timeout</code></td>
 <td style="text-align: left;"><code>int</code></td>
-<td style="text-align: left;">底层服务请求超时时间（秒）。在 <code>aistudio</code> 推理方式下用作单次请求超时，轮询超时为该值的 10 倍；在 <code>qianfan</code> 和 <code>self_hosted</code> 推理方式下用作 HTTP 读取超时。</td>
+<td style="text-align: left;">同步 HTTP API（<code>qianfan</code>、<code>self_hosted</code>）的单次 POST 读取超时（秒）。</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;"><code>60</code></td>
+<td style="text-align: left;"><code>600</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PADDLEOCR_MCP_AISTUDIO_REQUEST_TIMEOUT</code></td>
+<td style="text-align: left;"><code>--aistudio-request-timeout</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;">AI Studio 单次 HTTP 请求超时（秒），用于提交任务、查询状态等。</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"><code>120</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PADDLEOCR_MCP_AISTUDIO_POLL_TIMEOUT</code></td>
+<td style="text-align: left;"><code>--aistudio-poll-timeout</code></td>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;">AI Studio 任务轮询总等待上限（秒）。</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;"><code>600</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>PADDLEOCR_MCP_DEVICE</code></td>

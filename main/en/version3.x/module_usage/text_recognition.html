@@ -436,7 +436,7 @@ You're not viewing the latest version.
   
     
   
-  PP-OCRv5
+  PP-OCRv6
 
         </a>
       </li>
@@ -934,8 +934,6 @@ You're not viewing the latest version.
       
         
       
-        
-      
     
     
     
@@ -961,7 +959,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PP-OCRv5
+    PP-OCRv6
   
 
     
@@ -977,7 +975,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    PP-OCRv5
+    PP-OCRv6
   
 
           </label>
@@ -1018,42 +1016,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5.html" class="md-nav__link">
+      <a href="../algorithm/PP-OCRv6/PP-OCRv6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-OCRv5 Introduction
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PP-OCRv5 Multilingual Text Recognition
+    PP-OCRv6 Introduction
   
 
     
@@ -5698,6 +5668,31 @@ You're not viewing the latest version.
 <th>Introduction</th>
 </tr>
 <tr>
+<td>PP-OCRv6_medium_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_medium_rec_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_medium_rec_pretrained.pdparams">Training Model</a></td>
+<td>83.2*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>73.3</td>
+<td rowspan="3">PP-OCRv6 text recognition models based on PPLCNetV4 + LightSVTR + CTC/NRTR multi-head decoder, single model supports 50 languages (tiny: 49). Medium achieves +5.1% over PP-OCRv5_server.</td>
+</tr>
+<tr>
+<td>PP-OCRv6_small_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_small_rec_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_small_rec_pretrained.pdparams">Training Model</a></td>
+<td>81.3*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>20.4</td>
+</tr>
+<tr>
+<td>PP-OCRv6_tiny_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_tiny_rec_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_tiny_rec_pretrained.pdparams">Training Model</a></td>
+<td>73.5*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>4.4</td>
+</tr>
+<tr>
 <td>PP-OCRv5_server_rec</td>
 <td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/\
 PP-OCRv5_server_rec_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv5_server_rec_pretrained.pdparams">Pretrained Model</a></td>
@@ -5761,6 +5756,19 @@ en_PP-OCRv4_mobile_rec_infer.tar">Inference Model</a>/<a href="https://paddle-mo
 </blockquote>
 <details><summary> 👉Model List Details</summary>
 
+* <b>PP-OCRv6 Multi-Scenario Models</b>
+
+<table>
+<tr>
+<th>Model</th><th>Model Download Links</th>
+<th>Recognition Avg Accuracy(%)</th>
+<th>GPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
+<th>CPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
+<th>Model Storage Size (MB)</th>
+<th>Introduction</th>
+</tr>
+</table>
+
 * <b>PP-OCRv5 Multi-Scenario Models</b>
 
 <table>
@@ -5774,6 +5782,31 @@ en_PP-OCRv4_mobile_rec_infer.tar">Inference Model</a>/<a href="https://paddle-mo
 <th>CPU Inference Time (ms)<br/>[Normal Mode / High-Performance Mode]</th>
 <th>Model Storage Size (MB)</th>
 <th>Introduction</th>
+</tr>
+<tr>
+<td>PP-OCRv6_medium_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_medium_rec_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_medium_rec_pretrained.pdparams">Training Model</a></td>
+<td>83.2*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>73.3</td>
+<td rowspan="3">PP-OCRv6 text recognition models based on PPLCNetV4 + LightSVTR + CTC/NRTR multi-head decoder, single model supports 50 languages (tiny: 49). Medium achieves +5.1% over PP-OCRv5_server.</td>
+</tr>
+<tr>
+<td>PP-OCRv6_small_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_small_rec_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_small_rec_pretrained.pdparams">Training Model</a></td>
+<td>81.3*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>20.4</td>
+</tr>
+<tr>
+<td>PP-OCRv6_tiny_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_tiny_rec_infer.tar">Inference Model</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_tiny_rec_pretrained.pdparams">Training Model</a></td>
+<td>73.5*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>4.4</td>
 </tr>
 <tr>
 <td>PP-OCRv5_server_rec</td>
@@ -6231,7 +6264,7 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 <p><b>Note:</b> The official PaddleOCR models are downloaded from HuggingFace by default. If you cannot access HuggingFace, you can change the model source to BOS by setting the environment variable <code>PADDLE_PDX_MODEL_SOURCE="BOS"</code>. More mainstream model sources will be supported in the future.</p>
 <p>You can also integrate the model inference of the text recognition module into your project. Before running the following code, please download the <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_ocr_rec_001.png">sample image</a> to your local machine.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextRecognition</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextRecognition</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;PP-OCRv5_server_rec&quot;</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextRecognition</span><span class="p">()</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;general_ocr_rec_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
@@ -6241,27 +6274,21 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 <p>The example above uses the <code>paddle_static</code> inference engine by default. To run it, first install PaddlePaddle by following <a href="../paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>.</p>
 <p>If you choose <code>transformers</code> as the inference engine, make sure the Transformers environment is configured, and then run the following code:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextRecognition</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextRecognition</span><span class="p">(</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;PP-OCRv5_server_rec&quot;</span><span class="p">,</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">,</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;general_ocr_rec_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextRecognition</span><span class="p">(</span><span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;general_ocr_rec_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>If you choose <code>onnxruntime</code> as the inference engine, make sure the ONNX Runtime environment is configured, and then run the following code:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextRecognition</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextRecognition</span><span class="p">(</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;PP-OCRv5_server_rec&quot;</span><span class="p">,</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;onnxruntime&quot;</span><span class="p">,</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;general_ocr_rec_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextRecognition</span><span class="p">(</span><span class="n">engine</span><span class="o">=</span><span class="s2">&quot;onnxruntime&quot;</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;general_ocr_rec_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>In most scenarios, the default <code>paddle_static</code> inference engine delivers better inference performance and is the recommended first choice.</p>
 <p>If you want to use the trained model with the <code>paddle_dynamic</code> or <code>transformers</code> engine, refer to the <a href="#52-weight-conversion">Weight Conversion</a> section in the <a href="#5-inference-engine">Inference Engine</a> section below to convert the model from the <code>pdparams</code> format to the <code>safetensors</code> format using PaddleX.</p>
@@ -6277,7 +6304,7 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 <p><img src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/refs/heads/main/images/modules/text_recog/general_ocr_rec_001.png"/></p>
 <p>Descriptions of related methods and parameters are as follows:</p>
 <ul>
-<li>Instantiate the text recognition model using <code>TextRecognition</code> (using <code>PP-OCRv5_server_rec</code> as an example), as follows:</li>
+<li>Instantiate the text recognition model using <code>TextRecognition</code>, as follows:</li>
 </ul>
 <table>
 <thead>
@@ -6291,7 +6318,7 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">Inference Model</a>/<a href="https://p
 <tbody>
 <tr>
 <td><code>model_name</code></td>
-<td><b>Description:</b> If set to <code>None</code>, <code>PP-OCRv5_server_rec</code> is used.</td>
+<td><b>Description:</b> If set to <code>None</code>, <code>PP-OCRv6_medium_rec</code> is used.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>

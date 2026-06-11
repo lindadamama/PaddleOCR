@@ -18,7 +18,7 @@
         <link rel="prev" href="../../quick_start.html">
       
       
-        <link rel="next" href="../algorithm/PP-OCRv5/PP-OCRv5.html">
+        <link rel="next" href="../algorithm/PP-OCRv6/PP-OCRv6.html">
       
       
         
@@ -438,7 +438,7 @@ You're not viewing the latest version.
   
     
   
-  PP-OCRv5
+  PP-OCRv6
 
         </a>
       </li>
@@ -936,8 +936,6 @@ You're not viewing the latest version.
       
         
       
-        
-      
     
     
     
@@ -964,7 +962,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PP-OCRv5
+    PP-OCRv6
   
 
     
@@ -980,7 +978,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    PP-OCRv5
+    PP-OCRv6
   
 
           </label>
@@ -1391,42 +1389,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5.html" class="md-nav__link">
+      <a href="../algorithm/PP-OCRv6/PP-OCRv6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-OCRv5简介
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PP-OCRv5多语种文字识别
+    PP-OCRv6简介
   
 
     
@@ -5986,7 +5956,7 @@ You're not viewing the latest version.
 <h1 id="ocr">通用OCR产线使用教程<a class="headerlink" href="#ocr" title="Permanent link">&para;</a></h1>
 <h2 id="1-ocr">1. OCR产线介绍<a class="headerlink" href="#1-ocr" title="Permanent link">&para;</a></h2>
 <p>OCR（光学字符识别，Optical Character Recognition）是一种将图像中的文字转换为可编辑文本的技术。它广泛应用于文档数字化、信息提取和数据处理等领域。OCR 可以识别印刷文本、手写文本，甚至某些类型的字体和符号。</p>
-<p>通用 OCR 产线用于解决文字识别任务，提取图片中的文字信息以文本形式输出，本产线支持PP-OCRv3、PP-OCRv4、PP-OCRv5模型的使用，其中默认模型为 PaddleOCR3.0 发布的 PP-OCRv5_server 模型，其在多个场景中较 PP-OCRv4_server 提升 13 个百分点。</p>
+<p>通用 OCR 产线用于解决文字识别任务，提取图片中的文字信息以文本形式输出，本产线支持PP-OCRv3、PP-OCRv4、PP-OCRv5、PP-OCRv6模型的使用，其中默认模型为 PaddleOCR3.7 发布的 <strong>PP-OCRv6_medium</strong> 模型。PP-OCRv6 基于全新设计的 PPLCNetV4 统一骨干网络，提供 tiny/small/medium 三档模型，medium 档在综合精度上相比 PP-OCRv5_server 提升 5.1%（识别）和 4.6%（检测），同时推理速度更快；单一模型统一支持中、英、日及 46 种拉丁语系共 50 种语言。</p>
 <p><img src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/main/images/pipelines/ocr/01.png"/></p>
 <p><b>通用OCR产线中包含以下5个模块。每个模块均可独立进行训练和推理，并包含多个模型。有关详细信息，请点击相应模块以查看文档。</b></p>
 <ul>
@@ -6107,6 +6077,33 @@ You're not viewing the latest version.
 </thead>
 <tbody>
 <tr>
+<td>PP-OCRv6_medium_det</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_medium_det_infer.tar">推理模型</a>/<a href="">训练模型</a></td>
+<td>86.2*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>59.4</td>
+<td>PP-OCRv6 的中等规模文本检测模型，基于 PPLCNetV4 + RepLKFPN，精度最高，适合服务端部署</td>
+</tr>
+<tr>
+<td>PP-OCRv6_small_det</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_small_det_infer.tar">推理模型</a>/<a href="">训练模型</a></td>
+<td>84.1*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>9.6</td>
+<td>PP-OCRv6 的小型文本检测模型，兼顾精度与效率，适合移动端部署</td>
+</tr>
+<tr>
+<td>PP-OCRv6_tiny_det</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_tiny_det_infer.tar">推理模型</a>/<a href="">训练模型</a></td>
+<td>80.6*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>1.9</td>
+<td>PP-OCRv6 的超轻量文本检测模型（0.43M 参数），适合端侧/IoT 场景</td>
+</tr>
+<tr>
 <td>PP-OCRv5_server_det</td>
 <td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv5_server_det_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv5_server_det_pretrained.pdparams">训练模型</a></td>
 <td>83.8</td>
@@ -6156,6 +6153,31 @@ You're not viewing the latest version.
 <th>CPU推理耗时（ms）<br/>[常规模式 / 高性能模式]</th>
 <th>模型存储大小（MB）</th>
 <th>介绍</th>
+</tr>
+<tr>
+<td>PP-OCRv6_medium_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_medium_rec_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_medium_rec_pretrained.pdparams">训练模型</a></td>
+<td>83.2*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>73.3</td>
+<td rowspan="3">PP-OCRv6 文本识别模型，基于 PPLCNetV4 + LightSVTR + CTC/NRTR 多头解码器，单模型支持 50 种语言（tiny 档 49 种）</td>
+</tr>
+<tr>
+<td>PP-OCRv6_small_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_small_rec_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_small_rec_pretrained.pdparams">训练模型</a></td>
+<td>81.3*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>20.4</td>
+</tr>
+<tr>
+<td>PP-OCRv6_tiny_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_tiny_rec_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv6_tiny_rec_pretrained.pdparams">训练模型</a></td>
+<td>73.5*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>4.4</td>
 </tr>
 <tr>
 <td>PP-OCRv5_server_rec</td>
@@ -6729,16 +6751,15 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">推理模型</a>/<a href="https://padd
 </span></code></pre></div></p>
 <h3 id="21">2.1 命令行方式<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
 <p>一行命令即可快速体验OCR产线效果。运行以下代码前，请您下载<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_ocr_002.png">示例图片</a>到本地：</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># 默认使用 PP-OCRv5 模型</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>paddleocr<span class="w"> </span>ocr<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_ocr_002.png<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span>--use_doc_orientation_classify<span class="w"> </span>False<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span>--use_doc_unwarping<span class="w"> </span>False<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span>--use_textline_orientation<span class="w"> </span>False<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span>--save_path<span class="w"> </span>./output<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span>--device<span class="w"> </span>gpu:0<span class="w"> </span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># 通过 --ocr_version 指定 PP-OCR 其他版本</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>paddleocr<span class="w"> </span>ocr<span class="w"> </span>-i<span class="w"> </span>./general_ocr_002.png<span class="w"> </span>--ocr_version<span class="w"> </span>PP-OCRv4
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>paddleocr<span class="w"> </span>ocr<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_ocr_002.png<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>--use_doc_orientation_classify<span class="w"> </span>False<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span>--use_doc_unwarping<span class="w"> </span>False<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span>--use_textline_orientation<span class="w"> </span>False<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span>--save_path<span class="w"> </span>./output<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span>--device<span class="w"> </span>gpu:0<span class="w"> </span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># 通过 --ocr_version 指定 PP-OCR 其他版本</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>paddleocr<span class="w"> </span>ocr<span class="w"> </span>-i<span class="w"> </span>./general_ocr_002.png<span class="w"> </span>--ocr_version<span class="w"> </span>PP-OCRv4
 </span></code></pre></div>
 <p>上述命令默认使用本地推理引擎 <code>paddle_static</code>。如需运行，请先参考<a href="../paddlepaddle_installation.html">飞桨框架安装说明</a>安装 PaddlePaddle。</p>
 <p>如果选择 <code>transformers</code> 作为推理引擎，请先参考<a href="../inference_deployment/local_inference/inference_engine.html">推理引擎文档</a>完成 Transformers 环境配置，然后执行如下命令：</p>
@@ -6957,6 +6978,7 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">推理模型</a>/<a href="https://padd
 <td><b>含义：</b>OCR 模型版本。
 <br><b>说明：</b>
 <ul>
+<li><b>PP-OCRv6</b>：使用PP-OCRv6系列模型；
 <li><b>PP-OCRv5</b>：使用PP-OCRv5系列模型；
 <li><b>PP-OCRv4</b>：使用PP-OCRv4系列模型；
 <li><b>PP-OCRv3</b>：使用PP-OCRv3系列模型。
@@ -7443,6 +7465,7 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">推理模型</a>/<a href="https://padd
 <td><b>含义：</b>OCR 模型版本。
 <br><b>说明：</b>
 <ul>
+<li><b>PP-OCRv6</b>：使用PP-OCRv6系列模型；
 <li><b>PP-OCRv5</b>：使用PP-OCRv5系列模型；
 <li><b>PP-OCRv4</b>：使用PP-OCRv4系列模型；
 <li><b>PP-OCRv3</b>：使用PP-OCRv3系列模型。
@@ -8455,7 +8478,7 @@ foreach ($result as $i => $item) {
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># 通过 --text_detection_model_dir 指定本地模型路径</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>paddleocr<span class="w"> </span>ocr<span class="w"> </span>-i<span class="w"> </span>./general_ocr_002.png<span class="w"> </span>--text_detection_model_dir<span class="w"> </span>your_det_model_path
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># 默认使用 PP-OCRv5_server_det 模型作为默认文本检测模型，如果微调的不是该模型，通过 --text_detection_model_name 修改模型名称</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># 通过 --text_detection_model_name 修改模型名称</span>
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>paddleocr<span class="w"> </span>ocr<span class="w"> </span>-i<span class="w"> </span>./general_ocr_002.png<span class="w"> </span>--text_detection_model_name<span class="w"> </span>PP-OCRv5_mobile_det<span class="w"> </span>--text_detection_model_dir<span class="w"> </span>your_v5_mobile_det_model_path
 </span></code></pre></div>
 <p>脚本方式：</p>
@@ -8464,7 +8487,7 @@ foreach ($result as $i => $item) {
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c1"># 通过 text_detection_model_dir 指定本地模型路径</span>
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PaddleOCR</span><span class="p">(</span><span class="n">text_detection_model_dir</span><span class="o">=</span><span class="s2">&quot;./your_det_model_path&quot;</span><span class="p">)</span>
 </span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1"># 默认使用 PP-OCRv5_server_det 模型作为默认文本检测模型，如果微调的不是该模型，通过 text_detection_model_name 修改模型名称</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1"># 通过 text_detection_model_name 修改模型名称</span>
 </span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># pipeline = PaddleOCR(text_detection_model_name=&quot;PP-OCRv5_mobile_det&quot;, text_detection_model_dir=&quot;./your_v5_mobile_det_model_path&quot;)</span>
 </span></code></pre></div>
 <h4 id="422">4.2.2 通过配置文件指定本地模型路径<a class="headerlink" href="#422" title="Permanent link">&para;</a></h4>
@@ -8485,7 +8508,7 @@ foreach ($result as $i => $item) {
 </span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="nt">limit_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">min</span>
 </span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="nt">max_side_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4000</span>
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">    </span><span class="nt">model_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"> </span><span class="c1"># 替换为微调后的文本测模型权重路径</span>
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PP-OCRv5_server_det</span><span class="w"> </span><span class="c1"># 如果微调的模型名称与默认模型名称不同，请一并修改此处</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PP-OCRv6_medium_det</span><span class="w"> </span><span class="c1"># 如果微调的模型名称与默认模型名称不同，请一并修改此处</span>
 </span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span><span class="nt">module_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text_detection</span>
 </span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">    </span><span class="nt">thresh</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.3</span>
 </span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">    </span><span class="nt">unclip_ratio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.5</span>
@@ -8497,7 +8520,7 @@ foreach ($result as $i => $item) {
 </span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="w">  </span><span class="nt">TextRecognition</span><span class="p">:</span>
 </span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="w">    </span><span class="nt">batch_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
 </span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="w">    </span><span class="nt">model_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"> </span><span class="c1"># 替换为微调后的文本识模型权重路径</span>
-</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="w">    </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PP-OCRv5_server_rec</span><span class="w"> </span><span class="c1"># 如果微调的模型名称与默认模型名称不同，请一并修改此处</span>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="w">    </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PP-OCRv6_medium_rec</span><span class="w"> </span><span class="c1"># 如果微调的模型名称与默认模型名称不同，请一并修改此处</span>
 </span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="w">    </span><span class="nt">module_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">text_recognition</span>
 </span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="w">    </span><span class="nt">score_thresh</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0</span>
 </span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="l l-Scalar l-Scalar-Plain">......</span>
@@ -8620,6 +8643,10 @@ foreach ($result as $i => $item) {
   </thead>
   <tbody>
     <tr>
+      <td><code>PP-OCRv6</code></td>
+      <td><code>ch</code>, <code>chinese_cht</code>, <code>en</code>, <code>japan</code>, <code>af</code>, <code>az</code>, <code>bs</code>, <code>ca</code>, <code>cs</code>, <code>cy</code>, <code>da</code>, <code>de</code>, <code>es</code>, <code>et</code>, <code>eu</code>, <code>fi</code>, <code>fr</code>, <code>ga</code>, <code>gl</code>, <code>hr</code>, <code>hu</code>, <code>id</code>, <code>is</code>, <code>it</code>, <code>ku</code>, <code>la</code>, <code>lb</code>, <code>lt</code>, <code>lv</code>, <code>mi</code>, <code>ms</code>, <code>mt</code>, <code>nl</code>, <code>no</code>, <code>oc</code>, <code>pl</code>, <code>pt</code>, <code>qu</code>, <code>rm</code>, <code>ro</code>, <code>rs_latin</code>, <code>sk</code>, <code>sl</code>, <code>sq</code>, <code>sv</code>, <code>sw</code>, <code>tl</code>, <code>tr</code>, <code>uz</code>, <code>vi</code>, <code>french</code>, <code>german</code>。<code>PP-OCRv6_tiny</code> 不支持 <code>japan</code>，需显式指定 <code>PP-OCRv6_tiny_det</code>/<code>PP-OCRv6_tiny_rec</code>。</td>
+    </tr>
+    <tr>
       <td><code>PP-OCRv5</code></td>
       <td><code>ch</code>, <code>en</code>, <code>fr</code>, <code>de</code>, <code>japan</code>, <code>korean</code>, <code>chinese_cht</code>, <code>af</code>, <code>it</code>, <code>es</code>, <code>bs</code>, <code>pt</code>, <code>cs</code>, <code>cy</code>, <code>da</code>, <code>et</code>, <code>ga</code>, <code>hr</code>, <code>hu</code>, <code>rslatin</code>, <code>id</code>, <code>oc</code>, <code>is</code>, <code>lt</code>, <code>mi</code>, <code>ms</code>, <code>nl</code>, <code>no</code>, <code>pl</code>, <code>sk</code>, <code>sl</code>, <code>sq</code>, <code>sv</code>, <code>sw</code>, <code>tl</code>, <code>tr</code>, <code>uz</code>, <code>la</code>, <code>ru</code>, <code>be</code>, <code>uk</code>, <code>th</code>, <code>el</code>, <code>az</code>, <code>ku</code>, <code>lv</code>, <code>mt</code>, <code>pi</code>, <code>ro</code>, <code>vi</code>, <code>fi</code>, <code>eu</code>, <code>gl</code>, <code>lb</code>, <code>rm</code>, <code>ca</code>, <code>qu</code>, <code>te</code>, <code>sr</code>, <code>bg</code>, <code>mn</code>, <code>ab</code>, <code>ady</code>, <code>kbd</code>, <code>av</code>, <code>dar</code>, <code>inh</code>, <code>ce</code>, <code>lki</code>, <code>lez</code>, <code>tab</code>, <code>kk</code>, <code>ky</code>, <code>tg</code>, <code>mk</code>, <code>tt</code>, <code>cv</code>, <code>ba</code>, <code>mhr</code>, <code>mo</code>, <code>udm</code>, <code>kv</code>, <code>os</code>, <code>bua</code>, <code>xal</code>, <code>tyv</code>, <code>sah</code>, <code>kaa</code>, <code>ar</code>, <code>fa</code>, <code>ug</code>, <code>ur</code>, <code>ps</code>, <code>ku</code>, <code>sd</code>, <code>bal</code>, <code>hi</code>, <code>mr</code>, <code>ne</code>, <code>bh</code>, <code>mai</code>, <code>ang</code>, <code>bho</code>, <code>mah</code>, <code>sck</code>, <code>new</code>, <code>gom</code>, <code>sa</code>, <code>bgc</code>, <code>ta</code></td>
     </tr>
@@ -8671,7 +8698,7 @@ foreach ($result as $i => $item) {
 - 移动端部署：使用<code>PP-OCRv5_mobile</code>系列，模型小速度快
 - 实时处理：使用<code>PP-OCRv5_mobile</code>系列，推理速度快
 - 批量处理：使用<code>PP-OCRv5_server</code>系列，精度高
-- 多语言识别：使用<code>PP-OCRv5_multi_languages</code>，支持37种语言</p>
+- 多语言识别：拉丁语系等可使用 <code>PP-OCRv6</code>；阿拉伯文、西里尔文、天城文等语系请使用 <code>PP-OCRv5</code></p>
 <h3 id="53">5.3 最佳实践<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
 <h4 id="q_1">Q: 生产环境部署建议？<a class="headerlink" href="#q_1" title="Permanent link">&para;</a></h4>
 <p><strong>A</strong>: 
@@ -8790,13 +8817,13 @@ foreach ($result as $i => $item) {
         
         
           
-          <a href="../algorithm/PP-OCRv5/PP-OCRv5.html" class="md-footer__link md-footer__link--next" aria-label="下一页: PP-OCRv5简介">
+          <a href="../algorithm/PP-OCRv6/PP-OCRv6.html" class="md-footer__link md-footer__link--next" aria-label="下一页: PP-OCRv6简介">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                PP-OCRv5简介
+                PP-OCRv6简介
               </div>
             </div>
             <div class="md-footer__button md-icon">

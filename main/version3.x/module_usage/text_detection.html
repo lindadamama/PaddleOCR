@@ -436,7 +436,7 @@ You're not viewing the latest version.
   
     
   
-  PP-OCRv5
+  PP-OCRv6
 
         </a>
       </li>
@@ -934,8 +934,6 @@ You're not viewing the latest version.
       
         
       
-        
-      
     
     
     
@@ -961,7 +959,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PP-OCRv5
+    PP-OCRv6
   
 
     
@@ -977,7 +975,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
             
   
-    PP-OCRv5
+    PP-OCRv6
   
 
           </label>
@@ -1018,42 +1016,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5.html" class="md-nav__link">
+      <a href="../algorithm/PP-OCRv6/PP-OCRv6.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PP-OCRv5简介
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PP-OCRv5多语种文字识别
+    PP-OCRv6简介
   
 
     
@@ -6193,6 +6163,33 @@ You're not viewing the latest version.
 </thead>
 <tbody>
 <tr>
+<td>PP-OCRv6_medium_det</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_medium_det_infer.tar">推理模型</a>/<a href="">训练模型</a></td>
+<td>86.2*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>59.4</td>
+<td>PP-OCRv6 的中等规模文本检测模型，基于 PPLCNetV4 + RepLKFPN，精度最高，适合服务端部署</td>
+</tr>
+<tr>
+<td>PP-OCRv6_small_det</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_small_det_infer.tar">推理模型</a>/<a href="">训练模型</a></td>
+<td>84.1*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>9.6</td>
+<td>PP-OCRv6 的小型文本检测模型，兼顾精度与效率，适合移动端部署</td>
+</tr>
+<tr>
+<td>PP-OCRv6_tiny_det</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv6_tiny_det_infer.tar">推理模型</a>/<a href="">训练模型</a></td>
+<td>80.6*</td>
+<td>- / -</td>
+<td>- / -</td>
+<td>1.9</td>
+<td>PP-OCRv6 的超轻量文本检测模型（0.43M 参数），适合端侧/IoT 场景</td>
+</tr>
+<tr>
 <td>PP-OCRv5_server_det</td>
 <td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-OCRv5_server_det_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv5_server_det_pretrained.pdparams">训练模型</a></td>
 <td>83.8</td>
@@ -6306,11 +6303,8 @@ You're not viewing the latest version.
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 使用默认模型进行文本检测</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>paddleocr<span class="w"> </span>text_detection<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_ocr_001.png
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 指定模型进行检测</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>paddleocr<span class="w"> </span>text_detection<span class="w"> </span>-i<span class="w"> </span>general_ocr_001.png<span class="w"> </span>--model_name<span class="w"> </span>PP-OCRv5_server_det
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># 批量处理本地图片</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>paddleocr<span class="w"> </span>text_detection<span class="w"> </span>-i<span class="w"> </span>./images/<span class="w"> </span>--model_name<span class="w"> </span>PP-OCRv5_mobile_det
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 指定模型</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>paddleocr<span class="w"> </span>text_detection<span class="w"> </span>-i<span class="w"> </span>general_ocr_001.png<span class="w"> </span>--model_name<span class="w"> </span>PP-OCRv6_small_det
 </span></code></pre></div>
 <p>上述示例默认使用 <code>paddle_static</code> 推理引擎，请先按照<a href="../paddlepaddle_installation.html">飞桨框架安装</a>完成 PaddlePaddle 安装。</p>
 <p>如果选择 <code>transformers</code> 作为推理引擎，请确保已配置 Transformers 环境，然后执行如下命令：</p>
@@ -6328,7 +6322,7 @@ You're not viewing the latest version.
 <h3 id="33-python-api">3.3 Python API 使用<a class="headerlink" href="#33-python-api" title="Permanent link">&para;</a></h3>
 <p>您也可以将文本检测的模块中的模型推理集成到您的项目中。运行以下代码前，请您下载<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/general_ocr_001.png">示例图片</a>到本地。</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextDetection</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextDetection</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;PP-OCRv5_server_det&quot;</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextDetection</span><span class="p">()</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;general_ocr_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
@@ -6338,27 +6332,21 @@ You're not viewing the latest version.
 <p>上述示例默认使用 <code>paddle_static</code> 推理引擎，请先按照<a href="../paddlepaddle_installation.html">飞桨框架安装</a>完成 PaddlePaddle 安装。</p>
 <p>如果选择 <code>transformers</code> 作为推理引擎，请确保已配置 Transformers 环境，然后执行如下代码：</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextDetection</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextDetection</span><span class="p">(</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;PP-OCRv5_server_det&quot;</span><span class="p">,</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">,</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">)</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;general_ocr_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextDetection</span><span class="p">(</span><span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;general_ocr_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>如果选择 <code>onnxruntime</code> 作为推理引擎，请确保已配置 ONNX Runtime 环境，然后执行如下代码：</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextDetection</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextDetection</span><span class="p">(</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;PP-OCRv5_server_det&quot;</span><span class="p">,</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;onnxruntime&quot;</span><span class="p">,</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">)</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;general_ocr_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextDetection</span><span class="p">(</span><span class="n">engine</span><span class="o">=</span><span class="s2">&quot;onnxruntime&quot;</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;general_ocr_001.png&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="n">save_path</span><span class="o">=</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>在大多数场景下，默认的 <code>paddle_static</code> 推理引擎通常具备更好的推理性能，建议优先使用。</p>
 <p>训练后的模型如果想使用 <code>paddle_dynamic</code> 或 <code>transformers</code> 引擎，请参考后文 <a href="#五推理引擎">推理引擎</a> 中的 <a href="#52-权重转换">权重转换</a> 部分将模型由 <code>pdparams</code> 格式通过 PaddleX 转换为 <code>safetensors</code> 格式。</p>
@@ -6384,7 +6372,7 @@ You're not viewing the latest version.
 <p><img src="https://raw.githubusercontent.com/cuicheng01/PaddleX_doc_images/refs/heads/main/images/modules/text_det/general_ocr_001_res.png"/></p>
 <p>相关方法、参数等说明如下：</p>
 <ul>
-<li><code>TextDetection</code>类实例化文本检测模型（此处以<code>PP-OCRv5_server_det</code>为例），具体说明如下：</li>
+<li><code>TextDetection</code>类实例化文本检测模型，具体说明如下：</li>
 </ul>
 <table>
 <thead>
@@ -6400,7 +6388,7 @@ You're not viewing the latest version.
 <td><code>model_name</code></td>
 <td><b>含义：</b>模型名称。<br/>
 <b>说明：</b>
-如果设置为<code>None</code>，则使用<code>PP-OCRv5_server_det</code>。</td>
+如果设置为<code>None</code>，则使用<code>PP-OCRv6_medium_det</code>。</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -6943,35 +6931,34 @@ You're not viewing the latest version.
 （2）启用TensorRT加速：设置<code>use_tensorrt=True</code>，需要CUDA 11.8+和TensorRT 8.6+
 （3）使用半精度：设置<code>precision="fp16"</code>，可以显著提升速度
 （4）调整批处理大小：根据显存大小设置合适的<code>batch_size</code>
-（5）使用移动端模型：在精度要求不高时使用<code>PP-OCRv5_mobile</code>系列模型</p>
+（5）使用轻量模型：在精度要求不高时使用 <code>PP-OCRv6_small</code>/<code>PP-OCRv6_tiny</code> 等轻量级模型</p>
 <h4 id="q-gpucuda-out-of-memory">Q: GPU内存不足（CUDA out of memory）怎么办？<a class="headerlink" href="#q-gpucuda-out-of-memory" title="Permanent link">&para;</a></h4>
 <p><strong>A</strong>: 可以通过以下方式解决：
 （1）减小批处理大小：将<code>batch_size</code>设置为1
 （2）减小图像尺寸：设置<code>det_limit_side_len=640</code>
 （3）启用内存优化：设置<code>enable_memory_optim=True</code>
 （4）限制GPU内存使用：设置<code>gpu_mem=200</code>
-（5）使用移动端模型：切换到<code>PP-OCRv5_mobile</code>系列模型</p>
+（5）使用轻量模型：切换到 <code>PP-OCRv6_small</code>/<code>PP-OCRv6_tiny</code> 等轻量级模型</p>
 <h3 id="62">6.2 检测精度问题<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
 <h4 id="q">Q: 检测框不准确或漏检怎么办？<a class="headerlink" href="#q" title="Permanent link">&para;</a></h4>
 <p><strong>A</strong>: 可以通过以下方式优化：
 （1）调整检测参数：
 <div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TextDetection</span><span class="p">(</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;PP-OCRv5_server_det&quot;</span><span class="p">,</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="n">thresh</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># 降低像素阈值</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="n">box_thresh</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>  <span class="c1"># 降低检测框阈值</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="n">unclip_ratio</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>  <span class="c1"># 增大扩张系数</span>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="n">limit_side_len</span><span class="o">=</span><span class="mi">1216</span>  <span class="c1"># 增大图像尺寸</span>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">)</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="n">thresh</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># 降低像素阈值</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="n">box_thresh</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>  <span class="c1"># 降低检测框阈值</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="n">unclip_ratio</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>  <span class="c1"># 增大扩张系数</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="n">limit_side_len</span><span class="o">=</span><span class="mi">1216</span>  <span class="c1"># 增大图像尺寸</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">)</span>
 </span></code></pre></div>
 （2）使用更精确的后处理模式：设置<code>det_db_score_mode="slow"</code>
 （3）启用膨胀处理：设置<code>use_dilation=True</code></p>
 <h3 id="63">6.3 模型选择建议<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
 <h4 id="q_1">Q: 如何选择合适的模型？<a class="headerlink" href="#q_1" title="Permanent link">&para;</a></h4>
 <p><strong>A</strong>: 根据应用场景选择：
-- 服务器高精度场景：使用<code>PP-OCRv5_server_det</code>，精度最高
-- 移动端部署：使用<code>PP-OCRv5_mobile_det</code>，模型小速度快
-- 实时处理：使用<code>PP-OCRv5_mobile_det</code>，推理速度快
-- 批量处理：使用<code>PP-OCRv5_server_det</code>，精度高</p>
+- 服务器高精度场景：使用 <code>PP-OCRv6_medium_det</code>，精度最高
+- 移动端部署：使用 <code>PP-OCRv6_small_det</code>，兼顾精度与效率
+- 端侧/IoT：使用 <code>PP-OCRv6_tiny_det</code>，模型最小
+- 实时处理：使用 <code>PP-OCRv6_small_det</code> 或 <code>PP-OCRv6_tiny_det</code>，推理更快</p>
 <h3 id="64">6.4 参数调优建议<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
 <h4 id="q_2">Q: 如何调优检测参数？<a class="headerlink" href="#q_2" title="Permanent link">&para;</a></h4>
 <p><strong>A</strong>: 通过参数<code>limit_type</code>和<code>limit_side_len</code>来对图片的尺寸进行限制，<code>limit_type</code>可选参数为[<code>max</code>, <code>min</code>]，<code>limit_side_len</code> 为正整数，一般设置为 32 的倍数，比如 960。</p>
