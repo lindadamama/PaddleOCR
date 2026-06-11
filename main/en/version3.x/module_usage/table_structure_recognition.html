@@ -1353,6 +1353,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1443,6 +1445,34 @@ You're not viewing the latest version.
     
   
     PaddleOCR-VL-1.5 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.6 Introduction
   
 
     
@@ -2440,6 +2470,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -2494,14 +2526,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/cross_platform/on_device_deployment.html" class="md-nav__link">
+      <a href="../inference_deployment/cross_platform/android_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    On-Device Deployment
+    Android Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inference_deployment/cross_platform/ios_deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS Deployment
   
 
     
@@ -5095,7 +5155,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    On-Device Deployment
+    端侧部署
   
 
     
@@ -5719,32 +5779,48 @@ You're not viewing the latest version.
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>paddleocr<span class="w"> </span>table_structure_recognition<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>--engine<span class="w"> </span>transformers
 </span></code></pre></div>
+<p>If you choose <code>onnxruntime</code> as the inference engine, make sure the ONNX Runtime environment is configured, and then run the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Use the onnxruntime engine for inference</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>paddleocr<span class="w"> </span>table_structure_recognition<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>--engine<span class="w"> </span>onnxruntime
+</span></code></pre></div>
 <p>In most scenarios, the default <code>paddle_static</code> inference engine delivers better inference performance and is the recommended first choice.</p>
 <p><b>Note: </b>The official models would be download from HuggingFace by default. If can't access to HuggingFace, please set the environment variable <code>PADDLE_PDX_MODEL_SOURCE="BOS"</code> to change the model source to BOS. In the future, more model sources will be supported.</p>
 <p>You can also integrate the model inference of the table structure recognition module into your own project. Before running the code below, please download the <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg">sample image</a> to your local machine.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableStructureRecognition</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableStructureRecognition</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;SLANet&quot;</span><span class="p">)</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableStructureRecognition</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableStructureRecognition</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;SLANet&quot;</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>The example above uses the <code>paddle_static</code> inference engine by default. To run it, first install PaddlePaddle by following <a href="../paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>.</p>
 <p>If you choose <code>transformers</code> as the inference engine, make sure the Transformers environment is configured, and then run the following code:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableStructureRecognition</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableStructureRecognition</span><span class="p">(</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;SLANet&quot;</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">,</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableStructureRecognition</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableStructureRecognition</span><span class="p">(</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;SLANet&quot;</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>If you choose <code>onnxruntime</code> as the inference engine, make sure the ONNX Runtime environment is configured, and then run the following code:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableStructureRecognition</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableStructureRecognition</span><span class="p">(</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;SLANet&quot;</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;onnxruntime&quot;</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>In most scenarios, the default <code>paddle_static</code> inference engine delivers better inference performance and is the recommended first choice.</p>
 <p>If you want to use the trained model with the <code>paddle_dynamic</code> or <code>transformers</code> engine, refer to the <a href="#52-weight-conversion">Weight Conversion</a> section in the <a href="#5-inference-engine">Inference Engine</a> section below to convert the model from the <code>pdparams</code> format to the <code>safetensors</code> format using PaddleX.</p>
 <p>After running, the result is:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{&#39;res&#39;: {&#39;input_path&#39;: &#39;table_recognition.jpg&#39;, &#39;page_index&#39;: None, &#39;bbox&#39;: [[42, 2, 390, 2, 388, 27, 40, 26], [11, 35, 89, 35, 87, 63, 11, 63], [113, 34, 192, 34, 186, 64, 109, 64], [219, 33, 399, 33, 393, 62, 212, 62], [413, 33, 544, 33, 544, 64, 407, 64], [12, 67, 98, 68, 96, 93, 12, 93], [115, 66, 205, 66, 200, 91, 111, 91], [234, 65, 390, 65, 385, 92, 227, 92], [414, 66, 537, 67, 537, 95, 409, 95], [7, 97, 106, 97, 104, 128, 7, 128], [113, 96, 206, 95, 201, 127, 109, 127], [236, 96, 386, 96, 381, 128, 230, 128], [413, 96, 534, 95, 533, 127, 408, 127]], &#39;structure&#39;: [&#39;&lt;html&gt;&#39;, &#39;&lt;body&gt;&#39;, &#39;&lt;table&gt;&#39;, &#39;&lt;tr&gt;&#39;, &#39;&lt;td&#39;, &#39; colspan=&quot;4&quot;&#39;, &#39;&gt;&#39;, &#39;&lt;/td&gt;&#39;, &#39;&lt;/tr&gt;&#39;, &#39;&lt;tr&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;/tr&gt;&#39;, &#39;&lt;tr&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;/tr&gt;&#39;, &#39;&lt;tr&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;/tr&gt;&#39;, &#39;&lt;/table&gt;&#39;, &#39;&lt;/body&gt;&#39;, &#39;&lt;/html&gt;&#39;], &#39;structure_score&#39;: 0.99948007}}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{&#39;res&#39;: {&#39;input_path&#39;: &#39;table_recognition.jpg&#39;, &#39;page_index&#39;: None, &#39;bbox&#39;: [[42, 2, 390, 2, 388, 27, 40, 26], [11, 35, 89, 35, 87, 63, 11, 63], [113, 34, 192, 34, 186, 64, 109, 64], [219, 33, 399, 33, 393, 62, 212, 62], [413, 33, 544, 33, 544, 64, 407, 64], [12, 67, 98, 68, 96, 93, 12, 93], [115, 66, 205, 66, 200, 91, 111, 91], [234, 65, 390, 65, 385, 92, 227, 92], [414, 66, 537, 67, 537, 95, 409, 95], [7, 97, 106, 97, 104, 128, 7, 128], [113, 96, 206, 95, 201, 127, 109, 127], [236, 96, 386, 96, 381, 128, 230, 128], [413, 96, 534, 95, 533, 127, 408, 127]], &#39;structure&#39;: [&#39;&lt;html&gt;&#39;, &#39;&lt;body&gt;&#39;, &#39;&lt;table&gt;&#39;, &#39;&lt;tr&gt;&#39;, &#39;&lt;td&#39;, &#39; colspan=&quot;4&quot;&#39;, &#39;&gt;&#39;, &#39;&lt;/td&gt;&#39;, &#39;&lt;/tr&gt;&#39;, &#39;&lt;tr&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;/tr&gt;&#39;, &#39;&lt;tr&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;/tr&gt;&#39;, &#39;&lt;tr&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;td&gt;&lt;/td&gt;&#39;, &#39;&lt;/tr&gt;&#39;, &#39;&lt;/table&gt;&#39;, &#39;&lt;/body&gt;&#39;, &#39;&lt;/html&gt;&#39;], &#39;structure_score&#39;: 0.99948007}}
 </span></code></pre></div>
 <p>Parameter meanings are as follows:</p>
 <ul>
@@ -5795,7 +5871,7 @@ By default, GPU 0 is used if available; otherwise, CPU is used.</td>
 </tr>
 <tr>
 <td><code>engine</code></td>
-<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, <code>paddle_static</code>, <code>paddle_dynamic</code>, and <code>transformers</code>. When left as <code>None</code>, local inference uses the <code>paddle_static</code> engine by default. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_deployment/local_inference/inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, <code>paddle_static</code>, <code>paddle_dynamic</code>, <code>transformers</code>, and <code>onnxruntime</code>. When left as <code>None</code>, local inference uses the <code>paddle_static</code> engine by default. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_deployment/local_inference/inference_engine.en.md">Inference Engine and Configuration</a>.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -5964,54 +6040,54 @@ Can be set to any positive integer.</td>
 <p>If the above models are still not ideal for your scenario, you can try the following steps for secondary development. Here, training <code>SLANet_plus</code> is used as an example, and for other models, just replace the corresponding configuration file. First, you need to prepare a dataset for table structure recognition, which can be prepared with reference to the format of the <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/data/table_rec_dataset_examples.tar">table structure recognition demo data</a>. Once ready, you can train and export the model as follows. After exporting, you can quickly integrate the model into the above API. Here, the table structure recognition demo data is used as an example. Before training the model, please make sure you have installed the dependencies required by PaddleOCR according to the <a href="../installation.html">installation documentation</a>.</p>
 <h2 id="41-dataset-and-pretrained-model-preparation">4.1 Dataset and Pretrained Model Preparation<a class="headerlink" href="#41-dataset-and-pretrained-model-preparation" title="Permanent link">&para;</a></h2>
 <h3 id="411-prepare-dataset">4.1.1 Prepare Dataset<a class="headerlink" href="#411-prepare-dataset" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Download sample dataset</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>wget<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/data/table_rec_dataset_examples.tar
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>tar<span class="w"> </span>-xf<span class="w"> </span>table_rec_dataset_examples.tar
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Download sample dataset</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>wget<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/data/table_rec_dataset_examples.tar
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>tar<span class="w"> </span>-xf<span class="w"> </span>table_rec_dataset_examples.tar
 </span></code></pre></div>
 <h3 id="412-download-pretrained-model">4.1.2 Download Pretrained Model<a class="headerlink" href="#412-download-pretrained-model" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Download SLANet_plus pretrained model</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>wget<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/SLANet_plus_pretrained.pdparams
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Download SLANet_plus pretrained model</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>wget<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/SLANet_plus_pretrained.pdparams
 </span></code></pre></div>
 <h3 id="42-model-training">4.2 Model Training<a class="headerlink" href="#42-model-training" title="Permanent link">&para;</a></h3>
 <p>PaddleOCR is modularized. When training the <code>SLANet_plus</code> recognition model, you need to use the <a href="https://github.com/PaddlePaddle/PaddleOCR/blob/main/configs/table/SLANet_plus.yml">configuration file</a> of <code>SLANet_plus</code>.</p>
 <p>The training commands are as follows:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Single card training (default training method)</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>python3<span class="w"> </span>tools/train.py<span class="w"> </span>-c<span class="w"> </span>configs/table/SLANet_plus.yml<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span>-o<span class="w"> </span>Global.pretrained_model<span class="o">=</span>./SLANet_plus_pretrained.pdparams
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>Train.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span>Train.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/train.txt]&#39;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span>Eval.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span>Eval.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/val.txt]&#39;</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># Multi-card training, specify card numbers via --gpus parameter</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>python3<span class="w"> </span>-m<span class="w"> </span>paddle.distributed.launch<span class="w"> </span>--gpus<span class="w"> </span><span class="s1">&#39;0,1,2,3&#39;</span><span class="w"> </span>tools/train.py<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span>-c<span class="w"> </span>configs/table/SLANet_plus.yml<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span>-o<span class="w"> </span>Global.pretrained_model<span class="o">=</span>./SLANet_plus_pretrained.pdparams
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span>-o<span class="w"> </span>Global.pretrained_model<span class="o">=</span>./PP-OCRv5_server_det_pretrained.pdparams<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span>Train.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span>Train.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/train.txt]&#39;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span>Eval.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span>Eval.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/val.txt]&#39;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Single card training (default training method)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>python3<span class="w"> </span>tools/train.py<span class="w"> </span>-c<span class="w"> </span>configs/table/SLANet_plus.yml<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span>-o<span class="w"> </span>Global.pretrained_model<span class="o">=</span>./SLANet_plus_pretrained.pdparams
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span>Train.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span>Train.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/train.txt]&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span>Eval.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span>Eval.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/val.txt]&#39;</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># Multi-card training, specify card numbers via --gpus parameter</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>python3<span class="w"> </span>-m<span class="w"> </span>paddle.distributed.launch<span class="w"> </span>--gpus<span class="w"> </span><span class="s1">&#39;0,1,2,3&#39;</span><span class="w"> </span>tools/train.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span>-c<span class="w"> </span>configs/table/SLANet_plus.yml<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span>-o<span class="w"> </span>Global.pretrained_model<span class="o">=</span>./SLANet_plus_pretrained.pdparams
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span>-o<span class="w"> </span>Global.pretrained_model<span class="o">=</span>./PP-OCRv5_server_det_pretrained.pdparams<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span>Train.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span>Train.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/train.txt]&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span>Eval.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span>Eval.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/val.txt]&#39;</span>
 </span></code></pre></div>
 <h3 id="43-model-evaluation">4.3 Model Evaluation<a class="headerlink" href="#43-model-evaluation" title="Permanent link">&para;</a></h3>
 <p>You can evaluate the trained weights, such as <code>output/xxx/xxx.pdparams</code>, using the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Note to set the path of pretrained_model to the local path. If you use the model saved by your own training, please modify the path and file name to {path/to/weights}/{model_name}.</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w"> </span><span class="c1"># Demo test set evaluation</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w"> </span>python3<span class="w"> </span>tools/eval.py<span class="w"> </span>-c<span class="w"> </span>configs/table/SLANet_plus.yml<span class="w"> </span>-o<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span>Global.pretrained_model<span class="o">=</span>output/xxx/xxx.pdparams
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span>Eval.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span>Eval.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/val.txt]&#39;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Note to set the path of pretrained_model to the local path. If you use the model saved by your own training, please modify the path and file name to {path/to/weights}/{model_name}.</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w"> </span><span class="c1"># Demo test set evaluation</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w"> </span>python3<span class="w"> </span>tools/eval.py<span class="w"> </span>-c<span class="w"> </span>configs/table/SLANet_plus.yml<span class="w"> </span>-o<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span>Global.pretrained_model<span class="o">=</span>output/xxx/xxx.pdparams
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span>Eval.dataset.data_dir<span class="o">=</span>./table_rec_dataset_examples<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span>Eval.dataset.label_file_list<span class="o">=</span><span class="s1">&#39;[./table_rec_dataset_examples/val.txt]&#39;</span>
 </span></code></pre></div>
 <h3 id="44-model-export">4.4 Model Export<a class="headerlink" href="#44-model-export" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w"> </span>python3<span class="w"> </span>tools/export_model.py<span class="w"> </span>-c<span class="w"> </span>configs/table/SLANet_plus.yml<span class="w"> </span>-o<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span>Global.pretrained_model<span class="o">=</span>output/xxx/xxx.pdparams<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span>Global.save_inference_dir<span class="o">=</span><span class="s2">&quot;./SLANet_plus_infer/&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w"> </span>python3<span class="w"> </span>tools/export_model.py<span class="w"> </span>-c<span class="w"> </span>configs/table/SLANet_plus.yml<span class="w"> </span>-o<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>Global.pretrained_model<span class="o">=</span>output/xxx/xxx.pdparams<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>Global.save_inference_dir<span class="o">=</span><span class="s2">&quot;./SLANet_plus_infer/&quot;</span>
 </span></code></pre></div>
 <p>After exporting the model, the static graph model will be stored in <code>./SLANet_plus_infer/</code> in the current directory. In this directory, you will see the following files:
- <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./SLANet_plus_infer/
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>├── inference.json
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>├── inference.pdiparams
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>├── inference.yml
+ <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./SLANet_plus_infer/
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>├── inference.json
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>├── inference.pdiparams
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>├── inference.yml
 </span></code></pre></div>
 At this point, secondary development is complete, and this static graph model can be directly integrated into the PaddleOCR API.</p>
 <p>If you want to use the <code>paddle_dynamic</code> or <code>transformers</code> engine with the trained model, please refer to the <a href="#52-weight-conversion">Weight Conversion</a> section in <a href="#5-inference-engine">Inference Engine</a> later in this document to convert the model from the <code>pdparams</code> format to the <code>safetensors</code> format using PaddleX.</p>
@@ -6031,7 +6107,23 @@ At this point, secondary development is complete, and this static graph model ca
     </thead>
     <tbody>
         <tr>
-            <td rowspan="3">SLANeXt_wired</td>
+            <td rowspan="1">SLANet</td>
+            <td>onnxruntime</td>
+            <td>1.42</td>
+            <td>22.02</td>
+            <td>0.22</td>
+            <td>23.81</td>
+        </tr>
+        <tr>
+            <td rowspan="1">SLANet_plus</td>
+            <td>onnxruntime</td>
+            <td>1.40</td>
+            <td>21.64</td>
+            <td>0.22</td>
+            <td>23.42</td>
+        </tr>
+        <tr>
+            <td rowspan="4">SLANeXt_wired</td>
             <td>paddle_static</td>
             <td>1.50</td>
             <td>30.91</td>
@@ -6053,7 +6145,14 @@ At this point, secondary development is complete, and this static graph model ca
             <td>51.12</td>
         </tr>
         <tr>
-            <td rowspan="3">SLANeXt_wireless</td>
+            <td>onnxruntime</td>
+            <td>1.60</td>
+            <td>30.96</td>
+            <td>0.25</td>
+            <td>32.99</td>
+        </tr>
+        <tr>
+            <td rowspan="4">SLANeXt_wireless</td>
             <td>paddle_static</td>
             <td>1.67</td>
             <td>30.49</td>
@@ -6074,12 +6173,19 @@ At this point, secondary development is complete, and this static graph model ca
             <td>0.75</td>
             <td>51.76</td>
         </tr>
+        <tr>
+            <td>onnxruntime</td>
+            <td>1.62</td>
+            <td>31.01</td>
+            <td>0.26</td>
+            <td>33.06</td>
+        </tr>
     </tbody>
 </table>
 
 <p><strong>Test Environment Description:</strong></p>
 <ul>
-    <li><strong>Test Data:</strong> [Sample Image](https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg)</li>
+    <li><strong>Test Data:</strong> <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg">Sample Image</a></li>
     <li><strong>Hardware Configuration:</strong>
         <ul>
             <li>GPU: NVIDIA A100 40G</li>
@@ -6089,13 +6195,13 @@ At this point, secondary development is complete, and this static graph model ca
     <li><strong>Software Environment:</strong>
         <ul>
             <li>Ubuntu 22.04 / CUDA 12.6 / cuDNN 9.5</li>
-            <li>paddlepaddle-gpu 3.2.1 / paddleocr 3.5 / transformers 5.4.0 / torch 2.10</li>
+            <li>paddlepaddle-gpu 3.2.1 / paddleocr 3.5 / transformers 5.4.0 / torch 2.10 / onnxruntime-gpu 1.23.2</li>
         </ul>
     </li>
 </ul>
 
 <h3 id="52-weight-conversion">5.2 Weight Conversion<a class="headerlink" href="#52-weight-conversion" title="Permanent link">&para;</a></h3>
-<p>When using the inference engine, the system will automatically download the official pre-trained model. If you need to use a self-trained model with the <code>paddle_dynamic</code> or <code>transformers</code> engine, please refer to the <a href="https://paddlepaddle.github.io/PaddleX/latest/en/module_usage/tutorials/ocr_modules/table_structure_recognition.html#442">PaddleX Table Structure Recognition Module Weight Conversion</a> section to convert the model from the <code>pdparams</code> format to the <code>safetensors</code> format using PaddleX. This allows seamless integration into the PaddleOCR API for inference.</p>
+<p>When using the inference engine, the system will automatically download the official pre-trained model. If you need to use a self-trained model with the <code>paddle_dynamic</code> or <code>transformers</code> engine, please refer to the <a href="https://paddlepaddle.github.io/PaddleX/latest/en/module_usage/tutorials/ocr_modules/table_structure_recognition.html#442">PaddleX Table Structure Recognition Module Weight Conversion</a> section to convert the model from the <code>pdparams</code> format to the <code>safetensors</code> format using PaddleX. This allows seamless integration into the PaddleOCR API for inference. If you need to use a self-trained model with the <code>onnxruntime</code> engine, refer to <a href="https://paddlepaddle.github.io/PaddleX/latest/pipeline_deploy/paddle2onnx.html">PaddleX Obtain ONNX Models</a> to obtain the ONNX model, so it can be seamlessly integrated into the PaddleOCR API for inference.</p>
 <h2 id="6-faq">6. FAQ<a class="headerlink" href="#6-faq" title="Permanent link">&para;</a></h2>
 
 <!-- Source file information -->

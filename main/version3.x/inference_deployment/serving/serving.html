@@ -1355,6 +1355,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1445,6 +1447,34 @@ You're not viewing the latest version.
     
   
     PaddleOCR-VL-1.5简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.6简介
   
 
     
@@ -2315,6 +2345,17 @@ You're not viewing the latest version.
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 以 URL 形式返回二进制内容
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2559,6 +2600,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -2616,14 +2659,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../cross_platform/on_device_deployment.html" class="md-nav__link">
+      <a href="../cross_platform/android_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    端侧部署
+    Android 部署
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross_platform/ios_deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS 部署
   
 
     
@@ -5346,6 +5417,17 @@ You're not viewing the latest version.
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 以 URL 形式返回二进制内容
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5481,6 +5563,24 @@ You're not viewing the latest version.
 <h2 id="2">2. 高稳定性服务化部署<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>请参考 <a href="https://paddlepaddle.github.io/PaddleX/latest/pipeline_deploy/serving.html#2">PaddleX 服务化部署指南</a>。在 <a href="../../paddleocr_and_paddlex.html#3-paddlex">使用 PaddleX 产线配置文件</a> 中，可以了解关于 PaddleX 产线配置文件的更多信息。</p>
 <p>需要说明的是，由于缺乏细粒度优化等原因，当前 PaddleOCR 提供的高稳定性服务化部署方案在性能上可能不及 2.x 版本基于 PaddleServing 的方案；但该新方案已对飞桨 3.0 框架提供了全面支持，我们也将持续优化，后续考虑推出性能更优的部署方案。</p>
+<h2 id="3-url">3. 以 URL 形式返回二进制内容<a class="headerlink" href="#3-url" title="Permanent link">&para;</a></h2>
+<p>基础服务化与高稳定性服务化默认以 Base64 编码内联返回响应中的图像等二进制内容。当响应中包含较大图像或多页 PDF 时，Base64 会显著增加响应体积，可配置服务返回 URL。在产线配置文件的 <code>Serving</code> 节中开启（<code>return_urls</code> 为顶层字段，对象存储相关配置位于 <code>Serving.extra</code>），将相应字段改为以预签名 URL 返回：</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">Serving</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">return_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">file_storage</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bos</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;BOS 访问域名，例如 https://bj.bcebos.com&gt;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="nt">ak</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxx</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="nt">sk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxx</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="nt">bucket_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;存储空间名称&gt;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nt">url_expires_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3600</span><span class="w">  </span><span class="c1"># 预签名 URL 有效期（秒），-1 表示不过期</span>
+</span></code></pre></div>
+<ul>
+<li>基础服务化：上述配置写入 <code>paddlex --serve --pipeline</code> 指定的产线配置文件。</li>
+<li>高稳定性服务化：共用同一组配置项，写入 SDK 内的 <code>server/pipeline_config.yaml</code> 后重启容器即可。</li>
+</ul>
+<p>当前 URL 返回仅支持 <code>bos</code>（百度智能云对象存储）后端。URL 返回由顶层字段 <code>Serving.return_urls</code> 控制，作用于响应中所有 Base64 内联文件字段（不仅是图像）。完整配置项、注意事项与适用场景参见 <a href="https://paddlepaddle.github.io/PaddleX/latest/pipeline_deploy/serving.html#3">PaddleX 服务化部署指南 - 以 URL 形式返回二进制内容</a>；AK/SK 获取等更多信息，请参考 <a href="https://cloud.baidu.com/doc/BOS/index.html">百度智能云官方文档</a>。</p>
 
 <!-- Source file information -->
 

@@ -1353,6 +1353,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1443,6 +1445,34 @@ You're not viewing the latest version.
     
   
     PaddleOCR-VL-1.5 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.6 Introduction
   
 
     
@@ -2440,6 +2470,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -2494,14 +2526,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../inference_deployment/cross_platform/on_device_deployment.html" class="md-nav__link">
+      <a href="../inference_deployment/cross_platform/android_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    On-Device Deployment
+    Android Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inference_deployment/cross_platform/ios_deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS Deployment
   
 
     
@@ -5023,7 +5083,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    On-Device Deployment
+    端侧部署
   
 
     
@@ -5556,34 +5616,51 @@ You're not viewing the latest version.
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>paddleocr<span class="w"> </span>table_cells_detection<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>--engine<span class="w"> </span>transformers
 </span></code></pre></div>
+<p>If you choose <code>onnxruntime</code> as the inference engine, make sure the ONNX Runtime environment is configured, and then run the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Use the onnxruntime engine for inference</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>paddleocr<span class="w"> </span>table_cells_detection<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>--engine<span class="w"> </span>onnxruntime
+</span></code></pre></div>
 <p>In most scenarios, the default <code>paddle_static</code> inference engine delivers better inference performance and is the recommended first choice.</p>
 <p><b>Note: </b>The official models would be download from HuggingFace by default. If can't access to HuggingFace, please set the environment variable <code>PADDLE_PDX_MODEL_SOURCE="BOS"</code> to change the model source to BOS. In the future, more model sources will be supported.</p>
 <p>You can also integrate model inference from the table cell detection module into your project. Before running the following code, please download the <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg">sample image</a> locally.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableCellsDetection</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableCellsDetection</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;RT-DETR-L_wired_table_cell_det&quot;</span><span class="p">)</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableCellsDetection</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableCellsDetection</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;RT-DETR-L_wired_table_cell_det&quot;</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>The example above uses the <code>paddle_static</code> inference engine by default. To run it, first install PaddlePaddle by following <a href="../paddlepaddle_installation.html">PaddlePaddle Framework Installation</a>.</p>
 <p>If you choose <code>transformers</code> as the inference engine, make sure the Transformers environment is configured, and then run the following code:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableCellsDetection</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableCellsDetection</span><span class="p">(</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;RT-DETR-L_wired_table_cell_det&quot;</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">,</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableCellsDetection</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableCellsDetection</span><span class="p">(</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;RT-DETR-L_wired_table_cell_det&quot;</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;transformers&quot;</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>If you choose <code>onnxruntime</code> as the inference engine, make sure the ONNX Runtime environment is configured, and then run the following code:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">TableCellsDetection</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">TableCellsDetection</span><span class="p">(</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;RT-DETR-L_wired_table_cell_det&quot;</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;onnxruntime&quot;</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;table_recognition.jpg&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">res</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">json_format</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_img</span><span class="p">(</span><span class="s2">&quot;./output/&quot;</span><span class="p">)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">res</span><span class="o">.</span><span class="n">save_to_json</span><span class="p">(</span><span class="s2">&quot;./output/res.json&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>In most scenarios, the default <code>paddle_static</code> inference engine delivers better inference performance and is the recommended first choice.</p>
 <p>If you want to use the trained model with the <code>paddle_dynamic</code> or <code>transformers</code> engine, refer to the <a href="#52-weight-conversion">Weight Conversion</a> section in the <a href="#5-inference-engine">Inference Engine</a> section below to convert the model from the <code>pdparams</code> format to the <code>safetensors</code> format using PaddleX.</p>
 <p>After running, the result obtained is:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{&#39;res&#39;: {&#39;input_path&#39;: &#39;table_recognition.jpg&#39;, &#39;page_index&#39;: None, &#39;boxes&#39;: [{&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9698355197906494, &#39;coordinate&#39;: [2.3011515, 0, 546.29926, 30.530712]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9690820574760437, &#39;coordinate&#39;: [212.37508, 64.62493, 403.58868, 95.61413]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9668057560920715, &#39;coordinate&#39;: [212.46791, 30.311079, 403.7182, 64.62613]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.966505229473114, &#39;coordinate&#39;: [403.56082, 64.62544, 546.83215, 95.66117]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9662341475486755, &#39;coordinate&#39;: [109.48873, 64.66485, 212.5177, 95.631294]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9654079079627991, &#39;coordinate&#39;: [212.39197, 95.63037, 403.60852, 126.78792]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9653300642967224, &#39;coordinate&#39;: [2.2320926, 64.62229, 109.600494, 95.59732]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9639787673950195, &#39;coordinate&#39;: [403.5752, 30.562355, 546.98975, 64.61531]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9636150002479553, &#39;coordinate&#39;: [2.1537683, 30.410172, 109.568306, 64.62762]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9631900191307068, &#39;coordinate&#39;: [2.0534437, 95.57448, 109.57601, 126.71458]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9631181359291077, &#39;coordinate&#39;: [403.65976, 95.68139, 546.84766, 126.713394]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9614537358283997, &#39;coordinate&#39;: [109.56504, 30.391184, 212.65425, 64.6444]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9607433080673218, &#39;coordinate&#39;: [109.525795, 95.62622, 212.44917, 126.8258]}]}}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{&#39;res&#39;: {&#39;input_path&#39;: &#39;table_recognition.jpg&#39;, &#39;page_index&#39;: None, &#39;boxes&#39;: [{&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9698355197906494, &#39;coordinate&#39;: [2.3011515, 0, 546.29926, 30.530712]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9690820574760437, &#39;coordinate&#39;: [212.37508, 64.62493, 403.58868, 95.61413]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9668057560920715, &#39;coordinate&#39;: [212.46791, 30.311079, 403.7182, 64.62613]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.966505229473114, &#39;coordinate&#39;: [403.56082, 64.62544, 546.83215, 95.66117]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9662341475486755, &#39;coordinate&#39;: [109.48873, 64.66485, 212.5177, 95.631294]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9654079079627991, &#39;coordinate&#39;: [212.39197, 95.63037, 403.60852, 126.78792]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9653300642967224, &#39;coordinate&#39;: [2.2320926, 64.62229, 109.600494, 95.59732]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9639787673950195, &#39;coordinate&#39;: [403.5752, 30.562355, 546.98975, 64.61531]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9636150002479553, &#39;coordinate&#39;: [2.1537683, 30.410172, 109.568306, 64.62762]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9631900191307068, &#39;coordinate&#39;: [2.0534437, 95.57448, 109.57601, 126.71458]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9631181359291077, &#39;coordinate&#39;: [403.65976, 95.68139, 546.84766, 126.713394]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9614537358283997, &#39;coordinate&#39;: [109.56504, 30.391184, 212.65425, 64.6444]}, {&#39;cls_id&#39;: 0, &#39;label&#39;: &#39;cell&#39;, &#39;score&#39;: 0.9607433080673218, &#39;coordinate&#39;: [109.525795, 95.62622, 212.44917, 126.8258]}]}}
 </span></code></pre></div>
 <p>The parameter meanings are as follows:</p>
 <ul>
@@ -5640,7 +5717,7 @@ By default, GPU 0 is used if available; otherwise, CPU is used.</td>
 </tr>
 <tr>
 <td><code>engine</code></td>
-<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, <code>paddle_static</code>, <code>paddle_dynamic</code>, and <code>transformers</code>. When left as <code>None</code>, local inference uses the <code>paddle_static</code> engine by default. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_deployment/local_inference/inference_engine.en.md">Inference Engine and Configuration</a>.</td>
+<td><b>Meaning:</b> Inference engine.<br/><b>Description:</b> Supports <code>None</code> (the default), <code>paddle</code>, <code>paddle_static</code>, <code>paddle_dynamic</code>, <code>transformers</code>, and <code>onnxruntime</code>. When left as <code>None</code>, local inference uses the <code>paddle_static</code> engine by default. For detailed descriptions, supported values, compatibility rules, and examples, see <a href="../inference_deployment/local_inference/inference_engine.en.md">Inference Engine and Configuration</a>.</td>
 <td><code>str|None</code></td>
 <td><code>None</code></td>
 </tr>
@@ -5861,7 +5938,7 @@ Positive integer.</td>
     </thead>
     <tbody>
         <tr>
-            <td rowspan="3">RT-DETR-L_wired_table_cell_det</td>
+            <td rowspan="4">RT-DETR-L_wired_table_cell_det</td>
             <td>paddle_static</td>
             <td>3.59</td>
             <td>23.11</td>
@@ -5883,7 +5960,14 @@ Positive integer.</td>
             <td>42.10</td>
         </tr>
         <tr>
-            <td rowspan="3">RT-DETR-L_wireless_table_cell_det</td>
+            <td>onnxruntime</td>
+            <td>2.70</td>
+            <td>9.10</td>
+            <td>0.12</td>
+            <td>12.07</td>
+        </tr>
+        <tr>
+            <td rowspan="4">RT-DETR-L_wireless_table_cell_det</td>
             <td>paddle_static</td>
             <td>3.77</td>
             <td>23.44</td>
@@ -5904,12 +5988,19 @@ Positive integer.</td>
             <td>0.71</td>
             <td>41.91</td>
         </tr>
+        <tr>
+            <td>onnxruntime</td>
+            <td>2.77</td>
+            <td>9.11</td>
+            <td>0.12</td>
+            <td>12.14</td>
+        </tr>
     </tbody>
 </table>
 
 <p><strong>Test Environment Description:</strong></p>
 <ul>
-    <li><strong>Test Data:</strong> [Sample Image](https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg)</li>
+    <li><strong>Test Data:</strong> <a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/table_recognition.jpg">Sample Image</a></li>
     <li><strong>Hardware Configuration:</strong>
         <ul>
             <li>GPU: NVIDIA A100 40G</li>
@@ -5919,13 +6010,13 @@ Positive integer.</td>
     <li><strong>Software Environment:</strong>
         <ul>
             <li>Ubuntu 22.04 / CUDA 12.6 / cuDNN 9.5</li>
-            <li>paddlepaddle-gpu 3.2.1 / paddleocr 3.5 / transformers 5.4.0 / torch 2.10</li>
+            <li>paddlepaddle-gpu 3.2.1 / paddleocr 3.5 / transformers 5.4.0 / torch 2.10 / onnxruntime-gpu 1.23.2</li>
         </ul>
     </li>
 </ul>
 
 <h3 id="52-weight-conversion">5.2 Weight Conversion<a class="headerlink" href="#52-weight-conversion" title="Permanent link">&para;</a></h3>
-<p>When using the inference engine, the system will automatically download the official pre-trained model. If you need to use a self-trained model with the <code>paddle_dynamic</code> or <code>transformers</code> engine, please refer to the <a href="https://paddlepaddle.github.io/PaddleX/latest/en/module_usage/tutorials/ocr_modules/table_cells_detection.html#442">PaddleX Table Cell Detection Module Weight Conversion</a> section to convert the model from the <code>pdparams</code> format to the <code>safetensors</code> format using PaddleX. This allows seamless integration into the PaddleOCR API for inference.</p>
+<p>When using the inference engine, the system will automatically download the official pre-trained model. If you need to use a self-trained model with the <code>paddle_dynamic</code> or <code>transformers</code> engine, please refer to the <a href="https://paddlepaddle.github.io/PaddleX/latest/en/module_usage/tutorials/ocr_modules/table_cells_detection.html#442">PaddleX Table Cell Detection Module Weight Conversion</a> section to convert the model from the <code>pdparams</code> format to the <code>safetensors</code> format using PaddleX. This allows seamless integration into the PaddleOCR API for inference. If you need to use a self-trained model with the <code>onnxruntime</code> engine, refer to <a href="https://paddlepaddle.github.io/PaddleX/latest/pipeline_deploy/paddle2onnx.html">PaddleX Obtain ONNX Models</a> to obtain the ONNX model, so it can be seamlessly integrated into the PaddleOCR API for inference.</p>
 <h2 id="6-faq">6. FAQ<a class="headerlink" href="#6-faq" title="Permanent link">&para;</a></h2>
 
 <!-- Source file information -->

@@ -18,7 +18,7 @@
         <link rel="prev" href="go.html">
       
       
-        <link rel="next" href="../../cross_platform/on_device_deployment.html">
+        <link rel="next" href="../../cross_platform/android_deployment.html">
       
       
         
@@ -1355,6 +1355,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1445,6 +1447,34 @@ You're not viewing the latest version.
     
   
     PaddleOCR-VL-1.5 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.6 Introduction
   
 
     
@@ -2597,6 +2627,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -2654,14 +2686,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../cross_platform/on_device_deployment.html" class="md-nav__link">
+      <a href="../../cross_platform/android_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    On-Device Deployment
+    Android Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cross_platform/ios_deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS Deployment
   
 
     
@@ -5042,7 +5102,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    On-Device Deployment
+    端侧部署
   
 
     
@@ -5517,19 +5577,19 @@ You're not viewing the latest version.
 <li><code>--save_resources</code>: directory for saving resources referenced by the result object.</li>
 <li><code>--overwrite_resources</code>: overwrite existing files when saving resources.</li>
 <li><code>--page_ranges</code>: page ranges such as <code>2,4-6</code>.</li>
-<li><code>--use_doc_orientation_classify</code> / <code>--no-use_doc_orientation_classify</code>: enable or disable document orientation classification.</li>
-<li><code>--use_doc_unwarping</code> / <code>--no-use_doc_unwarping</code>: enable or disable document unwarping.</li>
-<li><code>--use_textline_orientation</code> / <code>--no-use_textline_orientation</code>: enable or disable textline orientation detection.</li>
+<li><code>--use_doc_orientation_classify</code>: document orientation classification, <code>True</code> or <code>False</code>.</li>
+<li><code>--use_doc_unwarping</code>: document unwarping, <code>True</code> or <code>False</code>.</li>
+<li><code>--use_textline_orientation</code>: textline orientation detection, <code>True</code> or <code>False</code>.</li>
 <li><code>--text_det_limit_side_len</code>: image side length limit for text detection.</li>
 <li><code>--text_det_limit_type</code>: side length limit type, <code>min</code> or <code>max</code>.</li>
 <li><code>--text_rec_score_thresh</code>: score threshold for text recognition results.</li>
-<li><code>--use_layout_detection</code> / <code>--no-use_layout_detection</code>: enable or disable layout detection.</li>
-<li><code>--use_seal_recognition</code> / <code>--no-use_seal_recognition</code>: enable or disable seal recognition.</li>
-<li><code>--use_table_recognition</code> / <code>--no-use_table_recognition</code>: enable or disable table recognition.</li>
-<li><code>--use_formula_recognition</code> / <code>--no-use_formula_recognition</code>: enable or disable formula recognition.</li>
-<li><code>--use_chart_recognition</code> / <code>--no-use_chart_recognition</code>: enable or disable chart recognition.</li>
-<li><code>--visualize</code> / <code>--no-visualize</code>: enable or disable result visualization images.</li>
-<li><code>--prettify_markdown</code> / <code>--no-prettify_markdown</code>: enable or disable markdown prettification.</li>
+<li><code>--use_layout_detection</code>: layout detection, <code>True</code> or <code>False</code>.</li>
+<li><code>--use_seal_recognition</code>: seal recognition, <code>True</code> or <code>False</code>.</li>
+<li><code>--use_table_recognition</code>: table recognition, <code>True</code> or <code>False</code>.</li>
+<li><code>--use_formula_recognition</code>: formula recognition, <code>True</code> or <code>False</code>.</li>
+<li><code>--use_chart_recognition</code>: chart recognition, <code>True</code> or <code>False</code>.</li>
+<li><code>--visualize</code>: result visualization images, <code>True</code> or <code>False</code>.</li>
+<li><code>--prettify_markdown</code>: markdown prettification, <code>True</code> or <code>False</code>.</li>
 </ul>
 <h2 id="ocr-example">OCR Example<a class="headerlink" href="#ocr-example" title="Permanent link">&para;</a></h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>paddleocr<span class="w"> </span>api<span class="w"> </span><span class="se">\</span>
@@ -5544,7 +5604,7 @@ You're not viewing the latest version.
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>paddleocr<span class="w"> </span>api<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--model_type<span class="w"> </span>doc_parsing<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--file_url<span class="w"> </span>https://example.com/report.pdf<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--use_chart_recognition<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--use_chart_recognition<span class="w"> </span>True<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span>--save_resources<span class="w"> </span>./doc-assets<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span>--output<span class="w"> </span>doc-result.json
 </span></code></pre></div>
@@ -5695,13 +5755,13 @@ You're not viewing the latest version.
         
         
           
-          <a href="../../cross_platform/on_device_deployment.html" class="md-footer__link md-footer__link--next" aria-label="Next: On-Device Deployment">
+          <a href="../../cross_platform/android_deployment.html" class="md-footer__link md-footer__link--next" aria-label="Next: Android Deployment">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                On-Device Deployment
+                Android Deployment
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -18,7 +18,7 @@
         <link rel="prev" href="go.html">
       
       
-        <link rel="next" href="../../cross_platform/on_device_deployment.html">
+        <link rel="next" href="../../cross_platform/android_deployment.html">
       
       
         
@@ -1355,6 +1355,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1445,6 +1447,34 @@ You're not viewing the latest version.
     
   
     PaddleOCR-VL-1.5简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.6简介
   
 
     
@@ -2597,6 +2627,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -2654,14 +2686,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../cross_platform/on_device_deployment.html" class="md-nav__link">
+      <a href="../../cross_platform/android_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    端侧部署
+    Android 部署
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cross_platform/ios_deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS 部署
   
 
     
@@ -5517,19 +5577,19 @@ You're not viewing the latest version.
 <li><code>--save_resources</code>：保存结果对象引用资源的目录。</li>
 <li><code>--overwrite_resources</code>：保存资源时覆盖已有文件。</li>
 <li><code>--page_ranges</code>：页码范围，例如 <code>2,4-6</code>。</li>
-<li><code>--use_doc_orientation_classify</code> / <code>--no-use_doc_orientation_classify</code>：启用或禁用文档方向分类。</li>
-<li><code>--use_doc_unwarping</code> / <code>--no-use_doc_unwarping</code>：启用或禁用文档扭曲矫正。</li>
-<li><code>--use_textline_orientation</code> / <code>--no-use_textline_orientation</code>：启用或禁用文本行方向检测。</li>
+<li><code>--use_doc_orientation_classify</code>：文档方向分类，<code>True</code> 或 <code>False</code>。</li>
+<li><code>--use_doc_unwarping</code>：文档扭曲矫正，<code>True</code> 或 <code>False</code>。</li>
+<li><code>--use_textline_orientation</code>：文本行方向检测，<code>True</code> 或 <code>False</code>。</li>
 <li><code>--text_det_limit_side_len</code>：文本检测图像边长限制。</li>
 <li><code>--text_det_limit_type</code>：边长限制类型，<code>min</code> 或 <code>max</code>。</li>
 <li><code>--text_rec_score_thresh</code>：文本识别置信度阈值。</li>
-<li><code>--use_layout_detection</code> / <code>--no-use_layout_detection</code>：启用或禁用版面检测。</li>
-<li><code>--use_seal_recognition</code> / <code>--no-use_seal_recognition</code>：启用或禁用印章识别。</li>
-<li><code>--use_table_recognition</code> / <code>--no-use_table_recognition</code>：启用或禁用表格识别。</li>
-<li><code>--use_formula_recognition</code> / <code>--no-use_formula_recognition</code>：启用或禁用公式识别。</li>
-<li><code>--use_chart_recognition</code> / <code>--no-use_chart_recognition</code>：启用或禁用图表识别。</li>
-<li><code>--visualize</code> / <code>--no-visualize</code>：启用或禁用可视化结果图。</li>
-<li><code>--prettify_markdown</code> / <code>--no-prettify_markdown</code>：启用或禁用 markdown 美化。</li>
+<li><code>--use_layout_detection</code>：版面检测，<code>True</code> 或 <code>False</code>。</li>
+<li><code>--use_seal_recognition</code>：印章识别，<code>True</code> 或 <code>False</code>。</li>
+<li><code>--use_table_recognition</code>：表格识别，<code>True</code> 或 <code>False</code>。</li>
+<li><code>--use_formula_recognition</code>：公式识别，<code>True</code> 或 <code>False</code>。</li>
+<li><code>--use_chart_recognition</code>：图表识别，<code>True</code> 或 <code>False</code>。</li>
+<li><code>--visualize</code>：可视化结果图，<code>True</code> 或 <code>False</code>。</li>
+<li><code>--prettify_markdown</code>：markdown 美化，<code>True</code> 或 <code>False</code>。</li>
 </ul>
 <h2 id="ocr">OCR 示例<a class="headerlink" href="#ocr" title="Permanent link">&para;</a></h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>paddleocr<span class="w"> </span>api<span class="w"> </span><span class="se">\</span>
@@ -5544,7 +5604,7 @@ You're not viewing the latest version.
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>paddleocr<span class="w"> </span>api<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--model_type<span class="w"> </span>doc_parsing<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--file_url<span class="w"> </span>https://example.com/report.pdf<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--use_chart_recognition<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--use_chart_recognition<span class="w"> </span>True<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span>--save_resources<span class="w"> </span>./doc-assets<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span>--output<span class="w"> </span>doc-result.json
 </span></code></pre></div>
@@ -5695,13 +5755,13 @@ You're not viewing the latest version.
         
         
           
-          <a href="../../cross_platform/on_device_deployment.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 端侧部署">
+          <a href="../../cross_platform/android_deployment.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Android 部署">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                端侧部署
+                Android 部署
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -1355,6 +1355,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1445,6 +1447,34 @@ You're not viewing the latest version.
     
   
     PaddleOCR-VL-1.5简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.6简介
   
 
     
@@ -2664,6 +2694,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -2721,14 +2753,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../../cross_platform/on_device_deployment.html" class="md-nav__link">
+      <a href="../../cross_platform/android_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    端侧部署
+    Android 部署
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cross_platform/ios_deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS 部署
   
 
     
@@ -5687,7 +5747,6 @@ You're not viewing the latest version.
 </tr>
 </tbody>
 </table>
-<p>常用对应关系：<code>Model.PP_OCRV5</code> 对应 <code>PP-OCRv5</code>，<code>Model.PP_STRUCTURE_V3</code> 对应 <code>PP-StructureV3</code>，<code>Model.PADDLE_OCR_VL</code> 对应 <code>PaddleOCR-VL</code>，<code>Model.PADDLE_OCR_VL_15</code> 对应 <code>PaddleOCR-VL-1.5</code>，<code>Model.PADDLE_OCR_VL_16</code> 对应 <code>PaddleOCR-VL-1.6</code>。</p>
 <h2 id="_4">配置与参数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="_5">客户端配置<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">PaddleOCRClient</span><span class="p">(</span>
@@ -5700,7 +5759,7 @@ You're not viewing the latest version.
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">client</span> <span class="o">=</span> <span class="n">PaddleOCRClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://my-proxy.com/paddle&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="_6">请求参数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>SDK 的参数名使用 Python 惯用的 snake_case，提交请求时自动转换为官方 API 的 camelCase。只需传入非 <code>None</code> 的字段，未设置的字段使用服务端默认值。完整字段定义见各 Options 类型源码或「官方 API 参考」。</p>
+<p>SDK 的参数名使用 Python 惯用的 snake_case，提交请求时自动转换为官方 API 的 camelCase。只需传入非 <code>None</code> 的字段，未设置的字段使用服务端默认值。完整字段定义见各 Options 类型源码或官方 API 参考。</p>
 <h4 id="ocroptions">OCROptions（常用字段）<a class="headerlink" href="#ocroptions" title="Permanent link">&para;</a></h4>
 <table>
 <thead>

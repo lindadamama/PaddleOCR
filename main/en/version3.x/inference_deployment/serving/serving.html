@@ -1355,6 +1355,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -1445,6 +1447,34 @@ You're not viewing the latest version.
     
   
     PaddleOCR-VL-1.5 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PaddleOCR-VL-1.6 Introduction
   
 
     
@@ -2315,6 +2345,17 @@ You're not viewing the latest version.
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-returning-binary-content-as-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Returning Binary Content as URLs
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2559,6 +2600,8 @@ You're not viewing the latest version.
       
         
       
+        
+      
     
     
     
@@ -2616,14 +2659,42 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../cross_platform/on_device_deployment.html" class="md-nav__link">
+      <a href="../cross_platform/android_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    On-Device Deployment
+    Android Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cross_platform/ios_deployment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS Deployment
   
 
     
@@ -5004,7 +5075,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    On-Device Deployment
+    端侧部署
   
 
     
@@ -5346,6 +5417,17 @@ You're not viewing the latest version.
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-returning-binary-content-as-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Returning Binary Content as URLs
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5481,6 +5563,24 @@ You're not viewing the latest version.
 <h2 id="2-high-stability-serving">2. High-Stability Serving<a class="headerlink" href="#2-high-stability-serving" title="Permanent link">&para;</a></h2>
 <p>Please refer to the <a href="https://paddlepaddle.github.io/PaddleX/latest/en/pipeline_deploy/serving.html#2">PaddleX Serving Guide</a>. More information about PaddleX pipeline configuration files can be found in <a href="../../paddleocr_and_paddlex.html#3-using-paddlex-pipeline-configuration-files">Using PaddleX Pipeline Configuration Files</a>.</p>
 <p>It should be noted that, due to the lack of fine-grained optimization and other reasons, the current high-stability serving deployment solution provided by PaddleOCR may not match the performance of the 2.x version based on PaddleServing. However, this new solution fully supports the PaddlePaddle 3.0 framework. We will continue to optimize it and consider introducing more performant deployment solutions in the future.</p>
+<h2 id="3-returning-binary-content-as-urls">3. Returning Binary Content as URLs<a class="headerlink" href="#3-returning-binary-content-as-urls" title="Permanent link">&para;</a></h2>
+<p>By default, both basic serving and high-stability serving return images and other binary content in the response inline as Base64-encoded strings. When the response contains large images or a multi-page PDF, Base64 encoding can significantly inflate the payload; you can configure the service to return URLs instead. Enable it in the <code>Serving</code> section of the pipeline configuration file (<code>return_urls</code> is a top-level switch; object-storage settings live under <code>Serving.extra</code>) to return those fields as pre-signed URLs:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">Serving</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">return_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">file_storage</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bos</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;BOS endpoint, e.g. https://bj.bcebos.com&gt;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="nt">ak</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxx</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="nt">sk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxx</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="nt">bucket_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;bucket name&gt;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nt">url_expires_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3600</span><span class="w">  </span><span class="c1"># Pre-signed URL lifetime in seconds; -1 means no expiry</span>
+</span></code></pre></div>
+<ul>
+<li>Basic serving: write the configuration to the pipeline config file passed to <code>paddlex --serve --pipeline</code>.</li>
+<li>High-stability serving: the same configuration applies — write it to <code>server/pipeline_config.yaml</code> inside the SDK and restart the container.</li>
+</ul>
+<p>Currently, URL return is only supported by the <code>bos</code> (Baidu Intelligent Cloud object storage) backend. URL return is controlled by the top-level <code>Serving.return_urls</code> field, which applies to every Base64-inlined file field in the response (not just images). For the full configuration reference, notes, and use cases, see <a href="https://paddlepaddle.github.io/PaddleX/latest/en/pipeline_deploy/serving.html#3">PaddleX Serving Guide - Returning Binary Content as URLs</a>. See the <a href="https://cloud.baidu.com/doc/BOS/index.html">Baidu Intelligent Cloud documentation</a> for AK/SK retrieval.</p>
 
 <!-- Source file information -->
 
