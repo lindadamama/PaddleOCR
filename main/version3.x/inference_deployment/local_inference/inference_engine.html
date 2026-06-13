@@ -6019,7 +6019,17 @@ You're not viewing the latest version.
 <h4 id="onnxruntime"><code>onnxruntime</code><a class="headerlink" href="#onnxruntime" title="Permanent link">&para;</a></h4>
 <p>常见字段包括：</p>
 <ul>
-<li><code>device_type</code> / <code>device_id</code>：推理设备类型和设备编号。</li>
+<li><code>device_type</code> / <code>device_id</code>：推理设备类型和设备编号；</li>
+<li><code>providers</code>：执行提供者列表（如 <code>CUDAExecutionProvider</code>、<code>CPUExecutionProvider</code>）；</li>
+<li><code>provider_options</code>：执行提供者专属配置；</li>
+<li><code>graph_optimization_level</code>：图优化级别；</li>
+<li><code>intra_op_num_threads</code>：节点内线程数；</li>
+<li><code>inter_op_num_threads</code>：节点间线程数；</li>
+<li><code>execution_mode</code>：执行模式（如 <code>sequential</code>、<code>parallel</code>）；</li>
+<li><code>log_severity_level</code>：日志严重级别；</li>
+<li><code>enable_mem_pattern</code>：是否启用内存模式；</li>
+<li><code>enable_cpu_mem_arena</code>：是否启用 CPU 内存池；</li>
+<li><code>session_options</code>：ONNX Runtime 会话选项。</li>
 </ul>
 <h4 id="421-engine_config">4.2.1 扁平与分桶 <code>engine_config</code><a class="headerlink" href="#421-engine_config" title="Permanent link">&para;</a></h4>
 <p>同一层级的 <code>engine_config</code> 可以是：</p>

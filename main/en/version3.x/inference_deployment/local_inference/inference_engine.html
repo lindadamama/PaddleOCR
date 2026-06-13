@@ -6019,7 +6019,17 @@ You're not viewing the latest version.
 <h4 id="onnxruntime"><code>onnxruntime</code><a class="headerlink" href="#onnxruntime" title="Permanent link">&para;</a></h4>
 <p>Common fields include:</p>
 <ul>
-<li><code>device_type</code> / <code>device_id</code>: inference device type and device index.</li>
+<li><code>device_type</code> / <code>device_id</code>: inference device type and device index;</li>
+<li><code>providers</code>: list of execution providers (e.g., <code>CUDAExecutionProvider</code>, <code>CPUExecutionProvider</code>);</li>
+<li><code>provider_options</code>: provider-specific configuration;</li>
+<li><code>graph_optimization_level</code>: graph optimization level;</li>
+<li><code>intra_op_num_threads</code>: number of intra-op threads;</li>
+<li><code>inter_op_num_threads</code>: number of inter-op threads;</li>
+<li><code>execution_mode</code>: execution mode (e.g., <code>sequential</code>, <code>parallel</code>);</li>
+<li><code>log_severity_level</code>: log severity level;</li>
+<li><code>enable_mem_pattern</code>: whether to enable memory pattern;</li>
+<li><code>enable_cpu_mem_arena</code>: whether to enable CPU memory arena;</li>
+<li><code>session_options</code>: ONNX Runtime session options.</li>
 </ul>
 <h4 id="421-flat-vs-bucketed-engine_config">4.2.1 Flat vs. bucketed <code>engine_config</code><a class="headerlink" href="#421-flat-vs-bucketed-engine_config" title="Permanent link">&para;</a></h4>
 <p>At the same level <code>engine_config</code> may be:</p>
