@@ -12,19 +12,19 @@
         <meta name="author" content="PaddleOCR PMC">
       
       
-        <link rel="canonical" href="https://paddlepaddle.github.io/PaddleOCR/main/en/FAQ.html">
+        <link rel="canonical" href="https://paddlepaddle.github.io/PaddleOCR/main/en/papers.html">
       
       
-        <link rel="prev" href="version2.x/legacy/benchmark.html">
+        <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="community/community_contribution.html">
+        <link rel="next" href="version3.x/installation.html">
       
       
         
-          <link rel="alternate" href="../FAQ.html" hreflang="zh">
+          <link rel="alternate" href="../papers.html" hreflang="zh">
         
-          <link rel="alternate" href="FAQ.html" hreflang="en">
+          <link rel="alternate" href="papers.html" hreflang="en">
         
       
       
@@ -33,7 +33,7 @@
     
     
       
-        <title>FAQ - PaddleOCR Documentation</title>
+        <title>Research Papers - PaddleOCR Documentation</title>
       
     
     
@@ -182,7 +182,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-installation-and-environment-setup" class="md-skip">
+        <a href="#paddleocr-research-papers" class="md-skip">
           Skip to content
         </a>
       
@@ -233,7 +233,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FAQ
+              Research Papers
             
           </span>
         </div>
@@ -280,13 +280,13 @@ You're not viewing the latest version.
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../FAQ.html" hreflang="zh" class="md-select__link">
+            <a href="../papers.html" hreflang="zh" class="md-select__link">
               简体中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="FAQ.html" hreflang="en" class="md-select__link">
+            <a href="papers.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -388,8 +388,10 @@ You're not viewing the latest version.
   
   
   
+    
   
-    <li class="md-tabs__item">
+  
+    <li class="md-tabs__item md-tabs__item--active">
       <a href="papers.html" class="md-tabs__link">
         
   
@@ -792,10 +794,8 @@ You're not viewing the latest version.
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
+    <li class="md-tabs__item">
       <a href="FAQ.html" class="md-tabs__link">
         
   
@@ -848,9 +848,7 @@ You're not viewing the latest version.
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -914,10 +912,37 @@ You're not viewing the latest version.
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="papers.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Papers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="papers.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -933,6 +958,410 @@ You're not viewing the latest version.
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reading-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to cite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolkit-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolkit overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolkit overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paddleocr-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddleOCR 3.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text recognition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text recognition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pp-ocr-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-OCR family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PP-OCR family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pp-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-OCR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pp-ocrv2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-OCRv2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pp-ocrv3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-OCRv3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pp-ocrv5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-OCRv5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pp-ocrv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-OCRv6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recognition-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recognition algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recognition algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#svtr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SVTR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cppd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPPD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-structure-and-layout-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document structure and layout analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document structure and layout analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pp-structurev2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-StructureV2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pp-doclayout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-DocLayout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-doclayout-pp-doclayoutv3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RT-DocLayout / PP-DocLayoutV3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formula-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formula recognition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formula recognition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pp-formulanet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-FormulaNet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vision-language-document-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vision-language document parsing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vision-language document parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paddleocr-vl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddleOCR-VL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paddleocr-vl-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddleOCR-VL-1.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paddleocr-vl-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddleOCR-VL-1.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hpd-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HPD-Parsing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation benchmarks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation benchmarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real5-omnidocbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real5-OmniDocBench
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-understanding-and-ecosystem-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document understanding and ecosystem research
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document understanding and ecosystem research">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pp-docbee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-DocBee
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-releases-and-technical-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other releases and technical documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5181,35 +5610,10 @@ You're not viewing the latest version.
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="FAQ.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="FAQ.html" class="md-nav__link">
         
   
   
@@ -5225,292 +5629,6 @@ You're not viewing the latest version.
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-installation-and-environment-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Installation and Environment Setup
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Installation and Environment Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-basic-installation-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Basic Installation Issues
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.1 Basic Installation Issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-paddleocr-installation-failed-with-dependency-conflicts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: PaddleOCR installation failed with dependency conflicts
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-gpu-environment-configuration-issues-cuda-version-mismatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: GPU environment configuration issues, CUDA version mismatch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-model-download-failed-or-slow-download" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Model download failed or slow download
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-how-to-run-on-windows-or-mac" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: How to run on Windows or Mac?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-model-usage-and-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Model Usage and Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Model Usage and Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-model-selection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 Model Selection
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.1 Model Selection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-how-to-choose-the-right-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: How to choose the right model?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-local-model-path-configuration-how-to-use-in-isolated-network-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Local model path configuration, how to use in isolated network environment?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-performance-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Performance Optimization
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Performance Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-gpu-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 GPU Optimization
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.1 GPU Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-slow-gpu-inference-speed-how-to-optimize-performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Slow GPU inference speed, how to optimize performance?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-gpu-memory-insufficient-cuda-out-of-memory-what-to-do" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: GPU memory insufficient (CUDA out of memory) what to do?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-deployment-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Deployment Issues
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Deployment Issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-service-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Service Deployment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.1 Service Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-how-to-deploy-paddleocr-as-a-web-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: How to deploy PaddleOCR as a web service?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-c-deployment-common-issues-and-solutions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: C++ deployment common issues and solutions?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-service-performance-optimization-suggestions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Service performance optimization suggestions?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-legacy-issues-for-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Legacy Issues (for reference)
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5646,9 +5764,7 @@ You're not viewing the latest version.
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -5656,6 +5772,8 @@ You're not viewing the latest version.
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -5665,34 +5783,84 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-installation-and-environment-setup" class="md-nav__link">
+  <a href="#reading-guide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Installation and Environment Setup
+        Reading guide
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Installation and Environment Setup">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-cite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to cite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolkit-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolkit overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolkit overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-basic-installation-issues" class="md-nav__link">
+  <a href="#paddleocr-30" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 Basic Installation Issues
+        PaddleOCR 3.0
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.1 Basic Installation Issues">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text recognition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text recognition">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#q-paddleocr-installation-failed-with-dependency-conflicts" class="md-nav__link">
+  <a href="#pp-ocr-family" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Q: PaddleOCR installation failed with dependency conflicts
+        PP-OCR family
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PP-OCR family">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pp-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-OCR
       
     </span>
   </a>
@@ -5700,10 +5868,10 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-gpu-environment-configuration-issues-cuda-version-mismatch" class="md-nav__link">
+  <a href="#pp-ocrv2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Q: GPU environment configuration issues, CUDA version mismatch
+        PP-OCRv2
       
     </span>
   </a>
@@ -5711,10 +5879,10 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-model-download-failed-or-slow-download" class="md-nav__link">
+  <a href="#pp-ocrv3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Q: Model download failed or slow download
+        PP-OCRv3
       
     </span>
   </a>
@@ -5722,10 +5890,60 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-how-to-run-on-windows-or-mac" class="md-nav__link">
+  <a href="#pp-ocrv5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Q: How to run on Windows or Mac?
+        PP-OCRv5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pp-ocrv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-OCRv6
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recognition-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recognition algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recognition algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#svtr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SVTR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cppd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPPD
       
     </span>
   </a>
@@ -5743,34 +5961,22 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-model-usage-and-configuration" class="md-nav__link">
+  <a href="#document-structure-and-layout-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Model Usage and Configuration
+        Document structure and layout analysis
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Model Usage and Configuration">
+    <nav class="md-nav" aria-label="Document structure and layout analysis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-model-selection" class="md-nav__link">
+  <a href="#pp-structurev2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 Model Selection
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.1 Model Selection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-how-to-choose-the-right-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: How to choose the right model?
+        PP-StructureV2
       
     </span>
   </a>
@@ -5778,55 +5984,10 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-local-model-path-configuration-how-to-use-in-isolated-network-environment" class="md-nav__link">
+  <a href="#pp-doclayout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Q: Local model path configuration, how to use in isolated network environment?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-performance-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Performance Optimization
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Performance Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-gpu-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 GPU Optimization
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.1 GPU Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-slow-gpu-inference-speed-how-to-optimize-performance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Slow GPU inference speed, how to optimize performance?
+        PP-DocLayout
       
     </span>
   </a>
@@ -5834,85 +5995,13 @@ You're not viewing the latest version.
 </li>
         
           <li class="md-nav__item">
-  <a href="#q-gpu-memory-insufficient-cuda-out-of-memory-what-to-do" class="md-nav__link">
+  <a href="#rt-doclayout-pp-doclayoutv3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Q: GPU memory insufficient (CUDA out of memory) what to do?
+        RT-DocLayout / PP-DocLayoutV3
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-deployment-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Deployment Issues
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Deployment Issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-service-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Service Deployment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.1 Service Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#q-how-to-deploy-paddleocr-as-a-web-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: How to deploy PaddleOCR as a web service?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-c-deployment-common-issues-and-solutions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: C++ deployment common issues and solutions?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#q-service-performance-optimization-suggestions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Q: Service performance optimization suggestions?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -5922,10 +6011,155 @@ You're not viewing the latest version.
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-legacy-issues-for-reference" class="md-nav__link">
+  <a href="#formula-recognition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Legacy Issues (for reference)
+        Formula recognition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formula recognition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pp-formulanet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-FormulaNet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vision-language-document-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vision-language document parsing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vision-language document parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paddleocr-vl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddleOCR-VL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paddleocr-vl-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddleOCR-VL-1.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paddleocr-vl-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PaddleOCR-VL-1.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hpd-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HPD-Parsing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation benchmarks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation benchmarks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real5-omnidocbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real5-OmniDocBench
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-understanding-and-ecosystem-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document understanding and ecosystem research
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document understanding and ecosystem research">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pp-docbee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PP-DocBee
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-releases-and-technical-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other releases and technical documentation
       
     </span>
   </a>
@@ -5969,14 +6203,12 @@ You're not viewing the latest version.
 
 <!-- Tags -->
 
-  
-
 
 
 <!-- Actions -->
 
   
-    <a href="https://github.com/PaddlePaddle/PaddleOCR/edit/main/docs/FAQ.en.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/edit/main/docs/papers.en.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -5985,7 +6217,7 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/PaddlePaddle/PaddleOCR/raw/main/docs/FAQ.en.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/PaddlePaddle/PaddleOCR/raw/main/docs/papers.en.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
@@ -5997,212 +6229,527 @@ You're not viewing the latest version.
   page title (or respectively site name) is used as the main headline.
 -->
 
-  <h1>FAQ</h1>
-
 
 
 
 <!-- Page content -->
-<blockquote>
-<p>🎉 <strong>Welcome to PaddleOCR FAQ!</strong><br />
-This document compiles common issues and solutions from GitHub Issues and Discussions, providing reference for OCR developers.</p>
-</blockquote>
-<h2 id="1-installation-and-environment-setup">1. Installation and Environment Setup<a class="headerlink" href="#1-installation-and-environment-setup" title="Permanent link">&para;</a></h2>
-<h3 id="11-basic-installation-issues">1.1 Basic Installation Issues<a class="headerlink" href="#11-basic-installation-issues" title="Permanent link">&para;</a></h3>
-<h4 id="q-paddleocr-installation-failed-with-dependency-conflicts">Q: PaddleOCR installation failed with dependency conflicts<a class="headerlink" href="#q-paddleocr-installation-failed-with-dependency-conflicts" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: This is a common issue that can be resolved by:
-(1) Create a new virtual environment: <code>conda create -n paddleocr python=3.8</code>, then activate and install
-(2) Install with specific versions: <code>pip install paddleocr==3.2.0 --no-deps</code>, then install dependencies separately
-(3) If using conda, try: <code>conda install -c conda-forge paddleocr</code></p>
-<h4 id="q-gpu-environment-configuration-issues-cuda-version-mismatch">Q: GPU environment configuration issues, CUDA version mismatch<a class="headerlink" href="#q-gpu-environment-configuration-issues-cuda-version-mismatch" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: First check CUDA version: <code>nvidia-smi</code>, then install corresponding PaddlePaddle version:
-- CUDA 11.8: <code>pip install paddlepaddle-gpu==3.0.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html</code>
-- CUDA 12.0: <code>pip install paddlepaddle-gpu==3.0.0 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html</code>
-Verify GPU availability: <code>python -c "import paddle; print(paddle.is_compiled_with_cuda())"</code></p>
-<h4 id="q-model-download-failed-or-slow-download">Q: Model download failed or slow download<a class="headerlink" href="#q-model-download-failed-or-slow-download" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: Can be resolved by:
-(1) Set model download source: <code>os.environ['PADDLE_PDX_MODEL_SOURCE'] = 'BOS'</code> (use Baidu Cloud Storage)
-(2) Manual model download: directly access model links to download and extract to local directory
-(3) Use local models: specify <code>model_dir</code> parameter pointing to local model path during initialization</p>
-<h4 id="q-how-to-run-on-windows-or-mac">Q: How to run on Windows or Mac?<a class="headerlink" href="#q-how-to-run-on-windows-or-mac" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: PaddleOCR has completed adaptation to Windows and MAC systems. Two points should be noted during operation:
-    1. In <a href="version3.x/installation.html">Quick installation</a>, if you do not want to install docker, you can skip the first step and start with the second step.
-    2. When downloading the inference model, if wget is not installed, you can directly click the model link or copy the link address to the browser to download, then extract and place it in the corresponding directory.</p>
-<h2 id="2-model-usage-and-configuration">2. Model Usage and Configuration<a class="headerlink" href="#2-model-usage-and-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="21-model-selection">2.1 Model Selection<a class="headerlink" href="#21-model-selection" title="Permanent link">&para;</a></h3>
-<h4 id="q-how-to-choose-the-right-model">Q: How to choose the right model?<a class="headerlink" href="#q-how-to-choose-the-right-model" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: Choose based on application scenario:
-- Server high accuracy: Use <code>PP-OCRv5_server</code> series, highest accuracy
-- Mobile deployment: Use <code>PP-OCRv5_mobile</code> series, small model fast speed
-- Real-time processing: Use <code>PP-OCRv5_mobile</code> series, fast inference speed
-- Batch processing: Use <code>PP-OCRv5_server</code> series, high accuracy
-- Multi-language recognition: Use <code>PP-OCRv5_multi_languages</code>, supports 37 languages</p>
-<h4 id="q-local-model-path-configuration-how-to-use-in-isolated-network-environment">Q: Local model path configuration, how to use in isolated network environment?<a class="headerlink" href="#q-local-model-path-configuration-how-to-use-in-isolated-network-environment" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: Can be configured by:
-(1) Use local model path: specify <code>model_dir</code> parameter during initialization
-(2) Set model download source: <code>os.environ['PADDLE_PDX_MODEL_SOURCE'] = 'BOS'</code>
-(3) Manual model download: download models from official links and extract locally
-(4) Example code:
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ocr</span> <span class="o">=</span> <span class="n">PaddleOCR</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">det_model_dir</span><span class="o">=</span><span class="s1">'./models/PP-OCRv5_server_det_infer/'</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">rec_model_dir</span><span class="o">=</span><span class="s1">'./models/PP-OCRv5_server_rec_infer/'</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">cls_model_dir</span><span class="o">=</span><span class="s1">'./models/PP-OCRv5_cls_infer/'</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">use_angle_cls</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">lang</span><span class="o">=</span><span class="s1">'ch'</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
-</span></code></pre></div></p>
-<h2 id="3-performance-optimization">3. Performance Optimization<a class="headerlink" href="#3-performance-optimization" title="Permanent link">&para;</a></h2>
-<h3 id="31-gpu-optimization">3.1 GPU Optimization<a class="headerlink" href="#31-gpu-optimization" title="Permanent link">&para;</a></h3>
-<h4 id="q-slow-gpu-inference-speed-how-to-optimize-performance">Q: Slow GPU inference speed, how to optimize performance?<a class="headerlink" href="#q-slow-gpu-inference-speed-how-to-optimize-performance" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: Can be optimized by:
-(1) Enable high-performance inference: set <code>enable_hpi=True</code>, automatically select optimal acceleration strategy
-(2) Enable TensorRT acceleration: set <code>use_tensorrt=True</code>, requires CUDA 11.8+ and TensorRT 8.6+
-(3) Use half precision: set <code>precision="fp16"</code>, can significantly improve speed
-(4) Adjust batch size: set appropriate <code>batch_size</code> based on GPU memory
-(5) Use mobile models: use <code>PP-OCRv5_mobile</code> series when accuracy requirements are not high</p>
-<h4 id="q-gpu-memory-insufficient-cuda-out-of-memory-what-to-do">Q: GPU memory insufficient (CUDA out of memory) what to do?<a class="headerlink" href="#q-gpu-memory-insufficient-cuda-out-of-memory-what-to-do" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: Can be resolved by:
-(1) Reduce batch size: set <code>batch_size</code> to 1
-(2) Reduce image size: set <code>det_limit_side_len=640</code>
-(3) Enable memory optimization: set <code>enable_memory_optim=True</code>
-(4) Limit GPU memory usage: set <code>gpu_mem=200</code>
-(5) Use mobile models: switch to <code>PP-OCRv5_mobile</code> series models</p>
-<h2 id="4-deployment-issues">4. Deployment Issues<a class="headerlink" href="#4-deployment-issues" title="Permanent link">&para;</a></h2>
-<h3 id="41-service-deployment">4.1 Service Deployment<a class="headerlink" href="#41-service-deployment" title="Permanent link">&para;</a></h3>
-<h4 id="q-how-to-deploy-paddleocr-as-a-web-service">Q: How to deploy PaddleOCR as a web service?<a class="headerlink" href="#q-how-to-deploy-paddleocr-as-a-web-service" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: Can be deployed by:
-(1) Use Flask deployment: create simple Web API service
-(2) Use gunicorn deployment: <code>gunicorn -w 4 -b 0.0.0.0:5000 app:app</code>
-(3) Use asynchronous processing: combine asyncio and ThreadPoolExecutor
-(4) Example code:
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">paddleocr</span><span class="w"> </span><span class="kn">import</span> <span class="n">PaddleOCR</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">ocr</span> <span class="o">=</span> <span class="n">PaddleOCR</span><span class="p">(</span><span class="n">use_angle_cls</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s1">'ch'</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/ocr'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'POST'</span><span class="p">])</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">ocr_api</span><span class="p">():</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">file</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">ocr</span><span class="o">.</span><span class="n">ocr</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">'result'</span><span class="p">:</span> <span class="n">result</span><span class="p">})</span>
-</span></code></pre></div></p>
-<h4 id="q-c-deployment-common-issues-and-solutions">Q: C++ deployment common issues and solutions?<a class="headerlink" href="#q-c-deployment-common-issues-and-solutions" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: Common issues and solutions:
-(1) Cannot find dynamic library: set <code>export LD_LIBRARY_PATH=/path/to/paddle/lib:$LD_LIBRARY_PATH</code>
-(2) OpenCV version mismatch: ensure OpenCV version matches compilation time
-(3) Model format issues: ensure correct inference model format
-(4) Compilation issues: ensure CMake configuration is correct, use <code>cmake .. -DCMAKE_BUILD_TYPE=Release</code></p>
-<h4 id="q-service-performance-optimization-suggestions">Q: Service performance optimization suggestions?<a class="headerlink" href="#q-service-performance-optimization-suggestions" title="Permanent link">&para;</a></h4>
-<p><strong>A</strong>: Can be optimized by:
-(1) Enable high-performance inference: set <code>enable_hpi=True</code>
-(2) Use batch processing: set appropriate <code>batch_size</code>
-(3) Enable TensorRT: set <code>use_tensorrt=True</code>
-(4) Use asynchronous processing: avoid blocking requests
-(5) Load balancing: use multiple service instances</p>
-<h2 id="5-legacy-issues-for-reference">5. Legacy Issues (for reference)<a class="headerlink" href="#5-legacy-issues-for-reference" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p><strong>Prediction error: got an unexpected keyword argument 'gradient_clip'</strong>
-The installed version of paddle is incorrect. Currently, this project only supports Paddle 1.7, which will be adapted to 1.8 in the near future.</p>
-</li>
-<li>
-<p><strong>Error when converting attention recognition model: KeyError: 'predict'</strong>
-Solved. Please update to the latest version of the code.</p>
-</li>
-<li>
-<p><strong>About inference speed</strong>
-When there are many words in the picture, the prediction time will increase. You can use <code>--rec_batch_num</code> to set a smaller prediction batch num. The default value is 30, which can be changed to 10 or other values.</p>
-</li>
-<li>
-<p><strong>Service deployment and mobile deployment</strong>
-It is expected that the service deployment based on Serving and the mobile deployment based on Paddle Lite will be released successively in mid-to-late June. Stay tuned for more updates.</p>
-</li>
-<li>
-<p><strong>Release time of self-developed algorithm</strong>
-Baidu Self-developed algorithms such as SAST, SRN and end2end PSL will be released in June or July. Please be patient.</p>
-</li>
-<li>
-<p><strong>How to run on Windows or Mac?</strong>
-PaddleOCR has completed the adaptation to Windows and MAC systems. Two points should be noted during operation:</p>
-<ol>
-<li>In <a href="version3.x/installation.html">Quick installation</a>, if you do not want to install docker, you can skip the first step and start with the second step.</li>
-<li>When downloading the inference model, if wget is not installed, you can directly click the model link or copy the link address to the browser to download, then extract and place it in the corresponding directory.</li>
-</ol>
-</li>
-<li>
-<p><strong>The difference between ultra-lightweight model and General OCR model</strong>
-At present, PaddleOCR has opensourced two Chinese models, namely 8.6M ultra-lightweight Chinese model and general Chinese OCR model. The comparison information between the two is as follows:</p>
-<ul>
-<li>Similarities: Both use the same <strong>algorithm</strong> and <strong>training data</strong>；</li>
-<li>Differences: The difference lies in <strong>backbone network</strong> and <strong>channel parameters</strong>, the ultra-lightweight model uses MobileNetV3 as the backbone network, the general model uses Resnet50_vd as the detection model backbone, and Resnet34_vd as the recognition model backbone. You can compare the two model training configuration files to see the differences in parameters.</li>
-</ul>
-</li>
-</ol>
+<h1 id="paddleocr-research-papers">PaddleOCR Research Papers<a class="headerlink" href="#paddleocr-research-papers" title="Permanent link">&para;</a></h1>
+<p>From lightweight OCR in 2020 to structured document parsing and vision-language models, this page traces six years of PaddleOCR research and the ideas behind its development.</p>
+<p><strong>Scope and verification date:</strong> As of 2026-09-14, this catalog includes verified PaddleOCR series papers and related Baidu-associated algorithm research implemented in PaddleOCR, with the origins of collaborative and PaddlePaddle ecosystem work identified. Downstream papers that only use PaddleOCR are outside this scope; see the <a href="version2.x/algorithm/overview.html">algorithm overview</a> for other third-party implementations. Dates indicate the first public paper release, which can differ from the model release date; later versions of the same preprint are not counted again.</p>
+<h2 id="reading-guide">Reading guide<a class="headerlink" href="#reading-guide" title="Permanent link">&para;</a></h2>
+<p>Start with the toolkit overview, then browse by research area. Within each area, papers in the same family stay together in order of first publication; related algorithms form a separate subgroup.</p>
 <table>
 <thead>
 <tr>
-<th>Model</th>
-<th>Backbone</th>
-<th>Detection configuration file</th>
-<th>Recognition configuration file</th>
+<th>Research area</th>
+<th>Suggested reading order</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>8.6M ultra-lightweight Chinese OCR model</td>
-<td>MobileNetV3+MobileNetV3</td>
-<td>det_mv3_db.yml</td>
-<td>rec_chinese_lite_train.yml</td>
+<td><a href="#research-overview">Toolkit overview</a></td>
+<td><a href="#paper-paddleocr-3-0">PaddleOCR 3.0</a></td>
 </tr>
 <tr>
-<td>General Chinese OCR model</td>
-<td>Resnet50_vd+Resnet34_vd</td>
-<td>det_r50_vd_db.yml</td>
-<td>rec_chinese_common_train.yml</td>
+<td><a href="#research-ocr">Text recognition</a></td>
+<td><a href="#paper-pp-ocr">PP-OCR</a> → <a href="#paper-pp-ocrv2">PP-OCRv2</a> → <a href="#paper-pp-ocrv3">PP-OCRv3</a> → <a href="#paper-pp-ocrv5">PP-OCRv5</a> → <a href="#paper-pp-ocrv6">PP-OCRv6</a>; <a href="#paper-svtr">SVTR</a> → <a href="#paper-cppd">CPPD</a></td>
+</tr>
+<tr>
+<td><a href="#research-layout">Document structure and layout analysis</a></td>
+<td><a href="#paper-pp-structurev2">PP-StructureV2</a> → <a href="#paper-pp-doclayout">PP-DocLayout</a> → <a href="#paper-rt-doclayout">RT-DocLayout / PP-DocLayoutV3</a></td>
+</tr>
+<tr>
+<td><a href="#research-formula">Formula recognition</a></td>
+<td><a href="#paper-pp-formulanet">PP-FormulaNet</a></td>
+</tr>
+<tr>
+<td><a href="#research-parsing">Vision-language document parsing</a></td>
+<td><a href="#paper-paddleocr-vl">PaddleOCR-VL</a> → <a href="#paper-paddleocr-vl-1-5">PaddleOCR-VL-1.5</a> → <a href="#paper-paddleocr-vl-1-6">PaddleOCR-VL-1.6</a> → <a href="#paper-hpd-parsing">HPD-Parsing</a></td>
+</tr>
+<tr>
+<td><a href="#research-benchmarks">Evaluation benchmarks</a></td>
+<td><a href="#paper-real5-omnidocbench">Real5-OmniDocBench</a></td>
+</tr>
+<tr>
+<td><a href="#research-understanding">Document understanding and ecosystem research</a></td>
+<td><a href="#paper-pp-docbee">PP-DocBee</a></td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li>
-<p><strong>Is there a plan to opensource a model that only recognizes numbers or only English + numbers?</strong>
-It is not planned to opensource numbers only, numbers + English only, or other vertical text models. PaddleOCR has opensourced a variety of detection and recognition algorithms for customized training. The two Chinese models are also based on the training output of the open-source algorithm library. You can prepare the data according to the tutorial, choose the appropriate configuration file, train yourselves, and we believe that you can get good result. If you have any questions during the training, you are welcome to open issues or ask in the communication group. We will answer them in time.</p>
-</li>
-<li>
-<p><strong>What is the training data used by the open-source model? Can it be opensourced?</strong>
-At present, the open source model, dataset and magnitude are as follows:</p>
-<ul>
-<li>Detection:
-English dataset: ICDAR2015
-Chinese dataset: LSVT street view dataset with 3w pictures</li>
-<li>Recognition:
-English dataset: MJSynth and SynthText synthetic dataset, the amount of data is tens of millions.
-Chinese dataset: LSVT street view dataset with cropped text area, a total of 30w images. In addition, the synthesized data based on LSVT corpus is 500w.</li>
-</ul>
-<p>Among them, the public datasets are opensourced, users can search and download by themselves, or refer to <a href="datasets/datasets.html">Chinese data set</a>, synthetic data is not opensourced, users can use open-source synthesis tools to synthesize data themselves. Current available synthesis tools include <a href="https://github.com/Sanster/text_renderer">text_renderer</a>, <a href="https://github.com/ankush-me/SynthText">SynthText</a>, <a href="https://github.com/Belval/TextRecognitionDataGenerator">TextRecognitionDataGenerator</a>, etc.</p>
-</li>
-<li>
-<p><strong>Error in using the model with TPS module for prediction</strong>
-Error message: Input(X) dims[3] and Input(Grid) dims[2] should be equal, but received X dimension[3](108) != Grid dimension[2](100)
-Solution: TPS does not support variable shape. Please set --rec_image_shape='3,32,100' and --rec_char_type='en'</p>
-</li>
-<li>
-<p><strong>Custom dictionary used during training, the recognition results show that words do not appear in the dictionary</strong>
-The used custom dictionary path is not set when making prediction. The solution is setting parameter <code>rec_char_dict_path</code> to the corresponding dictionary file.</p>
-</li>
-<li>
-<p><strong>Results of cpp_infer and python_inference are very different</strong>
-Versions of exported inference model and inference library should be same. For example, on Windows platform, version of the inference library that PaddlePaddle provides is 1.8, but version of the inference model that PaddleOCR provides is 1.7, you should export model yourself(<code>tools/export_model.py</code>) on PaddlePaddle 1.8 and then use the exported model for inference.</p>
-</li>
-<li>
-<p><strong>How to identify artistic fonts in signs or advertising images</strong>
-Recognizing artistic fonts in signs or advertising images is a very challenging task because the variation in individual characters is much greater compared to standard fonts. If the artistic font to be identified is within a dictionary list, each word in the dictionary can be treated as a template for recognition using a general image retrieval system. You can try using PaddleClas image recognition system.</p>
-</li>
-<li>
-<p><strong>How to change the font when visualizing the OCR prediction results?</strong></p>
-</li>
-</ol>
-<p><strong>A</strong>: You can specify the local font file path by using the environment variable <code>PADDLE_PDX_LOCAL_FONT_FILE_PATH</code>, such as <code>PADDLE_PDX_LOCAL_FONT_FILE_PATH=/root/fonts/simfang.ttf</code>.</p>
+<h2 id="how-to-cite">How to cite<a class="headerlink" href="#how-to-cite" title="Permanent link">&para;</a></h2>
+<p>The README highlights PaddleOCR 3.0 and PaddleOCR-VL as the two overarching works. When using a specific model or algorithm, cite its corresponding paper below. Each entry includes copyable BibTeX.</p>
+<p><a id="research-overview"></a></p>
+<h2 id="toolkit-overview">Toolkit overview<a class="headerlink" href="#toolkit-overview" title="Permanent link">&para;</a></h2>
+<p>Start with the toolkit’s capabilities and technical architecture.</p>
+<p><a id="paper-paddleocr-3-0"></a></p>
+<h3 id="paddleocr-30">PaddleOCR 3.0<a class="headerlink" href="#paddleocr-30" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2507.05595">PaddleOCR 3.0 Technical Report</a></strong></p>
+<p><strong>First public release:</strong> 2025-07-08 · arXiv:2507.05595</p>
+<p><strong>Authors:</strong> Cheng Cui; Ting Sun; Manhui Lin; Tingquan Gao; Yubo Zhang; Jiaxuan Liu; Xueqing Wang; Zelun Zhang; Changda Zhou; Hongen Liu; Yue Zhang; Wenyu Lv; Kui Huang; Yichao Zhang; Jing Zhang; Jun Zhang; Yi Liu; Dianhai Yu; Yanjun Ma</p>
+<p>Presents PP-OCRv5 multilingual recognition, PP-StructureV3 hierarchical document parsing, and PP-ChatOCRv4 key information extraction. It also covers training, inference, deployment, and heterogeneous hardware support, documenting the transition from an OCR toolkit to a document intelligence toolchain.</p>
+<p><a href="https://arxiv.org/abs/2507.05595">Paper</a> · <a href="https://arxiv.org/pdf/2507.05595">PDF</a> · <a href="index.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">cui2025paddleocr30technicalreport</span><span class="p">,</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="na">title</span><span class="p">=</span><span class="s">{PaddleOCR 3.0 Technical Report}</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="na">author</span><span class="p">=</span><span class="s">{Cheng Cui and Ting Sun and Manhui Lin and Tingquan Gao and Yubo Zhang and Jiaxuan Liu and Xueqing Wang and Zelun Zhang and Changda Zhou and Hongen Liu and Yue Zhang and Wenyu Lv and Kui Huang and Yichao Zhang and Jing Zhang and Jun Zhang and Yi Liu and Dianhai Yu and Yanjun Ma}</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="na">year</span><span class="p">=</span><span class="s">{2025}</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2507.05595}</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2507.05595}</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="research-ocr"></a></p>
+<h2 id="text-recognition">Text recognition<a class="headerlink" href="#text-recognition" title="Permanent link">&para;</a></h2>
+<p>Follow the PP-OCR system family, then explore research on recognition algorithms.</p>
+<h3 id="pp-ocr-family">PP-OCR family<a class="headerlink" href="#pp-ocr-family" title="Permanent link">&para;</a></h3>
+<p><a id="paper-pp-ocr"></a></p>
+<h4 id="pp-ocr">PP-OCR<a class="headerlink" href="#pp-ocr" title="Permanent link">&para;</a></h4>
+<p><strong><a href="https://arxiv.org/abs/2009.09941">PP-OCR: A Practical Ultra Lightweight OCR System</a></strong></p>
+<p><strong>First public release:</strong> 2020-09-21 · arXiv:2009.09941</p>
+<p><strong>Authors:</strong> Yuning Du; Chenxia Li; Ruoyu Guo; Xiaoting Yin; Weiwei Liu; Jun Zhou; Yifan Bai; Zilin Yu; Yehua Yang; Qingqing Dang; Haoshuang Wang</p>
+<p>Combines text detection, orientation classification, and recognition into a deployable lightweight OCR system. Backbone selection, augmentation, training strategies, pruning, and quantization balance accuracy and model size. It establishes the practical foundation of the PP-OCR family for Chinese, English, and other languages.</p>
+<p><a href="https://arxiv.org/abs/2009.09941">Paper</a> · <a href="https://arxiv.org/pdf/2009.09941">PDF</a> · <a href="version2.x/ppocr/overview.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">ppocr2020</span><span class="p">,</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-OCR: A Practical Ultra Lightweight OCR System}</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Du, Yuning and Li, Chenxia and Guo, Ruoyu and Yin, Xiaoting and Liu, Weiwei and Zhou, Jun and Bai, Yifan and Yu, Zilin and Yang, Yehua and Dang, Qingqing and Wang, Haoshuang}</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2020}</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2009.09941}</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2009.09941}</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-pp-ocrv2"></a></p>
+<h4 id="pp-ocrv2">PP-OCRv2<a class="headerlink" href="#pp-ocrv2" title="Permanent link">&para;</a></h4>
+<p><strong><a href="https://arxiv.org/abs/2109.03144">PP-OCRv2: Bag of Tricks for Ultra Lightweight OCR System</a></strong></p>
+<p><strong>First public release:</strong> 2021-09-07 · arXiv:2109.03144</p>
+<p><strong>Authors:</strong> Yuning Du; Chenxia Li; Ruoyu Guo; Cheng Cui; Weiwei Liu; Jun Zhou; Bin Lu; Yehua Yang; Qiwen Liu; Xiaoguang Hu; Dianhai Yu; Yanjun Ma</p>
+<p>Improves PP-OCR through collaborative mutual learning, CopyPaste augmentation, PP-LCNet, unified deep mutual learning, and an improved CTC loss. The system focuses on increasing detection and recognition accuracy while retaining efficient deployment.</p>
+<p><a href="https://arxiv.org/abs/2109.03144">Paper</a> · <a href="https://arxiv.org/pdf/2109.03144">PDF</a> · <a href="version2.x/ppocr/overview.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">ppocrv22021</span><span class="p">,</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-OCRv2: Bag of Tricks for Ultra Lightweight OCR System}</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Du, Yuning and Li, Chenxia and Guo, Ruoyu and Cui, Cheng and Liu, Weiwei and Zhou, Jun and Lu, Bin and Yang, Yehua and Liu, Qiwen and Hu, Xiaoguang and Yu, Dianhai and Ma, Yanjun}</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2021}</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2109.03144}</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2109.03144}</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-pp-ocrv3"></a></p>
+<h4 id="pp-ocrv3">PP-OCRv3<a class="headerlink" href="#pp-ocrv3" title="Permanent link">&para;</a></h4>
+<p><strong><a href="https://arxiv.org/abs/2206.03001">PP-OCRv3: More Attempts for the Improvement of Ultra Lightweight OCR System</a></strong></p>
+<p><strong>First public release:</strong> 2022-06-07 · arXiv:2206.03001</p>
+<p><strong>Authors:</strong> Chenxia Li; Weiwei Liu; Ruoyu Guo; Xiaoting Yin; Kaitao Jiang; Yongkun Du; Yuning Du; Lingfeng Zhu; Baohua Lai; Xiaoguang Hu; Dianhai Yu; Yanjun Ma</p>
+<p>Introduces nine detection and recognition improvements, including LK-PAN, RSE-FPN, distillation, and SVTR_LCNet. Attention-guided CTC training, augmentation, and pretraining improve the accuracy–speed balance, bringing visual Transformer ideas into practical lightweight OCR.</p>
+<p><a href="https://arxiv.org/abs/2206.03001">Paper</a> · <a href="https://arxiv.org/pdf/2206.03001">PDF</a> · <a href="version2.x/ppocr/blog/PP-OCRv3_introduction.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">ppocrv32022</span><span class="p">,</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-OCRv3: More Attempts for the Improvement of Ultra Lightweight OCR System}</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Li, Chenxia and Liu, Weiwei and Guo, Ruoyu and Yin, Xiaoting and Jiang, Kaitao and Du, Yongkun and Du, Yuning and Zhu, Lingfeng and Lai, Baohua and Hu, Xiaoguang and Yu, Dianhai and Ma, Yanjun}</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2022}</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2206.03001}</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2206.03001}</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-pp-ocrv5"></a></p>
+<h4 id="pp-ocrv5">PP-OCRv5<a class="headerlink" href="#pp-ocrv5" title="Permanent link">&para;</a></h4>
+<p><strong><a href="https://arxiv.org/abs/2603.24373">PP-OCRv5: A Specialized 5M-Parameter Model Rivaling Billion-Parameter Vision-Language Models on OCR Tasks</a></strong></p>
+<p><strong>First public release:</strong> 2026-03-25 · arXiv:2603.24373</p>
+<p><strong>Authors:</strong> Cheng Cui; Yubo Zhang; Ting Sun; Xueqing Wang; Hongen Liu; Manhui Lin; Yue Zhang; Tingquan Gao; Changda Zhou; Jiaxuan Liu; Zelun Zhang; Jing Zhang; Jun Zhang; Yi Liu</p>
+<p>Examines how a lightweight specialized OCR model can compete with large vision-language models on OCR tasks. Experiments study data difficulty, annotation accuracy, and diversity, demonstrating the potential of a roughly 5M-parameter system. This separate paper appeared in 2026, following the 2025 model release and PaddleOCR 3.0 report.</p>
+<p><a href="https://arxiv.org/abs/2603.24373">Paper</a> · <a href="https://arxiv.org/pdf/2603.24373">PDF</a> · <a href="version3.x/algorithm/PP-OCRv5/PP-OCRv5.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">ppocrv52026</span><span class="p">,</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-OCRv5: A Specialized 5M-Parameter Model Rivaling Billion-Parameter Vision-Language Models on OCR Tasks}</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Cui, Cheng and Zhang, Yubo and Sun, Ting and Wang, Xueqing and Liu, Hongen and Lin, Manhui and Zhang, Yue and Gao, Tingquan and Zhou, Changda and Liu, Jiaxuan and Zhang, Zelun and Zhang, Jing and Zhang, Jun and Liu, Yi}</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2026}</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2603.24373}</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2603.24373}</span><span class="p">,</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-pp-ocrv6"></a></p>
+<h4 id="pp-ocrv6">PP-OCRv6<a class="headerlink" href="#pp-ocrv6" title="Permanent link">&para;</a></h4>
+<p><strong><a href="https://arxiv.org/abs/2606.13108">PP-OCRv6: From 1.5M to 34.5M Parameters, Surpassing Billion-Scale VLMs on OCR Tasks</a></strong></p>
+<p><strong>First public release:</strong> 2026-06-11 · arXiv:2606.13108</p>
+<p><strong>Authors:</strong> Yubo Zhang; Xueqing Wang; Manhui Lin; Yue Zhang; Penglongyi Deng; Ting Sun; Tingquan Gao; Zelun Zhang; Jiaxuan Liu; Changda Zhou; Hongen Liu; Suyin Liang; Cheng Cui; Yi Liu; Dianhai Yu; Yanjun Ma</p>
+<p>Redesigns the backbone and detection and recognition necks using unified MetaFormer-style blocks and structural reparameterization, combined with data-centric optimization. Tiny, small, and medium tiers span 1.5M to 34.5M parameters for edge-to-server deployment, using task-specific stride configurations to support both detection and recognition.</p>
+<p><a href="https://arxiv.org/abs/2606.13108">Paper</a> · <a href="https://arxiv.org/pdf/2606.13108">PDF</a> · <a href="version3.x/algorithm/PP-OCRv6/PP-OCRv6.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">ppocrv62026</span><span class="p">,</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-OCRv6: From 1.5M to 34.5M Parameters, Surpassing Billion-Scale VLMs on OCR Tasks}</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Yubo Zhang and Xueqing Wang and Manhui Lin and Yue Zhang and Penglongyi Deng and Ting Sun and Tingquan Gao and Zelun Zhang and Jiaxuan Liu and Changda Zhou and Hongen Liu and Suyin Liang and Cheng Cui and Yi Liu and Dianhai Yu and Yanjun Ma}</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2026}</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2606.13108}</span><span class="p">,</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2606.13108}</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<h3 id="recognition-algorithms">Recognition algorithms<a class="headerlink" href="#recognition-algorithms" title="Permanent link">&para;</a></h3>
+<p><a id="paper-svtr"></a></p>
+<h4 id="svtr">SVTR<a class="headerlink" href="#svtr" title="Permanent link">&para;</a></h4>
+<p><strong><a href="https://arxiv.org/abs/2205.00159">SVTR: Scene Text Recognition with a Single Visual Model</a></strong></p>
+<p><strong>First public release:</strong> 2022-04-30 · arXiv:2205.00159</p>
+<p><strong>Authors:</strong> Yongkun Du; Zhineng Chen; Caiyan Jia; Xiaoting Yin; Tianlun Zheng; Chenxia Li; Yuning Du; Yu-Gang Jiang</p>
+<p>Uses local and global mixing to model visual relationships within and between characters, recognizing text with a single visual model and a simple prediction layer. This collaborative research underpins SVTR_LCNet in PP-OCRv3 and has a public PaddleOCR implementation.</p>
+<p><a href="https://arxiv.org/abs/2205.00159">Paper</a> · <a href="https://arxiv.org/pdf/2205.00159">PDF</a> · <a href="version2.x/algorithm/text_recognition/algorithm_rec_svtr.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">svtr2022</span><span class="p">,</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{SVTR: Scene Text Recognition with a Single Visual Model}</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Du, Yongkun and Chen, Zhineng and Jia, Caiyan and Yin, Xiaoting and Zheng, Tianlun and Li, Chenxia and Du, Yuning and Jiang, Yu-Gang}</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2022}</span><span class="p">,</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2205.00159}</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2205.00159}</span><span class="p">,</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-cppd"></a></p>
+<h4 id="cppd">CPPD<a class="headerlink" href="#cppd" title="Permanent link">&para;</a></h4>
+<p><strong><a href="https://arxiv.org/abs/2307.12270">Context Perception Parallel Decoder for Scene Text Recognition</a></strong></p>
+<p><strong>First public release:</strong> 2023-07-23 · arXiv:2307.12270</p>
+<p><strong>Authors:</strong> Yongkun Du; Zhineng Chen; Caiyan Jia; Xiaoting Yin; Chenxia Li; Yuning Du; Yu-Gang Jiang</p>
+<p>Uses character counting and character ordering tasks to model recognition context, then predicts the sequence in parallel. This collaborative research aims to retain contextual modeling while improving decoding efficiency; PaddleOCR provides training configurations and reproduction documentation.</p>
+<p><a href="https://arxiv.org/abs/2307.12270">Paper</a> · <a href="https://arxiv.org/pdf/2307.12270">PDF</a> · <a href="version2.x/algorithm/text_recognition/algorithm_rec_cppd.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">cppd2023</span><span class="p">,</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{Context Perception Parallel Decoder for Scene Text Recognition}</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Du, Yongkun and Chen, Zhineng and Jia, Caiyan and Yin, Xiaoting and Li, Chenxia and Du, Yuning and Jiang, Yu-Gang}</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2023}</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2307.12270}</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2307.12270}</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="research-layout"></a></p>
+<h2 id="document-structure-and-layout-analysis">Document structure and layout analysis<a class="headerlink" href="#document-structure-and-layout-analysis" title="Permanent link">&para;</a></h2>
+<p>From document analysis systems to layout models that jointly predict elements and reading order.</p>
+<p><a id="paper-pp-structurev2"></a></p>
+<h3 id="pp-structurev2">PP-StructureV2<a class="headerlink" href="#pp-structurev2" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2210.05391">PP-StructureV2: A Stronger Document Analysis System</a></strong></p>
+<p><strong>First public release:</strong> 2022-10-11 · arXiv:2210.05391</p>
+<p><strong>Authors:</strong> Chenxia Li; Ruoyu Guo; Jun Zhou; Mengtao An; Yuning Du; Lingfeng Zhu; Yi Liu; Xiaoguang Hu; Dianhai Yu</p>
+<p>Organizes document analysis into layout information extraction and key information extraction, with image orientation correction and layout recovery. It introduces lightweight layout detection, SLANet table recognition, and VI-LayoutXLM to turn document images into structured content.</p>
+<p><a href="https://arxiv.org/abs/2210.05391">Paper</a> · <a href="https://arxiv.org/pdf/2210.05391">PDF</a> · <a href="version2.x/ppstructure/overview.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">ppstructurev22022</span><span class="p">,</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-StructureV2: A Stronger Document Analysis System}</span><span class="p">,</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Li, Chenxia and Guo, Ruoyu and Zhou, Jun and An, Mengtao and Du, Yuning and Zhu, Lingfeng and Liu, Yi and Hu, Xiaoguang and Yu, Dianhai}</span><span class="p">,</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2022}</span><span class="p">,</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2210.05391}</span><span class="p">,</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2210.05391}</span><span class="p">,</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-pp-doclayout"></a></p>
+<h3 id="pp-doclayout">PP-DocLayout<a class="headerlink" href="#pp-doclayout" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2503.17213">PP-DocLayout: A Unified Document Layout Detection Model to Accelerate Large-Scale Data Construction</a></strong></p>
+<p><strong>First public release:</strong> 2025-03-21 · arXiv:2503.17213</p>
+<p><strong>Authors:</strong> Ting Sun; Cheng Cui; Yuning Du; Yi Liu</p>
+<p>Detects 23 types of layout regions, including titles, text, tables, and formulas, across diverse document formats. L, M, and S variants target high accuracy, balanced performance, and resource-constrained deployment, supporting large-scale document processing and training-data construction. Code and models are released in PaddleX, with layout detection available through PaddleOCR.</p>
+<p><a href="https://arxiv.org/abs/2503.17213">Paper</a> · <a href="https://arxiv.org/pdf/2503.17213">PDF</a> · <a href="version3.x/module_usage/layout_detection.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">sun2025ppdoclayoutunifieddocumentlayout</span><span class="p">,</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-DocLayout: A Unified Document Layout Detection Model to Accelerate Large-Scale Data Construction}</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Ting Sun and Cheng Cui and Yuning Du and Yi Liu}</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2025}</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2503.17213}</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2503.17213}</span><span class="p">,</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-rt-doclayout"></a></p>
+<h3 id="rt-doclayout-pp-doclayoutv3">RT-DocLayout / PP-DocLayoutV3<a class="headerlink" href="#rt-doclayout-pp-doclayoutv3" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2606.23344">RT-DocLayout: Real-Time End-to-End Document Layout Analysis with Reading Order in the Wild</a></strong></p>
+<p><strong>First public release:</strong> 2026-06-22 · arXiv:2606.23344</p>
+<p><strong>Authors:</strong> Cheng Cui; Tingquan Gao; Xueqing Wang; Changda Zhou; Hongen Liu; Ting Sun; Yubo Zhang; Zelun Zhang; Jiaxuan Liu; Manhui Lin; Yue Zhang; Suyin Liang; Yiqing Xiang; Yi Liu</p>
+<p>Builds on RT-DETR to unify element classification, bounding-box detection, pixel-level segmentation, and reading-order prediction in a single query-based decoder. Joint geometric and structural learning improves layout analysis under warping and perspective changes, providing an efficient front end for downstream OCR and full-document reconstruction.</p>
+<p><strong>Version mapping:</strong> The <a href="https://huggingface.co/PaddlePaddle/PP-DocLayoutV3">official PP-DocLayoutV3 model card</a> cites this RT-DocLayout paper. The original PP-DocLayout L/M/S models are covered by the <a href="#paper-pp-doclayout">2025 paper above</a>; the two works have separate entries.</p>
+<p><a href="https://arxiv.org/abs/2606.23344">Paper</a> · <a href="https://arxiv.org/pdf/2606.23344">PDF</a> · <a href="version3.x/module_usage/layout_analysis.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">rtdoclayout2026</span><span class="p">,</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{RT-DocLayout: Real-Time End-to-End Document Layout Analysis with Reading Order in the Wild}</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Cheng Cui and Tingquan Gao and Xueqing Wang and Changda Zhou and Hongen Liu and Ting Sun and Yubo Zhang and Zelun Zhang and Jiaxuan Liu and Manhui Lin and Yue Zhang and Suyin Liang and Yiqing Xiang and Yi Liu}</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2026}</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2606.23344}</span><span class="p">,</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2606.23344}</span><span class="p">,</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="research-formula"></a></p>
+<h2 id="formula-recognition">Formula recognition<a class="headerlink" href="#formula-recognition" title="Permanent link">&para;</a></h2>
+<p>Convert formula images into machine-readable symbolic expressions.</p>
+<p><a id="paper-pp-formulanet"></a></p>
+<h3 id="pp-formulanet">PP-FormulaNet<a class="headerlink" href="#pp-formulanet" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2503.18382">PP-FormulaNet: Bridging Accuracy and Efficiency in Advanced Formula Recognition</a></strong></p>
+<p><strong>First public release:</strong> 2025-03-24 · arXiv:2503.18382</p>
+<p><strong>Authors:</strong> Hongen Liu; Cheng Cui; Yuning Du; Yi Liu; Gang Pan</p>
+<p>Converts formula images into LaTeX with an accuracy-oriented L model and an efficiency-oriented S model. A formula mining system expands high-quality training data, supporting different compute budgets and mathematical document processing needs.</p>
+<p><a href="https://arxiv.org/abs/2503.18382">Paper</a> · <a href="https://arxiv.org/pdf/2503.18382">PDF</a> · <a href="version3.x/module_usage/formula_recognition.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">ppformulanet2025</span><span class="p">,</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-FormulaNet: Bridging Accuracy and Efficiency in Advanced Formula Recognition}</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Liu, Hongen and Cui, Cheng and Du, Yuning and Liu, Yi and Pan, Gang}</span><span class="p">,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2025}</span><span class="p">,</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2503.18382}</span><span class="p">,</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2503.18382}</span><span class="p">,</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="research-parsing"></a></p>
+<h2 id="vision-language-document-parsing">Vision-language document parsing<a class="headerlink" href="#vision-language-document-parsing" title="Permanent link">&para;</a></h2>
+<p>Follow successive PaddleOCR-VL releases, then explore hierarchical parallel decoding in HPD-Parsing.</p>
+<p><a id="paper-paddleocr-vl"></a></p>
+<h3 id="paddleocr-vl">PaddleOCR-VL<a class="headerlink" href="#paddleocr-vl" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2510.14528">PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact Vision-Language Model</a></strong></p>
+<p><strong>First public release:</strong> 2025-10-16 · arXiv:2510.14528</p>
+<p><strong>Authors:</strong> Cheng Cui; Ting Sun; Suyin Liang; Tingquan Gao; Zelun Zhang; Jiaxuan Liu; Xueqing Wang; Changda Zhou; Hongen Liu; Manhui Lin; Yue Zhang; Yubo Zhang; Handong Zheng; Jing Zhang; Jun Zhang; Yi Liu; Dianhai Yu; Yanjun Ma</p>
+<p>Builds a 0.9B document parsing model from a NaViT-style dynamic-resolution visual encoder and ERNIE-4.5-0.3B. It supports 109 languages and elements including text, tables, formulas, and charts, exploring efficient document parsing with a compact vision-language model.</p>
+<p><a href="https://arxiv.org/abs/2510.14528">Paper</a> · <a href="https://arxiv.org/pdf/2510.14528">PDF</a> · <a href="version3.x/algorithm/PaddleOCR-VL/PaddleOCR-VL.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">cui2025paddleocrvlboostingmultilingualdocument</span><span class="p">,</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">      </span><span class="na">title</span><span class="p">=</span><span class="s">{PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact Vision-Language Model}</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">      </span><span class="na">author</span><span class="p">=</span><span class="s">{Cheng Cui and Ting Sun and Suyin Liang and Tingquan Gao and Zelun Zhang and Jiaxuan Liu and Xueqing Wang and Changda Zhou and Hongen Liu and Manhui Lin and Yue Zhang and Yubo Zhang and Handong Zheng and Jing Zhang and Jun Zhang and Yi Liu and Dianhai Yu and Yanjun Ma}</span><span class="p">,</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">      </span><span class="na">year</span><span class="p">=</span><span class="s">{2025}</span><span class="p">,</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">      </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2510.14528}</span><span class="p">,</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">      </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">      </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">      </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2510.14528}</span><span class="p">,</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-paddleocr-vl-1-5"></a></p>
+<h3 id="paddleocr-vl-15">PaddleOCR-VL-1.5<a class="headerlink" href="#paddleocr-vl-15" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2601.21957">PaddleOCR-VL-1.5: Towards a Multi-Task 0.9B VLM for Robust In-the-Wild Document Parsing</a></strong></p>
+<p><strong>First public release:</strong> 2026-01-29 · arXiv:2601.21957</p>
+<p><strong>Authors:</strong> Cheng Cui; Ting Sun; Suyin Liang; Tingquan Gao; Zelun Zhang; Jiaxuan Liu; Xueqing Wang; Changda Zhou; Hongen Liu; Manhui Lin; Yue Zhang; Yubo Zhang; Yi Liu; Dianhai Yu; Yanjun Ma</p>
+<p>Improves real-world document parsing while retaining a 0.9B model and adding seal recognition and text spotting. It introduces Real5-OmniDocBench to evaluate scanning, skew, warping, screen photography, and illumination, extending evaluation to robustness under practical capture conditions.</p>
+<p><a href="https://arxiv.org/abs/2601.21957">Paper</a> · <a href="https://arxiv.org/pdf/2601.21957">PDF</a> · <a href="version3.x/algorithm/PaddleOCR-VL/PaddleOCR-VL-1.5.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">cui2026paddleocrvl15multitask09bvlm</span><span class="p">,</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">      </span><span class="na">title</span><span class="p">=</span><span class="s">{PaddleOCR-VL-1.5: Towards a Multi-Task 0.9B VLM for Robust In-the-Wild Document Parsing}</span><span class="p">,</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">      </span><span class="na">author</span><span class="p">=</span><span class="s">{Cheng Cui and Ting Sun and Suyin Liang and Tingquan Gao and Zelun Zhang and Jiaxuan Liu and Xueqing Wang and Changda Zhou and Hongen Liu and Manhui Lin and Yue Zhang and Yubo Zhang and Yi Liu and Dianhai Yu and Yanjun Ma}</span><span class="p">,</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">      </span><span class="na">year</span><span class="p">=</span><span class="s">{2026}</span><span class="p">,</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">      </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2601.21957}</span><span class="p">,</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">      </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">      </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">      </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2601.21957}</span><span class="p">,</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-paddleocr-vl-1-6"></a></p>
+<h3 id="paddleocr-vl-16">PaddleOCR-VL-1.6<a class="headerlink" href="#paddleocr-vl-16" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2606.03264">PaddleOCR-VL-1.6: Expanding the Frontier of Document Parsing with Under-Optimized Region Refinement and Progressive Post-Training</a></strong></p>
+<p><strong>First public release:</strong> 2026-06-02 · arXiv:2606.03264</p>
+<p><strong>Authors:</strong> Zelun Zhang; Hongen Liu; Suyin Liang; Yubo Zhang; Yiqing Xiang; Jiaxuan Liu; Ting Sun; Manhui Lin; Yue Zhang; Changda Zhou; Tingquan Gao; Cheng Cui; Yi Liu; Dianhai Yu; Yanjun Ma</p>
+<p>Targets regions where the previous model is unstable, data coverage is sparse, or supervision is unreliable. Region-aware data optimization and progressive post-training with curated data and reinforcement learning provide a targeted route to improve compact document parsing models.</p>
+<p><a href="https://arxiv.org/abs/2606.03264">Paper</a> · <a href="https://arxiv.org/pdf/2606.03264">PDF</a> · <a href="version3.x/algorithm/PaddleOCR-VL/PaddleOCR-VL-1.6.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">zhang2026paddleocrvl16expandingfrontierdocument</span><span class="p">,</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">      </span><span class="na">title</span><span class="p">=</span><span class="s">{PaddleOCR-VL-1.6: Expanding the Frontier of Document Parsing with Under-Optimized Region Refinement and Progressive Post-Training}</span><span class="p">,</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">      </span><span class="na">author</span><span class="p">=</span><span class="s">{Zelun Zhang and Hongen Liu and Suyin Liang and Yubo Zhang and Yiqing Xiang and Jiaxuan Liu and Ting Sun and Manhui Lin and Yue Zhang and Changda Zhou and Tingquan Gao and Cheng Cui and Yi Liu and Dianhai Yu and Yanjun Ma}</span><span class="p">,</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">      </span><span class="na">year</span><span class="p">=</span><span class="s">{2026}</span><span class="p">,</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">      </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2606.03264}</span><span class="p">,</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">      </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">      </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">      </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2606.03264}</span><span class="p">,</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="paper-hpd-parsing"></a></p>
+<h3 id="hpd-parsing">HPD-Parsing<a class="headerlink" href="#hpd-parsing" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2607.18839">HPD-Parsing: Hierarchical Parallel Document Parsing</a></strong></p>
+<p><strong>First public release:</strong> 2026-07-21 · arXiv:2607.18839</p>
+<p><strong>Authors:</strong> Shu Wei; Jingjing Wu; Lingshu Zhang; Qunyi Xie; Hao Zou; Le Xiang; Xu Fan; Yangliu Xu; Manhui Lin; Xiaolong Ma; Cheng Cui; Tengyu Du; YY</p>
+<p>Introduces hierarchical parallel decoding: a main layout branch coordinates document structure and dynamically spawns concurrent branches for block content. Progressive multi-token prediction (P-MTP) further shortens each branch’s sequential decoding path, improving throughput for long documents and batched parsing while retaining competitive accuracy.</p>
+<p><a href="https://arxiv.org/abs/2607.18839">Paper</a> · <a href="https://arxiv.org/pdf/2607.18839">PDF</a> · <a href="version3.x/pipeline_usage/HPD-Parsing.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">hpdparsing2026</span><span class="p">,</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{HPD-Parsing: Hierarchical Parallel Document Parsing}</span><span class="p">,</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Shu Wei and Jingjing Wu and Lingshu Zhang and Qunyi Xie and Hao Zou and Le Xiang and Xu Fan and Yangliu Xu and Manhui Lin and Xiaolong Ma and Cheng Cui and Tengyu Du and YY}</span><span class="p">,</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2026}</span><span class="p">,</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2607.18839}</span><span class="p">,</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CL}</span><span class="p">,</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2607.18839}</span><span class="p">,</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="research-benchmarks"></a></p>
+<h2 id="evaluation-benchmarks">Evaluation benchmarks<a class="headerlink" href="#evaluation-benchmarks" title="Permanent link">&para;</a></h2>
+<p>Evaluate document parsing robustness under real-world capture conditions.</p>
+<p><a id="paper-real5-omnidocbench"></a></p>
+<h3 id="real5-omnidocbench">Real5-OmniDocBench<a class="headerlink" href="#real5-omnidocbench" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2603.04205">Real5-OmniDocBench: A Full-Scale Physical Reconstruction Benchmark for Robust Document Parsing in the Wild</a></strong></p>
+<p><strong>First public release:</strong> 2026-03-04 · arXiv:2603.04205</p>
+<p><strong>Authors:</strong> Changda Zhou; Ziyue Gao; Xueqing Wang; Tingquan Gao; Cheng Cui; Jing Tang; Yi Liu</p>
+<p>Physically reconstructs all 1,355 OmniDocBench v1.5 images under scanning, warping, screen photography, illumination, and skew. One-to-one ground-truth correspondence with the digital originals supports controlled analysis of parsing degradation from geometry, imaging artifacts, and model limitations, enabling systematic robustness evaluation in real-world conditions.</p>
+<p><a href="https://arxiv.org/abs/2603.04205">Paper</a> · <a href="https://arxiv.org/pdf/2603.04205">PDF</a> · <a href="https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench">Dataset</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">real5omnidocbench2026</span><span class="p">,</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{Real5-OmniDocBench: A Full-Scale Physical Reconstruction Benchmark for Robust Document Parsing in the Wild}</span><span class="p">,</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Changda Zhou and Ziyue Gao and Xueqing Wang and Tingquan Gao and Cheng Cui and Jing Tang and Yi Liu}</span><span class="p">,</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2026}</span><span class="p">,</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2603.04205}</span><span class="p">,</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2603.04205}</span><span class="p">,</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<p><a id="research-understanding"></a></p>
+<h2 id="document-understanding-and-ecosystem-research">Document understanding and ecosystem research<a class="headerlink" href="#document-understanding-and-ecosystem-research" title="Permanent link">&para;</a></h2>
+<p>Explore document content understanding, with the originating project identified for each work.</p>
+<p><a id="paper-pp-docbee"></a></p>
+<h3 id="pp-docbee">PP-DocBee<a class="headerlink" href="#pp-docbee" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://arxiv.org/abs/2503.04065">PP-DocBee: Improving Multimodal Document Understanding Through a Bag of Tricks</a></strong></p>
+<p><strong>First public release:</strong> 2025-03-06 · arXiv:2503.04065</p>
+<p><strong>Authors:</strong> Feng Ni; Kui Huang; Yao Lu; Wenyu Lv; Guanzhong Wang; Zeyu Chen; Yi Liu</p>
+<p>Improves multimodal document understanding with document-specific data synthesis, dynamic proportional sampling, preprocessing, and OCR postprocessing. Training code and models are released in PaddleMIX, with a related document understanding pipeline in PaddleOCR, so it is listed separately as ecosystem research.</p>
+<p><a href="https://arxiv.org/abs/2503.04065">Paper</a> · <a href="https://arxiv.org/pdf/2503.04065">PDF</a> · <a href="version3.x/pipeline_usage/doc_understanding.html">Documentation</a></p>
+<details>
+<summary>Cite with BibTeX</summary>
+
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nc">@misc</span><span class="p">{</span><span class="nl">ppdocbee2025</span><span class="p">,</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{PP-DocBee: Improving Multimodal Document Understanding Through a Bag of Tricks}</span><span class="p">,</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Ni, Feng and Huang, Kui and Lu, Yao and Lv, Wenyu and Wang, Guanzhong and Chen, Zeyu and Liu, Yi}</span><span class="p">,</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2025}</span><span class="p">,</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2503.04065}</span><span class="p">,</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">  </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">  </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.CV}</span><span class="p">,</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2503.04065}</span><span class="p">,</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="p">}</span>
+</span></code></pre></div>
+
+</details>
+
+<h2 id="other-releases-and-technical-documentation">Other releases and technical documentation<a class="headerlink" href="#other-releases-and-technical-documentation" title="Permanent link">&para;</a></h2>
+<p>These releases or components have official technical documentation. This survey did not identify a confirmed standalone paper for them, or their methods are covered by an overarching report above. Documentation links are retained without inventing separate paper citations.</p>
+<table>
+<thead>
+<tr>
+<th>Release / component</th>
+<th>Research material and relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="version2.x/ppocr/blog/PP-OCRv4_introduction.html">PP-OCRv4</a></td>
+<td>2023 technical report in repository documentation (Chinese)</td>
+</tr>
+<tr>
+<td><a href="version2.x/ppstructure/overview.html">PP-Structure / SLANet / VI-LayoutXLM</a></td>
+<td>Covered by the PP-StructureV2 paper and documentation</td>
+</tr>
+<tr>
+<td><a href="version3.x/algorithm/PP-StructureV3/PP-StructureV3.html">PP-StructureV3</a></td>
+<td>Covered by the PaddleOCR 3.0 paper</td>
+</tr>
+<tr>
+<td><a href="version3.x/algorithm/PP-ChatOCRv4/PP-ChatOCRv4.html">PP-ChatOCRv4</a></td>
+<td>Covered by the PaddleOCR 3.0 paper</td>
+</tr>
+<tr>
+<td><a href="version3.x/module_usage/formula_recognition.html">PP-FormulaNet Plus / SLANeXt</a></td>
+<td>Formula recognition and <a href="version3.x/module_usage/table_structure_recognition.html">table structure recognition</a> module documentation</td>
+</tr>
+</tbody>
+</table>
+<p>For related layout analysis methods, see <a href="#paper-rt-doclayout">RT-DocLayout</a>; consult the <a href="version3.x/module_usage/layout_analysis.html">layout analysis documentation</a> for model-specific usage.</p>
+<p>To add a paper, update both language versions, include an author paper page or publication link, and state its relationship to PaddleOCR.</p>
 
 <!-- Source file information -->
 
@@ -6248,8 +6795,6 @@ Recognizing artistic fonts in signs or advertising images is a very challenging 
 
 <!-- Was this page helpful? -->
 
-
-  
 
 
 
@@ -6322,12 +6867,10 @@ Recognizing artistic fonts in signs or advertising images is a very challenging 
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="version2.x/legacy/benchmark.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Benchmark">
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -6337,20 +6880,20 @@ Recognizing artistic fonts in signs or advertising images is a very challenging 
                 Previous
               </span>
               <div class="md-ellipsis">
-                Benchmark
+                Home
               </div>
             </div>
           </a>
         
         
           
-          <a href="community/community_contribution.html" class="md-footer__link md-footer__link--next" aria-label="Next: Community Contribution">
+          <a href="version3.x/installation.html" class="md-footer__link md-footer__link--next" aria-label="Next: Installation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Community Contribution
+                Installation
               </div>
             </div>
             <div class="md-footer__button md-icon">
